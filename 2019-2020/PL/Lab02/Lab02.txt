@@ -1,0 +1,53 @@
+
+Laboratorium STL oraz Wyrażenia Lambda
+
+Uwagi
+1) etapy 2/3 można wykonać w dowolnej kolejności!
+2) należy wykorzystywać algorytmy z bibliotyeki STL, w szczególności "zwykłe" pętle (for, while) dozwolone
+   są jedynie w konstruktorach oraz metodach CompleteTheOrder, CreateOrder i CreateCheapOrder
+   (we wszystkich innych metodach muszą być uźyte algorytmy)
+
+Etap 1 (1.0 Pts)
+ - W pliku Store.cpp zaimplementuj konstruktor klasy Store uzupełniający przedmioty w Sklepie.
+ - W pliku Customer.cpp zaimplementuj konstruktor klasy Customer uzupełniający listę zakupów (shoppingList)
+   podanymi artykułami (zakładamy, że podane wektory mają jednakową długość).
+ - W pliku Store.cpp zaimplementuj metodę StoreStocktaking  klasy Store realizującą przeprowadzenie inwentaryzacji sklepu
+   używając funkcji std::accumulate oblicz wartość przedmiotów dostępnych w sklepie.
+ 
+Etap 2 (1.5 Pts)
+ - W pliku Store.cpp zaimplementuj metodę CompleteTheOrder klasy Store realizującą wydanie przedmiotów ze sklepu.
+   Wydanie przedmiotów następuje tylko w momencie kiedy każdy z przedmiotów z listy życzeń klienta znajduje się w sklepie.
+   W tym celu dla każdego elementu z zamówienia klienta funkcją std::find_if sprawdź, czy element znajduje się w sklepie
+   oraz czy posiada odpowiednią liczbę sztuk.
+   Jeśli sklep nie posiada danego elementu lub posiada mniejszą liczbę sztuk niż żądana zwróć false.
+   W przeciwnym wypadku (tutaj jesteśmy pewni, ze sklep posiada dany produkt w odpowiedniej liczbie)
+   dla każdego elementu z zamówienia klienta funkcją std::find_if znajdź dany element w sklepie oraz zaktualizuj liczbę
+   dostępnych sztuk (odejmij zamówioną liczbę od dostępnej) i zwróć true.
+ - W pliku Customer.cpp zaimplementuj metodę CreateOrder klasy Customer realizującą stworzenie nowego zamówienia
+   oraz jego realizację przez sklep.
+   W tym celu stwórz nowe zamówienie Order na podstawie listy zakupów (shoppingList), tzn. przekaż numer elementu
+   oraz liczbę sztuk. Nowe zamówienie wstaw do wektora customerOrders.
+   Na końcu wywołaj metodę CompleteTheOrder klasy Store i zaktualizuj listę zakupów klienta.
+   Jeśli metoda zwróciła wartość true, zakupy się udały, wyczyść listę zakupów, w przeciwnym wypadku nie rób nic.
+
+Etap 3 (1.5 Pts)
+ - W pliku Store.cpp zaimplementuj metodę PerformInflation klasy Store realizującą wpływ inflacji na ceny produktów w sklepie.
+   W tym celu używając funkcji std::transform zwiększ cenę przedmiotów w sklepie o podany współczynnik
+   (przemnóż obecną cenę przez współczynnik inflacji).
+ - W pliku Store.cpp zaimplementuj metodę GetMostValuableProduct klasy Store znajdującą produkt o największej łącznej wartości
+   w sklepie. W tym celu używając funkcji std::max_element znajdź element,
+   którego wartość productQuantity * productPrice jest największa.
+ - W pliku Store.cpp zaimplementuj metodę GetProductsWithQuantityUpTo klasy Store znajdującą wszystkie elementy,
+   których liczba sztuk w sklepie nie przekracza podanej wartości.
+   W tym celu wykorzystaj algorytm std::copy_if (ładniej) lub std::for_each (nie tak ładnie, ale dozwolone).
+
+Etap 4 (1.0 Pts)
+ - W pliku Customer.cpp zaimplementuj metodę CreateCheapOrder klasy Customer realizującą przeprowadzenie tanich zakupów.
+   W tym celu używając funkcji std::sort posortuj rosnąco po cenie elementy pobrane ze sklepu.
+   Dopóki nie wyczerpie się zapotrzebowanie klienta (productsCount) na przedmioty, pobieraj najtańsze elementy ze sklepu,
+   odpowiednio sprawdzając ich dostępność. Jeśli liczność przedmiotu (zmienia się w trakcie pobierania kolejnych przedmiotów)
+   w sklepie przewyższa aktualne zapotrzebowanie klienta, pobierz liczbę przedmiotów równą zapotrzebowaniu.
+   W przeciwnym wypadku, pobierz maksymalną możliwą liczność przedmiotu i przejdź do analizy następnego.
+   Pamiętaj, aby za każdą iteracją pętli sprawdzającej aktualizować bieżące zapotrzebowanie klienta
+   (zmniejszając je odpowiednio o pobraną w danym kroku liczbę elementów).
+   Na końcu analogicznie do metody CreateOrder sprawdź, czy zakupy się udały.

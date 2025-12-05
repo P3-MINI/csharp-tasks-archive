@@ -1,0 +1,60 @@
+Lab08: Zadanie z interfejsów i yielda
+
+Uwaga: W zadaniu nie wolno korzystać z technologii LINQ.
+
+Etap 1. (1 punkt)
+W pliku SequenceOperations.cs dodaj do statycznej klasy SequenceHelpers następujące metody:
+
+a) IEnumerable FirstNSeqElem(int N, IEnumerable enumeration)
+   Metoda zwraca co najwyżej N pierwszych elementów z wyliczenia enumeration.
+   
+b) IEnumerable<string> SeqFormat(IEnumerable enumeration, string format = "{0}")
+   Metoda konwertuje dowolnego typu wyliczenie na wyliczenie stringów używając do tego podanego formatu.
+   
+c) PrintSequence(IEnumerable enumeration, int limit)
+   Metoda wyświetla pierwszych N (domyślnie 15) wartości wg. podanego formatu:
+   
+{sequence.Name}
+  0: 1
+  1: 2
+  2: 3
+  ...
+  
+  Gdzie pierwsza kolumna ma szerokość co najmniej 3 znaków (ustawione za pomocą maski format).
+  Wartość {SequenceName} jest opcjonalna i wyświetlana jedynie gdy wyliczenie jest sekwencją (ISequence).
+
+Etap 2. (1.5 punkta)
+W pliku Sequences.cs zdefiniuj następujące klasy implementujące interfejs ISequence:
+
+a) ValueSequence - sekwencja zwracająca kolejne elementy zadanej tablicy liczb całkowitych (parametr konstruktora).
+   Dodatkowo konstruktor przyjmuje flagę looped (domyślnie true), po której ustawieniu enumerator zwraca nieskończony ciąg.
+   Właściwość Name zwraca odpowiednio "Looped Value Sequence" lub "Value Sequence".
+
+b) ArithmeticSequence - ciąg arytmetyczny liczb całkowitych.
+   Parametry konstruktora określają wartość wyrazu początkowego i kroku.
+   Właściwość Name zwraca "Arithmetic Sequence { Start = {}, Step = {}}".
+
+c) FibonacciSequence - ciąg Fibonacciego, F_0 = 0, F_1 = 1, F_n = F_n-2 + F_n-1 dla n >= 2
+   Właściwość Name zwraca "Fibonacci Sequence".
+
+Dla każdej klasy z pliku Sequences.cs przeciąż metody ToString, tak aby zwracały string zawierający co najwyżej pięć pierwszych 
+wartości oddzielonych przecinkiem i trzy kropek na końcu. Całość jest w nawiasach kwadratowych.
+Wykorzystaj do tego metody z klasy SequenceHelpers.
+Np: "[1, 2, 3, 1, 2, ...]"
+
+Etap 3. (1 punkt)
+W pliku Sequences.cs zdefiniuj klasy Exp i Sinus implementujące interfejs ISequence, które odpowiednio przybliżają wartości funkcji 
+eksponencjalnej i sinusa w punkcie x korzystając z szeregów Taylora. Użyj decimal jako typu wartości x oraz na których wykonywane są operacje arytmetyczne.
+ 
+Etap 4. (1.5 punkta)
+W pliku SequenceOperations.cs dodaj do interfejsu IMultiSeqOperation metodę Process, która przyjmuje co najmniej dwie sekwencję oraz zwraca wyliczenie wyniku.
+Jako parametr powinna przyjmować zarówno obiekt listy jak i poszczególne sekwencje.
+W przypadku podania niepoprawnej liczby sekwencji (<=1) zwraca wyjątek ArgumentException.
+Użyj powyższego interfejsu do zaimplementowania następujących klas:
+
+a) AddAllSequence - która zwraca w wyniku sekwencję sumy elementów wszystkich sekwencji, sumując po i-tej pozycji,
+   tj. zwraca tylko tyle elementów ile ma najkrótsza sekwencja.
+   Dla sekwencji [1,1,1,1,1,1] oraz [1,2,3] wynikiem jest [2,3,4].
+b) AddAnySequence - która zwraca w wyniku sekwencję sumy elementów jakiejkolwiek sekwencji, sumując po i-tej pozycji,
+   tj. zwraca tyle elementów ile ma najdłuższa sekwencja, dla krótszych sekwencji, przyjmowana jest wartość domyślna (0).
+   Dla sekwencji [1,1,1,1,1,1] oraz [1,2,3] wynikiem jest [2,3,4,1,1,1].

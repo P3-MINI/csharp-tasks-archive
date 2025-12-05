@@ -1,0 +1,58 @@
+﻿
+Zadanie z wykorzystaniem „yield”
+
+Uwaga 1: w zadaniu nie wolno korzystać ze standardowych elementów technologii LINQ
+
+Uwaga 2: Elementy sekwencji numerujemy od 1.
+
+Etap 1. (1 punkt)
+W pliku Sequences.cs zdefiniuj następujące klasy implementujące interfejs ISequence
+
+a) ArraySequence - sekwencja zwracająca kolejne elementy zadanej tablicy liczb całkowitych (parametr konstruktora).
+
+b) ArithmeticSequence - ciąg arytmetyczny liczb całkowitych.
+   Parametry konstruktora określają wartość wyrazu początkowego i kroku.
+
+c) NaturalNumbers - klasa pochodna od ArithmeticSequence - generuje liczby naturalne 0,1,2,3,...
+
+d) RandomSequence – ciąg pseudolosowych liczb naturalnych (wykorzystać klasę System.Random)
+   Parametry konstruktora określają ziarno (seed) oraz zakres ganerowanych liczb (od 0 do wskazanej wartości - 1).
+
+e) Tribonacci - ciąg Tribonacciego,
+             t0 = t1 = 0, t2 = 1, tn = tn-1 + tn-2 + tn-3
+
+
+Etap 2. (2 punkty)
+W pliku SingleSequencesProcessors.cs zdefiniuj następujące klasy implementujące interfejs ISingleSequenceProcessor
+
+a) SequenceSum – generuje cząstkową sumę podanej sekwencji.
+
+b) SequenceRemainderer – oblicza reszty z dzielenia elementów podanej sekwencji przez zadaną wartość.
+   Zadana wartość jest parametrem konstruktora (typu int).
+
+c) EveryNFilter
+   – dla Memory=false wybiera co N-ty element sekwencji, zaczynając od elementu o indeksie Start.
+   Czyli dla ciągu 0 1 2 3 4 5 6 7 8 9 ... i parametrów start=2, N=3, Memory=false zwróci ciąg 1 4 7 10 ...
+   - dla memory=true zamiast pomijania elementów powtarza ostatnio zwróconą wartość (ale zaczyna od start).
+   Czyli dla ciągu 0 1 2 3 4 5 6 7 8 9 ... i parametrów start=2, N=3, Memory=true zwróci ciąg 1 1 1 4 4 4 7 7 7...
+   (Uwaga konstruktor ma parametry: start, N, Memory=false)
+
+d) EveryNSumMFilter - filtr działa następująco
+   1) zaczyna od elementu start (wcześniejsze pomija)
+   2) sumuje element bieżący i kolejnych M-1 elementów i sumę tych M elementów zwraca
+   3) pomija kolejnych N-M elementów 
+   4) wraca do kroku 2
+   Na przykład, dla ciągu 0 1 2 3 4 5 6 7 …, filtr z parametrami, start = 2, N=3, M=2 wygeneruje: 3 9 15 …
+   (Uwaga konstruktor ma parametry: start, N, M)
+
+ 
+Etap 3. (2 punkty)
+W pliku DoubleSequencesProcessors.cs zdefiniuj następujące klasy implementujące interfejs IDoubleSequenceProcessor
+
+a)  LogicGateAND – wykonuje funkcje logicznej bramki AND na zadanych ciągach,
+                   dla elementów a(i), b(i) z podanych ciągów (A i B) zwraca iloczyn bitowy (a(i) AND b(i)) tych elementów.
+                   Dla sekwencji różnych długości, po skończeniu krótszej powinny być zwracane elementy zerowe.
+
+b)  LogicGateOR – wykonuje funkcje logicznej bramki OR na zadanych ciągach,
+                  dla elementów a(i), b(i) z podanych ciągów (A i B) zwraca sumę bitową (a(i) OR b(i)) tych elementów.
+                  Dla sekwencji różnych długości, po skończeniu krótszej powinny być zwracane elementy dłuższej.

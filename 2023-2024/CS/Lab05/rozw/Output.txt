@@ -1,0 +1,62 @@
+----------------------Stage 1-------------------------
+
+//// Creating objects of type Vector2
+Point(1, 0)
+Point(1, 0)
+//// Creating objects of type Circle and Triangle
+Position in Circle object: Point(1, 0)
+Circle ID 0: Position in Point(1, 0), Radius=1
+
+Position in Triangle object: Point(1, 0)
+Triangle ID 1: Position in Point(1, 0), Vertices in Point(0, 1), Point(1, 0), Point(1, 1)
+
+
+----------------------Stage 2-------------------------
+
+//// Creating tree of the objects
+Circle ID 0: Position in Point(1, 0), Radius=1
+        Triangle ID 1: Position in Point(1, 0), Vertices in Point(0, 1), Point(1, 0), Point(1, 1)
+        Triangle ID 2: Position in Point(3, 0), Vertices in Point(0, 1), Point(1, 0), Point(1, 1)
+                Circle ID 3: Position in Point(4, 0), Radius=4
+
+Circle max number of children: 2
+
+//// Extending child array capacity
+Circle ID 0: Position in Point(1, 0), Radius=1
+        Triangle ID 1: Position in Point(1, 0), Vertices in Point(0, 1), Point(1, 0), Point(1, 1)
+        Triangle ID 2: Position in Point(3, 0), Vertices in Point(0, 1), Point(1, 0), Point(1, 1)
+                Circle ID 3: Position in Point(4, 0), Radius=4
+        Circle ID 4: Position in Point(5, 0), Radius=5
+
+Circle max number of children: 4
+
+//// Moving tree
+Circle ID 0: Position in Point(2, 0), Radius=1
+        Triangle ID 1: Position in Point(1, 0), Vertices in Point(0, 1), Point(1, 0), Point(1, 1)
+        Triangle ID 2: Position in Point(3, 0), Vertices in Point(0, 1), Point(1, 0), Point(1, 1)
+                Circle ID 3: Position in Point(4, 0), Radius=4
+        Circle ID 4: Position in Point(5, 0), Radius=5
+
+----------------------Stage 3-------------------------
+
+//// Calculating global coordinates
+Circle ID 0: Position in Point(2, 0), Radius=1
+        Triangle ID 1: Position in Point(3, 0), Vertices in Point(0, 1), Point(1, 0), Point(1, 1)
+        Triangle ID 2: Position in Point(5, 0), Vertices in Point(0, 1), Point(1, 0), Point(1, 1)
+                Circle ID 3: Position in Point(9, 0), Radius=4
+        Circle ID 4: Position in Point(7, 0), Radius=5
+
+//// Creatng BoundingBox from pointS0 and pointS4
+Point(1, 0)
+Point(5, 0)
+BoundingBox: Minimum in Point(1, 0), Maximum in Point(5, 0)
+
+//// Calculating BoundingBox for objects triangle1 i circle4
+Triangle1 - BoundingBox: Minimum in Point(3, 0), Maximum in Point(4, 1)
+Circle4 - BoundingBox: Minimum in Point(2, -5), Maximum in Point(12, 5)
+//// Calculating BoundingBox for subtree
+Bounding box of the whole tree
+BoundingBox: Minimum in Point(1, -5), Maximum in Point(13, 5)
+
+Bounding box for subtree with root in triangle2
+BoundingBox: Minimum in Point(5, -4), Maximum in Point(13, 4)

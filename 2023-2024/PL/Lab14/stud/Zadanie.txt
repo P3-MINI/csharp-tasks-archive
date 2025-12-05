@@ -1,0 +1,27 @@
+Przed rozpoczęciem zadania należy przeczytać cały poniższy tekst!!!
+
+Celem zadania jest napisanie 5 zapytań (przy użyciu technologii LINQ) do prostej bazy danych dla sklepu internetowego.
+Zapytania można wykonać w dowolnej kolejności. Dokładne treści zadań, co należy zrobić zostały umieszczone w pliku Program.cs
+i tam też należy umieścić rozwiązanie wraz z wypisaniem go do konsoli.
+
+Zapytania MUSZĄ być zrealizowane przy użyciu technologii LINQ.
+NIE WOLNO przetwarzać kolekcji wchodzących w skład bazy danych "ręcznie" np. przy użyciu instrukcji for, foreach i podobnych.
+
+Zapytania 1-4 powinny być zrealizowane jako pojedyncze wyrażenia kwerendowe lub jako pojedyncze zapytanie łańcuchowe.
+Zadanie 5 można zrealizować jako kilka powiązanych wyrażeń lub zapytań (jako pojedyncze wyrażenia oczywiście też można).
+
+W pliku Database.cs znajdują się rekordy reprezentujące tabele w bazie danych (Customer, Product, Order, OrderProduct),
+natomiast w klasie Database znajdują się listy z danymi reprezentujące wspomniane wyżej tabele.
+
+Tabela Customers przechowuje listę wszystkich klientów zamawiających w sklepie, zawiera takie dane jak:
+ID klienta (CustomerId), imię (FirstName), nazwisko (LastName), adres (Address) oraz datę rejestracji w sklepie (RegistrationDate).
+
+Tabela Products przechowuje listę dostępnych produktów w sklepie, zawiera takie dane jak:
+ID produktu (ProductId), nazwę (Name) i cenę (Price).
+
+Tabela Orders przechowuje listę wszystkich zamówień jakie zostały wykonane w sklepie, zawiera takie dane jak:
+ID zamówienia (OrderId), ID klienta składającego zamówienie (CustomerId) i datę złożenia zamówienia (Date).
+
+Tabela OrderProducts przechowuje listę produktów wchodzących w skład zamówienia, zawiera takie dane jak:
+Id zamówienia do którego należy dany produkt (OrderId), Id zamówionego produktu (ProductId) oraz liczba sztuk produktu (Quantity).
+Jedno zamówienie może zawierać kilka produktów, w takim przypadku w tabeli OrderProducts istnieje kilka wierszy z ID danego zamówienia.

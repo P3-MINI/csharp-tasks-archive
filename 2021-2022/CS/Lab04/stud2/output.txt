@@ -1,0 +1,52 @@
+
+STAGE 1
+
+Basic test
+Car (1) { Car1 } has been created.
+Car Car1 traveled 13.5 km.
+Bus (2) { Bus1 } [ 0/48 ] has been created.
+[OK] Bus can not carry more then 48 passengers.
+[OK] Bus can carry 23 passengers.
+Bus Bus1 traveled 120.4 km with 23 passengers.
+Truck (3) { Truck1 } [ 0 of 2500 kg ] has been created.
+[OK] Truck can not transport more then 2500 kg.
+[OK] Truck can transport 1682.3 kg.
+Truck Truck1 traveled 203.8 km with load of 1682.3 kg.
+Car (4) { Car2 } has been created.
+
+Fleet:
+Car (1) { Car1 }
+Car (4) { Car2 }
+Bus (2) { Bus1 } [ 23/48 ]
+Truck (3) { Truck1 } [ 1682.3 of 2500 kg ]
+
+Fleet travel:
+Car Car1 traveled 342.4 km.
+Car Car2 traveled 342.4 km.
+Bus Bus1 traveled 342.4 km with 32 passengers.
+Truck Truck1 traveled 342.4 km with load of 1682.3 kg.
+
+STAGE 2
+
+Beeps: 
+Car Car1 beeps!
+Bus Bus1 beeps!
+Truck Truck1 beeps with loud trumpet!
+
+Vehicle beeps: 
+Vehicle Car1 honks!
+Bus Bus1 beeps!
+Truck Truck1 beeps with loud trumpet!
+
+STAGE 3
+
+New fleet order:
+Car (5) { New car 1 } has been created.
+New Car (5) { New car 1 } has beed added to fleet.
+Truck (6) { New truck 1 } [ 0 of 2500 kg ] has been created.
+New Truck (6) { New truck 1 } [ 0 of 2500 kg ] has beed added to fleet.
+Bus (7) { New bus 1 } [ 0/48 ] has been created.
+New Bus (7) { New bus 1 } [ 0/48 ] has beed added to fleet.
+Factory could not manufactured a motorcycle.
+Bus (8) { New bus 2 } [ 0/48 ] has been created.
+New Bus (8) { New bus 2 } [ 0/48 ] has beed added to fleet.

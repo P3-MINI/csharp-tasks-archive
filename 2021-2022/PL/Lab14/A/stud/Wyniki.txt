@@ -1,0 +1,78 @@
+1 222
+18 1103
+25 2096
+35 1193
+45 550
+50 496
+56 380
+--------------
+50 F  - 1919
+25 M  - 1919
+35 F  - 1919
+18 M  - 1919
+35 M  - 1919
+25 F  - 1919
+45 M  - 1919
+45 F  - 1919
+50 M  - 1919
+56 M  - 1919
+56 F  - 1919
+1 F  - 1921
+18 F  - 1921
+1 M  - 1921
+--------------
+Action 503
+Adventure 283
+Animation 105
+Children's 251
+Comedy 1200
+Crime 211
+Documentary 127
+Drama 1603
+Fantasy 68
+Film-Noir 44
+Horror 343
+Musical 114
+Mystery 106
+Romance 471
+Sci-Fi 276
+Thriller 492
+War 143
+Western 68
+--------------
+915 Sabrina 1954 Comedy|Romance
+7 Sabrina 1995 Comedy|Romance
+2848 Othello 1952 Drama
+26 Othello 1995 Drama
+73 Misérables, Les 1995 Drama|Musical
+1873 Misérables, Les 1998 Drama
+957 Scarlet Letter, The 1926 Drama
+191 Scarlet Letter, The 1995 Drama
+2398 Miracle on 34th Street 1947 Drama
+277 Miracle on 34th Street 1994 Drama
+2553 Village of the Damned 1960 Horror|Sci-Fi|Thriller
+332 Village of the Damned 1995 Horror|Sci-Fi
+2078 Jungle Book, The 1967 Animation|Children's|Comedy|Musical
+362 Jungle Book, The 1994 Adventure|Children's|Romance
+--------------
+Seven Samurai (The Magnificent Seven) (Shichinin no samurai) 4,560509554140127
+Shawshank Redemption, The 4,554557700942973
+Godfather, The 4,524966261808367
+Close Shave, A 4,52054794520548
+Usual Suspects, The 4,517106001121705
+Schindler's List 4,510416666666667
+Wrong Trousers, The 4,507936507936508
+Sunset Blvd. (a.k.a. Sunset Boulevard) 4,491489361702127
+Raiders of the Lost Ark 4,477724741447892
+Rear Window 4,476190476190476
+Paths of Glory 4,473913043478261
+Star Wars: Episode IV - A New Hope 4,453694416583082
+Third Man, The 4,452083333333333
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb 4,4498902706656915
+Wallace & Gromit: The Best of Aardman Animation 4,426940639269406
+To Kill a Mockingbird 4,425646551724138
+Double Indemnity 4,415607985480944
+Casablanca 4,412822049131217
+Sixth Sense, The 4,406262708418057
+Yojimbo 4,404651162790698
+--------------

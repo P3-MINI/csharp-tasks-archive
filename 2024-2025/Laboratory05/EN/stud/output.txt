@@ -1,0 +1,52 @@
+
+  -=== STAGE 01 ===-
+
+Key: 1, Value: Apple
+Updated Value: Banana
+
+  -=== STAGE 02 ===-
+
+ No code to test - only unit tests
+
+  -=== STAGE 02 ===-
+
+
+Adding values: 1,2,3.14
+Count: 3
+1
+2
+3.14
+Indexer should throw an exception: OK
+Indexer should throw an exception: OK
+
+Adding values: 13,21,2.71,36.5,sqrt(2)
+Count: 8
+Values: [1, 2, 3.14, 13, 21, 2.71, 36.5, 1.4142135623730951]
+
+IndexOf(13) = 3
+IndexOf(-1) = -1
+Contains(2.71) = True
+Contains(10) = False
+
+Removing 2
+Count: 7
+Values: [1, 3.14, 13, 21, 2.71, 36.5, 1.4142135623730951]
+
+Removing at 2
+Count: 6
+Values: [1, 3.14, 21, 2.71, 36.5, 1.4142135623730951]
+
+Clearing list
+Count: 0
+IndexOf(13) = -1
+Contains(21) = False
+
+  -=== STAGE 04 ===-
+
+Count: 3
+
+Found: apple - 5
+
+Found: cherry - 15
+
+Key 'grape' not found.

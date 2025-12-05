@@ -1,0 +1,44 @@
+Zadaniem jest przygotowanie klasy reprezentuj¹cej tablicê wyników trzymaj¹c¹ informacjê o turniejach skoków narciarskich.
+    Tabela wyników potrafi trzymaæ dane zarówno w pamiêci operacyjnej jak równie¿ zapisaæ je odpowiednio na dysku komputera.
+    W zale¿noœci od potrzeb mo¿e wyst¹piæ jeden lub drugi scenariusz. Szczegó³y w zadaniu.
+Klasy reprezentuj¹ce turniej i uczestników oraz ich pomocnicze sk³adowe zosta³y ju¿ przygotowane.
+Pamiêtaj, aby zmieniæ w³aœciwoœæ 'Copy to Output Directory' pliku Contests.bin na 'Copy always'.
+
+Skorzystaj z do³¹czonego projektu. Serializacja binarna wprowadza wiele ograniczeñ, miêdzy innymi to, ¿e nazwa projektu (assembly) oraz przestrzeñ nazw (namespace) musi zgadzaæ siê pomiêdzy serializacj¹ i deserializacj¹. Oczywiœcie jêzyk dostarcza mechanizmy mapowania klas pomiêdzy projektami, tak aby pliki binarne mog³y byæ (de)serializowane, lecz znacznie wykracza to poza zakres wyk³adu/laboratorium.
+
+Etap_1 (1.5 Pkt)
+    Stwórz klasê 'PathAlreadyExistsException' reprezentuj¹c¹ wyj¹tek zg³aszany w momencie kiedy plik lub folder na danej œcie¿ce ju¿ istnieje.
+
+    Klasa 'Scoreboard' powinna zawieraæ dwie listy przetrzymuj¹ce informacje odpowiednio o uczestnikach i turniejach.
+        Dodatkowo w³aœciwoœæ reprezentuj¹c¹ aktualn¹ œcie¿kê do folderu zapisu biblioteki.
+
+    Zaimplementuj konstruktor tworz¹cy pusty folder na dysku, na podstawie parametru string konstruktora.
+
+    Domyœlna wartoœæ parametru konstruktowa powinna byæ ustawiona na pusty napis (""), co oznaczaæ bêdzie tabelê wynikó stworzon¹ tylko w pamiêci operacyjnej.
+        Przy tworzeniu nowego katalogu pamiêtaj aby dodatkowo sprawdziæ czy parametr string nie jest pusty.
+
+    Zaimplementuj metodê Add, która zserializuje zawartoœæ podanego jako parametr konkursu do pliku xml oraz doda go do listy konkursów.
+        Jako nazwê pliku u¿yj wartoœci nazwy turnieju. Zg³oœ wyj¹tek jeœli plik o danej nazwie ju¿ istnieje.
+        Pamiêtaj o nadaniu w³aœciwoœciom klasy odpowiednich atrybutów.
+        Mo¿emy za³o¿yæ, ¿e dla turnieju nie serializujemy jego uczestników.
+
+    Zaimplementuj metodê Info wypisuj¹c¹ informacje w formie wszyscy uczestnicy wraz z ich nagrodami, nastêpnie wszystkie turnieje.
+
+Etap_2 (1.5 Pkt)
+    Zaimplementuj metodê Update, przyjmuj¹c¹ turniej, który chcemy zaktualizowaæ.
+        Podmieñ odpowiedni plik, tak aby zawiera³ zaktualiowan¹ zawartoœæ.
+        Zak³adamy, ¿e nazwa turnieju (nazwa pliku) nie mo¿e ulec zmianie.
+
+    Zaimplementuj metodê Delete, przyjmuj¹c¹ nazwê turnieju, która usuwa plik o odpowiedniej nazwie.
+        Zg³asza wyj¹tek jeœli plik nie istnieje oraz true gdy plik uwa³o siê usun¹æ.
+
+    Dla klasy 'Scoreboard' zaimplementuj interfejs IEnumerable.
+        Metoda powinna iteruj¹c siê po plikach z katalogu w którym zapisana jest tabela wyników, zdeserializowaæ zawartoœæ ka¿dego z plików i u¿ywaj¹c mechanizmu yield return zwróciæ dany turniej.
+
+Etap_3 (1.0 Pkt)
+    Zaimplementuj statyczn¹ metodê Create(string sourceFileContests), która utworzy tabelê wyników tylko w pamiêci operacyjnej (wykorzystanie konstruktora z wartoœci¹ domyœln¹) na podstawie pliku binarnego zlokalizowanego w sourceFileContests.
+        Jako utworzenie tabeli wyników uznajemy dodanie wszystkich turniejów i ich uczestników to odpowiednich list z klasy. Zwróæ stworzon¹ tablicê wyników.
+
+Etap_4 (1.0 Pkt)
+    Zaimplementuj metodê Save(string directoryPath), która pod wskazan¹ œcie¿k¹ zapisze w formacie binarnym wszystkich uczestników znajdujace siê w tabeli wyników.
+        Pamiêtaj o dodaniu odpowiednich atrybutów do klas.

@@ -1,0 +1,110 @@
+------------------ Etap1 ------------------
+Exception Expected: OK!
+
+Turniej 4 Skoczni took place on 15.12.2016 00:00:00
+Sapporo Contest took place on 17.02.2017 00:00:00
+Villingen Contest took place on 28.01.2017 00:00:00
+------------------ Etap2 ------------------
+
+Turniej 4 Skoczni took place on 15.12.2016 00:00:00
+Sapporo Contest took place on 17.02.2017 00:00:00
+Villingen Contest took place on 29.11.2019 00:00:00
+
+Sapporo Contest took place on 17.02.2017 00:00:00
+Turniej 4 Skoczni took place on 15.12.2016 00:00:00
+------------------ Etap3 ------------------
+Mary Langosh
+        2 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+        3 at Conn-Harris took place on 08.09.1937 00:00:00
+        1 at Gutmann, Kris and McCullough took place on 28.07.1937 00:00:00
+        3 at Bartell, Boyle and Hand took place on 23.12.1960 00:00:00
+Orville Rippin
+        2 at Bartell, Boyle and Hand took place on 23.12.1960 00:00:00
+        3 at Anderson-Koss took place on 24.07.1939 00:00:00
+        3 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+Jacynthe Marks
+        1 at Conn-Harris took place on 08.09.1937 00:00:00
+        3 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+Sincere Zemlak
+        1 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+        3 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+        1 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+Rubye Lubowitz
+        2 at Conn-Harris took place on 08.09.1937 00:00:00
+        1 at Reichert, Medhurst and Schuppe took place on 28.11.2014 00:00:00
+        3 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+Georgiana Murazik
+        3 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+        2 at Rippin LLC took place on 18.02.1944 00:00:00
+        2 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+Paul Heathcote
+        3 at Reichert, Medhurst and Schuppe took place on 28.11.2014 00:00:00
+        1 at Shanahan Inc and Sons took place on 09.11.1989 00:00:00
+        2 at Gutmann, Kris and McCullough took place on 28.07.1937 00:00:00
+Ruben Bosco
+        3 at Anderson-Koss took place on 24.07.1939 00:00:00
+        2 at Jenkins-Boyle took place on 04.06.1964 00:00:00
+        3 at Reichert, Medhurst and Schuppe took place on 28.11.2014 00:00:00
+Catherine Volkman
+        3 at Reichert, Medhurst and Schuppe took place on 28.11.2014 00:00:00
+        2 at Jenkins-Boyle took place on 04.06.1964 00:00:00
+        1 at Anderson-Koss took place on 24.07.1939 00:00:00
+Linda Kohler
+        3 at Romaguera Inc and Sons took place on 21.04.1925 00:00:00
+        1 at Anderson-Koss took place on 24.07.1939 00:00:00
+        1 at Reichert, Medhurst and Schuppe took place on 28.11.2014 00:00:00
+Margarette Romaguera
+        1 at Shields, Auer and Boyle took place on 21.12.1951 00:00:00
+        1 at Reichert, Medhurst and Schuppe took place on 28.11.2014 00:00:00
+        2 at Anderson-Koss took place on 24.07.1939 00:00:00
+Trey Turcotte
+        3 at Jenkins-Boyle took place on 04.06.1964 00:00:00
+        2 at Anderson-Koss took place on 24.07.1939 00:00:00
+Mose Kirlin
+        3 at Shields, Auer and Boyle took place on 21.12.1951 00:00:00
+        3 at Anderson-Koss took place on 24.07.1939 00:00:00
+        1 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+Rebekah Brown
+        1 at Anderson-Koss took place on 24.07.1939 00:00:00
+        1 at Anderson-Koss took place on 24.07.1939 00:00:00
+Blair Barton
+        3 at Romaguera Inc and Sons took place on 21.04.1925 00:00:00
+        1 at Anderson-Koss took place on 24.07.1939 00:00:00
+        1 at Jenkins-Boyle took place on 04.06.1964 00:00:00
+Arnulfo Tremblay
+        3 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+        3 at Romaguera Inc and Sons took place on 21.04.1925 00:00:00
+        1 at Hilll-Ondricka took place on 24.07.1995 00:00:00
+Dayana O'Keefe
+        1 at Hilll-Ondricka took place on 24.07.1995 00:00:00
+        1 at Conn-Harris took place on 08.09.1937 00:00:00
+Joel Hickle
+        3 at Reichert, Medhurst and Schuppe took place on 28.11.2014 00:00:00
+        3 at Hilll-Ondricka took place on 24.07.1995 00:00:00
+        3 at Shields, Auer and Boyle took place on 21.12.1951 00:00:00
+Wallace Hansen
+        2 at Hilll-Ondricka took place on 24.07.1995 00:00:00
+        1 at Romaguera Inc and Sons took place on 21.04.1925 00:00:00
+        3 at Witting Inc and Sons took place on 05.06.1924 00:00:00
+Louie Smitham
+        3 at Anderson-Koss took place on 24.07.1939 00:00:00
+        2 at Jenkins-Boyle took place on 04.06.1964 00:00:00
+        1 at Romaguera Inc and Sons took place on 21.04.1925 00:00:00
+        3 at Romaguera Inc and Sons took place on 21.04.1925 00:00:00
+Dean Senger
+        1 at Shields, Auer and Boyle took place on 21.12.1951 00:00:00
+        2 at Romaguera Inc and Sons took place on 21.04.1925 00:00:00
+        3 at Rippin LLC took place on 18.02.1944 00:00:00
+        1 at Romaguera Inc and Sons took place on 21.04.1925 00:00:00
+Lauryn Batz
+        2 at Romaguera Inc and Sons took place on 21.04.1925 00:00:00
+        2 at Shields, Auer and Boyle took place on 21.12.1951 00:00:00
+        2 at Shields, Auer and Boyle took place on 21.12.1951 00:00:00
+
+Witting Inc and Sons took place on 05.06.1924 00:00:00
+Reichert, Medhurst and Schuppe took place on 28.11.2014 00:00:00
+Anderson-Koss took place on 24.07.1939 00:00:00
+Hilll-Ondricka took place on 24.07.1995 00:00:00
+Romaguera Inc and Sons took place on 21.04.1925 00:00:00
+------------------ Etap4 ------------------
+Binary File Found: OK!

@@ -1,0 +1,70 @@
+﻿
+Wydział Komunikacji pewnej ważnej instytucji potrzebuje systemu do 
+zarządzania bazą zarejestrowanych samochodów. Pomóż im napisać prototyp programu, 
+który będzie zarządzał plikami reprezentującymi samochody.
+
+Można założyć, że zawsze rejestracja samochodu będzie postaci 
+litery identyfikujące miasto/powiat + spacja + pozostałe litery lub cyfry rejestracji.
+
+Etap I (1 pkt.)
+W klasie WydzialKomunikacji dodaj konstruktor bezparametrowy, w którym 
+w dowolnej (wybranej przez Ciebie) lokalizacji zostanie utworzony katalog 
+o nazwie takiej jak nazwa Wydziału (pole name). Jeśli katalog o takiej nazwie 
+już istnieje należy go usunąć (łącznie z zawartością).
+
+W klasie WydzialKomunikacji dodaj metodę void SerializujSamochod 
+o parametrach (Samochod s, string path), która dokona serializacji typu soap 
+obiektu s do pliku o lokalizacji i nazwie podanych w path.
+
+W klasie WydzialKomunikacji dodaj metodę DeserializujSamochod, która przyjmie 
+jeden parametr typu string - ścieżkę pliku, z którego należy 
+zdeserializować Samochod i go zwrócić.
+
+Etap II (1 pkt.)
+W klasie Samochod dodaj odpowiednie atrybuty i metodę, aby: pole miasto 
+nie było zapisywane do pliku podczas serializacji, lecz było wyliczane 
+automatycznie po deserializacji samochodu na podstawie rejestracji samochodu 
+oraz dołączonego do zadania pliku rejestracje.txt.
+
+Etap III (1 pkt.)
+W klasie WydzialKomunikacji stwórz metodę void DodajSamochod z parametrem typu Samochód, 
+która zapisze plik z zserializowanym samochodem według następującego schematu:
+każda z początkowych (przed spacją) liter rejestracji samochodu to oddzielny zagnieżdżony 
+katalog, w ostatnim z nich ma zostać uwtorzony plik o nazwie "{rejestracja_samochodu}.soap"
+Przykład: samochód o rejestracji WPI 07BR powinien zostać zapisany do pliku 
+"Wydzial Komunikacji\W\P\I\WPI 07BR.soap"
+dla samochodu o rejestracji LU 16120 poprawną ścieżką pliku będzie 
+"Wydzial Komunikacji\L\U\LU 16120.soap"
+Jeśli samochód o podanej rejestracji już istnieje należy wypisać komunikat:
+"Samochód o podanej rejestracji istnieje już w bazie"
+
+
+Etap IV (1 pkt.)
+W klasie WydzialKomunikacji stwórz metodę void UsunSamochod, która przyjmie 
+rejestrację samochodu (string), który ma zostać usunięty. Metoda sprawdza 
+czy samochód o podanej rejestracji został wcześniej zapisany (w strukturze 
+katalogów jak w etapie III). Jeśli samochód nie istnieje wypisywany jest komunikat 
+"Samochód o rejestracji {rejestracja} nie istnieje w bazie". 
+W przeciwnym przypadku plik jest usuwany i wypisywany komunikat:
+"Usunięto samochód o rejestracji {rejestracja}"
+Uwaga: jeśli usunięcie samochodu spowoduje, że katalog, w którym się on znajdował 
+będzie pusty, to również ten katalog powinien zostać usunięty i jeśli usunięcie 
+tego katalogu spowoduje, że katalog powyżej będzie pusty, to również powinien on 
+zostać usunięty itp. Innymi słowy: żaden z katalogów po usunięciu samochodu nie może być pusty.
+
+Etap V (1 pkt.)
+W klasie WydzialKomunikacji dodaj metodę IleDoPrzegladu, która zwróci liczbę 
+samochodów w bazie, które mają nieważny przegląd okresowy. Dla uproszczenia 
+przyjmijmy, że przegląd jest nieważny jeżeli:
+od daty pierwszej rejestracji samochodu minęło więcej niż 5 lat (można przyjąć 5*365 dni) 
+oraz od ostatniego przeglądu minął ponad rok (ponad 365 dni)
+lub
+od daty pierwszej rejestracji samochodu minęło więcej niż 3 lata (można przyjąć 3*365 dni) 
+oraz od ostatniego przeglądu minąły ponad 2 lata (ponad 2*365 dni)
+
+(W rzeczywistości według przepisów:
+Kolejne badania (przegląd) techniczne są dokonywane:
+- do 3 lat od pierwszej rejestracji
+- następnie w ciągu 2 lat od pierwszego badania
+- corocznie po upływie ww. okresu.)
+

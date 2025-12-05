@@ -1,0 +1,77 @@
+
+Uwaga ogólna: Każdy z etapów wymaga
+- zaimplementowania odpowiedniej funkcjonalności w pliku Functions.cs
+- odpowiedniego zmodyfikowania funkcji Main w pliku Lab09Main.cs
+
+Uwaga: Wszystkie klasy należy definiować w przestrzeni nazw Lab09.
+
+Etap 1 (1.0 pkt)
+Uwaga: Wszystkie funkcje z tego etapu zwracają obiekt typu Func<double,double> czyli jednoparametrową funkcję
+       o parametrze typu double i wyniku typu double.
+
+W pliku Functions.cs zdefiniować statyczną klasę Functions a w niej następujące metody statyczne
+
+a) Metodę Constant o parametrze typu double zwracającą funkcję stałą, o zwracanej wartości równej parametrowi funkcji Const.
+
+b) Metodę Identity zwracającą funkcję identycznościową.
+
+c) Metodę Polynomial przyjmującą dowolną liczbę parametrów typu double.
+   Funkcja zwraca wielomian o współczynnikach określonych przez kolejne parametry funkcji Polynomial
+   (pierwszy parametr to współczynnik przy najwyższej potędze, ostatni to wyraz wolny,
+   stopień wielomianu wynika z liczby parametrów funkcji Polynomial).
+   Metoda Polynomial wywołana bez parametrów oznacza wielomian stopnia 0 o wyrazie wolnym 0.
+   Uwaga: najlepiej zastosować schemat Hornera, ale dozwolony jest inny w miarę wydajny sposób obliczania wartości wielomianu
+          (czyli korzystanie z metody Math.Pow jest NIEDOZWOLONE, ponieważ jest to skrajnie niewydajne).
+
+Etap 2 (2.0 pkt)
+Uwaga: Wszystkie funkcje z tego etapu zwracają obiekt typu Func<double,double> czyli jednoparametrową funkcję
+       o parametrze typu double i wyniku typu double.
+
+W pliku Functions.cs zdefiniować statyczną klasę Transformations a w niej następujące metody statyczne
+
+a) Metodę Derivative o pierwszym parametrze f typu Func<double,double>, a drugim parametrze h typu double.
+   Parametr h ma wartość domyślną 0.000001.
+   Metoda zwraca funkcję będącą pochodną funkcji odpowiadającej parametrowi f.
+   Pochodną obliczamy ze wzoru:  pochodna(x) = (f(x+h)-f(x-h))/2h
+
+b) Metody Max i Min przyjmujące dowolną liczbę (ale co najmniej jeden) parametrów typu Func<double,double>
+   i zwracające funkcję będącą odpowiednio maksimum lub minimum ze wszystkich funkcji przekazanych jako parametry.
+
+c) Metodę Compose przyjmujące dowolną liczbę (ale co najmniej jeden) parametrów typu Func<double,double>
+   i zwracające funkcję będącą złożeniem wszystkich funkcji przekazanych jako parametry,
+   tzn. np. dla trzech parametrów f1, f2, f3 wynikowa funkcja f(x) = f3(f2(f1(x)))
+
+Etap 3 (1.5 pkt)
+
+W pliku Functions.cs zdefiniować statyczną klasę NumericalMethods a w niej następujące metody statyczne
+
+a) Metodę Bisection przyjmująca 4 parametry
+   - parametr f typu Func<double,double> - badana funkcja
+   - parametry a i b typu double - granice przedziału
+   - parametr eps typu double z wartością domyślną 0.000001 (dokładność obliczeń)
+   zwracającą wynik typu double
+
+   Metoda zwraca miejsce zerowe funkcji f na przedziale <a,b> (jeśli metoda bisekcji nie jest w stanie
+   wyznaczyć miejsca zerowego zwraca double.NaN).
+
+b) Metodę Integral przyjmująca 4 parametry
+   - parametr f typu Func<double,double> - całkowana funkcja
+   - parametry a i b typu double - granice całkowania
+   - parametr n typu int z wartością domyślną 100 - liczba podprzedzialów
+   zwracającą wynik typu double
+   Metoda zwraca wartość całki oznaczonej funkcji f na przedziale <a,b> obliczoną metodą trapezów.
+
+Etap 4 (0.5 pkt)
+
+W pliku Functions.cs zdefiniować klasę Iterations implementującą interface IEnumerable<double>
+Klasa ta ma nastepujące składowe publiczne
+
+a) Konstruktor z parametrami
+   - parametr f typu Func<double,double> - iterowana funkcja
+   - parametr init typu double - wartość początkowa
+   - parametr n typu int - liczba iteracji
+
+b) Metoda wymagana przez interfejs
+   - w pierwszej iteracji zwracana jest wartość początkowa
+   - w kolejnych iteracjach zwracane są wartości x = f(wartość z poprzedniej iteracji) 
+   - metoda wykonuje n iteracji po czy kończy działanie

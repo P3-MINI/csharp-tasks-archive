@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<ArrayOfEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Event>
+    <Id>34e695fe-cbf0-42f5-b236-30208c9661c0</Id>
+    <Name>AppEnabled</Name>
+    <EventOccurredAt>2020-01-07T18:01:00</EventOccurredAt>
+    <Owner>Henryk Biegała</Owner>
+  </Event>
+  <Event>
+    <Id>867656f8-de83-424b-a5b0-fc1ee9a47090</Id>
+    <Name>MenuViewSelected</Name>
+    <EventOccurredAt>2020-01-07T18:04:00</EventOccurredAt>
+    <Owner>Henryk Biegała</Owner>
+  </Event>
+  <Event>
+    <Id>ab84f061-0777-4618-8cce-635548e09daa</Id>
+    <Name>AdvertisementClicked</Name>
+    <EventOccurredAt>2020-01-07T18:04:00</EventOccurredAt>
+    <Owner>Henryk Biegała</Owner>
+    <Details>AdvertisementId=12325</Details>
+  </Event>
+  <Event>
+    <Id>35987f3e-b67f-426c-8150-8336bddcf5a7</Id>
+    <Name>ShopViewSelected</Name>
+    <EventOccurredAt>2020-01-07T18:44:00</EventOccurredAt>
+    <Owner>Henryk Biegała</Owner>
+  </Event>
+  <Event>
+    <Id>2cb24488-89da-427b-bcae-57b99ed89feb</Id>
+    <Name>ItemOrdered</Name>
+    <EventOccurredAt>2020-01-07T19:00:00</EventOccurredAt>
+    <Owner>Henryk Biegała</Owner>
+    <Details>ItemId=123212</Details>
+  </Event>
+  <Event>
+    <Id>dc6368b2-6dec-4799-bf61-c2fee9e39ddd</Id>
+    <Name>DeviceEnabled</Name>
+    <EventOccurredAt>2020-01-07T18:01:00</EventOccurredAt>
+    <Owner>Iwona Kiwała</Owner>
+  </Event>
+  <Event>
+    <Id>4e731947-2db5-4b8f-a321-11d2737c6fc1</Id>
+    <Name>ErrorOccurred</Name>
+    <EventOccurredAt>2020-01-07T18:02:00</EventOccurredAt>
+    <Owner>Iwona Kiwała</Owner>
+  </Event>
+  <Event>
+    <Id>1f7ed4a9-fd64-4aef-80f5-2c29888bbba4</Id>
+    <Name>DeviceRebooted</Name>
+    <EventOccurredAt>2020-01-07T18:03:00</EventOccurredAt>
+    <Owner>Iwona Kiwała</Owner>
+  </Event>
+  <Event>
+    <Id>7df35b20-877a-47d5-be09-865dbaf8c815</Id>
+    <Name>ContactViewSelected</Name>
+    <EventOccurredAt>2020-01-07T18:04:00</EventOccurredAt>
+    <Owner>Iwona Kiwała</Owner>
+  </Event>
+  <Event>
+    <Id>ad121fea-9703-4a88-bd0e-21df881334b9</Id>
+    <Name>ContactMessageSent</Name>
+    <EventOccurredAt>2020-01-07T18:10:00</EventOccurredAt>
+    <Owner>Iwona Kiwała</Owner>
+    <Details>ContactMessageId=123</Details>
+  </Event>
+  <Event>
+    <Id>5b541435-5363-4012-8688-701f3fe88ee3</Id>
+    <Name>ProgramChanged</Name>
+    <EventOccurredAt>2020-01-07T18:54:00</EventOccurredAt>
+    <Owner>Iwona Kiwała</Owner>
+    <Details>ProgramId=P1</Details>
+  </Event>
+  <Event>
+    <Id>0a11f68e-8c1c-4505-8cdd-88ed58aa11ca</Id>
+    <Name>DeviceDisabled</Name>
+    <EventOccurredAt>2020-01-08T01:00:00</EventOccurredAt>
+    <Owner>Iwona Kiwała</Owner>
+  </Event>
+  <Event>
+    <Id>c956d165-6ace-4df2-864e-5ea1471d6553</Id>
+    <Name>DeviceEnabled</Name>
+    <EventOccurredAt>2020-01-07T12:01:00</EventOccurredAt>
+    <Owner>Janusz Bąk</Owner>
+  </Event>
+  <Event>
+    <Id>7c1819c0-f9db-4834-b2c0-a98bedb93118</Id>
+    <Name>ProgramSet</Name>
+    <EventOccurredAt>2020-01-07T12:04:00</EventOccurredAt>
+    <Owner>Janusz Bąk</Owner>
+    <Details>ProgramId=P1</Details>
+  </Event>
+  <Event>
+    <Id>2df3dafa-30c9-4fb7-a82f-bcd00a93fef3</Id>
+    <Name>ProgramChanged</Name>
+    <EventOccurredAt>2020-01-07T12:04:00</EventOccurredAt>
+    <Owner>Janusz Bąk</Owner>
+    <Details>ProgramId=P2</Details>
+  </Event>
+  <Event>
+    <Id>d3a11a3f-ff07-4e49-b980-2f62e5dc6c17</Id>
+    <Name>ProgramChanged</Name>
+    <EventOccurredAt>2020-01-07T12:44:00</EventOccurredAt>
+    <Owner>Janusz Bąk</Owner>
+    <Details>ProgramId=P-TV</Details>
+  </Event>
+  <Event>
+    <Id>fe8d9c1b-e017-4308-bfe5-336169d4d854</Id>
+    <Name>DeviceDisabled</Name>
+    <EventOccurredAt>2020-01-07T13:00:00</EventOccurredAt>
+    <Owner>Janusz Bąk</Owner>
+    <Details>ProgramId=P-TV</Details>
+  </Event>
+</ArrayOfEvent>

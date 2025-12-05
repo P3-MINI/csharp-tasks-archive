@@ -1,0 +1,170 @@
+/************** Etap 1 (1.0p) **************/
+0  Jan       Hoerl             Austria      0
+1  Yukiya    Sato              Japan        0
+2  Karl      Geiger            Germany      0
+3  Ryoyu     Kobayashi         Japan        0
+4  Marius    Lindvik           Norway       0
+5  Halvor    Granerud          Norway       0
+6  Stefan    Kraft             Austria      0
+7  Markus    Eisenbichler      Germany      0
+8  Anze      Lanisek           Slovenia     0
+9  Timi      Zajc              Slovenia     0
+10 Piotr     Zyla              Poland       0
+11 Kamil     Stoch             Poland       0
+
+Competition_0:
+ * 1.    0     134.0m
+ * 1.    1     126.5m
+ * 1.    2     120.5m
+ * 1.    3     139.0m
+ * 1.    4     128.0m
+ * 1.    5     138.5m
+ * 1.    6     137.0m
+ * 1.    7     134.0m
+ * 1.    8     128.0m
+ * 1.    9     132.0m
+ * 1.   10     132.5m
+ * 1.   11     139.0m
+Competition_1:
+ * 1.    0     125.5m
+ * 1.    1     131.5m
+ * 1.    2     129.0m
+ * 1.    3     130.5m
+ * 1.    4     134.0m
+ * 1.    5     129.5m
+ * 1.    6     136.0m
+ * 1.    7     137.5m
+ * 1.    8     134.5m
+ * 1.    9     132.0m
+ * 1.   10     132.0m
+ * 1.   11     123.5m
+Competition_2:
+ * 1.    0     123.5m
+ * 1.    1     125.0m
+ * 1.    2     122.5m
+ * 1.    3     137.5m
+ * 1.    4     136.5m
+ * 1.    5     132.5m
+ * 1.    6     134.0m
+ * 1.    7     122.0m
+ * 1.    8     131.5m
+ * 1.    9     124.5m
+ * 1.   10     120.5m
+ * 1.   11     137.0m
+Competition_3:
+ * 1.    0     130.5m
+ * 1.    1     134.5m
+ * 1.    2     132.5m
+ * 1.    3     136.0m
+ * 1.    4     134.0m
+ * 1.    5     122.0m
+ * 1.    6     129.0m
+ * 1.    7     135.0m
+ * 1.    8     129.5m
+ * 1.    9     126.0m
+ * 1.   10     131.5m
+ * 1.   11     135.0m
+Competition_4:
+ * 1.    0     133.0m
+ * 1.    1     131.5m
+ * 1.    2     136.5m
+ * 1.    3     129.5m
+ * 1.    4     130.0m
+ * 1.    5     133.5m
+ * 1.    6     133.5m
+ * 1.    7     132.5m
+ * 1.    8     125.5m
+ * 1.    9     139.5m
+ * 1.   10     134.0m
+ * 1.   11     136.5m
+/************** Etap 2 (1.5p) **************/
+Competition_0:
+ * 1.    3     139.0m
+ * 1.   11     139.0m
+ * 2.    5     138.5m
+ * 3.    6     137.0m
+ * 4.    0     134.0m
+ * 4.    7     134.0m
+ * 5.   10     132.5m
+ * 6.    9     132.0m
+ * 7.    4     128.0m
+ * 7.    8     128.0m
+ * 8.    1     126.5m
+ * 9.    2     120.5m
+Competition_1:
+ * 1.    7     137.5m
+ * 2.    6     136.0m
+ * 3.    8     134.5m
+ * 4.    4     134.0m
+ * 5.    9     132.0m
+ * 5.   10     132.0m
+ * 6.    1     131.5m
+ * 7.    3     130.5m
+ * 8.    5     129.5m
+ * 9.    2     129.0m
+ * 10.    0     125.5m
+ * 11.   11     123.5m
+Competition_2:
+ * 1.    3     137.5m
+ * 2.   11     137.0m
+ * 3.    4     136.5m
+ * 4.    6     134.0m
+ * 5.    5     132.5m
+ * 6.    8     131.5m
+ * 7.    1     125.0m
+ * 8.    9     124.5m
+ * 9.    0     123.5m
+ * 10.    2     122.5m
+ * 11.    7     122.0m
+ * 12.   10     120.5m
+Competition_3:
+ * 1.    3     136.0m
+ * 2.    7     135.0m
+ * 2.   11     135.0m
+ * 3.    1     134.5m
+ * 4.    4     134.0m
+ * 5.    2     132.5m
+ * 6.   10     131.5m
+ * 7.    0     130.5m
+ * 8.    8     129.5m
+ * 9.    6     129.0m
+ * 10.    9     126.0m
+ * 11.    5     122.0m
+Competition_4:
+ * 1.    9     139.5m
+ * 2.    2     136.5m
+ * 2.   11     136.5m
+ * 3.   10     134.0m
+ * 4.    5     133.5m
+ * 4.    6     133.5m
+ * 5.    0     133.0m
+ * 6.    7     132.5m
+ * 7.    1     131.5m
+ * 8.    4     130.0m
+ * 9.    3     129.5m
+ * 10.    8     125.5m
+/************** Etap 3 (1.0p) **************/
+0  Jan       Hoerl             Austria    186
+1  Yukiya    Sato              Japan      204
+2  Karl      Geiger            Germany    209
+3  Ryoyu     Kobayashi         Japan      365
+4  Marius    Lindvik           Norway     228
+5  Halvor    Granerud          Norway     231
+6  Stefan    Kraft             Austria    269
+7  Markus    Eisenbichler      Germany    294
+8  Anze      Lanisek           Slovenia   194
+9  Timi      Zajc              Slovenia   243
+10 Piotr     Zyla              Poland     212
+11 Kamil     Stoch             Poland     364
+/************** Etap 3 (1.0p) **************/
+3  Ryoyu     Kobayashi         Japan      365
+7  Markus    Eisenbichler      Germany    294
+9  Timi      Zajc              Slovenia   243
+11 Kamil     Stoch             Poland     364
+/************** Etap 3 (0.5p) **************/
+Austria
+Germany
+Japan
+Norway
+Poland
+Slovenia

@@ -1,0 +1,32 @@
+Stage 1. (2 points)
+
+Create generic interface IFormula with two methods: Calculate, which returns double and takes double parameter x, and PrintFormula, which takes no parameters and returns string.
+Create two classes that implement IFormula interface:
+
+QuadraticFormula should have public properties that correspond to A, B and C (Ax^2+Bx+C), alongside with constructor that takes those parameters and sets them.
+CubicFormula should have public properties that correspond to A, B and C, D (Ax^3+Bx^2+Cx+D), alongside with constructor that takes those parameters and sets them.
+
+Both formulas should have method that will calculate derivative of the function in point x (CalculateDerivative).
+
+Both classes should implement the methods from interface & do it correctly. 
+
+Stage 2. (2 points)
+
+Create an abstract class Generator that implements interface IEnumerable. The constructor should take as the input an object of interface IFormula and store it within readonly property (without set option).
+Property of name Formula should return whatever PrintFormula method returnes.
+
+Create derivate classes of class Generator - FibonacciGenerator and WeirdFibonacciGenerator.
+
+Implementation of GetEnumerator for those classes should use yield returns, and should use the Calculate method from the formula provided with the constructor on the subsequent fibonacci & lucas number.
+
+WeirdFibonacciGenerator numbers are described by the following function:
+WF(0) = 1
+WF(1) = 2
+WF(2) = 3
+WF(n) = 2*WF(n-3)+WF(n-2)+WF(n-1) for n >= 3
+
+Stage 3. (1 points)
+
+Implement default methods of IFormula interface. Create DefaultFormula, that uses those default methods. 
+
+Add default parameter of formula to all derivative classes of Generator to be null (make necessary changes), and set it in constructor to be an instance of Default Formula if needed.

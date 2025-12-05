@@ -1,0 +1,77 @@
+ --==== Zadanie 1 (0.5 pkt) ====--
+22     Amanda    Beltran
+ 6       Mark    Francis
+ 4   Danielle  Jefferson
+ 8    Richard    Morales
+11      Scott   Townsend
+
+ --==== Zadanie 2 (0.5 pkt) ====--
+    Lawson    William 1096.0
+    Wilson    Rebecca 1092.0
+    Ashley   Nicholas 1073.0
+   Hickman  Elizabeth 1033.0
+     Perez     Regina  987.0
+   Francis       Mark  979.0
+    Murphy    Vanessa  938.0
+     Nunez    Allison  936.0
+  Townsend      Scott  912.0
+   Beltran  Catherine  837.0
+   Acevedo       Tina  831.0
+   Sanchez     Daniel  823.0
+      Mann   Nicholas  821.0
+  Peterson      Sarah  712.0
+   Morales    Richard  707.0
+  Williams      Karen  702.0
+     Adams     Robert  699.0
+    Snyder      James  697.0
+     Clark    Michael  694.0
+ Schroeder      Stacy  656.0
+   Manning      Roger  645.0
+     Greer       Brad  629.0
+   Hopkins        Ray  522.0
+
+ --==== Zadanie 3 (1.0 pkt) ====--
+  1 09/01/2023 00:00:00  260.9
+ 28 09/01/2023 00:00:00  727.4
+  3 31/01/2023 00:00:00  640.5
+ 14 13/02/2023 00:00:00  604.7
+ 19 13/02/2023 00:00:00  161.8
+ 29 17/02/2023 00:00:00  326.7
+ 24 24/02/2023 00:00:00   91.5
+ 20 17/03/2023 00:00:00  522.0
+ 18 18/03/2023 00:00:00  345.1
+ 25 09/04/2023 00:00:00  552.6
+
+ --==== Zadanie 4 (1.0 pkt) ====--
+          Jeans  33
+         Sarong  30
+          Pants  29
+           Polo  24
+      Moccasins  22
+
+ --==== Zadanie 5 (2.0 pkt) ====--
+      Tina Acevedo   : 17    3421.71     201.28
+    Robert Adams     :  6    1719.32     286.55
+  Nicholas Ashley    : 23    4012.79     174.47
+ Catherine Beltran   : 25    3965.43     158.62
+   Michael Clark     :  9    1499.76     166.64
+      Kent Gonzalez  : 14    1203.00      85.93
+      Brad Greer     : 12    2802.93     233.58
+      Lisa Hayes     :  5    1426.53     285.31
+ Elizabeth Hickman   :  7    1344.13     192.02
+       Ray Hopkins   : 11     868.70      78.97
+   Herbert Kelly     : 12    1926.30     160.53
+   William Lawson    : 21    3320.36     158.11
+  Nicholas Mann      :  8     651.57      81.45
+     Roger Manning   :  7     707.65     101.09
+    Justin Mitchell  : 20    1582.00      79.10
+   Vanessa Murphy    :  1     164.60     164.60
+     Billy Nichols   :  4     810.56     202.64
+   Allison Nunez     : 22    3487.82     158.54
+    Regina Perez     : 37    5714.97     154.46
+     Sarah Peterson  :  2     495.96     247.98
+    Daniel Sanchez   :  9    2294.22     254.91
+     Stacy Schroeder :  1      84.36      84.36
+     James Snyder    : 10    1646.08     164.61
+     Karen Williams  : 21    3496.39     166.49
+   Rebecca Wilson    :  1      66.52      66.52

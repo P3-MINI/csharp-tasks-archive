@@ -1,0 +1,123 @@
+ === SATGE 1 ===
+        Count: 0/5
+        Is empty: True
+        Is full: False
+        Values:
+
+OK. Puts 1
+OK. Gets 1
+OK. Exception has been thrown! Empty buffer
+OK. Puts 2
+OK. Puts 3
+OK. Puts 4
+OK. Puts 5
+OK. Gets 2
+OK. Puts 6
+OK. Gets 3
+OK. Puts 3
+OK. Puts 4
+Buffer reset
+        Count: 0/5
+        Is empty: True
+        Is full: False
+        Values:
+
+OK. Exception has been thrown! Empty buffer
+
+ === SATGE 2 ===
+OK. Puts 2
+OK. Puts 3
+OK. Puts 4
+OK. Puts 5
+OK. Puts 6
+OK. Exception has been thrown! Full buffer
+OK. Exception has been thrown! Full buffer
+OK. Buffer has correct values
+OK. Gets 2
+OK. Puts 100
+OK. Buffer has correct values
+
+Values in buffer lower than 5:
+3, 4,
+Should be:
+3, 4
+
+ === SATGE 3 ===
+CircularBuffer1
+        Count: 5/5
+        Is empty: False
+        Is full: True
+        Values: 3, 4, 5, 6, 100,
+
+Cloning...
+CircularBuffer1
+        Count: 5/5
+        Is empty: False
+        Is full: True
+        Values: 3, 4, 5, 6, 100,
+
+OK. Buffer has correct values
+CircularBuffer2
+        Count: 5/5
+        Is empty: False
+        Is full: True
+        Values: 3, 4, 5, 6, 100,
+
+OK. Buffer has correct values
+OK. Gets 3
+OK. Gets 4
+OK. Exception has been thrown! Full buffer
+OK. Puts 0
+OK. Gets 3
+OK. Puts 6
+OK. Gets 5
+OK. Puts 7
+        Count: 5/5
+        Is empty: False
+        Is full: True
+        Values: 6, 100, 0, 6, 7,
+
+        Count: 4/5
+        Is empty: False
+        Is full: False
+        Values: 4, 5, 6, 100,
+
+OK. Buffer has correct values
+OK. Buffer has correct values
+ === Additional Tests with doubles ===
+        Count: 0/10
+        Is empty: True
+        Is full: False
+        Values:
+
+        Count: 3/10
+        Is empty: False
+        Is full: False
+        Values: 3.141592653589793, 0, 2.718281828459045,
+
+OK. Puts 8.5
+OK. Puts 9
+OK. Puts 8.75
+OK. Puts 7.75
+OK. Puts 6
+OK. Puts 7.75
+OK. Puts 9.5
+OK. Exception has been thrown! Full buffer
+OK. Exception has been thrown! Full buffer
+OK. Exception has been thrown! Full buffer
+OK. Exception has been thrown! Full buffer
+OK. Exception has been thrown! Full buffer
+OK. Exception has been thrown! Full buffer
+        Count: 10/10
+        Is empty: False
+        Is full: True
+        Values: 3.141592653589793, 0, 2.718281828459045, 8.5, 9, 8.75, 7.75, 6, 7.75, 9.5,
+
+OK. Buffer has correct values
+OK. Gets 3.141592653589793
+OK. Buffer has correct values
+
+Values in buffer lower than 8.0:
+0, 2.718281828459045, 7.75, 6, 7.75,
+Should be:
+6, 7.75, 7, 6.25, 6.25, 7.25

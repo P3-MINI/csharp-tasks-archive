@@ -1,0 +1,31 @@
+------------------ Stage1 ------------------
+Book 'The Power of Habit' by Charles Duhigg
+Book 'Małżeństwo - przemyśl to' by Bogna Białecka
+Book 'The lean startup' by Eric Ries
+Book 'Sekretne życie drzew' by Peter Wohlleben
+Book 'Szata' by Lloyd Douglas
+------------------ Stage2 ------------------
+PathAlreadyExistsException Expected: OK!
+Book 'The Power of Habit' by Charles Duhigg
+Book 'Małżeństwo - przemyśl to' by Bogna Białecka
+Book 'The lean startup' by Eric Ries
+Book 'Sekretne życie drzew' by Peter Wohlleben
+Book 'Szata' by Lloyd Douglas
+Book 'Harry Potter i Kamień Filozoficzny' by Joanne Rowling
+Book 'Harry Potter i Komnata Tajemnic' by Joanne Rowling
+------------------ Stage3 ------------------
+Book #1 Found: OK!
+Book #2 Found: OK!
+Book #3 NOT Found: OK!
+Book 'Harry Potter i Komnata Tajemnic' by Joanne Rowling
+Book 'Małżeństwo - przemyśl to' by Bogna Białecka
+FileNotFoundException Expected: OK!
+Book 'The Power of Habit' by Charles Duhigg
+Book 'Małżeństwo - przemyśl to' by Bogna Białecka
+Book 'The lean startup' by Eric Ries
+Book 'Sekretne życie drzew' by Peter Wohlleben
+Book 'Szata' by Lloyd Douglas
+Book 'Harry Potter i Kamień Filozoficzny' by Joanne Rowling
+Book 'Harry Potter i Komnata Tajemnic' by Joanne Rowling
+------------------ Stage4 ------------------
+Binary File Found: OK!

@@ -1,0 +1,37 @@
+Implement Matrix class. The matrix has m rows and n columns, and stores values of type double.
+
+Stage 1 (2 Points):
+    Create constructor that takes two integer numbers m and n. The resulting matrix is filled with zeroes. 
+    Create constructor that takes an array of type double[,]. It creates deep copy of the array.
+    Create properties M and N that return the number of rows and columns respectively.
+    Create indexer that takes two numbers i and j (use System.Index) and return/modify value from matrix at i-th row and j-th column
+    Create indexer that takes two ranges (use System.Range) and returns/modify specified sub-matrix.
+        If the value is out of range throw IndexOutOfRangeException.
+    Create indexers that takes two mixed arguments (Index/Range, Range/Index).
+    Uncomment ToString() method.
+
+Stage 2 (1 Point):
+    Create explicit converter that returns double[,] from Matrix.
+    Create explicit converter that returns double from Matrix.
+        if the size of matrix is different than 1x1 throw InvalidCastException
+    Create implicit converter that returns Matrix from double[,].
+    Create implicit converter that returns Matrix from double.
+    Create Equals method that compares two matrices using element-wise operations and operators == and !=.
+
+Stage 3 (1 Point):
+    Create unary operators + and - that applies unary plus/minus element-wise on the matrix.
+    Create operator + and - that adds/subtracts two matrices together. 
+        If the sizes are not compatible throw ArgumentException.
+    Create operator !, that transposes the matrix.
+    Create operator |, that concatenates two matrices. 
+        If the matrices have different number of rows throw ArgumentException.
+
+Stage 4 (1 Point):
+    Create operator *, that multiplies matrix and scalar (of type double).
+    Create operator /, that divides matrix by scalar (of type double), 
+        if scalar is zero throw DivideByZeroException.
+    Create operator *, that multiplies two matrices, 
+        If the sizes are not compatible throw ArgumentException.
+    Create operator /, that takes two matrix parameters A and b, and solves system of linear equations Ax = b. 
+        If the matrices have different number of rows or A is not square matrix throw ArgumentException.
+    

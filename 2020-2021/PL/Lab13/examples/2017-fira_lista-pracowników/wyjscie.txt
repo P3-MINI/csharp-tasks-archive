@@ -1,0 +1,41 @@
+----ETAP I----
+Zdeserializowano pracownika Bartosz Bednarek na stanowisku Praktykant
+Zdeserializowano pracownika Czeslaw Czarnecki na stanowisku CzlonekZarzadu
+Zdeserializowano pracownika Bartosz Bednarek na stanowisku Praktykant
+----ETAP II----
+Bartosz Bednarek z Dzial Analiz
+Natalia Nowak z Dzial Analiz
+Patryk Piekarski z Dzial Analiz
+Krystyna Kowalska z Dzial HR
+Andrzej Adamczyk z Dzial Jakosci
+Czeslaw Czarnecki z Dzial Jakosci
+Grzegorz Grajewski z Dzial Testow
+Milena Misiewicz z Dzial Testow
+----ETAP III----
+- Pracownicy po zatrudnieniach -
+Bartosz Bednarek z Dzial Analiz
+Natalia Nowak z Dzial Analiz
+Patryk Piekarski z Dzial Analiz
+Zenon Zakrzewski z Dzial HR
+Krystyna Kowalska z Dzial HR
+Cyprian Cybulski z Dzial Jakosci
+Andrzej Adamczyk z Dzial Jakosci
+Czeslaw Czarnecki z Dzial Jakosci
+Siergiej Siwiec z Dzial Kierowcow
+Grzegorz Grajewski z Dzial Testow
+Milena Misiewicz z Dzial Testow
+----ETAP IV----
+Brak pracownika o podanym identyfikatorze
+- Pracownicy po zwolnieniach -
+Bartosz Bednarek z Dzial Analiz
+Patryk Piekarski z Dzial Analiz
+Zenon Zakrzewski z Dzial HR
+Krystyna Kowalska z Dzial HR
+Andrzej Adamczyk z Dzial Jakosci
+Czeslaw Czarnecki z Dzial Jakosci
+Siergiej Siwiec z Dzial Kierowcow
+Grzegorz Grajewski z Dzial Testow
+Milena Misiewicz z Dzial Testow
+----ETAP V----
+Firma liczy 9 pracowników.
+Nazwisko czlonka zarzadu to Czarnecki

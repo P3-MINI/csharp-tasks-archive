@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="ImGui.NET" Version="1.91.0.1" />
+      <PackageReference Include="OpenTK" Version="4.8.2" />
+      <PackageReference Include="StbImageSharp" Version="2.27.14" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Include="Resources\Shaders\imgui.frag" />
+        <EmbeddedResource Include="Resources\Shaders\imgui.vert" />
+        <EmbeddedResource Include="Resources\Shaders\plane.frag" />
+        <EmbeddedResource Include="Resources\Shaders\plane.vert" />
+        <EmbeddedResource Include="Resources\Shaders\sky.frag" />
+        <EmbeddedResource Include="Resources\Shaders\sky.vert" />
+        <EmbeddedResource Include="Resources\Shaders\shader.frag" />
+        <EmbeddedResource Include="Resources\Shaders\shader.vert" />
+        <EmbeddedResource Include="Resources\Textures\grid.png" />
+        <EmbeddedResource Include="Resources\Textures\water_still.png" />
+        <EmbeddedResource Include="Resources\Fonts\FiraCode-Medium.ttf" />
+    </ItemGroup>
+
+</Project>

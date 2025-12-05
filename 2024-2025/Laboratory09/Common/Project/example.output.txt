@@ -1,0 +1,80 @@
+Running tests from class AuthenticationService.Tests.AuthServiceTests...
+GetRegisteredUserData_ExistingUsername_ShouldThrowError     : PASSED
+GetRegisteredUserData_NonExistingUsername_ShouldThrowError  : PASSED
+Login_InvalidPassword_ShouldFail                            : PASSED
+Login_NonExistingUsername_ShouldFail                        : PASSED
+Login_ValidPassword_ShouldSucceed                           : PASSED
+Register_ExistingUsername_ShouldRejectRegisteringUser       : PASSED
+Register_InvalidPassword_ShouldRejectNewUser                : PASSED
+Register_InvalidUsername_ShouldRejectNewUser                : PASSED
+Register_NewUsername_ShouldAddNewUser                       : PASSED
+Register_TwoDifferentUsernames_ShouldAddBothUsers           : PASSED
+ChangePassword_InvalidNewPassword_ShouldFail                : FAILED
+User should not be able to change password to something invalid.
+This test is supposed to fail, just for testing purposes.
+ChangePassword_NonExistingUsername_ShouldThrowError         : FAILED
+Expected exception type:<AuthenticationService.UserNotFoundException>. Actual exception type:<System.NotImplementedException>. 
+This test is supposed to fail, just for testing purposes.
+ChangePassword_ValidUserAndPassword_ShouldSucceed           : FAILED
+Existing user should be able to change password to something valid.
+This test is supposed to fail, just for testing purposes.
+******************************
+* Test passed:    10 / 13    *
+* Failed:          3         *
+******************************
+################################################################################
+Running tests from class AuthenticationService.Tests.CredentialsValidatorTests...
+CredentialsValidator_InvalidPassword_ShouldFail
+ - Password too long                                        : PASSED
+ - Password too short                                       : PASSED
+ - No upper case letter, number or special character        : PASSED
+ - No special character                                     : PASSED
+ - No number                                                : PASSED
+ - No lowercase letter                                      : PASSED
+ - No number, no upper case letter, too short               : PASSED
+CredentialsValidator_InvalidUsername_ShouldFail
+ - Starts with a number                                     : PASSED
+ - Starts with underscore                                   : PASSED
+ - To short (needs at least 8 characters)                   : PASSED
+ - Contains (mostly) illegal characters                     : PASSED
+ - Contains illegal character                               : PASSED
+ - Exceeds Username Length Limit                            : PASSED
+CredentialsValidator_UsernameStartsWithNumber_ShouldFail    : PASSED
+CredentialsValidator_UsernameStartsWithUnderscore_ShouldFail: PASSED
+CredentialsValidator_ValidPassword_ShouldSucceed
+ - o\(O_0)/o                                                : PASSED
+ - !Nic3Password*                                           : PASSED
+ - (modnaRlat0t                                             : PASSED
+ - PJDs6a!q                                                 : PASSED
+These passwords contain between 8 and 16 characters,
+  lower/uppercase char, number and a special character
+CredentialsValidator_ValidUsername_ShouldSucceed
+ - UserName                                                 : PASSED
+ - MarioTheStrong_01                                        : PASSED
+ - hello_kitty_                                             : PASSED
+ - smiley2137                                               : PASSED
+ - qwertyqwerty                                             : PASSED
+ - ONLY_CAPSLOCK                                            : PASSED
+These username contain only legal characters ([a-zA-Z0-9_])
+  and have correct length (8-32)
+******************************
+* Test passed:    25 / 25    *
+* Failed:          0         *
+******************************
+################################################################################
+Running tests from class AuthenticationService.Tests.PasswordHasherTests...
+PasswordHasher_DifferentPasswords_ShouldHaveDifferentHashes : PASSED
+PasswordHasher_SamePassword_ShouldHaveSameHash
+ - !Nic3Password*                                           : PASSED
+ - (modnaRlat0t                                             : PASSED
+ - PJDs6a!q                                                 : PASSED
+******************************
+* Test passed:     4 / 4     *
+* Failed:          0         *
+******************************
+################################################################################
+Summary of running tests from AuthenticationService.Tests:
+******************************
+* Test passed:    39 / 42    *
+* Failed:          3         *
+******************************

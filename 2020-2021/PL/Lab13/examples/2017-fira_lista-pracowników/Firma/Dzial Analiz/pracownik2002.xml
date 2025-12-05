@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pracownik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <identyfikator>2002</identyfikator>
+  <imie>Natalia</imie>
+  <nazwisko>Nowak</nazwisko>
+  <stanowisko>Dyrektor</stanowisko>
+  <stazPracy>36</stazPracy>
+  <adres>
+    <ulica>Ciolka</ulica>
+    <miasto>Warszawa</miasto>
+    <nr_lokalu>22</nr_lokalu>
+  </adres>
+</Pracownik>

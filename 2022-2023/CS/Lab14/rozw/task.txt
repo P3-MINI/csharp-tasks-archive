@@ -1,0 +1,10 @@
+All parts should be solved with LINQ methods.
+It is forbidden to use loops or any other similar techniques (e.g. recursion).
+Hint: you can use String.Join(...) for merging collection for printing. 
+
+Before starting copy the file movies.csv to the directory with all other project source files.
+
+Detailed stages descriptions are provided in comments in MovieDataBase.cs and your solution code should be written only in this class.
+You are not allowed to modify the list of movies.
+
+All stages are independent and can be done in any order.

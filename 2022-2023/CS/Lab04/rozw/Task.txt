@@ -1,0 +1,18 @@
+Using backtracking algorithm implement GameSolver class that solves modified version of Nanogram puzzle.
+In this game you're required to mark individual fields in a way that the amount of those marked fields in column/row equals according numbers in m_column_sum and m_row_sum vectors (i-th value in those vectors means the amount given for i-th comulm/row accordingly). Marked fiels means that it contains value of 1, unmarked means 0.
+
+Hint: You can add variables and helper methods in the GameSolver class. Longer tests can be commented out
+(can count long in Debug mode)
+
+Step 1 (0.5 points)
+Implement the constructor of the GameSolver class, which initializes the class components and creates an empty board.
+
+Stage 2 (3 pts)
+Implement a Solve method that returns all possible solutions using a backtracking (recursion algorithm).
+The game may have no solution at all (consider in which case the solution will definitely not
+exist), have one or more solutions. 
+
+Step 3 (1.5 points)
+Optimally written method for solving the Nanogram. 
+
+Hint: It does not make sense to mark the field every move you make. You can do early exit from the recursive path if you already know there winn be no solution, analogously with accepting the solution.

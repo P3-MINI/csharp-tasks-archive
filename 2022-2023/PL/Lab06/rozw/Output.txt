@@ -1,0 +1,71 @@
+ --- Stage 1 (2 Pts) ---
+Constructor and Properties Tests:
+  01. OK! "x = 1, y = 2, z = 3" == "x = 1, y = 2, z = 3"
+  02. OK! "x = 7, y = 0, z = 0" == "x = 7, y = 0, z = 0"
+  03. OK! It Works!
+Equals Tests:
+  04. OK! "Vector3D(X = 1, Y = 2, Z = 3)" != "Vector3D(X = 7, Y = 0, Z = 0)"
+  05. OK! "False" == "False"
+  06. OK! "True" == "True"
+  07. OK! "Vector3D(X = 7, Y = 0, Z = 0)" == "Vector3D(X = 7, Y = 0, Z = 0)"
+  08. OK! "True" == "True"
+  09. OK! "False" == "False"
+ToString() Tests:
+  10. OK! "Vector3D(X = 1, Y = 2, Z = 3)" == "Vector3D(X = 1, Y = 2, Z = 3)"
+  11. OK! "Vector3D(X = 7, Y = 0, Z = 0)" == "Vector3D(X = 7, Y = 0, Z = 0)"
+  12. OK! "Vector3D(X = 1,23, Y = 3,14, Z = 2,72)" == "Vector3D(X = 1,23, Y = 3,14, Z = 2,72)"
+
+ --- Stage 2 (1 Pts) ---
+Static Class Object Tests:
+  13. OK! "Vector3D(X = 0, Y = 0, Z = 0)" == "Vector3D(X = 0, Y = 0, Z = 0)"
+  14. OK! "Vector3D(X = 1, Y = 1, Z = 1)" == "Vector3D(X = 1, Y = 1, Z = 1)"
+  15. OK! "Vector3D(X = 1, Y = 0, Z = 0)" == "Vector3D(X = 1, Y = 0, Z = 0)"
+  16. OK! "Vector3D(X = 0, Y = 1, Z = 0)" == "Vector3D(X = 0, Y = 1, Z = 0)"
+  17. OK! "Vector3D(X = 0, Y = 0, Z = 1)" == "Vector3D(X = 0, Y = 0, Z = 1)"
+Length Tests:
+  18. OK! "3,74165738677394" == "3,74165738677394"
+  19. OK! "0" == "0"
+  20. OK! "1" == "1"
+  21. OK! "1,73205080756888" == "1,73205080756888"
+Dot Product Tests:
+  22. OK! "7" == "7"
+
+ --- Stage 3 (1 Pts) ---
+Indexer Tests:
+  23. OK! "A[0] = 1, A[1] = 0, A[2] = 3" == "A[0] = 1, A[1] = 0, A[2] = 3"
+  24. OK! Exception Has Been Thrown!
+  25. OK! Exception Has Been Thrown!
+  26. OK! Exception Has Been Thrown!
+  27. OK! Exception Has Been Thrown!
+  28. OK! Exception Has Been Thrown!
+  29. OK! "B[0] = 7, B[1] = 2, B[2] = 3" == "B[0] = 7, B[1] = 2, B[2] = 3"
+Deconstructor Tests:
+  30. OK! "X = 1, Y = 2, Z = 3" == "X = 1, Y = 2, Z = 3"
+  31. OK! "X = 7, Y = 2, Z = 3" == "X = 7, Y = 2, Z = 3"
+Converters Tests:
+  32. OK! "Vector3D(X = 1,3, Y = 2,4, Z = 1,1)" == "Vector3D(X = 1,3, Y = 2,4, Z = 1,1)"
+  33. OK! "Vector3D(X = 1, Y = 2, Z = 3)" == "Vector3D(X = 1, Y = 2, Z = 3)"
+
+ --- Stage 4 (1 Pts) ---
+Normalize Tests:
+  34. OK! "1" == "1"
+  35. OK! "3,74165738677394" == "3,74165738677394"
+  36. OK! "0" == "0"
+  37. OK! "x = 1, y = 2, z = 3" == "x = 1, y = 2, z = 3"
+  38. OK! "True" == "True"
+MakeUnit Tests:
+  39. OK! "1" == "1"
+  40. OK! "True" == "True"
+AlmostEquals Tests:
+  41. OK! "False" == "False"
+  42. OK! "True" == "True"
+  43. OK! "True" == "True"
+AlmostZero Tests:
+  44. OK! "True" == "True"
+  45. OK! "True" == "True"
+IsNaN Tests:
+  46. OK! "False" == "False"
+  47. OK! "False" == "False"
+  48. OK! "True" == "True"
+
+Test Finished!

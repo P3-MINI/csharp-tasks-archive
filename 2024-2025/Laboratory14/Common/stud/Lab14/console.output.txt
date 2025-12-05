@@ -1,0 +1,234 @@
+=> Number of chefs: 4
+=> Number of deliverers: 4
+=> Pizza queue capacity: 10
+
+Control:
+  p - Pause pizza preparation
+  r - Resume pizza preparation
+  k - Pause delivery
+  l - Resume delivery
+  b - Sum up daily income
+  q - Exit
+Timeout or cancellation during dequeue operation.
+Timeout or cancellation during dequeue operation.
+Timeout or cancellation during dequeue operation.
+Timeout or cancellation during dequeue operation.
+[Deliverer 3]: No pizzas available for delivery.
+[Deliverer 2]: No pizzas available for delivery.
+[Deliverer 4]: No pizzas available for delivery.
+[Deliverer 1]: No pizzas available for delivery.
+Element enqueued: Pepperoni of size 14 with Cheese ($25,82)
+[Chef 2]: Prepared Pepperoni of size 14 with Cheese ($25,82).
+Element dequeued: Pepperoni of size 14 with Cheese ($25,82)
+Element enqueued: BBQ Chicken of size 15 with Onions ($20,44)
+[Chef 1]: Prepared BBQ Chicken of size 15 with Onions ($20,44).
+Element dequeued: BBQ Chicken of size 15 with Onions ($20,44)
+Element enqueued: Veggie of size 11 with Mushrooms ($27,04)
+[Chef 3]: Prepared Veggie of size 11 with Mushrooms ($27,04).
+Element dequeued: Veggie of size 11 with Mushrooms ($27,04)
+Element enqueued: BBQ Chicken of size 10 with Spinach ($22,10)
+[Chef 4]: Prepared BBQ Chicken of size 10 with Spinach ($22,10).
+Element dequeued: BBQ Chicken of size 10 with Spinach ($22,10)
+Enqueue operations are paused.
+=> Pizza preparation has been paused...
+[Deliverer 4]: Delivered Veggie of size 11 with Mushrooms ($27,04)
+[Deliverer 3]: Delivered Pepperoni of size 14 with Cheese ($25,82)
+[Deliverer 1]: Delivered BBQ Chicken of size 10 with Spinach ($22,10)
+[Deliverer 2]: Delivered BBQ Chicken of size 15 with Onions ($20,44)
+Timeout or cancellation during dequeue operation.
+[Deliverer 4]: No pizzas available for delivery.
+Timeout or cancellation during dequeue operation.
+[Deliverer 3]: No pizzas available for delivery.
+Timeout or cancellation during dequeue operation.
+[Deliverer 1]: No pizzas available for delivery.
+Enqueue operations are resumed.
+=> Pizza preparation has been resumed.
+Element enqueued: BBQ Chicken of size 9 with Mushrooms ($29,11)
+Element enqueued: Margherita of size 13 with Mushrooms ($24,26)
+[Chef 3]: Prepared BBQ Chicken of size 9 with Mushrooms ($29,11).
+[Chef 1]: Prepared Margherita of size 13 with Mushrooms ($24,26).
+Element enqueued: Margherita of size 13 with Olives ($20,55)
+[Chef 4]: Prepared Margherita of size 13 with Olives ($20,55).
+Element enqueued: Pepperoni of size 12 with Mushrooms ($25,31)
+[Chef 2]: Prepared Pepperoni of size 12 with Mushrooms ($25,31).
+Element dequeued: BBQ Chicken of size 9 with Mushrooms ($29,11)
+Element dequeued: Margherita of size 13 with Mushrooms ($24,26)
+Element dequeued: Margherita of size 13 with Olives ($20,55)
+Element dequeued: Pepperoni of size 12 with Mushrooms ($25,31)
+Element enqueued: Margherita of size 15 with Spinach ($29,47)
+[Chef 1]: Prepared Margherita of size 15 with Spinach ($29,47).
+Element enqueued: Veggie of size 14 with Olives ($25,10)
+[Chef 2]: Prepared Veggie of size 14 with Olives ($25,10).
+Element enqueued: Margherita of size 12 with Olives ($24,57)
+[Chef 4]: Prepared Margherita of size 12 with Olives ($24,57).
+[Deliverer 1]: Delivered Pepperoni of size 12 with Mushrooms ($25,31)
+Element dequeued: Margherita of size 15 with Spinach ($29,47)
+[Deliverer 3]: Delivered Margherita of size 13 with Olives ($20,55)
+Element dequeued: Veggie of size 14 with Olives ($25,10)
+[Deliverer 4]: Delivered Margherita of size 13 with Mushrooms ($24,26)
+Element dequeued: Margherita of size 12 with Olives ($24,57)
+[Deliverer 2]: Delivered BBQ Chicken of size 9 with Mushrooms ($29,11)
+Element enqueued: BBQ Chicken of size 11 with Onions ($27,88)
+[Chef 3]: Prepared BBQ Chicken of size 11 with Onions ($27,88).
+Element dequeued: BBQ Chicken of size 11 with Onions ($27,88)
+Element enqueued: Veggie of size 13 with Cheese ($28,83)
+[Chef 2]: Prepared Veggie of size 13 with Cheese ($28,83).
+Element enqueued: BBQ Chicken of size 11 with Cheese ($24,37)
+[Chef 1]: Prepared BBQ Chicken of size 11 with Cheese ($24,37).
+[Deliverer 3]: Delivered Veggie of size 14 with Olives ($25,10)
+[Deliverer 3]: Enough pizzas for today...
+Dequeue operations are paused.
+=> Deliveries have been paused...
+[Deliverer 1]: Delivered Margherita of size 15 with Spinach ($29,47)
+[Deliverer 1]: Enough pizzas for today...
+Element enqueued: Hawaiian of size 15 with Olives ($22,98)
+[Chef 4]: Prepared Hawaiian of size 15 with Olives ($22,98).
+Element enqueued: BBQ Chicken of size 14 with Bacon ($29,33)
+[Chef 3]: Prepared BBQ Chicken of size 14 with Bacon ($29,33).
+[Deliverer 4]: Delivered Margherita of size 12 with Olives ($24,57)
+[Deliverer 4]: Enough pizzas for today...
+[Deliverer 2]: Delivered BBQ Chicken of size 11 with Onions ($27,88)
+Element enqueued: Margherita of size 9 with Onions ($26,80)
+[Chef 1]: Prepared Margherita of size 9 with Onions ($26,80).
+[Chef 1]: Enough pizzas for today...
+Element enqueued: Hawaiian of size 14 with Cheese ($23,38)
+[Chef 2]: Prepared Hawaiian of size 14 with Cheese ($23,38).
+[Chef 2]: Enough pizzas for today...
+Element enqueued: Margherita of size 10 with Mushrooms ($29,98)
+[Chef 3]: Prepared Margherita of size 10 with Mushrooms ($29,98).
+[Chef 3]: Enough pizzas for today...
+Element enqueued: Hawaiian of size 9 with Onions ($28,10)
+[Chef 4]: Prepared Hawaiian of size 9 with Onions ($28,10).
+[Chef 4]: Enough pizzas for today...
+Dequeue operations are resumed.
+Deliveries have been resumed...
+Element dequeued: Veggie of size 13 with Cheese ($28,83)
+[Deliverer 2]: Delivered Veggie of size 13 with Cheese ($28,83)
+[Deliverer 2]: Enough pizzas for today...
+Waiting for chefs and deliverers to finish processing today's orders...
+=== It's time to sum up the daily income! ===
+Margherita: 98,84
+BBQ Chicken: 99,53
+Pepperoni: 51,13
+Veggie: 80,96
+Element dequeued: BBQ Chicken of size 11 with Cheese ($24,37)
+Element dequeued: Hawaiian of size 15 with Olives ($22,98)
+Element dequeued: BBQ Chicken of size 14 with Bacon ($29,33)
+Element dequeued: Margherita of size 9 with Onions ($26,80)
+[Deliverer 4]: Delivered Margherita of size 9 with Onions ($26,80)
+Element dequeued: Hawaiian of size 14 with Cheese ($23,38)
+[Deliverer 2]: Delivered Hawaiian of size 15 with Olives ($22,98)
+Element dequeued: Margherita of size 10 with Mushrooms ($29,98)
+[Deliverer 1]: Delivered BBQ Chicken of size 11 with Cheese ($24,37)
+Element dequeued: Hawaiian of size 9 with Onions ($28,10)
+[Deliverer 3]: Delivered BBQ Chicken of size 14 with Bacon ($29,33)
+Element enqueued: Veggie of size 8 with Spinach ($27,10)
+[Chef 3]: Prepared Veggie of size 8 with Spinach ($27,10).
+Element dequeued: Veggie of size 8 with Spinach ($27,10)
+Element enqueued: Veggie of size 15 with Spinach ($22,00)
+[Chef 4]: Prepared Veggie of size 15 with Spinach ($22,00).
+Element enqueued: Hawaiian of size 10 with Spinach ($21,95)
+[Chef 2]: Prepared Hawaiian of size 10 with Spinach ($21,95).
+Element enqueued: BBQ Chicken of size 15 with Cheese ($26,76)
+[Chef 1]: Prepared BBQ Chicken of size 15 with Cheese ($26,76).
+[Deliverer 2]: Delivered Margherita of size 10 with Mushrooms ($29,98)
+Element dequeued: Veggie of size 15 with Spinach ($22,00)
+[Deliverer 1]: Delivered Hawaiian of size 9 with Onions ($28,10)
+Element dequeued: Hawaiian of size 10 with Spinach ($21,95)
+[Deliverer 4]: Delivered Hawaiian of size 14 with Cheese ($23,38)
+Element dequeued: BBQ Chicken of size 15 with Cheese ($26,76)
+[Deliverer 3]: Delivered Veggie of size 8 with Spinach ($27,10)
+Element enqueued: Hawaiian of size 15 with Olives ($22,19)
+[Chef 4]: Prepared Hawaiian of size 15 with Olives ($22,19).
+Element dequeued: Hawaiian of size 15 with Olives ($22,19)
+Element enqueued: Pepperoni of size 8 with Olives ($27,28)
+[Chef 3]: Prepared Pepperoni of size 8 with Olives ($27,28).
+Element enqueued: Pepperoni of size 15 with Olives ($23,10)
+[Chef 2]: Prepared Pepperoni of size 15 with Olives ($23,10).
+[Deliverer 4]: Delivered BBQ Chicken of size 15 with Cheese ($26,76)
+Element dequeued: Pepperoni of size 8 with Olives ($27,28)
+Element enqueued: Pepperoni of size 14 with Spinach ($26,66)
+[Chef 1]: Prepared Pepperoni of size 14 with Spinach ($26,66).
+Dequeue operations are paused.
+=> Deliveries have been paused...
+[Deliverer 1]: Delivered Hawaiian of size 10 with Spinach ($21,95)
+[Deliverer 2]: Delivered Veggie of size 15 with Spinach ($22,00)
+Element enqueued: BBQ Chicken of size 10 with Onions ($27,05)
+[Chef 3]: Prepared BBQ Chicken of size 10 with Onions ($27,05).
+Element enqueued: Veggie of size 14 with Mushrooms ($20,71)
+[Chef 1]: Prepared Veggie of size 14 with Mushrooms ($20,71).
+[Deliverer 3]: Delivered Hawaiian of size 15 with Olives ($22,19)
+Element enqueued: Veggie of size 9 with Olives ($29,67)
+[Chef 4]: Prepared Veggie of size 9 with Olives ($29,67).
+Element enqueued: BBQ Chicken of size 13 with Spinach ($22,56)
+[Chef 2]: Prepared BBQ Chicken of size 13 with Spinach ($22,56).
+[Deliverer 4]: Delivered Pepperoni of size 8 with Olives ($27,28)
+Element enqueued: Pepperoni of size 14 with Spinach ($24,68)
+[Chef 1]: Prepared Pepperoni of size 14 with Spinach ($24,68).
+Element enqueued: Pepperoni of size 12 with Mushrooms ($29,32)
+[Chef 2]: Prepared Pepperoni of size 12 with Mushrooms ($29,32).
+Element enqueued: Hawaiian of size 14 with Olives ($21,72)
+[Chef 3]: Prepared Hawaiian of size 14 with Olives ($21,72).
+Element enqueued: Margherita of size 11 with Bacon ($25,55)
+[Chef 4]: Prepared Margherita of size 11 with Bacon ($25,55).
+Timeout or cancellation during enqueue operation.
+[Chef 1]: Couldn't place a pizza in the pizza queue.
+[Chef 1]: Enough pizzas for today...
+Timeout or cancellation during enqueue operation.
+[Chef 3]: Couldn't place a pizza in the pizza queue.
+[Chef 3]: Enough pizzas for today...
+Timeout or cancellation during enqueue operation.
+[Chef 2]: Couldn't place a pizza in the pizza queue.
+[Chef 2]: Enough pizzas for today...
+Timeout or cancellation during enqueue operation.
+[Chef 4]: Couldn't place a pizza in the pizza queue.
+[Chef 4]: Enough pizzas for today...
+Dequeue operations are resumed.
+Deliveries have been resumed...
+Element dequeued: Pepperoni of size 15 with Olives ($23,10)
+Element dequeued: Pepperoni of size 14 with Spinach ($26,66)
+Element dequeued: BBQ Chicken of size 10 with Onions ($27,05)
+Element dequeued: Veggie of size 14 with Mushrooms ($20,71)
+[Deliverer 3]: Delivered Pepperoni of size 14 with Spinach ($26,66)
+Element dequeued: Veggie of size 9 with Olives ($29,67)
+[Deliverer 4]: Delivered BBQ Chicken of size 10 with Onions ($27,05)
+[Deliverer 4]: Enough pizzas for today...
+[Deliverer 2]: Delivered Veggie of size 14 with Mushrooms ($20,71)
+Element dequeued: BBQ Chicken of size 13 with Spinach ($22,56)
+[Deliverer 1]: Delivered Pepperoni of size 15 with Olives ($23,10)
+Element dequeued: Pepperoni of size 14 with Spinach ($24,68)
+[Deliverer 3]: Delivered Veggie of size 9 with Olives ($29,67)
+[Deliverer 3]: Enough pizzas for today...
+[Deliverer 2]: Delivered BBQ Chicken of size 13 with Spinach ($22,56)
+[Deliverer 2]: Enough pizzas for today...
+[Deliverer 1]: Delivered Pepperoni of size 14 with Spinach ($24,68)
+[Deliverer 1]: Enough pizzas for today...
+Waiting for chefs and deliverers to finish processing today's orders...
+=== It's time to sum up the daily income! ===
+Margherita: 56,78
+BBQ Chicken: 130,07
+Hawaiian: 118,61
+Pepperoni: 101,72
+Veggie: 99,49
+Element dequeued: Pepperoni of size 12 with Mushrooms ($29,32)
+Element dequeued: Hawaiian of size 14 with Olives ($21,72)
+Element dequeued: Margherita of size 11 with Bacon ($25,55)
+Timeout or cancellation during dequeue operation.
+[Deliverer 1]: No pizzas available for delivery.
+Element enqueued: Pepperoni of size 15 with Olives ($26,07)
+[Chef 2]: Prepared Pepperoni of size 15 with Olives ($26,07).
+Element dequeued: Pepperoni of size 15 with Olives ($26,07)
+Element enqueued: BBQ Chicken of size 10 with Onions ($26,37)
+[Chef 3]: Prepared BBQ Chicken of size 10 with Onions ($26,37).
+[Deliverer 4]: Delivered Hawaiian of size 14 with Olives ($21,72)
+Element dequeued: BBQ Chicken of size 10 with Onions ($26,37)
+Closing the pizzeria...
+[Chef 1]: Stopped working.
+[Chef 3]: Stopped working.
+[Deliverer 4]: Stopped working.
+[Chef 2]: Stopped working.
+[Deliverer 1]: Stopped working.
+[Deliverer 3]: Stopped working.
+[Deliverer 2]: Stopped working.
+[Chef 4]: Stopped working.
+The pizzeria is closed for the day.

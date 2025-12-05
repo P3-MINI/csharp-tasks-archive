@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab15Retake", "Lab15Retake\Lab15Retake.csproj", "{46DA7A71-909A-4C88-98A9-A6E28F589655}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA0363CA-9F3E-48C6-A04C-87BFDF8BE3FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA0363CA-9F3E-48C6-A04C-87BFDF8BE3FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA0363CA-9F3E-48C6-A04C-87BFDF8BE3FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA0363CA-9F3E-48C6-A04C-87BFDF8BE3FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46DA7A71-909A-4C88-98A9-A6E28F589655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DA7A71-909A-4C88-98A9-A6E28F589655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DA7A71-909A-4C88-98A9-A6E28F589655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DA7A71-909A-4C88-98A9-A6E28F589655}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D51C7B9-3179-413C-A9EE-95F6EFF240BD}
+	EndGlobalSection
+EndGlobal

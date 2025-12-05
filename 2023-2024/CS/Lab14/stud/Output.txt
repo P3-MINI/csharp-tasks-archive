@@ -1,0 +1,113 @@
+
+ --==== Task 1 (0.5 pts) ====--
+ 16    Jessica   Anderson 2
+ 47       Jack   Campbell 1
+ 49    Raymond     Carter 1
+  3      Emily    Johnson 2
+ 23      Betty      Perez 1
+ 10     Joseph  Rodriguez 0
+ 18     Robert     Taylor 3
+ 17      Sarah     Thomas 4
+ 32     Steven     Walker 4
+
+ --==== Task 2 (0.5 pts) ====--
+ 34.      Helen Allen      14
+ 20.     Daniel Jackson    13
+ 45.      Frank Baker      13
+ 12.     Thomas Hernandez  12
+ 19.      Nancy Moore      12
+ 39.    Stephen Nguyen     12
+ 42.     Sandra Green      12
+  6.      David Jones      11
+ 44.    Rebecca Nelson     11
+ 50.    Cynthia Roberts    11
+
+ --==== Task 3 (1.0 pts) ====--
+ 40.            The Handmaid's Tale 300
+ 50.              David Copperfield 300
+ 41.              To the Lighthouse 249
+  5.                      Moby-Dick 243
+  4.               The Great Gatsby 229
+ 22.                  Anna Karenina 228
+ 35.       The Silence of the Lambs 199
+ 27.      The Diary of a Young Girl 185
+ 36.                        Beloved 181
+ 23.                 Fahrenheit 451 166
+ 47.                 Les Misérables 166
+ 14.                      Jane Eyre 165
+ 29.     The Picture of Dorian Gray 153
+ 20.           A Tale of Two Cities 151
+ 30.                   Frankenstein 150
+ 44.             A Clockwork Orange 146
+ 48.         The Brothers Karamazov 142
+ 46.                The Kite Runner 141
+ 42.            Catch Me If You Can 131
+ 13.                Brave New World 111
+ 28.              The Little Prince 105
+ 43.            Slaughterhouse-Five 104
+ 51.                     Good Omens -1
+ 52.                    Great House -1
+
+ --==== Task 4 (1.5 pts) ====--
+  9.      Linda      Davis  25    16.43
+ 42.     Sandra      Green  25    13.67
+ 20.     Daniel    Jackson  24    14.00
+ 39.    Stephen     Nguyen  23    16.58
+ 37.      Kevin      Scott  22    17.63
+ 46.      Julia     Rivera  22    17.20
+ 19.      Nancy      Moore  22    16.08
+ 34.      Helen      Allen  22    13.00
+ 44.    Rebecca     Nelson  22    12.55
+ 45.      Frank      Baker  22    12.38
+
+ --==== Task 5 (1.5 pts) ====--
+  1.          Matthew Lee  22     2024-01-11 11
+  2.        Gary Thompson  24     2024-01-09 19
+  3.          Frank Baker  45     2024-01-07 22
+  4.         Julia Rivera  46     2024-01-06 22
+  5.         Sandra Green  42     2023-12-25 25
+  6.          Linda Davis   9     2023-12-24 25
+  7.      Michelle Wright  36     2023-12-24 6
+  8.       Anthony Harris  26     2023-12-20 20
+  9.     Michael Williams   4     2023-12-15 9
+ 10.         George Lewis  30     2023-12-14 14
+ 11.     Richard Gonzalez  14     2023-12-12 17
+ 12.       Daniel Jackson  20     2023-12-12 24
+ 13.      Cynthia Roberts  50     2023-12-12 20
+ 14.     Thomas Hernandez  12     2023-12-11 19
+ 15.         Paul Sanchez  27     2023-12-03 11
+ 16.          Jason Adams  43     2023-11-24 11
+ 17.        Donna Ramirez  29     2023-11-23 19
+ 18.          David Jones   6     2023-11-22 19
+ 19.         Susan Wilson  15     2023-11-22 10
+ 20.          Lisa Martin  21     2023-11-20 10
+ 21.       Stephen Nguyen  39     2023-11-20 23
+ 22.          Nancy Moore  19     2023-11-10 22
+ 23.          Kevin Scott  37     2023-11-08 22
+ 24.           Mary Brown   5     2023-10-30 20
+ 25.        Emily Johnson   3     2023-10-18 2
+ 26.           Jane Smith   2     2023-10-09 21
+ 27.          Helen Allen  34     2023-10-06 22
+ 28.         Laura Torres  38     2023-09-25 8
+ 29.             John Doe   1     2023-09-24 10
+ 30.          Karen Lopez  13     2023-09-09 20
+ 31.          Edward King  35     2023-09-06 19
+ 32.        Robert Taylor  18     2023-08-20 3
+ 33.       Rebecca Nelson  44     2023-08-20 22
+ 34.         Sarah Thomas  17     2023-08-06 4
+ 35.        Steven Walker  32     2023-07-16 4
+ 36.        Dorothy White  25     2023-06-30 7
+ 37.         Larry Flores  41     2023-06-29 14
+ 38.           Mark Clark  28     2023-06-26 18
+ 39.     Barbara Martinez  11     2023-06-02 14
+ 40.      Patricia Garcia   7     2023-05-04 7
+ 41.     Shirley Mitchell  48     2023-05-01 19
+ 42.   Katherine Robinson  31     2023-04-25 14
+ 43.   Christopher Miller   8     2023-03-21 12
+ 44.          Brian Young  33     2023-03-06 9
+ 45.     Jessica Anderson  16     2022-12-09 2
+ 46.          Betty Perez  23     2022-11-05 1
+ 47.       Raymond Carter  49     2022-10-30 1
+ 48.           Carol Hill  40     2022-06-16 6
+ 49.        Jack Campbell  47     2020-11-11 1
+ 50.     Joseph Rodriguez  10   No loans yet 0

@@ -1,0 +1,134 @@
+Stage one
+
+0
+id: 0
+name: Small gods
+author: Terry Pratchett
+print date: 01-01-1998
+fee for 60 days: 900
+
+Item with id: 0
+Book Small gods by Terry Pratchett, printed 01-01-1998 softcover
+
+
+1
+
+
+
+
+
+
+
+
+
+
+
+
+
+id: 1
+name: The Hobbit, or There and Back Again
+author: J.R.R. Tolkien
+print date: 17-05-2003
+fee for 60 days: 1170
+
+Item with id: 1
+Book The Hobbit, or There and Back Again by J.R.R. Tolkien, printed 17-05-2003 hardcover
+
+
+2
+id: 2
+name: National Geographic
+author: NG Media
+print date: 01-10-2017
+fee for 60 days: 390
+
+Item with id: 2
+Magazine National Geographic by NG Media, printed 01-10-2017) edition: 5
+
+
+3
+id: 3
+name: Computing Edge
+author: IEEE Computer Society
+print date: 05-07-2020
+fee for 60 days: 390
+
+Item with id: 3
+Magazine Computing Edge by IEEE Computer Society, printed 05-07-2020) edition: 2
+
+
+4
+id: 4
+name: Poetic Edda
+author: Unknown
+print date: 16-04-1950
+fee for 60 days: 1350
+
+Item with id: 4
+Book Poetic Edda by Unknown, printed 16-04-1950 hardcover
+
+
+Stage two
+
+True
+1
+True
+2
+True
+3
+
+False
+3
+
+Bookshelf with 3 items
+
+Items: 
+Item with id: 0
+Book Small gods by Terry Pratchett, printed 01-01-1998 softcover
+
+Item with id: 1
+Book The Hobbit, or There and Back Again by J.R.R. Tolkien, printed 17-05-2003 hardcover
+
+Item with id: 2
+Magazine National Geographic by NG Media, printed 01-10-2017) edition: 5
+
+
+
+Stage four
+
+Items in library: 4
+
+Library: L-space
+Shelves:
+shelf 0:
+
+Bookshelf with 2 items
+
+Items: 
+Item with id: 2
+Magazine National Geographic by NG Media, printed 01-10-2017) edition: 5
+
+Item with id: 3
+Magazine Computing Edge by IEEE Computer Society, printed 05-07-2020) edition: 2
+
+shelf 1:
+
+Bookshelf with 2 items
+
+Items: 
+Item with id: 0
+Book Small gods by Terry Pratchett, printed 01-01-1998 softcover
+
+Item with id: 1
+Book The Hobbit, or There and Back Again by J.R.R. Tolkien, printed 17-05-2003 hardcover
+
+Bookshelf number 0
+
+Bookshelf with 2 items
+
+Items: 
+Item with id: 2
+Magazine National Geographic by NG Media, printed 01-10-2017) edition: 5
+
+Item with id: 3
+Magazine Computing Edge by IEEE Computer Society, printed 05-07-2020) edition: 2

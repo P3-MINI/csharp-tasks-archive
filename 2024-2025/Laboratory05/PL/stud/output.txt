@@ -1,0 +1,45 @@
+
+  -=== STAGE 01 ===-
+
+ No code to test - only unit tests
+
+  -=== STAGE 02 ===-
+
+MyCircularBuffer should be empty: OK
+MyCircularBuffer should not be full: OK
+
+Adding values: 1,1,2,3,5,8
+Enumerated values: [1, 1, 2, 3, 5, 8]
+Items: [1, 1, 2, 3, 5, 8]
+
+Adding values: 13,21,34,55
+Items: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+Enumerated values: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 1]
+MyCircularBuffer should not be empty: OK
+MyCircularBuffer should be full: OK
+
+Adding values: 89,144,233
+Items: [3, 5, 8, 13, 21, 34, 55, 89, 144, 233]
+Enumerated values: [3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 3]
+
+  -=== STAGE 03 ===-
+
+PopFront on empty list!
+PopFront should throw an exception: OK
+
+Adding values: 5,3,8
+Count: 3
+Contains '3': OK
+
+Enumerating values:
+3
+5
+8
+
+PopFront value 3: OK
+Count after PopFront: 2
+Enumerated values: [5, 8]
+
+Adding values: 84,1,55,8
+Count: 6
+Enumerated values: [1, 5, 8, 8, 55, 84]

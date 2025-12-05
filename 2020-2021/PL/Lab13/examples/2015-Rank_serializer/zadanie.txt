@@ -1,0 +1,54 @@
+
+UWAGA !!! - przeczytaæ uwagi na koñcu pliku
+
+Dana jest klasa Ranking, która przechowuje informacje o zespo³ach bior¹cych udzia³ w pewnych zawodach.
+Klasa ta posiada konstruktor przyjmuj¹cy dwie liczby: liczbê zespo³ów oraz liczbê cz³onków ka¿dej dru¿yny. 
+
+Klasa Team zawiera nazwê ka¿dej dru¿yny - name, generowan¹ za pomoc¹ dodania do prefiksu "Team_" numeru indeksu (np. "Team_1").
+Indeks - pole id - powinien byæ nadawany, zaczynaj¹c od wartoœci 1 i unikalny dla ka¿dego obiektu.
+Dlatego te¿ ostatnia wartoœæ przechowywana jest w polu maxId.
+Klasa Team zawiera ponadto listê graczy oraz publiczne atrybuty pozwalaj¹ce na okreœlenie m.in. sumarycznego wyniku
+wszystkich graczy - bêd¹cego jednoczeœnie wynikiem ca³ej dru¿yny.
+
+Klasa Player zawiera informacje o graczu. Informacje jak nazwa, wiek i liczba punktów jest generowana automatycznie,
+natomiast id powinien byæ kolejn¹ liczb¹ naturaln¹ od 0. Tu równie¿ nale¿y pamiêtaæ o polu maxId oznaczaj¹cym,
+podobnie jak w klasie Team, najwiêkszy u¿ywany aktualnie index.
+
+ETAP 1 (1p.)
+Uzupe³niæ konstruktor klasy Ranking tak, aby trzyma³a ona zespo³y w sposób posortowany malej¹co wzglêdem ich wyniku.
+W tym celu nale¿y równie¿ uzupe³niæ publiczny konstruktor klasy Team oraz metodê Team.AddPlayer.
+
+ETAP 2 (1p.)
+W klasie RankSerializers uzupe³niæ dwie metody statyczne SerializeBinary i DeserializeBinary. 
+SerializeBinary - powinna zserializowaæ obiekt typu Ranking do strumienia pamiêci (MemoryStream)
+a nastêpnie zwróciæ wype³niony strumieñ z pozycj¹ wskazuj¹c¹ na pocz¹tek.
+DeserializeBinary - powinna zdeserializowaæ obiekt ze strumienia podanego jako parametr.
+Metoda powinna zwróciæ zdeserializowany obiekt typu Ranking.
+
+ETAP 3 (1p.)
+W klasie RankSerializers uzupe³niæ analogicznie do poprzedniego punktu,
+dwie metody statyczne SerializeSOAP i DeserializeSOAP. W tym wypadku strumieniem jest plik.
+Metody przyjmuj¹ jako parametr jego nazwê. Nale¿y zwróciæ uwagê na ograniczenia serializatora SOAP
+i zaproponowaæ ich rozwi¹zanie.
+
+ETAP 4 (1p.)
+Nale¿y zaimplementowaæ metodê ToText() w klasie Ranking, która zwróci nastêpuj¹c¹ reprezentacjê obiektu:
+id_druzyny,id_gracza|nazwa_gracza|wiek|wynik_gracza,[... kolejni gracze ...];[... kolejna druzyna ...]
+(Czyli dru¿yny oddzielamy œrednikami, natomiast w ka¿dej dru¿ynie znajduje siê id oddzielone przecinkiem
+i dane poszczególnych graczy oddzielone pionowymi kreskami.)
+przyk³ad:
+1,0|sut|27|829,1|nwl|35|847;2,2|hlp|25|755,3|avy|29|731;3,4|uvy|16|964,5|nxr|26|291
+
+ETAP 5 (1p.)
+Wykorzystuj¹c format z etapu 4, implementujemy ostatnie ju¿ dwie metody z klasy RankSerializers:
+SerializeOwn oraz DeserializeOwn. SerializeOwn powinno zapisaæ do strumienia wynik wywo³ania zaimplementowanej
+w³aœnie metody ranking.ToText. Po tej operacji strumieñ powinien zostaæ przewiniêty do pocz¹tku.
+DeserializeOwn pobiera strumieñ i na jego podstawie buduje nowy obiekt klasy Ranking.
+W tym celu nale¿y zaimplementowaæ statyczne metody FromText przyjmuj¹ce jeden parametr typu string
+i zwracaj¹ce obiekt danej klasy utworzony przy u¿yciu prywatnej wersji konstruktora. 
+Nale¿y pamiêtaæ aktualizacji wartoœci minId.
+
+UWAGI
+1) plik example.str wgraæ do katalogu Debug (tam gdzie VS generuje pliki exe)
+2) Mo¿na modyfikowaæ przygotowane klasy np. dopisuj¹c odpowiednie atrybuty
+3) Mo¿e byæ potrzebne dodanie do projektu odpowiednich referencji

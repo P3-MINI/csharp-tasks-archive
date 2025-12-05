@@ -1,0 +1,55 @@
+﻿Stage1 (3 points)
+Create abstract class Item and two child classes: Magazine, Book.
+
+Item class
+Each Item has unique consecutive id which is assigned in a constructor and can't be changed.
+Each Item has also three readonly fields which can be accessed from child classes but not from outside:
+    author of type string,
+    name of type string,
+    printDate of type DateTime.
+Class Item also has an abstract method CalculateFee which returns decimal and takes parameter of type int indicating the number of days.
+In class Item there should also be methods GetId(), GetAuthor(), GetName(), GetPrintDate(),
+which should return object id, author, name, and printDate respectively.
+Each item has an overriden method ToString which returns text:
+"Item with id: id"
+
+Magazine class
+Magazine class constructor has also a parameter of type int which indicates editionNumber.
+Calculate fee method should return the number of days divided by 2 and multiplied by 10.
+ToString method should return following string:
+    ToString() from base class + "Magazine name by author, printed printDate edition: editionNumber"
+ 
+Book class
+Book class constructor has 2 more parameters than a Item class constructor, it also has a parameter of type decimal which specifies 
+feePerDay value and a parameter of type bool which specifies if the book has hardcover and has a default value of false.
+Calculate fee method should return following value:
+    if days < 30 : days multiplied by feePerDay,
+    if days >= 30 : 30 multiplied by feePerDay and double that for every day over 30 days.
+ToString method should return following string:
+    ToString() from base class + "Book name by author, printed printDate " + if book has hardcover "hardcover" else "softcover"
+There should be also method HasHardcover() which returns true if book has hardcover and false if not.
+
+Stage2 (1 point)
+Create Bookshelf class.
+It should have constructor which takes parameter specifying size of items array.
+It should have method AddItem which has a parameter of type Item and adds it the array and returns true,
+    if array is full the method should return false and do nothing else.
+Create method GetItemsCount() which should return the number of items in the array.
+Method Print() which returns void and prints on the console following text (example in output.txt):
+     "Bookshelf with NumberOfItemsInArray
+     Items:"
+     for each item
+        item.ToString() + new line
+        
+Stage3 (1 point)
+Create Library class.
+Add constructor which has two parameters, the first one is of type string and specifies the name of library,
+    the second one is an array of Bookshelves (Bookshelf[]) which should be stored within object.
+Implement GetItemsCount() method which returns the total number of items on all of the bookshelves in the array.
+Method GetBookshelf(int i) should return Bookshelf number i from the array, i is out of bounds return null.
+Method Print() should return void and print following text (example in output.txt):
+    "Library name
+    Shelves
+    for each bookshelf
+        "shelf i" (i is the number of the shelf
+        invoke shelf.Print()     

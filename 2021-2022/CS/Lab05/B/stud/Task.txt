@@ -1,0 +1,60 @@
+﻿Stage1 (3 points)
+Create abstract class Item and two child classes: Mail, Package.
+
+Item class
+Each Item has unique consecutive id which is assigned in a constructor and can't be changed.
+Each Item has also three readonly fields which can be accessed from child classes but not from outside:
+    sender of type string,
+    recipient of type string,
+    postageDate of type DateTime.
+Class Item also has an abstract method CalculateArrivalTime() which returns DateTime.
+In class Item there should also be methods GetId(), GetSender(), GetRecipient(), GetPostageDate(),
+which should return object id, sender, recipient, and postageDate respectively.
+Each item has an overriden method ToString which returns text:
+"Item with id: id
+ From: sender
+ To: recipient
+ Postage date: postageDate"
+
+Package class
+Package class constructor has also a parameter of type float which indicates weight.
+CalculateArrivalTime method should return the postageDate + 15 days if weight > 20 and postageDate + 10 days otherwise.
+ToString method should return following string:
+    ToString() from base class + "Type: package" + new line + "Weight: weight"
+There should be method GetWeight() which returns weight of the package.
+ 
+Mail class
+Book class constructor has 1 more parameter than a Item class constructor, it has a parameter of type bool which specifies
+ if the mail is registered and has a default value of false.
+CalculateArrivalTime method should return following value:
+    if registered : postageDate + 2 days,
+    if not : postageDate + 5 days
+ToString method should return following string:
+    ToString() from base class + "Type: " + (if mail is registered "registered" else "standard") + " mail"
+There should be also method IsRegistered() which returns true if mail is registered and false if not.
+
+Hint: to calculate arrival time you can use method AddDays.
+
+Stage2 (1 point)
+Create PostBox class.
+It should have constructor which takes 2 parameters first of type string specifying location, and the second one of type int specifying size of items array.
+Create method GetItemsCount() which should return the number of items in the array (which are not null).
+Create method GetItem(int i) return item at the position i, if i is out of bounds it should return null.
+Method Print() which returns void and prints on the console following text (example in output.txt):
+     "Postbox location
+     Items:"
+     for each item
+        item i: item.ToString() + new line, i is the localization of the item in the array
+
+Stage3 (1 point)
+Create PostOffice class.
+Add constructor which has one parameter which is an array of post boxes (PostBox[]) which should be stored within object.
+Implement GetPostBoxesCount() method which returns the total number of post boxes in the array.
+It should have method AddPostBox which has a parameter of type PostBox and adds it the array and returns true,
+    if array is full the method should return false and do nothing else.
+Method Print() should return void and print following text (example in output.txt):
+    "Post office with (number of post boxes) post boxes  
+    Post boxes:
+    for each post box
+        " i" (i is the number of the postbox)
+        invoke shelf.Print()     

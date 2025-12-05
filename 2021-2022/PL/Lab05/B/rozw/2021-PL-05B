@@ -1,0 +1,121 @@
+Uwaga: kompilacja zadania nie powinna dawać błędów bądź ostrzeżeń np. CS0108
+Aby upewnić się że tak jest można włączyć opcję:
+Project properties -> Build -> Treat warnings as errors -> is ustawić set to All
+
+Etap 1. (0.5 pkt)
+    W pliku "Node.cs" zaimplementuj abstrakcyjną klasę "Node" reprezentującą wierzchołek w drzewie.
+    
+    Klasa "Node" powinna zawierać następujące pola:
+     - pole publiczne "left" typu "Node" - korzeń lewego poddrzewa,
+     - pole publiczne "right" typu "Node" - korzeń prawego poddrzewa,
+     - pole tylko do odczytu, niedostępne z zewnątrz z wyjątkiem klas pochodnych "_uniqueId" typu "string".
+     - statyczne pole prywatne "_nextNodeId" typu "int" z wartością początkową równą 0.
+     
+    Klasa "Node" powinna również zawierać następujące konstruktory:
+     - konstruktor przyjmujący parametr typu "string" reprezentujący fragment id wierzchołka,
+        powinien on ustawić wartość "_uniqueId" na "{otrzymany parametr}-{_nextNode+Id}", nastepnie należy zwiększyć
+        wartość "_nextNodeId".
+     
+    Dodatkowo klasa "Node" powinna zawierać metody:
+     - bezparametrową publiczną metodę abstrakcyjną "Clone" zwracającą "Node",
+     - bezparametrową publiczną metodę abstrakcyjną "Evaluate" zwracającą "double".
+           
+             
+Etap 2. (2 pkt)
+    W pliku "ArithmNode" znajduje się enum wykorzystywany w tej części zadania.s
+    
+    1)
+        W pliku "ValueNode.cs" zaimplementuj klasę "ValueNode" klasę pochodną klasy "Node", będzie ona reprezentować liść w drzewie
+        o określonej wartości.
+        
+        Klasa powinna zawierać następujące składowe:
+         - prywatne pole "_value" typu "double",
+         - statyczne pole prywatne "_nextNodeId" typu "int" z wartością początkową równą 0.
+         
+        Klasa "ValueNode" powinna również zawierać następujące konstruktory:
+         - konstruktor przyjmujący parametr typu "double" o domyślnej wartości=0 reprezentujący wartość węzła, konstruktor powinien ustawiać
+            wartość zmiennej _value na tą otrzymaną jako parametr, ponadto powinien przekazać podany napis do konstruktora
+            klasy bazowej: "Value-Node-Id-{_nextNodeId}", , nastepnie należy zwiększyć wartość "_nextNodeId".
+         - prywatny konstruktor kopiujący.
+            
+        W klasie "ValueNode" należy zaimplementować wszystkie składowe wymagane przez klasę "Node":
+         - metoda "ToString" powinna zwracać następujący napis: "Id:{_uniqueId - pole z klasy bazowej}{nowa linia}Value:{_value}{nowa linia}",
+         - metoda "Evaluate" powinna zwracać wartość "_value".
+         - metoda "Clone" powinna zwracać kopię obiektu - wartość "_uniqueId" może być inna.
+        
+        Dodatkowo należy zaimplementować Seter dla wartości "_value" metoda:
+         - SetValue.
+         
+         
+    2)
+        W pliku "ArithmNode.cs" zaimplementuj klasę "ArithmNode" klasę pochodną klasy "Node", będzie ona reprezentować 
+        wierzchołek operacji arytmetycznych.
+            
+        Klasa powinna zawierać następujące składowe:
+         - prywatne pole "_operation" typu "ArithmOperation".
+            
+        Klasa "ArithmNode" powinna również zawierać następujące konstruktory:
+         - konstruktor przyjmujący parametr typu "ArithmOperation" reprezentujący typ operacji węzła, konstruktor powinien ustawiać
+            wartość zmiennej _operation na tą otrzymaną jako parametr, ponadto powinien przekazać podany napis do konstruktora
+            klasy bazowej: "{operation}-Node-Id".
+         - konstruktor przyjmujący krotkę "(ArithmOperation operation, Node left, Node right)" - zwykłe przypisanie, bez wykonywania kopii "left" i "right".
+         - prywatny konstruktor kopiujący wykonujący głęboką kopię lewego i prawego poddrzewa.
+         
+         Podpowiedź: uwaga na poddrzewa o wartości null.
+                
+        W klasie "ArithmNode" należy zaimplementować wszystkie składowe wymagane przez klasę "Node":
+         - metoda "ToString" powinna zwracać następujący napis: "Id:{_uniqueId - pole z klasy bazowej}{nowa linia}Operation:{nazwa wartości enuma _operation}{nowa linia}",
+         - metoda "Clone" zwraca obiekt będący głęboką kopią tego obiektu - wartość "_uniqueId" może być inna.
+         - metoda "Evaluate" powinna zwracać następujący wynik w zależności od wartości enuma "_operation":
+            - dla wartości "Addition" zwracamy sumę wartości zwracanych przez funkcje "Evaluate" wykonanych na poddrzewach,
+            - dla wartości "Subtraction" zwracamy różnicę wartości zwracanych przez funkcje "Evaluate" wykonanych na poddrzewach,
+            - dla wartości "Multiplication" zwracamy iloczyn wartości zwracanych przez funkcje "Evaluate" wykonanych na poddrzewach,
+            - dla wartości "Division" zwracamy iloraz wartości zwracanych przez funkcje "Evaluate" wykonanych na poddrzewach.
+            Uwaga!
+             - jeśli nie ma jakiegokolwiek z poddrzew to zwracamy "0", analogicznie przy dzieleniu przez "0".
+             
+                           
+Etap 3. (2.0 pkt)
+    W pliku "NodesFactory.cs" zaimplementuj klasę statyczną "NodesFactory" będącą fabryką (nazwa na klasę tworząca obiekty innych klas)
+    obiektów pozostałych klas.
+                          
+    W klasie "ValueNode" należy zaimplementować nastepujące metody:
+     - metodę "CreateNode" przyjmującą parametr typu "string" na podstawie którego będzie tworzony i zwracany odpowiedni obiekt:
+        - dla wartości "null" zwracamy "null",
+        - dla napisu "+" będzie zwracany "ArithmNode" z operacją dodawania, 
+        - dla napisu "-" będzie zwracany "ArithmNode" z operacją odejmowania, 
+        - dla napisu "*" będzie zwracany "ArithmNode" z operacją mnożenia, 
+        - dla napisu "/" będzie zwracany "ArithmNode" z operacją dzielenia,        
+        - w pozostałych przypadkach zwracamy "ValueNode" z wartością powstałą z parsowania parametru na wartość typu "double".
+     
+     Uwaga!
+     Nie trzeba sprawdzać poprawności danych.
+     Przy parsowaniu należy skorzystać z "double.Parse(<napis>, CultureInfo.InvariantCulture)".
+     Do zwracanego typu musi być możliwość przypisania obiektu każdej z tworzonych klas. 
+                  
+     - metoda "CreateMultipleNodes" zachowuje się analogicznie jak "CreateNode", ale zwraca tablicę stworzonych obiektów
+                oraz przyjmuje tablicę parametrów typu "string", dla braku danych wejściowych lub wartości "null" zwracamy "null".
+     - metodę "CreateTree" przyjmującą parametr typu "Node[]" reprezentujący tablicę wierzchołków, z których będziemy tworzyć drzewo
+       według podanego algorytmu:
+       1) Wybierz pierwszy element w tablicy jako korzeń drzewa.
+       2) Ustaw korzeń jako aktywny wierzchołek.
+       3) Dopóki nie przejrzano wszystkich wierzchołków w tablicy wykonuj 4,5,6,7, wpp idź do 8.     
+       4) Jeśli aktywny wierzchołek ma puste lewe poddrzewo przypisz aktywnie przeglądany wierzchołek jako lewe poddrzewo,
+       5) W przeciwnym przypadku przypisz jako prawe poddrzewo.
+       6) Jeśli przypisano przeglądany wierzchołek jako prawe poddrzewo aktywnego weirzchołka, zmień aktywny wierzchołek
+          na w tablicy (nie ma znaczenia który wierzchołek był przeglądany, jeśli aktywny był o numerze "i" to teraz jest "i+1")
+       7) Wróć do punktu 3.
+       8) Zwróć korzeń drzewa.
+    
+       Dla tablicy wierzchołków "*", "/", "*", "-5", "6.0", "3", "50" wynikiem jest -125.
+       Metoda zwraca obiekt typu "Node" będący korzeniem stworzonego drzewa.
+            
+     Wskazówki:
+      - "Nie pisać 2 razy tego samego".
+     
+        
+Etap 4. (0.5 pkt)
+    W pliku "ValueNode.cs" zaimplementuj metodę statyczną "Sort", przyjmującą parameter typu "ValueNode[]" reprezentujący sortowaną tablicę,
+    Sortowanie należy wykonać w miejscu - nie tworzymy i nie zwracamy dodatkowej tablicy. Należy zwrócić tę samą tablicę co na wejściu,
+    tylko posortowaną, typ zwracany to "ValueNode[]". Zadanie należy wykonać z wykorzystaniem "krotek", należy użyć operacji przypisania i dekonstrukcji
+    do zamiany elementów tablicy.

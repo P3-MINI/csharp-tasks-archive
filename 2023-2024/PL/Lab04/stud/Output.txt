@@ -1,0 +1,38 @@
+
+----------------------Stage 1-------------------------
+
+Shape2D (0) created
+Circle (0) with radius=5 created
+Circle(r=5)
+Area of circle: 78,5398
+Shape2D (1) created
+Circle (1) with radius=5 created
+Circle(r=5)
+
+----------------------Stage 2-------------------------
+
+Shape2D (2) created
+Circle (2) with radius=10 created
+Cylinder volume: 3 141,5927
+Cylinder(h=10)(Id: 0) with base: Circle(r=10) and height: 10
+Shape2D (3) created
+Circle (3) with radius=5 created
+Cone volume: 261,7994
+Cone(h=10)(Id: 100) with base: Circle(r=5)
+NumberOfShapes3D: 2
+Cylinder(h=10)(Id: 0) with base: Circle(r=10) and height: 10
+Cone(h=10)(Id: 100) with base: Circle(r=5)
+
+----------------------Stage 3-------------------------
+
+0)
+Id of original object: 0. Id of a copy 2
+Type of original object Lab04.Cylinder. Type of copy Lab04.Cylinder
+Cylinder(h=10)(Id: 0) with base: Circle(r=10) and height: 10
+Cylinder(h=10)(Id: 1) with base: Circle(r=10) and height: 10
+
+1)
+Id of original object: 1. Id of a copy 3
+Type of original object Lab04.Cone. Type of copy Lab04.Cone
+Cone(h=10)(Id: 100) with base: Circle(r=5)
+Cone(h=10)(Id: 300) with base: Circle(r=5)

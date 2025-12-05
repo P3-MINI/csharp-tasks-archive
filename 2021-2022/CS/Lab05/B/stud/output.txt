@@ -1,0 +1,192 @@
+Stage one
+
+0
+id: 0
+sender: Carrot
+recipient: Vimes
+postage date: 23-10-2021
+arrival time: 28.10.2021 15:16:25
+
+Item id: 0
+From: Carrot
+To: Vimes
+Postage date: 23.10.2021 15:16:25
+Type: standard mail
+
+
+1
+id: 1
+sender: Frodo
+recipient: Gandalf
+postage date: 20-10-2021
+arrival time: 22.10.2021 15:16:25
+
+Item id: 1
+From: Frodo
+To: Gandalf
+Postage date: 20.10.2021 15:16:25
+Type: registered mail
+
+
+2
+id: 2
+sender: Paul
+recipient: Shaddam IV Corrino
+postage date: 05-04-9997
+arrival time: 15.04.9997 23:59:59
+
+Item id: 2
+From: Paul
+To: Shaddam IV Corrino
+Postage date: 05.04.9997 23:59:59
+Type: package
+Weight: 5
+
+
+3
+id: 3
+sender: Ford Prefect
+recipient: Zaphod Beeblebrox
+postage date: 24-10-2021
+arrival time: 08.11.2021 15:16:25
+
+Item id: 3
+From: Ford Prefect
+To: Zaphod Beeblebrox
+Postage date: 24.10.2021 15:16:25
+Type: package
+Weight: 40
+
+
+4
+id: 4
+sender: Zeus
+recipient: Odin
+postage date: 16-04-0030
+arrival time: 18.04.0030 00:00:00
+
+Item id: 4
+From: Zeus
+To: Odin
+Postage date: 16.04.0030 00:00:00
+Type: registered mail
+
+
+Stage two
+
+Item id: 0
+From: Carrot
+To: Vimes
+Postage date: 23.10.2021 15:16:25
+Type: standard mail
+Item id: 1
+From: Frodo
+To: Gandalf
+Postage date: 20.10.2021 15:16:25
+Type: registered mail
+Item id: 2
+From: Paul
+To: Shaddam IV Corrino
+Postage date: 05.04.9997 23:59:59
+Type: package
+Weight: 5
+5
+
+
+
+Postbox: Ankh-Morpork
+Items:
+Item 0:
+Item id: 0
+From: Carrot
+To: Vimes
+Postage date: 23.10.2021 15:16:25
+Type: standard mail
+
+Item 1:
+Item id: 1
+From: Frodo
+To: Gandalf
+Postage date: 20.10.2021 15:16:25
+Type: registered mail
+
+Item 2:
+Item id: 2
+From: Paul
+To: Shaddam IV Corrino
+Postage date: 05.04.9997 23:59:59
+Type: package
+Weight: 5
+
+Item 3:
+Item id: 3
+From: Ford Prefect
+To: Zaphod Beeblebrox
+Postage date: 24.10.2021 15:16:25
+Type: package
+Weight: 40
+
+Item 4:
+Item id: 4
+From: Zeus
+To: Odin
+Postage date: 16.04.0030 00:00:00
+Type: registered mail
+
+
+
+Stage three
+
+True
+1
+True
+2
+True
+3
+
+False
+3
+
+Post office with 3 post boxes
+
+Post boxes: 
+0
+Postbox: The Restaurant at the End of the Universe
+Items:
+Item 0:
+Item id: 2
+From: Paul
+To: Shaddam IV Corrino
+Postage date: 05.04.9997 23:59:59
+Type: package
+Weight: 5
+
+
+1
+Postbox: Gondolin
+Items:
+Item 0:
+Item id: 1
+From: Frodo
+To: Gandalf
+Postage date: 20.10.2021 15:16:25
+Type: registered mail
+
+Item 1:
+Item id: 3
+From: Ford Prefect
+To: Zaphod Beeblebrox
+Postage date: 24.10.2021 15:16:25
+Type: package
+Weight: 40
+
+
+2
+Postbox: Kaladan
+Items:
+Item 0:
+Item id: 4
+From: Zeus
+To: Odin
+Postage date: 16.04.0030 00:00:00
+Type: registered mail

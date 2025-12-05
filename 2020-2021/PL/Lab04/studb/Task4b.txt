@@ -1,0 +1,21 @@
+Wykorzystując algorytm z nawrotami (ang. backtracking) zaimplementuj klasę GameSolver rozwiązującą
+zmodyfikowaną wersję łamigłówki Nanogram. Gra polega na tym, aby wypełnić pola planszy w taki
+w sposób, aby suma wartości pól w kolumnie/ wierszu zgadzała się z podanymi w wektorach m_column_sum
+i m_row_sum wartościami (i-ta wartość w wektorze m_column_sum oznacza sumę wartości pól w i-tej kolumnie,
+analogicznie dla m_row_sum i wierszy). Pola mogą mieć wartość od 0 do m_max_value.
+
+Uwaga: Można dodać zmienne oraz metody pomocnicze w klasie GameSolver. Dłuższe testy można zakomentować
+(mogą liczyć się długo w trybie Debug)
+
+Etap 1 (0.5 pkt)
+Zaimplementuj konstruktor klasy GameSolver, który inicjalizuje składowe klasy oraz tworzy pustą planszę.
+
+Etap 2 (3 pkt)
+Zaimplementuj metodę Solve, która zwraca znalezione rozwiązania wykorzystując metodę z nawrotami.
+Gra może nie mieć żadnego rozwiązania (zastanowić się w jakim przypadku rozwiązanie na pewno nie będzie
+istnieć), mieć jedno lub kilka rozwiązań. 
+
+Etap 3 (1.5 pkt)
+Optymalnie napisana metoda rozwiązywania Nanogramu. 
+Podpowiedź: Można oszacować jaką wartość maksymalną przypisać do pola. Można wcześniej zrezygnować z 
+rozwiązania jeżeli nie prowadzi do poprawnej odpowiedzi, analogicznie z akceptacją rozwiązania. 

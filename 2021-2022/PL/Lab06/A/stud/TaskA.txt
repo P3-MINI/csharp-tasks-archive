@@ -1,0 +1,26 @@
+Stage_1 (1.5 Pts)
+    Create Person structure that contains three fields: weight, name, surname.
+    Create constructor implementation for that structure with default value for weight parameter (default value equals 75).
+    Create implementation that allows system to print person in format: surname name. Version from C# language.
+    Create implementation that allows for deconstruction to tuple for name and surname.
+
+Stage_2 (1.0 Pts)
+    Create Car class that contains several readonly fields: mass, torque, horsepower, maxCapacity, tankCapacity.
+    	Additionally, milage with default value 0.0 and array of passangers. All of them protected.
+    Create constructor implementation for that class with parameters as follow: mass, torque, horsepower, tankCapacity, maxCapacity, arbitrary amount of passangers.
+    Create method PrintInfo(bool printPassengers) that prints basic information about car including passengers (if printPassengers equals true). For more details see the output file.
+    Create implementation that allows for deconstruction to tuple for torque, horsepower, tankCapacity.
+
+Stage_3 (1.5 Pts)
+    Create method CalculateRange() that computes total range of a car using given formula: tankCapacity * (torque + horsepower) / (totalMass * 17.46).
+    Create method AddPassenger(Person passenger) that adds new passanger. It returns true if there's enough space to add new passanger, false otherwise. Note that you have to resize the array.
+	Enough space is indicate by maxCapacity and current lenght of the array. You need to copy all existing passengers to some temporary array, allocate memory for new set of passengers and copy them back, whilst adding new one too.
+    Create Travel(double distance) method that computes travel distance. It returns tuple with bool indicating if we reach final destination and double describing remaining distance.
+	It uses CalculateRange() method to indicate maxRange which stays the same, so you need to subtract current milage from that to see whether it's enough to travel given distance.
+	If it's enough just return true and zero as remaining distance. Otherwise return false and whatever the remaining distance is (distance - (maxRange - milage)).
+
+Stage_4 (1.0 Pts)
+    Create Bus class that inherits from Car class.
+    Create constructor implementation and pass all the arguments to base class.
+    Create AddPassengers(...) with arbitrary amount of passangers as an argument. It returns true if all passangers have been added, false otherwise.
+	Remarks, it can return false after first failure.

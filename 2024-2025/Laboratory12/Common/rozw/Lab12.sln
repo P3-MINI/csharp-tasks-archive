@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab12", "Lab12\Lab12.csproj", "{6E44A93B-831B-4275-B87F-C74ACAF91073}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpSimulator", "HttpSimulator\HttpSimulator.csproj", "{4CC6B809-3597-4CB5-9924-AB350D3FC1A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E44A93B-831B-4275-B87F-C74ACAF91073}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E44A93B-831B-4275-B87F-C74ACAF91073}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E44A93B-831B-4275-B87F-C74ACAF91073}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E44A93B-831B-4275-B87F-C74ACAF91073}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CC6B809-3597-4CB5-9924-AB350D3FC1A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CC6B809-3597-4CB5-9924-AB350D3FC1A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CC6B809-3597-4CB5-9924-AB350D3FC1A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CC6B809-3597-4CB5-9924-AB350D3FC1A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CAFFB928-D478-4135-9565-EAF2A91EA597}
+	EndGlobalSection
+EndGlobal

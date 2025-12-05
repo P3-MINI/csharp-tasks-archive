@@ -1,0 +1,81 @@
+Etap 1. - 1.5 punkta
+
+Uwaga: W tym etapie w pliku Program.cs można jedynie korzystać z wyrażeń lambda.
+W pliku Functions.cs:
+
+Zaimplementuj metodę "FillWith" rozszerzającą klasę List<T>, przyjmującą 2 parametry:
+- liczbę elementów (n),
+- funkcję f  nieprzyjmującą parametrów zwracającą element typu T.
+Metoda powinna rozszerzać listę o n elementów, każdy uzyskany przez wywołanie funkcji f.
+
+W pliku Program.cs:
+
+Uzupełnij wywołanie FillWith, tak żeby do listy fib, dopisać 10 pierwszych wyrazów ciągu fibonacciego.
+
+Uzupełnij wywołanie Sort, tak żeby posortować liczby ich modułami rosnąco, jeśli moduły są równe większa jest liczba dodatnia.
+
+
+
+Etap 2. - 1 punkt
+
+Uwaga: Nie wolno korzystać z wyrażeń lambda.
+W pliku Functions.cs:
+
+Dopisz do klasy Generators podane metody:
+
+Metoda RandomInteger przyjmuje 2 parametry typu int: 
+- ziarno,
+- mod.
+Metoda zwraca funkcję zwracająca kolejną losową liczbę modulo mod zwróconą przez instancję klasy Random stworzoną z podanego ziarna. 
+
+Metoda ReturnElement przyjmuje 1 parametr:
+- kolekcja typu IEnumerable<T>.
+Zwraca funckję przyjmująca jeden parametr, numer elementu z kolekcji i zwracającą ten element,
+ jeśli numer jest <0 to zwracamy pierwszy element,
+ jeśli numer jest większy od rozmiaru kolekcji to zwracamy ostatni element kolekcji,
+ zakładamy, że kolekcja ma co najmniej jeden element 
+ 
+
+ 
+Etap 3. - 1 punkt
+
+Uwaga: Etap należy wykonać korzystając wyłącznie z wyrażeń lambda.
+W pliku Functions.cs:
+
+Dopisz do klasy FunctionsManipulator podane metody:
+
+Metoda Combine, przyjmuje 2 funkcje przyjmujące i zwracające double, i zwraca ich złożenie - pierwsza_funkcja(druga_funkcja(x))
+
+Metoda Derivative przyjmuje:
+- funkcję f przyjmującą i zwracającą double,
+- parametr domyślny h=0.001.
+Funkcja zwraca funkcję przyjmującą parametr x i obliczającą pochodną funkcji f w x,
+pochodną liczymy z x1 = x - h i x2 = x + h.
+
+W pliku Program.cs:
+
+Uzupełnij zapisane w komentarzach funkcje w miejscu ich deklaracji lub przypisania.  
+
+
+Etap 4. - 1.5 punkta
+
+W pliku Functions.cs:
+
+Zaimplementuj podane metody rozszerzejące interfejs IEnumerable<T>:
+
+Metoda Accumulate, przyjmuje 2 parametry:
+- wartość startową sumy, typu T,
+- funkcję przyjmującą zliczającą przyjmującą w koljeności: obecny element, aktualną sumą i zwracającą nową sumę.
+
+Metoda zwraca wartość T będącą wynikiem sumowania elementów kolekcji za pomocą powyższej funkcji.
+
+Metoda Transform przyjmującą funkcję wywoływaną na każdym elemencie kolekcji,
+metoda powinna zwrócić nową kolekcję powstałą przez zastosowanie podanej funkcji do każdego jej elementu.
+
+W pliku Program.cs:
+
+Uzupełnij wywołanie Accumulate o funkcję sumującą zaczynającą od 0 sumującą wszystkie elementy parzyste dodatnie,
+ponadto funkcja powinna zapisać w zmiennej absSum sumę modułów wszystkich elementów kolekcji.
+
+Uzupełnij wywołanie Transform o funkcję, która dla liczb o części ułamkowej większej od 1/2 zwróci część ułamkową,
+a w pozostałych przypadkach połowę liczby.

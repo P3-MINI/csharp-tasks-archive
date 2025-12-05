@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pracownik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <identyfikator>3003</identyfikator>
+  <imie>Patryk</imie>
+  <nazwisko>Piekarski</nazwisko>
+  <stanowisko>Specjalista</stanowisko>
+  <stazPracy>36</stazPracy>
+  <adres>
+    <ulica>Konopackiego</ulica>
+    <miasto>Marki</miasto>
+    <nr_lokalu>33</nr_lokalu>
+  </adres>
+</Pracownik>

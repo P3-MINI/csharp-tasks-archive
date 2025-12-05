@@ -1,0 +1,31 @@
+
+----------------------Stage 1-------------------------
+
+Shape2D(1) created
+Circle(1) with radius=5 created
+Circle(r=5)
+Area of circle: 78,5398
+Shape2D(2) created
+Circle(2) with radius=5 created
+End of Finalizers method
+Shape2D(3) created
+Circle(3) with radius=5 created
+Circle(r=5)
+Circle (2) destroyed
+Shape2D (2) destroyed
+
+----------------------Stage 2-------------------------
+
+Shape2D(4) created
+Circle(4) with radius=10 created
+Cylinder capacity: 3 141,5927
+Cylinder(h=10) with base: Circle(r=10)
+Shape2D(5) created
+Circle(5) with radius=5 created
+Cone capacity: 261,7994
+Cone(h=10) with base: Circle(r=5)
+NumberOfShapes3D: 2
+NumberOfCones: 1
+NumberOfCylinders: 1
+Shape3D with base Circle(r=10) and height: 10
+Cone(h=10) with base: Circle(r=5)

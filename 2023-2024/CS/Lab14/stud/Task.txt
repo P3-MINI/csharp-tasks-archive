@@ -1,0 +1,30 @@
+Before starting the task, read the entire text below!!!
+
+The aim of the task is to write 5 queries (using LINQ technology) to a simple database for an online store.
+Queries can be performed in any order. The exact contents of the tasks and what needs to be done are placed in 
+the Program.cs file, and there the solution should be placed along with printing it to the console.
+
+Queries MUST be implemented using LINQ technology. It is NOT ALLOWED to process collections that are part of 
+the database "manually," e.g., using for, foreach, and similar instructions.
+
+Queries 1-4 should be implemented as single query expressions or as a single chain query.
+Task 5 can be implemented as several related expressions or queries (as single expressions, of course, you can too).
+
+In the Database.cs file, there are records representing tables in the database (Book, Author, BookAuthor, Member, Loan),
+while in the Database class, there are lists with data representing the above-mentioned tables.
+
+The Book table stores a list of all books available in the library; it contains such data as:
+Book ID (BookId), title (Title), and the year of the publication (PublicationYear).
+
+The Author table stores a list of the book's authors; it contains such data as:
+Author ID (AuthorId), first name (FirstName), and last name (LastName).
+
+The BookAuthor table stores the connection information between books and their authors; it contains two fields:
+Book ID (BookId) and Author ID (AuthorId).
+
+The Member table stores a list of all library members; it contains such data as:
+Member ID (MemberId), first name (FirstName), last name (LastName), and their registration date (RegistrationDate).
+
+The Loan table stores a list of all member's loans information; it connection such data as:
+Loan ID (LoanId), member ID (MemberId), book ID (BookId), loan date (LoanDate), 
+and optionally if the book was already returned, its date (ReturnDate).

@@ -1,0 +1,4 @@
+The task is to solve 5 problems using STL library. The commands are written in Lab2.cpp file.
+The stages can be solved in any order, unless they use data calculated in another part.
+DON'T use any C++ loops. The function std::for_each can be used ONLY for printing results.
+Use lambda expression in algorithms.

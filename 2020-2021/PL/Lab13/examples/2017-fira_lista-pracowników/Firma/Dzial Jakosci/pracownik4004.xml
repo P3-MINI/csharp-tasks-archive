@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pracownik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <identyfikator>4004</identyfikator>
+  <imie>Andrzej</imie>
+  <nazwisko>Adamczyk</nazwisko>
+  <stanowisko>Dyrektor</stanowisko>
+  <stazPracy>14</stazPracy>
+  <adres>
+    <ulica>Krucza</ulica>
+    <miasto>Warszawa</miasto>
+    <nr_lokalu>1</nr_lokalu>
+  </adres>
+</Pracownik>

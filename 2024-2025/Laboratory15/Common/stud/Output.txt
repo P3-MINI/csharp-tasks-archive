@@ -1,0 +1,21 @@
+Value -1 found 2 times in a tree
+Value  1 found 1 times in a tree
+Value  6 found 3 times in a tree
+Value  9 found 7 times in a tree
+
+P1 Coefficients: 0, 0
+P2 Coefficients: 0.5, -1, 0.75
+P3 Coefficients: 0.5, -1, 0.75
+P4 Coefficients: -0.5, 1, -0.75
+
+P1 Get @3: 0
+P1 Set @5: Exception Thrown, OK!
+
+Value of P3(2.0) = 1.5
+Value of P4(9.0) = -52.25
+
+Random Sequence: 3 4 2 4 3 4 4 3 3 2
+
+Reading Text.txt file ..
+Mangling Text.txt file with some random values ..
+Mangled Text.txt file to Mangled.txt ..

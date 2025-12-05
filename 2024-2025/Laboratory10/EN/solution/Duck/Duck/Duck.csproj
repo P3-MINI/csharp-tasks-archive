@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\OpenGL\OpenGL.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\duck.mesh" />
+      <EmbeddedResource Include="Resources\duck.mesh" />
+      <None Remove="Resources\duck.texture" />
+      <EmbeddedResource Include="Resources\duck.texture" />
+      <None Remove="Resources\ducks.bin" />
+      <EmbeddedResource Include="Resources\ducks.bin" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,44 @@
+--------------- ETAP_1 (0.5 Pts) ---------------
+Airbus A319 - D-TRYZ
+Airbus A319 - D-QZZK
+
+--------------- ETAP_2 (1.0 Pts) ---------------
+Kod ICAO "EPWA" - 3 Wylotów.
+Kod ICAO "EPKK" - 2 Wylotów.
+Kod ICAO "EPWR" - 2 Wylotów.
+
+--------------- ETAP_3 (1.0 Pts) ---------------
+EC-TYZ - Nadgodziny: 235 Minut.
+EC-TYZ - Nadgodziny: 75 Minut.
+G-OTMY - Nadgodziny: 40 Minut.
+
+--------------- ETAP_4 (1.0 Pts) ---------------
+Frantsev Raoul - Piston License
+Gamddsev Wallas - Turbofan License
+
+--------------- ETAP_5 (1.0 Pts) ---------------
+WAW -> BCN MAD
+FCO -> LHR MPL KRK
+NAP -> VIE WRO MAD
+MAD -> MPL BER WAW
+CGN -> BCN WRO
+KRK -> MUC LHR
+BER -> CGN VIE
+VIE -> BCN BER
+WRO -> BCN CDG
+LHR -> EDI FCO
+BCN -> EDI WAW
+EDI -> CDG
+MUC -> CGN
+MPL -> MUC
+
+--------------- ETAP_6 (1.5 Pts) ---------------
+Dilston Gerianna - 03:15:00
+Gullan Cameron - 01:55:00
+Camell Joelynn - 01:45:00
+Peron Wallas - 01:45:00
+Surgeoner Davin - 01:45:00
+Gullan Kattie - 01:15:00
+Belden Lilias - 00:45:00
+Cruddas Vivienne - 00:45:00
+Wythill Luther - 00:45:00

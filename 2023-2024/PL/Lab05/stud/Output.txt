@@ -1,0 +1,55 @@
+----------------------Stage 1-------------------------
+
+//// Tworzenie obiektów typu Vector3
+Point(0,1, 0, 1)
+Point(0,1, 0, 1)
+//// Tworzenie obiektów typu Sphere i Cylinder
+Position in Sphere object: Point(0,1, 0, 1)
+Sphere ID 0: Position in Point(0,1, 0, 1), Radius=1
+
+Position in Cylinder object: Point(0,2, 0, 2)
+Cylinder ID 1: Position in Point(0,2, 0, 2), Radius=2, Height=4
+
+//// Tworzenie drzewa obiektów
+Sphere ID 0: Position in Point(0,1, 0, 1), Radius=1
+        Cylinder ID 1: Position in Point(0,2, 0, 2), Radius=2, Height=4
+        Cylinder ID 2: Position in Point(0,3, 0, 3), Radius=4, Height=8
+                Sphere ID 3: Position in Point(0,4, 0, 4), Radius=4
+
+Sphere max number of children: 2
+
+//// Rozszerzanie tablicy dzieci
+Sphere ID 0: Position in Point(0,1, 0, 1), Radius=1
+        Cylinder ID 1: Position in Point(0,2, 0, 2), Radius=2, Height=4
+        Cylinder ID 2: Position in Point(0,3, 0, 3), Radius=4, Height=8
+                Sphere ID 3: Position in Point(0,4, 0, 4), Radius=4
+        Sphere ID 4: Position in Point(0,5, 0, 5), Radius=5
+
+Sphere max number of children: 4
+
+
+----------------------Stage 2-------------------------
+
+//// Liczenie współrzędnych w kartezjańskim układzie współrzędnych
+Sphere ID 0: Position in Point(0,1, 0, 1), Radius=1
+        Cylinder ID 1: Position in Point(0,3, 0, 3), Radius=2, Height=4
+        Cylinder ID 2: Position in Point(0,4, 0, 4), Radius=4, Height=8
+                Sphere ID 3: Position in Point(0,8, 0, 8), Radius=4
+        Sphere ID 4: Position in Point(0,6, 0, 6), Radius=5
+
+//// Tworzenie bounding boxa z pointS0 i pointS4
+Point(0,1, 0, 1)
+Point(0,5, 0, 5)
+BoundingBox: Minimum in Point(0,1, 0, 1), Maximum in Point(0,5, 0, 5)
+
+//// Liczenie bounding boxa dla obiektów cylinder2 i sphere4
+Cylinder1 - BoundingBox: Minimum in Point(-1,7, -2, 3), Maximum in Point(2,3, 2, 7)
+Sphere4 - BoundingBox: Minimum in Point(-4,4, -5, 1), Maximum in Point(5,6, 5, 11)
+
+----------------------Stage 3-------------------------
+
+//// Liczenie bounding boxa dla danego poddrzewa
+Bounding box całego drzewa
+BoundingBox: Minimum in Point(-4,4, -5, 0), Maximum in Point(5,6, 5, 12)
+Bounding box dla poddrzewa zaczynającego się w cylinder2
+BoundingBox: Minimum in Point(-3,6, -4, 4), Maximum in Point(4,8, 4, 12)

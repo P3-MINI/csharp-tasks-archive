@@ -1,0 +1,54 @@
+/************** Etap 1 (1.0p) **************/
+1. Maciej    Maciejewski     40     0
+- Inwentaryzacja                   2h
+- Obsluga klienta                 10h
+- Serwis duze RTV                  0h
+- Serwis komputery                40h
+- Serwis male RTV                  0h
+- Szkolenie                        2h
+2. Jan       Kowalski        25     0
+- Inwentaryzacja                   2h
+- Obsluga klienta                  1h
+- Serwis duze RTV                 10h
+- Serwis komputery                 0h
+- Serwis male RTV                 30h
+- Szkolenie                        5h
+3. Albert    Nowak           30     0
+- Inwentaryzacja                   0h
+- Obsluga klienta                  5h
+- Serwis duze RTV                 20h
+- Serwis komputery                 3h
+- Serwis male RTV                 20h
+- Szkolenie                       10h
+4. Milosz    Wasilewski      20     0
+- Inwentaryzacja                  10h
+- Obsluga klienta                 12h
+- Serwis duze RTV                  4h
+- Serwis komputery                 0h
+- Serwis male RTV                  4h
+- Szkolenie                       20h
+5. Jakub     Nowicki         35     0
+- Inwentaryzacja                   8h
+- Obsluga klienta                  0h
+- Serwis duze RTV                 20h
+- Serwis komputery                 5h
+- Serwis male RTV                 20h
+- Szkolenie                        2h
+/************** Etap 2 (1.0p) **************/
+1. Maciej    Maciejewski     40  6500
+2. Jan       Kowalski        25  3480
+3. Albert    Nowak           30  4500
+4. Milosz    Wasilewski      20  2540
+5. Jakub     Nowicki         35  4650
+/************** Etap 3 (1.0p) **************/
+1. Maciej    Maciejewski     40  6500
+2. Jan       Kowalski        25  3480
+3. Milosz    Wasilewski      20  2540
+/************** Etap 4 (1.5p) **************/
+1. Jakub     Nowicki         35  4650
+2. Albert    Nowak           30  4500
+3. Jan       Kowalski        25  3480
+4. Maciej    Maciejewski     40  6500
+5. Milosz    Wasilewski      20  2540
+/************** Etap 5 (0.5p) **************/
+2, 10, 14, 18, 20, 29, 31, 37,

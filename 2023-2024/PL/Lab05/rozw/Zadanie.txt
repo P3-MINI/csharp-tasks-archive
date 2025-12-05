@@ -1,0 +1,46 @@
+Uwaga: kompilacja zadania nie powinna dawać błędów bądź ostrzeżeń np. CS0108
+Aby upewnić się że tak jest można włączyć opcję:
+Project properties -> Build -> Treat warnings as errors -> is ustawić set to All
+
+Zadaniem punktowanym jest przygotowanie struktury drzewiastej przechowującej bryły w przestrzeni trójwymiarowej.
+Za pomocą danej struktury będzie wyliczany bounding box dla danego poddrzewa.
+
+Etap 1 (2.5 pkt)
+W pliku Math.cs stwórz strukturę Vector3 odpowiadającą pozycji w przestrzeni R^3, która przechowuje w prywatnych polach współrzędne X, Y i Z (floaty).
+Zaimplementuj metodę ToString, zwracającą współrzędne punktu w konwecji "Point(X, Y, Z)"
+
+W pliku Figures.cs stwórz abstrakcyjną klasę Figure. Ma ona przechowywać:
+ - swoją pozycję (Vector3). Jest to pozycja względem rodzica, jeśli bryła takowego posiada, jeśli nie - jest to pozycja w przestrzeni R^3.
+ - tablicę swoich dzieci (typu Figure)
+ - referencję na rodzica (typ Figure), jeśli go posiada
+ - id (int) bryły. Id są kolejnymi liczbami naturalnymi przydzielanymi stworzonym figurom. Dla wszystkich stworzonych figur jest jeden licznik.
+Konstruktor klasy Figure przyjmuje: 
+ - pozycję figury względem rodzica. Jeśli figura nie ma rodzica, podana pozycja jest pozycją w kartezjańskim układzie współrzędnych o środku w (0,0,0).
+ - początkową liczbę elementów tablicy dzieci, domyślnie ustawioną na 2.
+
+Stwórz klasę Sphere dziedziczącą po klasie Figure, która dodatkowo przechowuje promień sfery oraz Cylinder, przechowujący dodatkowo promień i wysokość cylindra.
+Przeciąż metody ToString w klasach pochodnych aby wypisywały podane w konstruktorze współrzędne wraz z danymi przechowywanymi w klasie (promień dla sfery lub promień i wysokość dla cylindra). Konwencja wypisywania:
+"Sphere ID id: Position in P, Radius=R", gdzie id,P,R to zmienne
+"Cylinder ID id: Position in P, Radius=R, Height=H", , gdzie id,P,R,H to zmienne
+W klasie Figure zaimplementuj metodę GetPosition(), która zwróci pozycję obiektu i metodę GetMaxNumberOfChildren(), która zwróci maksymalną pojemność tablicy dzieci.
+
+W klasie Figure zaimplementuj metodę AddChild, przyjmującą jako parametr figurę typu Figure, która dodaje dziecko do tablicy dzieci, a dla dziecka ustawia referencję na rodzica. Jeśli tablica jest za mała, należy dynamicznie zwiększyć liczbę jej elementów, podwajając liczbę możliwych elementów.
+Hint: Array.Resize lub List<T>
+
+(0.5 pkt)
+Zaimplementować funkcję GetTreeString(), wypisującą drzewo z odpowiednią liczbą wcięć na początku linii - dla rodzica bez wcięcia, dla dziecka - jedno wcięcie, dla wnuka - 2 wcięcia itd.
+Zaimplementować w klasie Figure funkcję Move przesuwającą daną bryłę. Figury w drzewie muszą pozostać niezmienionymi obiektami, natomiast bounding box musi zostać przeliczony na nowo.
+
+Etap 2 (1.5 pkt)
+Zaimplementuj w klasie bazowej Figure wyliczanie współrzędnych danej figury w hierarchii drzewa w kartezjańskim układzie współrzędnych. W tym celu napisać metodę w klasie Vector3 do operacji dodawania wektorów oraz funkcję GetCartesianSpaceCoordinates().
+Hint: metoda ma przejść po hierarchii drzewa do korzenia i zsumować pozycje danych figur.
+Zmień metodę ToString w klasach pochodnych, aby wypisywały globalne współrzędne w kartezjańskim układzie współrzednych. (UWAGA: część z etapu 1 wypisująca pozycje będzie wypisywała inne koordynaty).
+
+Zaimplementuj strukturę BoundingBox, która dla danej bryły reprezentuje bryłę brzegową ułożoną równo z osiami układu współrzędnych. Reprezentowana jest przez dwa pola typu Vector3: MinimumPoint, która zawiera minimalną współrzędną po X, po Y i po Z oraz MaximumPoint zawierającą analogicznie maksymalną współrzędną po X, Y, Z. 
+Przeciążyć metodę ToString dla klasy BoundingBox by zwracała tekst w formacie:
+"BoundingBox: Minimum in A, Maximum in B"
+
+Stwórz abstrakcyjną metodę GetFigureBoundingBox() dla klasy Figure i zaimplementuj tę metodę dla klas pochodnych.
+
+Etap 3 (1 pkt)
+Stwórz metodę CalculateBoundingBox() dla klasy Figure, która wyliczy bounding box dla danego elementu i jego poddrzewa. W tym celu napisz metodę MergeBoundingBoxes() w strukturze BoundingBox, która dla dwóch bounding boxów zwróci bounding box zawierający oba z nich.

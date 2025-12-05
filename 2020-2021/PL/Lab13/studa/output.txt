@@ -1,0 +1,60 @@
+------------------ Etap1 ------------------
+Imported items:
+1: The Power of Habit, Charles Duhigg, pages: 416, type:Hardcover, publish details: Random House Trade Paperbacks, 2014-01-07, New York City
+2: Małżeństwo - przemyśl to, Bogna Białecka, pages: 180, type:Hardcover, publish details: Dębogóra, 2012-12-14, Dębogóra
+3: The lean startup, Eric Ries, pages: 336, type:Ebook, publish details: Currency, 2011-09-13, Unknown
+4: Sekretne życie drzew, Peter Wohlleben, pages: 256, type:Ebook, publish details: Otwarte, 2016-09-14, Kraków
+5: Szata, Lloyd C. Douglas, pages: 672, type:Hardcover, publish details: Instytut wydawniczy PAX, 2011-01-01, Warszawa
+
+OK: FileNotFoundException raised. File non-existing-file.csv doesn't exist
+
+------------------ Etap2 ------------------
+List of all created files:
+\Małżeństwo - przemyśl to.xml
+\Sekretne życie drzew.xml
+\Szata.xml
+\The lean startup.xml
+\The Power of Habit.xml
+OK: Number of files is 5
+
+Read single item
+OK: geting object for non existing item should return null
+
+Getting existing item:
+5: Szata, Lloyd C. Douglas, pages: 672, type:Hardcover, publish details: Instytut wydawniczy PAX, 2011-01-01, Warszawa
+
+------------------ Etap 3 ------------------
+6: The Pragmatic Programmer, Andrew Hunt, pages: 458, type:Hardcover, publish details: Addison-Wesley Professional, 1999-10-20, Boston
+OK: InvalidOperationException raised when delete operates on non-existing object
+
+List of all files:
+\Małżeństwo - przemyśl to.xml
+\Sekretne życie drzew.xml
+\Szata.xml
+\The lean startup.xml
+\The Power of Habit.xml
+OK: Number of files is 5
+
+List whole db:
+2: Małżeństwo - przemyśl to, Bogna Białecka, pages: 180, type:Hardcover, publish details: Dębogóra, 2012-12-14, Dębogóra
+4: Sekretne życie drzew, Peter Wohlleben, pages: 256, type:Ebook, publish details: Otwarte, 2016-09-14, Kraków
+5: Szata, Lloyd C. Douglas, pages: 672, type:Hardcover, publish details: Instytut wydawniczy PAX, 2011-01-01, Warszawa
+3: The lean startup, Eric Ries, pages: 336, type:Ebook, publish details: Currency, 2011-09-13, Unknown
+1: The Power of Habit, Charles Duhigg, pages: 416, type:Hardcover, publish details: Random House Trade Paperbacks, 2014-01-07, New York City
+
+------------------ Etap 4 ------------------
+<?xml version="1.0" encoding="utf-8"?>
+<Book xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" BookType="Hardcover">
+  <Identifier>6</Identifier>
+  <Title>The Pragmatic Programmer</Title>
+  <Author>Andrew Hunt</Author>
+  <PrintLength>458</PrintLength>
+  <PublicationDetails>
+    <PublicationDate>1999-10-20T00:00:00</PublicationDate>
+    <PublicationPlace>Boston</PublicationPlace>
+    <Publisher>Addison-Wesley Professional</Publisher>
+  </PublicationDetails>
+</Book>
+OK: Enum BookType value should be serialized as attribute
+OK: PagesNumber field name should be serialized as: PrintLength
+OK: Id field name should be serialized as: Identifier

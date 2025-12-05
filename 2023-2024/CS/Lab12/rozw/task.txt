@@ -1,0 +1,107 @@
+Laboratory 12
+
+The task is divided into 3 stages.
+ The delivered task includes project and solution files:
+ - .csproj,
+ - .sln.
+ The task should be run by opening these files using the selected IDE (Visual, Rider, VSCode, etc.).
+ If someone would like to create their own project, they must copy the text.txt file to the resulting folder
+ during compilation. In the finished project, the following lines in the .csproj file are responsible for this:
+ 
+ <ItemGroup>
+     <None Remove="text.txt" />
+     <AdditionalFiles Include="text.txt">
+         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+     </AdditionalFiles>
+ </ItemGroup>
+ 
+ The task also comes with .cs files that you need to add to your solution and complete the code in them.
+ 
+ WARNING!!!
+ The solution should be sent without bin and obj folders, and must be sent as a zip archive. The archive should contain .cs, .csproj and .sln files.
+ 
+ Stage 1 can be done independently of the others.
+ Stage 3 depends on stage 2.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Stage 1 - Parallel class - 1 point
+
+We perform this step in the Program.cs file. It is allowed to modify marked code fragments.
+
+a)
+Using the ForEach method from the Parallel class, for each line of the text.txt file (the lines are saved in the lines variable),
+count the number of words in a given line. For each line, add a string of the form "Worker <line number>, words count: <number of words>" to the messages variable.
+
+b)
+Use the For method from the Parallel class to Append all prime numbers in the range [2,1000] into StringBuilder and print that after for loop finishes execution. Store their number in the primesCount variable.
+
+Hints:
+- Parallel.For
+- Parallel.ForEach
+- Interlocked
+- Mutex
+- Semaphore
+
+------------------------------------------------------------------------------------------------------------------------
+
+Stage 2 - 2 points
+
+Using the supplied ILoggerSink interface, write the following implementations:
+1) Color Logger Sink:
+    - Depending on the error level (Severity enum), print it in the appropriate color:
+      blue, white, yellow or red.
+    - The log should be in the form: "<Current date and time>, <error level>, <message>"
+    - The OnAttach method should print: "<Current date and time>, Color logger attaching"
+    - The OnDetach method should print: "<Current date and time>, Color logger detaching"
+2) Conditional Logger Sink:
+    - The constructor accepts an additional parameter, a function that will decide whether to log the message based on the message and the error level.
+    - Only messages that fulfills the specified function are logged.
+    - The log is in the form:
+            ""-----------
+            Sample log: <message>
+            -----------"
+    - The OnAttach method should print: "<Current date and time>, Conditional logger attaching" 
+    - The OnDetach method should print: "<Current date and time>, Conditional logger detaching"
+
+Additionally, based on the Main function and the ILoggerSink interface, implement the Logger class
+- AttachSink and DetachSink methods should add a given logger sink to the appropriate event triggered after reading the message in the HandleMessage function.
+  The method should additionally write the received message to the console in the format: "Severity: <severity>, message: <message>". The message and error level are passed to the Loggers.
+  Additionally, write a PrintStatus method that prints the current number of connected loggers (do not store them in variables).
+  
+Hints:
+ - events
+ - event handler
+ - Console.ForegroundColor
+
+------------------------------------------------------------------------------------------------------------------------   
+  
+Stage 3 - 2 points
+
+Based on the IInputSource interface, implement the following classes:
+- RandomSource implementing IInputSource
+    - the class constructor accepts 2 variables: the minimum and maximum length of the string, if max < min or min < 0 throw an ArgumentOutOfRangeException exception.
+    - GetLine always returns true, and the parameter passes a random alphanumeric string with a length in the range [min, max]
+    - The OnAttach method prints:
+                "Attaching random sources
+                Chars array: <characters that may appear in the string>
+                attached"
+    - The OnDetach method prints:
+                "Detaching random sources
+                Detached"
+- FileSource implementing IInputSource
+    - the constructor accepts a file path
+    - GetLine, returns true if the end of the file has not been reached, false otherwise. Subsequent lines from the file are passed through the parameter.
+    - The OnAttach method prints:
+                "Attaching file sources
+                Path: <filePath>
+                attached"
+    - The OnDetach method prints:
+                "Detaching file source
+                filePath"
+- Expand the Logger class with:
+    - methods for attaching and detaching InputSources
+    - the ProcessNextLines method taking as a parameter the number of lines to be processed using the connected InputSources.
+        Data sources are meant to be invoked via events, they cannot be stored in any other variables.
+    - GetLineEventArgs class allowing for adding data (lines) from subsequent functions (GetLine) attached to one event.
+    

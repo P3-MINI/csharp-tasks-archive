@@ -1,0 +1,103 @@
+/************** Stage 1 (1.0p) **************/
+/************** Stage 2 (1.0p) **************/
+0  Max       Verstappen  Red Bull Racing     0
+1  Charles   Leclerc     Ferrari             0
+2  Sergio    Perez       Red Bull Racing     0
+3  George    Russell     Mercedes            0
+4  Carlos    Sainz       Ferrari             0
+5  Lewis     Hamilton    Mercedes            0
+6  Lando     Norris      McLaren             0
+7  Esteban   Ocon        Alpine              0
+8  Fernando  Alonso      Alpine              0
+9  Valtteri  Bottas      Alfa Romeo          0
+10 Daniel    Ricciardo   McLaren             0
+11 Sebastian Vettel      Aston Martin        0
+
+Race_0:
+1   -> 2
+2   -> 11
+3   -> 7
+4   -> 6
+5   -> 5
+6   -> 10
+7   -> 9
+8   -> 1
+9   -> 3
+10  -> 4
+11  -> 0
+12  -> 8
+Race_1:
+1   -> 2
+2   -> 10
+3   -> 1
+4   -> 7
+5   -> 11
+6   -> 9
+7   -> 3
+8   -> 4
+9   -> 0
+10  -> 8
+11  -> 5
+12  -> 6
+Race_2:
+1   -> 4
+2   -> 7
+3   -> 6
+4   -> 11
+5   -> 10
+6   -> 5
+7   -> 1
+8   -> 8
+9   -> 9
+10  -> 0
+11  -> 2
+12  -> 3
+Race_3:
+1   -> 7
+2   -> 4
+3   -> 10
+4   -> 0
+5   -> 9
+6   -> 5
+7   -> 11
+8   -> 2
+9   -> 6
+10  -> 1
+11  -> 3
+12  -> 8
+Race_4:
+1   -> 9
+2   -> 7
+3   -> 6
+4   -> 3
+5   -> 5
+6   -> 0
+7   -> 10
+8   -> 11
+9   -> 8
+10  -> 4
+11  -> 1
+12  -> 2
+/************** Stage 3 (1.0p) **************/
+0  Max       Verstappen  Red Bull Racing    19
+1  Charles   Leclerc     Ferrari            24
+2  Sergio    Perez       Red Bull Racing    53
+3  George    Russell     Mercedes           17
+4  Carlos    Sainz       Ferrari            50
+5  Lewis     Hamilton    Mercedes           28
+6  Lando     Norris      McLaren            42
+7  Esteban   Ocon        Alpine             90
+8  Fernando  Alonso      Alpine              6
+9  Valtteri  Bottas      Alfa Romeo         46
+10 Daniel    Ricciardo   McLaren            54
+11 Sebastian Vettel      Aston Martin       46
+/************** Stage 4 (1.0p) **************/
+9  Valtteri  Bottas      Alfa Romeo         46
+7  Esteban   Ocon        Alpine             90
+11 Sebastian Vettel      Aston Martin       46
+4  Carlos    Sainz       Ferrari            50
+10 Daniel    Ricciardo   McLaren            54
+5  Lewis     Hamilton    Mercedes           28
+2  Sergio    Perez       Red Bull Racing    53
+/************** Stage 5 (1.0p) **************/
+7  Esteban   Ocon        Alpine             90

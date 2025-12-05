@@ -1,0 +1,50 @@
+Uwaga: kompilacja zadania nie powinna dawać błędów bądź ostrzeżeń np. CS0108
+Aby upewnić się że tak jest można włączyć opcję:
+Project properties -> Build -> Treat warnings as errors -> ustawić set to All
+
+-------------------------------------------------------------------------
+
+Celem zadania jest zaimplementowanie klasy uogólnionej (generycznej) MyDictionary<TKey, TValue>,
+czyli samoorganizującego się słownika przechowującego pola: klucz typu TKey (typ bezpośredni nie
+przyjmujący wartości null), wartość typu TValue oraz licznik typu int. Dane trzymane są w jednowymiarowej
+tablicy o początkowym rozmiarze 4. Pola tablicy są stopniowo wypełniane elementami. Jeżeli zabraknie miejsca
+to tworzona zostaje 2 razy większa tablica, a elementy przepisywane w takiej samej kolejności. Słownik
+ten jest samoorganizujący tzn. że przy każdej operacji szukania (liniowo) elementu (tzn. w metodach Add, Contains,
+TryGetValue) o podanej wartości klucza zwiększany jest licznik, a następnie (jeżeli zajdzie taka konieczność)
+element ten jest przesuwany w stronę początku tak, aby kolekcja zachowała porządek od elementu z najwyższą
+wartością licznika do elementu z najniższą.
+UWAGA: W zadaniu można korzystać tylko z własnych klas/struktur lub metod pomocniczych, nie można używać
+standardowych kolekcji C# np. LinkedList, List, Dictionary, Queue itp.
+
+-------------------------------------------------------------------------
+
+Etap 1 (3.0)
+Należy zaimplementować klasę MyDictionary<TKey, TValue>
+ - 	klasa ma implementować intefejs IMyDictionary<TKey, TValue> podany w pliku MyDictionary.cs
+ - 	nałożyć na typ TKey ograniczenia - tylko nienulowalne typy bezpośrednie.
+ - 	właściwość Count - zwraca liczbę elementów znajdujących się w słowniku. Złożoność wywołania metody O(1).
+ -	metoda Add - dodaje element na koniec kolekcji. Jeżeli element o podanym kluczu istnieje, wartość jest
+	nadpisywana, licznik inkrementowany, a element przesuwany w odpowiednie miejsce.
+ -	metoda Contains - zwraca informację czy element o podanej wartości klucza istnieje w słowniku.
+ -	metoda TryGetValue - zwraca informację czy element o podanej wartości klucza istnieje w słowniku oraz
+	wartość przypisaną do tego klucza. Jeżeli podanego klucza nie ma, należy zwrócić wartość domyślną dla
+	typu TValue.
+ -	metoda Remove - usuwa element o podanym kluczu jeżeli znajduje się w słowniku. Zwraca true jeśli operacja się
+	powiodła tzn. element został znaleziony i usunięty, false w przeciwnym przypadku.
+ -	przeciążyć metodę ToString - metoda zwraca słownik zapisany do string'a o formacie "[{key0}:{value0}({counter0})][{key1}:{value1}({counter1})]..."
+
+-------------------------------------------------------------------------
+
+Etap 2 (1.0)
+Zaimplementować interfejs IEnumerable<(TKey, TValue, int)>. Metoda GetEnumerator powinna zwracać
+elementy jako krotkę (TKey key, TValue value, int counter) w kolejności takiej samej jak są zapisane w tablicy. 
+
+-------------------------------------------------------------------------
+
+Etap 3 (1.0)
+Stworzyć klasę MyDictionaryExtensions. Klasa powinna znajdować się również w pliku MyDictionary
+W powyższej klasie należy zaimplementować metody rozszerzające klasę MyDictionary<TKey, TValue>:
+ -	metodę rozszerzającą TKey[] GetValues() - zwraca tablicę wszystkich UNIKALNYCH wartości w słowniku. 
+	Złożoność metody O(n^2)
+ -	metodę rozszerzającą TValue MinValue() - zwraca najmniejszą wartość dla elementów w słowniku 
+	(TValue powinno implementować interfejs IComparable<TValue>).

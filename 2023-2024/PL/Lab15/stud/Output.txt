@@ -1,0 +1,52 @@
+----------------- STAGE_1 (1.0) -----------------
+23+5*
+34-5+
+537-2*351+*-*3-
+2/3+5*
++2x+4*+3-
+9413*74+*+
+47-+
+24-*
+24b*
+27+3/73-4*+2/
+9234*95/+*+
+512+4*+3-
+9413*74/+*+
+235-3*-
+47-
+238-*
+24+46-*
+----------------- STAGE_2 (2.0) -----------------
+ValueTreeNode with value of: 5
+ValueTreeNode with value of: 9
+AdditionTreeNode with value of: 14
+SubtractionTreeNode with value of: -4
+MultiplicationTreeNode with value of: 45
+DivisionTreeNode with value of: 0
+
+ValueTreeNode with value of: 6
+ValueTreeNode with value of: 9
+AdditionTreeNode with value of: 15
+SubtractionTreeNode with value of: -3
+MultiplicationTreeNode with value of: 54
+DivisionTreeNode with value of: 0,6666667
+----------------- STAGE_3 (1.0) -----------------
+Expression: 23+5* = 25
+Expression: 34-5+ = 4
+Expression: 27+3/73-4*+2/ = 9
+Expression: 9234*95/+*+ = 35
+
+Invalid expression source stream - not enough elements or wrong expression!
+Invalid expression source stream - not enough elements or wrong expression!
+Invalid expression source stream - too many elements!
+Invalid expression source stream - not enough elements or wrong expression!
+Invalid expression source stream - not enough elements or wrong expression!
+Invalid expression source stream - invalid symbol found!
+----------------- STAGE_4 (0.5) -----------------
+ExpressionTree + Operator: 25 + 4 = 29
+ExpressionTree - Operator: 25 - 9 = 16
+ExpressionTree * Operator: 9 * 35 = 315
+ExpressionTree / Operator: 35 / 4 = 8
+----------------- STAGE_5 (0.5) -----------------
+Primes async: 39194 + 19.82 seconds.
+Primes: 39194 + 131.23 seconds.

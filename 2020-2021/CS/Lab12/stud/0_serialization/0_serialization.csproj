@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_0_serialization</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="compressed.txt" />
+    <None Remove="compressed.txt.gzip" />
+    <None Remove="persons.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="compressed.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="compressed.txt.gzip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="persons.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

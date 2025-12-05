@@ -1,0 +1,18 @@
+*** ETAP I ***
+Serializacja OK
+*** ETAP II ***
+ZnajdzMiasto OK
+*** ETAP III ***
+Samochód o podanej rejestracji istnieje ju¿ w bazie
+*** ETAP IV ***
+Usuniêto samochód o rejestracji BI 806LP
+Usuniêto samochód o rejestracji WPI 07BR
+Usuniêto samochód o rejestracji WPL 67CL
+Usuniêto samochód o rejestracji WBR 77LX
+Usuniêto samochód o rejestracji LU 16120
+Samochód o rejestracji WPL 67CL nie istnieje w bazie
+Samochód o rejestracji BZA 04CV nie istnieje w bazie
+Samochód o rejestracji NGI 89DF nie istnieje w bazie
+*** ETAP V ***
+Liczba samochodów do przegl¹du: 3
+*** KONIEC ***

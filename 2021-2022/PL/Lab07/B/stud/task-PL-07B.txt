@@ -1,0 +1,31 @@
+Całe zadanie polega na zaimplementowaniu binarnego drzewa poszukiwań (BST, dynamiczna struktura danych). Gdy w poleceniach poniżej jest używane słowo "drzewo", mamy na myśli implementowaną przez nas klasę binarnego drzewa poszukiwań (binary search tree, BST).
+
+Etap 1 (1.5 Pkt.)
+
+Stwórz właściwość Root tylko z akcesorem get (zwraca pole prywatne root).
+Stwórz właściwość Count tylko z akcesorem get, które zwraca liczbę elementów w drzewie (każde dodanie elementu do drzewa ma aktualizować ten licznik, może zajść potrzeba dopisania się do gotowej metody Insert).
+Stwórz właściwość IsEmpty tylko z akcesorem get, które zwraca true wtedy i tylko wtedy gdy nie ma żadnego elementu w drzewie.
+Stwórz konstruktor bezparametrowy tworzący puste drzewo.
+Stwórz konstruktor przyjmujący tablicę liczb całkowitych, które zostaną wstawione do drzewa.
+
+Etap 2 (1 Pkt.)
+
+Stwórz operator jawnej konwersji z drzewa do tablicy liczb całkowitych. Elementy w tablicy powinny być posortowane (podpowiedź: przechodzenie drzewa in-order; stworzyć pomocniczą metodę rekurencyjną, która przyjmuje tablicę oraz indeks, pod który ma zapisywać, a także węzeł, który aktualnie przetwarzamy; zmiana indeksu powinna być widoczna na zewnątrz).
+Stwórz operator konwersji niejawnej z tablicy liczb całkowitych do drzewa.
+Stwórz metodę Clone() która zwraca drzewo. Klonowanie powinno odbywać się poprzez konwersję drzewa do tablicy, a następnie skonwertowanie tej tablicy do nowego drzewa.
+Przeciąż metodę ToString() która konwertuje drzewo do tablicy, a następnie zapisuje tę tablicę jako napis (podpowiedź: string.Join()).
+
+
+Etap 3 (1 Pkt.)
+
+Stwórz operator +, który przyjmuje dwa drzewa i zwraca nowe drzewo, które jest sumą teoriomnogościową drzew wejściowych.
+
+Stwórz operator *, który przyjmuje dwa drzewa i zwraca nowe drzewo, które jest iloczynem teoriomnogościowym (przecięciem) drzew wejściowych.
+
+Stwórz operator == wraz z operatorami/metodami które muszą mu towarzyszyć. Dwa drzewa są sobie równe, jeśli mają tyle samo elementów i każdy element z jednego drzewa znajduje się w drugim.
+
+Etap 4 (1.5 Pkt.)
+
+Zaimplementuj dekonstrukcję listy na dwie składowe. Lewa składowa ma posiadać same wartości mniejsze od mediany elementów w drzewie, a prawa składowa same wartości większe lub równe medianie.
+
+Zaimplementuj operator [], tylko akcesor get. Pod indeksem 0 zwracamy minimum z drzewa, a pod indeksem 1 maksimum.

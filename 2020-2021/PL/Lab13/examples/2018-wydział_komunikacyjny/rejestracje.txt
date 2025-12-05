@@ -1,0 +1,399 @@
+BAU: Augustów
+BBI: Bielsk Podlaski
+BGR: Grajewo
+BHA: Hajnówka
+BI: Białystok (miasto)
+BIA: Białystok (powiat)
+BKL: Kolno
+BL: Łomża (miasto)
+BLM: Łomża (powiat)
+BMN: Mońki
+BS: Suwałki
+BSE: Sejny
+BSI: Siemiatycze
+BSK: Sokółka
+BSU: Suwałki
+BWM: Wysokie Mazowieckie
+BZA: Zambrów
+CAL: Aleksandrów Kujawski
+CB: Bydgoszcz (miasto)
+CBR: Brodnica
+CBY: Bydgoszcz (powiat)
+CCH: Chełmno
+CG: Grudziądz
+CGD: Golub Dobrzyń
+CIN: Inowrocław
+CLI: Lipno
+CMG: Mogilno
+CNA: Nakło nad Notecią
+CRA: Radziejów
+CRY: Rypin
+CS: Świecie
+CSE: Sępólno Krajeńskie
+CT: Toruń (miasto)
+CTR: Toruń (powiat)
+CTU: Tuchola
+CWA: Wąbrzeźno
+CW: Włocławek (miasto)
+CWL: Włocławek (powiat)
+CZN: Żnin
+DB: Wałbrzych (miasto)
+DBA: Wałbrzych (powiat)
+DBL: Bolesławiec
+DDZ: Dzierżoniów
+DGL: Głogów
+DGR: Góra
+DJ: Jelenia Góra (miasto)
+DJA: Jawor
+DJE: Jelenia Góra (powiat)
+DKA: Kamienna Góra
+DKL: Kłodzko
+DL: Legnica (miasto)
+DLB: Lubań
+DLE: Legnica (powiat)
+DLU: Lubin
+DLW: Lwówek Śląski
+DMI: Milicz
+DOA: Oława
+DOL: Oleśnica
+DPL: Polkowice
+DSR: Środa Śląska
+DST: Strzelin
+DSW: Świdnica
+DTR: Trzebnica
+DW: Wrocław (miasto)
+DWL: Wołów
+DWR: Wrocław (powiat)
+DZA: Ząbkowice Ślaskie
+DZG: Zgorzelec
+DZL: Złotoryja
+EBE: Bełchatów
+EBR: Brzeziny
+EKU: Kutno
+EL: Łódź (miasto)
+ELA: Łask
+ELC: Łowicz
+ELE: Łęczyca
+ELW: Łódź Wschód
+EOP: Opoczno
+EP: Piotrków Trybunalski (miasto)
+EPA: Pabianice
+EPD: Poddębice
+EPI: Piotrków Trybunalski (powiat)
+EPJ: Pajęczno
+ERA: Radomsko
+ERW: Rawa Mazowoecka
+ES: Skierniewice
+ESI: Sieradz
+ESK: Skierniewice
+ETM: Tomaszów Mazowiecki
+EWE: Wieruszów
+EWI: Wieluń
+EZD: Zduńska Wola
+EZG: Zgierz
+FG: Gorzów Wielkopolski (miasto)
+FGW: Gorzów Wielkopolski (powiat)
+FKR: Krosno Odrzańskie
+FMI: Międzyrzecz
+FNW: Nowa Sól
+FSD: Strzelce Krajeńskie
+FSL: Słubice
+FSU: Sulęcin
+FSW: Świebodzin
+FWS: Wschowa
+FZ: Zielona Góra (miasto)
+FZA: Żary
+FZG: Żagań
+FZI: Zielona Góra (powiat)
+GA: Gdynia
+GBY: Bytów
+GCH: Chojnice
+GCZ: Człuchów
+GD: Gdańsk (miasto)
+GDA: Gdańsk (powiat—Pruszcz Gdański)
+GKA: Kartuzy
+GKS: Kościerzyna
+GKW: Kwidzyn
+GLE: Lębork
+GMB: Malbork
+GND: Nowy Dwór Gdański
+GPU: Puck
+GS: Słupsk (miasto)
+GSL: Słupsk (powiat)
+GSP: Sopot
+GST: Starogard Gdański
+GSZ: Sztum
+GTC: Tczew
+GWE: Wejherowo
+KBC: Bochnia
+KBR: Brzesko
+KCH: Chrzanów
+KDA: Dąbrowa Tarnowska
+KGR: Gorlice
+KLI: Limanowa
+KMI: Miechów
+KMY: Myślenice
+KN: Nowy Sącz (miasto)
+KNS: Nowy Sącz (powiat)
+KNT: Nowy Targ
+KOL: Olkusz
+KOS: Oświęcim
+KPR: Proszowice
+KR: Kraków (miasto)
+KRA: Kraków (powiat)
+KSU: Sucha Beskidzka
+KT: Tarnów (miasto)
+KTA: Tarnów (powiat)
+KTT: Zakopane
+KWA: Wadowice
+KWI: Wieliczka
+LB: Biała Podlaska (miasto)
+LBI: Biała Podlaska (powiat)
+LBL: Biłgoraj
+LC: Chełm (miasto)
+LCH: Chełm (powiat)
+LHR: Hrubieszów
+LJA: Janów Lubelski
+LKR: Kraśnik
+LKS: Krasnystaw
+LLB: Lubartów
+LLE: Łęczna
+LLU: Łuków
+LOP: Opole Lubelskie
+LPA: Parczew
+LPU: Puławy
+LRA: Radzyń Podlaski
+LRY: Ryki
+LSW: Świdnik
+LTM: Tomaszów Lubelski
+LU: Lublin (miasto)
+LUB: Lublin (powiat)
+LWL: Włodawa
+LZ: Zamość (miasto)
+LZA: Zamość (powiat)
+NBA: Bartoszyce
+NBR: Braniewo
+NDZ: Działdowo
+NE: Elbląg (miasto)
+NEB: Elbląg (powiat)
+NEL: Ełk
+NGI: Giżycko
+NGO: Gołdap
+NIL: Iława
+NKE: Kętrzyn
+NLI: Lidzbark Warmiński
+NMR: Mrągowo
+NNI: Nidzica
+NNM: Nowe Miasto Lubawskie
+NO: Olsztyn (miasto)
+NOE: Olecko
+NOG: Olecko
+NOL: Olsztyn (powiat)
+NOS: Ostróda
+NPI: Pisz
+NSZ: Szczytno
+NWE: Węgorzewo
+OB: Brzeg
+OGL: Głubczyce
+OK: Kędzierzyn—Koźle
+OKL: Kluczbork
+OKR: Krapkowice
+ONA: Namysłów
+ONY: Nysa
+OOL: Olesno
+OP: Opole (miasto)
+OPO: Opole (powiat)
+OPR: Prudnik
+OST: Strzelce Opolskie
+PCH: Chodzież
+PCT: Czarnków
+PGN: Gniezno
+PGO: Grodzisk Wielkopolski
+PGS: Gostyń
+PJA: Jarocin
+PK: Kalisz (miasto)
+PKA: Kalisz (powiat)
+PKE: Kępno
+PKL: Koło
+PKN: Konin (powiat)
+PKO: Konin (miasto)
+PKR: Krotoszyn
+PKS: Kościan
+PL: Leszno (miasto)
+PLE: Leszno (powiat)
+PMI: Międzychód
+PN: Konin (miasto)
+PNT: Nowy Tomyśl
+PO: Poznań (miasto)
+POB: Oborniki
+POS: Ostrów Wielkopolski
+POT: Ostrzeszów
+POZ: Poznań (powiat)
+PP: Piła
+PPL: Pleszew
+PRA: Rawicz
+PSE: Śrem
+PSL: Słupca
+PSR: Środa Wielkopolska
+PSZ: Szamotuły
+PTU: Turek
+PWA: Wągrowiec
+PWL: Wolsztyn
+PWR: Września
+PZ: Poznań (powiat)
+PZL: Złotów
+RBI: Ustrzyki Dolne
+RBR: Brzozów
+RDE: Dębica
+RJA: Jarosław
+RJS: Jasło
+RK: Krosno (miasto)
+RKL: Kolbuszowa
+RKR: Krosno (powiat)
+RLA: Łańcut
+RLE: Leżajsk
+RLS: Lesko
+RLU: Lubaczów
+RMI: Mielec
+RNI: Nisko
+RP: Przemyśl (miasto)
+RPR: Przemyśl (powiat)
+RPZ: Przeworsk
+RRS: Ropczyce
+RSA: Sanok
+RSR: Strzyżów
+RST: Stalowa Wola
+RT: Tarnobrzeg (miasto)
+RTA: Tarnobrzeg (powiat)
+RZ: Rzeszów (miasto)
+RZE: Rzeszów (powiat)
+SB: Bielsko-Biała (miasto)
+SBE: Będzin
+SBI: Bielsko-Biała (powiat)
+SBL: Tychu
+SC: Częstochowa (miasto)
+SCI: Cieszyn
+SCZ: Częstochowa (powiat)
+SD: Dąbrowa Górnicza
+SG: Gliwice (miasto)
+SGL: Gliwice (powiat)
+SH: Chorzów
+SI: Siemianowice Śląskie
+SJ: Jaworzno
+SJZ: Jastrzębie Zdrój
+SK: Katowice
+SKL: Kłobuck
+SL: Ruda Śląska
+SLU: Lubliniec
+SM: Mysłowice
+SMI: Mikołów
+SMY: Myszków
+SO: Sosnowiec
+SPI: Piekary Śląskie
+SPS: Pszczyna
+SR: Rybnik (miasto)
+SRB: Rybnik (powiat)
+SRC: Racibórz
+SRS: Ruda Śląska
+ST: Tychy
+STA: Tarnowskie Góry
+STY: Tychy (powiat)
+SW: Świętochłowice
+SWD: Wodzisław Śląski
+SY: Bytom
+SZ: Zabrze
+SZA: Zawiercie
+SZO: Żory
+SZY: Żywiec
+TBU: Busko Zdrój
+TJE: Jędrzejów
+TK: Kielce (miasto)
+TKA: Kazimierza Wielka
+TKI: Kielce (powiat)
+TKN: Końskie
+TLW: Włoszczowa
+TOP: Opatów
+TOS: Ostrowiec Świętokrzyski
+TPI: Pińczów
+TSA: Sandomierz
+TSK: Skarżysko-Kamienna
+TST: Starachowice
+TSZ: Staszów
+WA: Warszawa
+WB: Warszawa
+WBR: Białobrzegi
+WCI: Ciechanów
+WD: Warszawa
+WE: Warszawa
+WF: Warszawa
+WG: Garwolin
+WGM: Grodzisk Mazowiecki
+WGR: Grójec
+WGS: Gostynin
+WH: Warszawa
+WI: Warszawa
+WJ: Warszawa
+WK: Warszawa
+WKZ: Kozienice
+WL: Legionowo
+WLI: Lipsko
+WLS: Łosice
+WM: Mińsk Mazowiecki
+WMA: Maków Mazowiecki
+WML: Mława
+WN: Warszawa
+WND: Nowy Dwór Mazowiecki
+WO: Ostrołęka (miasto)
+WOR: Ostrów Mazowiecki
+WOS: Ostrołęka (powiat)
+WOT: Otwock
+WP: Płock (miasto)
+WPI: Piaseczno
+WPL: Płock (powiat)
+WPN: Płońsk
+WPR: Pruszków
+WPU: Pułtusk
+WPY: Przysucha
+WPZ: Przasnysz
+WR: Radom (miasto)
+WRA: Radom (powiat)
+WS: Siedlce (miasto)
+WSC: Sochaczew
+WSE: Sierpc
+WSK: Sokołów Podlaski
+WSI: Siedlce (powiat)
+WSZ :Szydłowiec
+WT: Warszawa
+WU: Warszawa
+WV: Wołomin
+WW: Warszawa
+WWE: Węgrów
+WWL: Wołomin
+WWY: Wyszków
+WX: Warszawa
+WY: Warszawa
+WZ: Warszawa Zachód
+WZU: Żuromin
+WZW: Zwoleń
+WZY: Żyrardów
+ZBI: Białogard
+ZCH: Choszczno
+ZDR: Drawsko Pomorskie
+ZGL: Goleniów
+ZGR: Gryfino
+ZGY: Gryfice
+ZK: Koszalin (miasto)
+ZKA: Kamień Pomorski
+ZKL: Kołobrzeg
+ZKO: Koszalin (powiat)
+ZLO: Łobez
+ZMY: Myślibórz
+ZPL: Police
+ZPY: Pyrzyce
+ZS: Szczecin
+ZSD: Świdwin
+ZSL: Sławno
+ZST: Stargard Szczeciński
+ZSW: Świnoujście
+ZSZ: Szczecinek
+ZWA: Wałcz

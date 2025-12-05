@@ -1,0 +1,85 @@
+F 0,28294701986754967
+M 0,7170529801324503
+--------------
+0,012913907284768211 - 1 F
+0,02384105960264901 - 1 M
+0,04933774834437086 - 18 F
+0,13327814569536423 - 18 M
+0,0923841059602649 - 25 F
+0,254635761589404 - 25 M
+0,05596026490066225 - 35 F
+0,14155629139072848 - 35 M
+0,03129139072847682 - 45 F
+0,0597682119205298 - 45 M
+0,024172185430463577 - 50 F
+0,057947019867549666 - 50 M
+0,016887417218543047 - 56 F
+0,04602649006622517 - 56 M
+--------------
+107 Muppet Treasure Island 1996 Adventure|Children's|Comedy|Musical
+113 Before and After 1996 Drama|Mystery
+123 Chungking Express 1994 Drama|Mystery|Romance
+160 Congo 1995 Action|Adventure|Mystery|Sci-Fi
+164 Devil in a Blue Dress 1995 Crime|Film-Noir|Mystery|Thriller
+199 Umbrellas of Cherbourg, The (Parapluies de Cherbourg, Les) 1964 Drama|Musical
+--------------
+Sabrina 1954 1995 41
+Othello 1952 1995 43
+Misérables, Les 1995 1998 3
+Scarlet Letter, The 1926 1995 69
+Miracle on 34th Street 1947 1994 47
+Village of the Damned 1960 1995 35
+Jungle Book, The 1967 1994 27
+True Crime 1995 1999 4
+Nutty Professor, The 1963 1996 33
+Ballad of Narayama, The (Narayama Bushiko) 1958 1982 24
+My Man Godfrey 1936 1957 21
+Parent Trap, The 1961 1998 37
+That Darn Cat! 1965 1997 32
+Loser 1991 2000 9
+Psycho 1960 1998 38
+Cape Fear 1962 1991 29
+101 Dalmatians 1961 1996 35
+Hamlet 1948 2000 52
+Wonderland 1997 1999 2
+Titanic 1953 1997 44
+Doctor Dolittle 1967 1998 31
+Lolita 1962 1997 35
+Man Who Knew Too Much, The 1934 1956 22
+Godzilla (Gojira) 1954 1984 30
+King Kong 1933 1976 43
+General, The 1927 1998 71
+Mighty Joe Young 1949 1998 49
+Fly, The 1958 1986 28
+Haunting, The 1963 1999 36
+King and I, The 1956 1999 43
+Mummy, The 1932 1999 67
+Dracula 1931 1958 27
+Thomas Crown Affair, The 1968 1999 31
+End of the Affair, The 1955 1999 44
+Kid, The 1921 2000 79
+Shaft 1971 2000 29
+Kronos 1957 1973 16
+Get Carter 1971 2000 29
+--------------
+Apple, The (Sib) F 4,75
+Rain F 4,75
+I Am Cuba (Soy Cuba/Ya Kuba) M 4,75
+Lamerica M 4,666666666666667
+Panther F 4,666666666666667
+Window to Paris M 4,666666666666667
+Aparajito F 4,666666666666667
+Among Giants F 4,666666666666667
+Marcello Mastroianni: I Remember Yes, I Remember F 4,666666666666667
+Close Shave, A F 4,644444444444445
+Sanjuro M 4,639344262295082
+Before the Rain (Pred dozhdot) F 4,6
+Flower of My Secret, The (La Flor de Mi Secreto) F 4,6
+Firelight F 4,6
+Apple, The (Sib) M 4,6
+Wrong Trousers, The F 4,588235294117647
+Godfather, The M 4,583333333333333
+For All Mankind M 4,583333333333333
+Seven Samurai (The Magnificent Seven) (Shichinin no samurai) M 4,576628352490421
+Sunset Blvd. (a.k.a. Sunset Boulevard) F 4,572649572649572
+--------------

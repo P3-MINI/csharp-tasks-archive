@@ -1,0 +1,41 @@
+
+Uwaga: kompilacja zadania nie powinna dawać błędów bądź ostrzeżeń np. CS0108
+Aby upewnić się że tak jest można włączyć opcję:
+Project properties -> Build -> Treat warnings as errors -> is ustawić set to All
+
+-------------------------------------------------------------------------
+Celem zadania jest zaimplementowanie zbioru UniqueSet zawierającego liczby całkowite bez powtórzeń 
+wraz z operacjami na nim.
+W zadaniu NIE MOŻNA korzystać z wbudowanych kolekcji (np. List<T>) oraz biblioteki LINQ.
+Rozwiązanie powinno znaleźć się w pliku UniqueSet.cs, gdzie znajduje się już stworzona klasa ze składową
+tab (przechowuje elementy zbioru) oraz zaimplementowana metoda ToString (nie należy zmieniać!!). 
+Natomiast pliku Program.cs nie wolno modyfikować (z wyjątkiem odkomentowania etapów)!!!
+
+Należy zaimplementować:
+
+Etap 1 (2.0p)
+- konstruktor bezparametrowy tworzący 0-elementowy zbiór
+- konstruktor przyjmujący tablicę int (może zawierać powtórzenia)
+- właściwość tylko do odczytu Size zwracającą aktualną liczbę elementów w zbiorze
+- metodę Clone zwracającą głęboką kopie obiektu
+- metodę Deconstruct, która dekonstruuje zbiór na zbiory: liczb parzystych i nieparzystych
+- indeksator, który zwraca lub ustawia i-ty element zbioru. W przypadku, gdy indeks nie wskazuje na żaden element
+zgłaszany jest błąd IndexOutOfRangeException, wyjątki w C# rzucane są tak samo jak w C++ 
+(https://docs.microsoft.com/pl-pl/dotnet/csharp/programming-guide/exceptions/)
+
+Etap 2 (1.5p)
+- operator porównania == i wszystko co jest z nim związane (szczególnie uważać na jedną z metod)
+  Zbiory są równe jeżeli zawierają te same wartości (ich kolejność w reprezentacji wewnętrznej nie ma znaczena)
+- operator konwersji jawnej z int[] na UniqueSet
+- operator konwersji niejawnej z UniqueSet na int[]
+- operator konwersji niejawnej z int na UniqueSet - tworzy 1-elementowy zbiór
+
+Etap 3 (1.5p)
+- operator dodawania (UniqueSet + UniqueSet), który tworzy nowy zbiór poprzez połączenie dwóch podanych zbiorów.
+  Wynikiem jest nowy zbiór.
+- operator bitowy XOR (UniqueSet ^ UniqueSet), który zwraca różnicę symetryczną dwóch podanych zbiorów (wszystkie elementy,
+  które należą tylko do jednego z tych zbiorów). Wynikiem jest nowy zbiór.
+- operator dekrementacji (UniqueSet-- lub --UniqueSet), który dekrementuje wszystkie wartości zbioru (-1)
+
+
+

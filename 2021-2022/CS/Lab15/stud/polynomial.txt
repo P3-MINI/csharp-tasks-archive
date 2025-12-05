@@ -1,0 +1,51 @@
+
+There is an interface:
+
+interface IComputable<T>
+    {
+    T Add(T x);
+    T Sub(T x);
+    T Mul(T x);
+    T Div(T x);
+    }
+
+1) (0.5 pkt)
+   Define value type Real:
+   - it contains (in private field) a value of type double
+   - it implements the interface IComputable<Real>
+   - it makes possible implicit conversions: Real -> double  i  double -> Real
+
+2) (3.5 pkt)
+   Define generic type Polynomial<T>,
+      where T must be a value type which implements the interface IComputable<T>
+   implement operations:
+   - a constructor with int parameter - a degree of the polynomial (it means a number of coefficients is greater by one, all of them are equal zero)
+   - a constructor with parameter T[] - an array of coefficients (it means a degree is smaller by one)
+   - a property Degree - degree (just to obtain a value)
+   - adding of polynomials (operator)
+   - multiplying of polynomials (operator)
+   - negation of polynomial (operator "unary minus") - a change of sign of all coefficients
+   - indexing (argument of type int, we assume it never is negative)
+     reading
+	    for index <= degree it returns corresponding coefficient
+		for index >  degree it returns zero
+	 assigning
+	    for index <= degree it modify corresponding coefficient
+		for index >  degree it creates a new array of coefficients so a degree == argument,
+		              where it assigns a given value at the index position (the rest is copied, lacking are filled with zero)
+   - it is possible to use a foreach construction (reading coefficients from 0 to the last)
+   - ToString() method - examples of output in main
+   - Polynomial<T> Clone() method - creates a new polynomial with the same coefficients
+   
+   Points
+   - constructros, Degree    -  0.5
+   - ToString                -  0.5
+   - operators               -  1.0
+   - indexing                -  1.0
+   - foreach, Clone          -  0.5
+
+3) (1.0 pkt)
+   - define a generic method Neg<T> which extends a type T by a negation (changing a sign of a value)
+     of a value assuming that the T implements the interface IComputable<T>
+   - define a generic method Horner<T> which extends a type Polynomial<T> by calculating a value
+     of polynomial in a given point (you can ask about a Horner schema your teacher)

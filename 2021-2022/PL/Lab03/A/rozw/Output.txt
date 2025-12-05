@@ -1,0 +1,30 @@
+ --------------------- ETAP_1 (1.5 Pts) ---------------------
+CURL Elapsed: 2312.16
+
+Resources Acquired:
+cppReference_3.txt
+cppReference_0.txt
+cppReference_8.txt
+cppReference_9.txt
+cppReference_7.txt
+cppReference_1.txt
+cppReference_6.txt
+cppReference_4.txt
+cppReference_5.txt
+cppReference_2.txt
+
+ --------------------- ETAP_2 (1.0 Pts) ---------------------
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_0.txt has type: 2
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_1.txt has type: 2
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_2.txt has type: 2
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_3.txt has type: 2
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_4.txt has type: 2
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_5.txt has type: 2
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_6.txt has type: 2
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_7.txt has type: 2
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_8.txt has type: 2
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_9.txt has type: 2
+
+ --------------------- ETAP_3 (0.5 Pts) ---------------------
+
+ --------------------- ETAP_4 (2.0 Pts) ---------------------

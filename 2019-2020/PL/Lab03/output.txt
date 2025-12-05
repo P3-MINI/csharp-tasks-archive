@@ -1,0 +1,65 @@
+
+>>>>>>>> STAGE 1 (2.0 pt) <<<<<<<<
+
+Creating resource of File_Handler
+Creating resource of Window_Handler
+Constructor
+Move operator
+Constructor
+Variable sp2 holds resource "Window_Handler"
+Move constructor
+Move operator
+Variable sp2 holds resource "File_Handler"
+
+>>>>>>>> STAGE 2 (1.5 pt) <<<<<<<<
+
+
+All resources:
+CD_Driver_x86
+USB_Driver
+WinApi_Dll
+CUDADrivers_10.1
+GPU_Driver_x64
+WinApi_Dllx64
+Gamepad_Driver
+OpenCLx64_WinPlatform
+
+Old resources:
+**Rleased resource**
+**Rleased resource**
+**Rleased resource**
+**Rleased resource**
+**Rleased resource**
+**Rleased resource**
+**Rleased resource**
+**Rleased resource**
+
+x86 resources:
+CD_Driver_x86
+USB_Driver
+WinApi_Dll
+CUDADrivers_10.1
+Gamepad_Driver
+
+x64 resources:
+GPU_Driver_x64
+WinApi_Dllx64
+OpenCLx64_WinPlatform
+
+>>>>>>>> STAGE 3 (1.5 pt) <<<<<<<<
+
+
+Custom resources:
+honda
+civic_DEPRECATED
+NoLemon_NoMelon_DEPRECATED
+Ott0
+TopSpot_DEPRECATED
+NotAPalindrome
+7RADar7_DEPRECATED
+
+>>>>>>>> END <<<<<<<<
+
+
+All resources were released.
+

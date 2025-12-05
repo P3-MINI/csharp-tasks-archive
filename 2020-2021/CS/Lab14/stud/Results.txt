@@ -1,0 +1,41 @@
+--------------- STAGE_1 (0.5 Pts) ---------------
+Belden Lilias
+Camell Joelynn
+Cruddas Vivienne
+Dilston Gerianna
+Frantsev Raoul
+Gamddsev Wallas
+Gullan Kattie
+Gullan Cameron
+Peron Wallas
+Surgeoner Davin
+Wythill Luther
+
+--------------- STAGE_2 (0.5 Pts) ---------------
+Boeing 747-400 - Weight 178.8 Tons - Total 210300 Kilograms
+Airbus A340 - Weight 177 Tons - Total 203600 Kilograms
+Boeing 777-300 - Weight 155.7 Tons - Total 185800 Kilograms
+
+--------------- STAGE_3 (1.0 Pts) ---------------
+Airbus A319 - D-TRYZ
+Boeing 737-800 - EC-TER
+
+--------------- STAGE_4 (1.5 Pts) ---------------
+BCN (5 Arrival Flights) - 146 Minutes.
+MUC (2 Arrival Flights) - 95 Minutes.
+WRO (2 Arrival Flights) - 152.5 Minutes.
+CGN (2 Arrival Flights) - 60 Minutes.
+LHR (2 Arrival Flights) - 175 Minutes.
+CDG (2 Arrival Flights) - 140 Minutes.
+VIE (2 Arrival Flights) - 105 Minutes.
+MPL (2 Arrival Flights) - 107.5 Minutes.
+EDI (2 Arrival Flights) - 115 Minutes.
+BER (2 Arrival Flights) - 102.5 Minutes.
+FCO (1 Arrival Flights) - 180 Minutes.
+WAW (2 Arrival Flights) - 180 Minutes.
+KRK (1 Arrival Flights) - 130 Minutes.
+MAD (2 Arrival Flights) - 200 Minutes.
+
+--------------- STAGE_5 (1.5 Pts) ---------------
+Frantsev Raoul - Piston License
+Gamddsev Wallas - Turbofan License

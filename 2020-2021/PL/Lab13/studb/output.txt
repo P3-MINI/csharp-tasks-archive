@@ -1,0 +1,49 @@
+------------------ Etap1 ------------------
+Imported items:
+1: Iwona Kiwała, birth: 1990-05-25, type:FullTime, address: Kraków, Wąska 10/1
+2: Zdzisław Bąkała, birth: 1989-08-12, type:External, address: Wrocław, Pilna 12
+3: Henryk Kowalski, birth: 1991-01-10, type:FullTime, address: Poznań, Wujka 3/5
+4: Adam Sipowicz, birth: 1991-03-08, type:External, address: Gdańsk, Kliniczna 183
+5: Beata Bartoszewicz, birth: 1990-11-11, type:FullTime, address: Rzeszów, Hetmańska 15
+
+OK: FileNotFoundException raised. File non-existing-file.csv doesn't exist
+
+------------------ Etap2 ------------------
+List of all created files:
+\Adam-Sipowicz.json
+\Beata-Bartoszewicz.json
+\Henryk-Kowalski.json
+\Iwona-Kiwała.json
+\Zdzisław-Bąkała.json
+OK: Number of files is 5
+
+Read single item
+OK: geting object for non existing item should return null
+
+Getting existing item:
+5: Beata Bartoszewicz, birth: 1990-11-11, type:FullTime, address: Rzeszów, Hetmańska 15
+
+------------------ Etap 3 ------------------
+6: Grzegorz Brzęczyszczykiewicz, birth: 1990-01-01, type:External, address: Chrząszczyżewoszyce, Łękołody 1
+OK: InvalidOperationException raised when delete operates on non-existing object
+
+List of all files:
+\Adam-Sipowicz.json
+\Beata-Bartoszewicz.json
+\Henryk-Kowalski.json
+\Iwona-Kiwała.json
+\Zdzisław-Bąkała.json
+OK: Number of files is 5
+
+List whole db:
+4: Adam Sipowicz, birth: 1991-03-08, type:External, address: Gdańsk, Kliniczna 183
+5: Beata Bartoszewicz, birth: 1990-11-11, type:FullTime, address: Rzeszów, Hetmańska 15
+3: Henryk Kowalski, birth: 1991-01-10, type:FullTime, address: Poznań, Wujka 3/5
+1: Iwona Kiwała, birth: 1990-05-25, type:FullTime, address: Kraków, Wąska 10/1
+2: Zdzisław Bąkała, birth: 1989-08-12, type:External, address: Wrocław, Pilna 12
+
+------------------ Etap 4 ------------------
+{"Id":6,"First name":"Grzegorz","Last name":"Brz\u0119czyszczykiewicz","BirthDate":"1990-01-01T00:00:00","StudentType":"External","Address":{"City":"Chrz\u0105szczy\u017Cewoszyce","Street":"\u0141\u0119ko\u0142ody","StreetNo":"1"}}
+OK: Enum StudentType value should be serialized using string value
+OK: FirstName field name should be serialized as: First name
+OK: LastName field name should be serialized as: Last name

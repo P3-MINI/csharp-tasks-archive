@@ -1,0 +1,84 @@
+Etap 1. - 1.5 punkta
+
+Uwaga: W tym etapie w pliku Program.cs można jedynie korzystajać z wyrażeń lambda.
+W pliku Functions.cs:
+
+Zaimplementuj metodę "AddElementsFromFunction" rozszerzającą klasę Dictionary<int, T>, przyjmującą 2 parametry:
+- liczbę elementów (n),
+- funkcję f nieprzyjmującą parametrów zwracającą krotkę (int, T).
+Metoda powinna rozszerzać słownik o n elementów, każdy uzyskany przez wywołanie funkcji f, pierwszy element krotki to klucz, a drugi to wartość.
+
+W pliku Program.cs:
+
+Uzupełnij wywołanie AddElementsFromFunction, tak żeby do słownika fib, dopisać 10 pierwszych wyrazów ciągu fibonacciego - kluczem dla każdego elementu jest jego numer, począwszy od 1.
+
+Uzupełnij wywołanie Sort, tak żeby posortować liczby malejąco ich modułami, jeśli moduły są równe większa jest liczba dodatnia.
+
+
+
+Etap 2. - 1 punkt
+
+Uwaga: Nie wolno korzystać z wyrażeń lambda.
+W pliku Functions.cs:
+
+Dopisz do klasy Generators podane metody:
+
+Metoda NextInteger przyjmuje 2 parametry typu int: 
+- startingValue,
+- increaseValue.
+Metoda zwraca funkcję zwracająca kolejne liczby całkowite począwszy od startingValue, każda kolejna powstaje z poprzedniej poprzez dodanie increaseValue. 
+
+Metoda LookUpKey przyjmuje 2 parametry:
+- słownik typu IDictionary<int, T>.
+- keyIncreaseValue typu int
+Zwraca funkcję przyjmująca jeden parametr:
+ - klucz elementu w słowniku
+Funkcja wyszukuje element o podanym kluczu, powiększa jego klucz o keyIncreaseValue i zwraca znaleziony element.
+Jeśli podany klucz nie istnieje do słownika dodawany jest element domyślny dla T (kluczem jest szukany klucz), zwracana jest też wartość domyślna dla T.
+ 
+
+ 
+Etap 3. - 1 punkt
+
+Uwaga: Etap należy wykonać korzystając wyłącznie z wyrażeń lambda.
+W pliku Functions.cs:
+
+Dopisz do klasy FunctionsManipulator podane metody:
+
+Metoda Distance, przyjmuje 2 funkcje przyjmujące i zwracające double, i zwraca moduł ich różnicy dla danego x.
+
+Metoda Integral przyjmuje:
+- funkcję f przyjmującą i zwracającą double,
+Funkcja zwraca funkcję przyjmującą dwa parametry x1, x2 i obliczającą całkę oznaczoną f na przedziale [x1,x2],
+całkę przybliżamy pojedynczym prostokątem.
+
+W pliku Program.cs:
+
+Uzupełnij zapisane w komentarzach funkcje w miejscu ich deklaracji lub przypisania.  
+
+
+Etap 4. - 1.5 punkta
+
+W pliku Functions.cs:
+
+Zaimplementuj podane metody rozszerzejące interfejs IEnumerable<T>:
+
+Metoda Partition, przyjmuje 1 parametr:
+- funkcję f przyjmującą jeden parametr typu T i zwracającą bool.
+
+Metoda zwraca krotkę (IEnumerable<T>, IEnumerable<T>), opisującą 2 kolekcje, pierwsza to kolekcja elementów dla których f zwraca true, druga to kolekcja pozostałych elementów.
+
+Metoda ReplaceIf przyjmuje 2 parametry:
+- funkcję chooseFunc przyjmującą jeden parametr typu T i zwracającą bool,
+- funkcję replaceFunc przyjmującą jeden parametr typu T i zwracającą T.
+
+Metoda zwraca obiekt typu List<T> będący kolekcją elementów powstałych poprzez wywołanie replaceFunc na elementach IEnumerable<T> dla których chooseFunc zwraca true.   
+
+W pliku Program.cs:
+
+Uzupełnij wywołanie Partition o funkcję zwracającą true dla elementów parzystych i false dla nieparzystych,
+ponadto funkcja powinna zapisać w zmiennej absSum sumę modułów wszystkich elementów kolekcji.
+
+Uzupełnij wywołanie ReplaceIf o następujące funkcje:
+- chooseFunc która dla liczb o części ułamkowej większej od 1/2 zwróci true,
+- replaceFunc która zwróci połowę liczby pomniejszoną o część ułamkową całej liczby. 

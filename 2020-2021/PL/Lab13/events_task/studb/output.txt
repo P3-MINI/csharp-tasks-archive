@@ -1,0 +1,23 @@
+------------------ Etap1 ------------------
+OK: Collections are equal
+OK: Exception raised. File non-existing-file.xml doesn't exist
+
+------------------ Etap2 ------------------
+List of all created files:
+\Grzegorz Brzęczyszczykiewicz\2020\01\2020-01-09.json
+\Grzegorz Brzęczyszczykiewicz\2020\01\2020-01-10.json
+\Henryk Biegała\2020\01\2020-01-07.json
+\Iwona Kiwała\2020\01\2020-01-07.json
+\Iwona Kiwała\2020\01\2020-01-08.json
+\Janusz Bąk\2020\01\2020-01-07.json
+OK: Number of files is 6
+
+------------------ Etap 3 ------------------
+OK: Collections are equal
+OK: For non existing owner empty collection should be returned
+OK: User exists - removal should succeed
+OK: User doesn't exist - removal should return false
+OK: After removing user get data result should be empty
+
+------------------ Etap 4 ------------------
+OK: Collections are equal

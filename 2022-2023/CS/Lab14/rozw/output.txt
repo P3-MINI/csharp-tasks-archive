@@ -1,0 +1,11 @@
+A1: Casino Royale, Flushed Away, Night at the Museum, Miami Vice, Superman Returns, Cars, X-Men - The Last Stand, The Da Vinci Code, Poseidon, Mission - Impossible III
+A2: Titanic
+A3: The Intouchables, Forrest Gump, Back to the Future, Inside Out, The Wolf of Wall Street
+B1: 3,0521456300493126
+B2: 167,425468164794
+C1: 2008-01-01 number of movies: 102
+C2: fr:2226315153
+D1: (Doctor Who - Last Christmas, Christmas Day), (Crisis Hotline - Veterans Press 1, Veterans Day), (There Will Come a Day, Martin Luther King Jr. Day)
+D2: (The Place Beyond the Pines, The Croods), (Sherlock Holmes - A Game of Shadows, Hugo), (The Karate Kid, The A-Team), (Terminator Salvation, Night at the Museum - Battle of the Smithsonian)
+E1: LOVE:140, STORY:91, LAST:87, LIFE:84, NIGHT:76
+E2: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97

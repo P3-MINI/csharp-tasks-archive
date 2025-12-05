@@ -1,0 +1,70 @@
+/************** Etap 1 (1.0p) **************/
+1. Jan       Kowalski             20    0
+- Analiza matematyczna 1         4.5
+- Fizyka 1                         4
+- Grafika komputerowa 1            5
+- Metody numeryczne 2              3
+- Podstawy elektroniki             3
+- Programowanie 1                  4
+- UNIX                             5
+2. Albert    Nowak                22    0
+- Analiza matematyczna 1         3.5
+- Fizyka 1                       3.5
+- Grafika komputerowa 1            4
+- Metody numeryczne 2              4
+- Podstawy elektroniki             2
+- Programowanie 1                  3
+- UNIX                             3
+3. Lech      Nowicki              27    0
+- Analiza matematyczna 1           2
+- Fizyka 1                         2
+- Grafika komputerowa 1            2
+- Metody numeryczne 2              2
+- Podstawy elektroniki             2
+- Programowanie 1                  2
+- UNIX                             2
+4. Adam      Homenda              19    0
+- Analiza matematyczna 1         3.5
+- Fizyka 1                         3
+- Grafika komputerowa 1            3
+- Metody numeryczne 2              2
+- Podstawy elektroniki             2
+- Programowanie 1                  3
+- UNIX                             4
+5. Jakub     Lewicki              23    0
+- Analiza matematyczna 1         3.5
+- Fizyka 1                         2
+- Grafika komputerowa 1            3
+- Metody numeryczne 2              2
+- Podstawy elektroniki           3.5
+- Programowanie 1                  3
+- UNIX                             4
+6. Kamil     Wasilewski           24    0
+- Analiza matematyczna 1         4.5
+- Fizyka 1                         4
+- Grafika komputerowa 1            4
+- Metody numeryczne 2              5
+- Podstawy elektroniki           4.5
+- Programowanie 1                  5
+- UNIX                             4
+/************** Etap 2 (1.0p) **************/
+1. Jan       Kowalski             20  4.1
+2. Albert    Nowak                22  3.3
+3. Lech      Nowicki              27    2
+4. Adam      Homenda              19  2.9
+5. Jakub     Lewicki              23    3
+6. Kamil     Wasilewski           24  4.5
+/************** Etap 3 (1.0p) **************/
+1. Albert    Nowak                22  3.3
+2. Lech      Nowicki              27    2
+3. Adam      Homenda              19  2.9
+4. Jakub     Lewicki              23    3
+/************** Etap 4 (1.5p) **************/
+1. Lech      Nowicki              27    2
+2. Adam      Homenda              19  2.9
+3. Jakub     Lewicki              23    3
+4. Albert    Nowak                22  3.3
+5. Jan       Kowalski             20  4.1
+6. Kamil     Wasilewski           24  4.5
+/************** Etap 5 (0.5p) **************/
+1, 2, 9, 10, 14, 17, 18, 20, 22, 24, 29, 30, 31, 32, 37, 40,

@@ -1,0 +1,77 @@
+Uwaga: kompilacja zadania nie powinna dawać błędów bądź ostrzeżeń np. CS0108
+Aby upewnić się że tak jest można włączyć opcję:
+Project properties -> Build -> Treat warnings as errors -> is ustawić set to All
+
+-------------------------------------------------------------------------
+Część 1
+
+W pliku Shapes stwórz klasę abstrakcyjną Shape2D, oraz klasę dziedziczącą Circle
+Każdy obiekt Shape2D ma unikalny narastający identyfikator `ObjectNumber` 
+przypisany podczas tworzenia obiektu `niezmienialny` (wspólny dla klas dziedziczących z Shape2D)
+Każda z klas powinna wyświetlać informację gdy zostanie stworzona:
+Shape2D: Shape2D (ObjectNumber) created
+Circle: Circle (ObjectNumber) with radius=wartość_promienia created
+Obie klasy powinny posiadać finalizatory i w finalizatorach wyświetlać informację:
+- Shape2D: Shape2D (ObjectNumber) destroyed
+- Circle: Circle (ObjectNumber) destroyed
+
+Klasa Shape2D ma następujące składowe:
+- konstruktor wypisujący informację:
+  Shape2D (ObjectNumber) created
+- finalizator wypisujący informację:
+  Shape2D (ObjectNumber) destroyed
+- metodę abstrakcyjną CalculateArea
+- metodę PrintShape2D która zwraca informację:
+  Shape(Shape2D)
+
+Klasa Circle:
+- posiada konstruktor który przyjmuje promień koła i wypisuje informację:
+  Circle (ObjectNumber) with radius=wartość_promienia created
+- finalizator wypisujący informację:
+  Circle (ObjectNumber) destroyed
+- przedefiniowywuje metodę CalculateArea tak aby zwracała pole koła
+- Implementuje metodę PrintShape2D i zwraca informację: 
+  `Circle(r=10)` gdzie 10 to przykładowy promień koła
+
+Punktacja:
+- stworzenie klasy Shape2D oraz klasy Circle
+  z metodami PrintShape2D i CalculateArea - 1p
+- numeracja obketów (ObjectNumber) - 0.5p
+- finalizatory - 0.5p
+
+-------------------------------------------------------------------------
+Część 2
+
+W pliku Shapes stwórz klasę abstrakcyjną Shape3D oraz dwie klasy dziedziczące Cylinder i Cone
+Każdy obiekt Shape3D i obiekty dziedziczące mają posiadać unikalny narastający `niezmienialny` identyfikator `ObjectNumber` 
+Uwaga numeracja ma być indywidualna dla każdego typu obiektu tzn 
+Tzn Shape3D numeruje ilość stworzonych obiektów Shape3D
+Cylinder numeruje ilość stworzonych obiektów Cylinder
+Cone numeruje ilość stworzonych obiektów Cone.
+
+Klasa Shape3D powinna posiadać 
+- konstruktor przyjmujący dwa parametry: baseShape typu Shape2D oraz height typu double - wysokość obiektu
+- metodę abstrakcyjną CalculateCapacity
+- metodę PrintShape3D zwracającą dla obiektów Cone i Cylinder napis
+  `Shape3D with base Circle(r=5) and height: 10`, gdzie h- height a r-promień koła 
+
+Klasa Cone:
+- konstruktor przyjmujący Circle i height
+- implementuje CalculateCapacity: (Pi*r^2*h)/3)
+- metoda PrintShape3D zwracająca: 
+  Cone(h=10) with base: Circle(r=5) gdzie h- height a r-promień koła
+
+Klasa Cylinder:
+- konstruktor przyjmujący Circle i height
+- implementuje CalculateCapacity: Pi * r^2 * h
+- metoda PrintShape3D zwracająca: 
+  Cylinder(h=10) with base: Circle(r=5) gdzie h- height a r-promień koła
+- uwaga jeśli obiekt Cylinder jest używany jako Shape3D 
+  Wywołanie metody PrintShape3D ma zwrócić:
+  `Shape3D with base Circle(r=5) and height: 10`, gdzie h- height a r-promień koła 
+
+Punktacja:
+- implementacja Shape3D, Cone i Cylinder 2p
+- numeracja każdego z obiektów odzielnie - 0.5p
+- zwrócenie poprawnego kokmunikatu przy wywołaniu 
+  PrintShape3D dla obiektu Cylinder gdy używany jest jako Shape3D 0.5p

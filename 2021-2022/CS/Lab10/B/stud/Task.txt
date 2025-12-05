@@ -1,0 +1,63 @@
+﻿Stage 1. - 1 point
+Files: Program.cs
+ 
+a) In Main function use lambda expression to sort persons array their absolute Age.
+    You can only write code inside brackets persons.Sort(...); expression.
+   
+b) In Main function use lambda expression to print info about persons and sum their age using following criteria:
+    if age is greater than 100 print "REDACTED!",
+    else: add age of a person to the result.
+    Result should be stored in "accumulatedAge" variable.
+    You can only write code inside brackets of persons.ForEach(...); expression.
+   
+Stage 2. - 1.5 point
+Files: Functions.cs
+Class: BaseFunctions
+
+You are not allowed to use lambda expressions here, you have to use delegates
+
+a) Add public static method ConstantFunction which takes parameter of type double "d", and returns function which takes one parameter of type double "x" and returns value of "d". 
+
+b) Add public static method ModulusFunction which takes two parameters of type double "a", "b" and returns function which takes one parameter of type double "x" and returns
+    modulus of value of linear formula: ax + b
+    
+c) Add public static method PolynomialFunction which takes variable number of parameters (params keyword) of type double "tab" and returns function which takes one parameter of type double "x" 
+    and computes the value of polynomial at point "x". "tab" parameter specifies coefficients of the polynomial, tab[0] is a coefficient next to "x" to the highest power.    
+    Use Horner's method.
+    
+Stage 3. - 1 point
+Files: Functions.cs
+Class: FunctionsManipulator
+
+You have to use lambda expressions here.
+
+a) Add public static method ChooseFunction which takes two parameters f and g which are functions that take and return one parameter of type double each, method should return
+    function that takes one parameter of type double "x" and if the fractional part of "x" is greater than 0.5 it returns value of f at "x" otherwise it returns value of g at "x". 
+
+b) Add public static method MultiplyFunctions which takes two parameters f and g which are functions that take and return one parameter of type double each, method should return
+    function that takes one parameter of type double "x" and returns the multiplication value of the difference of the f,g at "x".
+    
+c) Add public static method CombineFunctions which takes two parameters f and g which are functions that take and return one parameter of type double each, method should return
+    function that takes one parameter of type double "x" and returns function composition (f ∘ g) of the f,g at "x".
+
+Stage 4. - 1 point
+Files: Functions.cs, Program.cs
+Class: ExtensionMethods
+
+In Function.cs:
+
+a) Add extension method PerformAction to the IEnumerable<Person> interface which takes one parameter which specifies an action to perform on each element of the collection
+    and takes two parameters, Person to perform action on, and int number - place of an object in collection.
+    Method should perform that action on every element of the collection. Return type is void.
+    
+b) Add extension method Accumulate to the IEnumerable<Person> interface which takes two parameters, 
+    first is "accumulateFunc" which is a function that takes two parameters: object of type Person and current sum and returns one parameter of type double.
+    Method should return a double which is return value of last invocation of "accumulateFunc", in each new invocation use current sum.
+    
+In Program.cs:
+
+a) Write action which modifies age property of Person if its number (i) in collection is divisible by 3, Write: i+"Age changed!" or i+"No changes made" correspondingly.
+    Action should be passed to "persons.PerformAction(...)" expression.
+b) Write function which sums age of all persons in array, use starting value of 0.
+    Function should be passed to "persons.Accumulate(...)" expression.
+     

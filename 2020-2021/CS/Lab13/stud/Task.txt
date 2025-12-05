@@ -1,0 +1,48 @@
+Your task is to implement simple Database class.
+
+The non-generic Database class should contain public generic methods:
+TEntity Get<TEntity>(int id)
+void Add<TEntity>(TEntity entity)
+void Update<TEntity>(TEntity entity)
+void Delete<TEntity>(int id)
+TEntity should always be class implementing IEntity interface so you need add proper constraint
+
+Add method adds object to the database and the object is serialized to the file.
+We use XmlSerializer to serialize objects - you need to modify some classes to make XmlSerializer work.
+Every serialized object implements IEntity so it contains Id property.
+The object is serialized to file _baseDir\[ObjectTypeName]_[Id].xml where: 
+- [ObjectTypeName] is the name of the object class. You can retrieve name of object type using below code line:
+    var typeName = typeof(TEntity).Name;
+- [Id] is the sequence number of the serialized object with the same type
+If the object with the given Id and the same type exists, the exception should be thrown.
+If Id == 0 it should be changed by (max Id of serialized objects of given type) + 1.
+
+Get method retrieves an object from the database.
+If the object with the given Id does not exist, the exception should be thrown.
+
+Update method updates object in the database.
+If the object with the given Id does not exist, the exception should be thrown.
+
+Delete method deletes object from the database.
+If the object with the given Id does not exist, the exception should be thrown.
+
+Additional requirements:
+- You need to modify some classes (User/Order/Product) to allow serialize classes with XmlSerialize
+- The property FullName of User class should be computed (FirstName + " " + LastName) and it should not be serialized
+- You can create Order object only by its 3-parameters constructor
+
+Tips:
+- Directory.Exists([path])
+- Directory.GetFiles([path])
+- Directory.CreateDirectory([path])
+- Path.Combine([path part 1], [path part 2])
+- File.Exists([path])
+- File.Delete([path])
+- Path.GetFileNameWithoutExtension([path])
+
+Points:
+- required modifications of User/Order/Product classes - 0.5p
+- Add - 1.5p
+- Get  - 1p
+- Update - 1p
+- Delete - 1p

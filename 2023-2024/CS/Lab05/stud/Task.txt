@@ -1,0 +1,41 @@
+The general idea of the task is to create tree structure containing 2D shapes with the functionality of calculating the bounding box of its subtree.
+
+Stage 1 (1 point)
+In file Math.cs create structure Vector2 representing position in R^2 space, storing X and Y coords (float).
+Implement method ToString(), displaying point coordinates in format: "Point(X, Y)".
+
+W file Figures.cs create abstract class Figure. It should contain:
+- its position (Vector2). It is a position relative to its parent, if it has one. If it doesn't have a parent (i.e. it is a root node), then its position is global position - related to the (0,0) point in R^2 space.
+- an array of its children (type Figure).
+- an reference to its parent (type Figure), if it has one.
+- id (int) of the figure. Id's are sequential natural numbers assigned to created figures. For all created figures there is only one counter.
+Constructor of the Figure class takes:
+- figure position
+- initial capacity of the children array, default value set to 2.
+Implement GetRelativePosition(), returning position of the object.
+
+Create two classes derived from Figure: Circle and Triangle. Circle class extends Figure class by storing circle's radius, while Triangle extends Figure class by storing it's 3 vertices (related to its position).
+Implement method ToString() in derived classes, displaying class information in format:
+"Circle ID id: Position in P, Radius=R", where id,P,R are variables
+"Triangle ID id: Position in P, Vertices in V1,V2,V3", where id,P,V1,V2,V3 are variables
+
+Stage 2 (2 points)
+In class Figure implement methods:
+- AddChild(). It takes Figure object as parameter and adds child to the children array and sets reference for the child to the parent. If array is too short, you have to extend its capacity dynamically (extend it 2 times).
+- GetTreeString(), returning string output with the tree with proper number of indent at the beginning of the line - for root no indent, for child - 1 indent, for grandchild - 2 indents etc.
+- GetMaxNumberOfChildren(), returning max capacity of the children arary.
+- Move(), moving current node with its subtree. To do this implement Add() method in Vector2.
+
+Stage 3 (2 points)
+Implement GetGlobalPosition() in Figure. It should return object position in global coordinates - related to the (0,0) point in R^2 space. Hint: traverse the tree to the root and use Add() from Vector2.
+Correct ToString() to print out global position of the objects (use GetGlobalPosition() method inside).
+
+Implement structure BoundingBox, which represents bounding box for specific figure. 
+It is represented by two points Vector2: MinimumPoint (storing min X coordinate and min Y coordinate of the figure) and MaximumPoint (storing max X coordinate and max Y coordinate of the figure).
+Overload ToString() for BoundingBox structure to return text in format:
+"BoundingBox: Minimum in A, Maximum in B"
+
+Create abstract method GetFigureBoundingBox() for class Figure and implement it for derived classes.
+
+Create method CalculateBoundingBox() for Figure class, which calculates bounding box for the node and its subtree. 
+In order to do this write method MergeBoundingBoxes() in structure BoundingBox, which returns bounding box containing all bounding boxes passed as parameters.

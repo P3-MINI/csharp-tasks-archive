@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>Lab13PL</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="ImGui.NET" Version="1.88.0" />
+      <PackageReference Include="OpenTK" Version="4.7.5" />
+      <PackageReference Include="StbImageSharp" Version="2.27.13" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Resources/*" />
+        <EmbeddedResource Include="Resources/*" />
+        <Content Include="Resources/*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+</Project>

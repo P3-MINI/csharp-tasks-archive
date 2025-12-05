@@ -1,0 +1,22 @@
+Stage 1. (2.5 points)
+
+Create generic interface IFormula with two methods: Calculate, which returns double and takes generic parameter x, and PrintFormula, which takes no parameters and returns string.
+Create two classes that implement IFormula interface: CubicFormula, and GeometricSequenceSumFormula.
+
+CubicFormula should have public properties that correspond to A, B and C, D (Ax^3+Bx^2+Cx+D), alongside with constructor that takes those parameters and sets them.
+GeometricSequenceSumFormula should have public properties that are A1 and R (sum of n: A(1-R^n)/(1-R)), alongside with constructor that takes those parameters and sets them.
+
+Both classes should implement the methods from interface & do it correctly. Since calculation for quadratic formula can be any real number, it should take it as parameter; in case of geometric sequence, only natural numbers should be allowed. You should use generic method from interface to achieve that.
+
+Stage 2. (0.5 point)
+Create extension method for class CubicFormula that will calculate derivative of the function in point x.
+
+Stage 3. (2 points)
+Create generic class LucasGenerator, that implements interface IEnumerable. The constructor should take as the input an object of generic interface IFormula and store it within readonly property (without set option).
+
+Implementation of GetEnumerator should use yield returns, and should use the Calculate method from the formula provided with the constructor on the subsequent lucas number.
+
+Lucas numbers are described by the following function:
+L(0) = 2
+L(1) = 1
+L(n) = L(n-2)+L(n-1) for n >= 2

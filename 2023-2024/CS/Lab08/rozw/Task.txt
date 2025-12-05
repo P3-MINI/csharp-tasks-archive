@@ -1,0 +1,45 @@
+Lab08: Interfaces and yield
+
+NOTE: Do not use LINQ in this task!
+
+Part 1. (1.5 points)
+In file Sequences.cs, add ISequence interface, which implements IEnumerable, and has one read-only property Name.
+Create the following classes which implement ISequence interface:
+
+a) RandomSequence - sequence returns random integer values from a given range [a, b).
+   You should also provide an optional parameter for seed. Use the Random class and initialize it with the given seed,
+   if provided.
+   Name property returns "Random Sequence (range = [a, b), seed=x)".
+
+b) GeometricSequence - geometric sequence based on a and q values.
+   Name property returns "Geometric Sequence (a = {}, q = {})".
+
+c) TribonacciSequence - tribonacci sequence, T_0 = 0, T_1 = 0, T_2 = 1, T_n = T_n-3 + T_n-2 + T_n-1 for n >= 3
+   Name property returns "Tribonacci Sequence".
+
+Part 2. (1.5 points)
+In file Functions.cs, create an IFunction interface defining one method: Evaluate(). Evaluate takes a double
+and returns a double. Implement the given function using IFunction interface:
+a) QuadraticFunction - implements the quadratic function. Constructor as arguments take a, b, and c coefficients.
+b) SinFunction - implements sinus function. Use Sin from the Math library.
+c) HalfCircleFunction - implement a function that is the top half of the unit circle (r=1) with a center in
+    the origin of the coordinate system (0,0).
+
+Add a new sequence FunctionalSequence, which uses the IFunction interface. The constructor arguments are:
+a function, start value, step, and name and returns a series of values evaluated in points starting in the start value
+and increased by step.
+
+Part 3. (2 points)
+In Integrator.cs file, add to IIntegral interface with Solve method, which takes some range and returns interface for
+the enumerator.
+Implement classes:
+a) NumericalIntegrator - numerical integration using the rectangle method (you can evaluate the value on the left side
+    of the bar). Pass a function to integrate in the constructor. Start returning values with two divisions and double
+    it with every iteration.
+    For more details, see: https://en.wikipedia.org/wiki/Numerical_integration
+b) MonteCarloIntegrator - integration using Monte Carlo method. It randomizes some points on a rectangular area where
+    we want to calculate an integral and check if the given points are above or below the function. The result
+    (integral value) is proportional to the number of points below and the total number of samples multiplied by area.
+    Pass a number of samples per iteration in the constructor and increase it by this value with each iteration.
+    Assume that y is in a range from 0 to maxY (constructor parameter).
+    For more details, see: https://en.wikipedia.org/wiki/Monte_Carlo_integration

@@ -1,0 +1,13 @@
+In this task we will pretend that we're writing program for displaying animations.
+It will read frames from disk and display them in correct order with synchronization.
+
+After creating project ensure you are using c++17 - if not some things may not work.
+Then compile project and copy "dataset" directory where your project is located.
+DO NOT edit files in "dataset" directory nor even open them - if you accidentally
+modify one of it you can have different results and waste time debugging that.
+
+That lab isn't typical - its purpose is to show you a bit of modern C++.
+In (almost) every phase there are links to cppreference - I strongly suggest you to 
+check them.
+
+GL HF

@@ -1,0 +1,60 @@
+===   BINARY TREE TESTS (1 point)    ===
+Tree In-order:
+                        4
+                3
+                        5
+        2
+1
+        6
+                        8
+                7
+                                10
+                        9
+===    DICTIONARY TESTS (1 point)    ===
+Fruit occurrences: 
+apple         : 13
+orange        :  6
+pear          :  5
+banana        :  4
+lemon         :  4
+kiwi          :  3
+plum          :  3
+cherry        :  2
+mango         :  2
+nectarines    :  2
+pineapple     :  2
+strawberry    :  2
+dragon fruit  :  1
+avocado       :  1
+blackberry    :  1
+blackcurrant  :  1
+blueberry     :  1
+durian        :  1
+grape         :  1
+lime          :  1
+lychee        :  1
+melon         :  1
+passion fruit :  1
+pomegranate   :  1
+raspberry pi  :  1
+rhubarb       :  1
+tangerine     :  1
+watermelon    :  1
+===    ENUMERABLE TESTS (1 point)    ===
+List of numbers: 
+[3, -2, -12, 4, 5, 17, 2, 2, 0, 1, -10]
+Sum: 10
+Min: -12
+Max: 17
+List of numbers: 
+[3, -2.5, -9, 4, 5.5, 18, 2, 2, 0, 1.5, -10.5]
+Sum: 14
+Min: -10.5
+Max: 18
+=== FACTORY METHODS TESTS (1 point)  ===
+PI estimation: 3.1445
+Error: 0.002938596410206884
+===     NUMERICS TESTS (1 point)     ===
+Linear function root: 2
+Quadratic function root: -1
+Sinus function root: 3.1416

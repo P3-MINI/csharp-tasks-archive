@@ -1,0 +1,42 @@
+
+Przed rozpoczêciem zadania nale¿y przeczytaæ ca³y poni¿szy tekst!!!
+
+Celem zadania jest napisanie 5 zapytañ (przy u¿yciu technologii LINQ) do prostej bazy danych dla sklepu internetowego.
+Zapytania mo¿na wykonaæ w dowolnej kolejnoœci. Dok³adne treœci zadañ, co nale¿y zrobiæ zosta³y umieszczone w pliku Program.cs
+i tam te¿ nale¿y umieœciæ rozwi¹zanie wraz z wypisaniem go do konsoli.
+
+Zapytania MUSZ¥ byæ zrealizowane przy u¿yciu technologii LINQ jako wyra¿enia kwerendowe.
+Tam gdzie to konieczne mo¿na oczywiœcie u¿yæ metod zwi¹zanych z technologi¹ LINQ (np. Count, Sum, Min, Take).
+
+NIE WOLNO przetwarzaæ kolekcji wchodz¹cych w sk³ad bazy danych "rêcznie" np. przy u¿yciu instrukcji for, foreach i podobnych.
+
+W zapytaniach 3 i 4 (wyznaczyæ 3 osoby ...) wybór owych 3 osób mo¿e byæ zrealizowany przy wypisywaniu 
+(uciêcie sekwencji) a nie w samym zapytaniu definiuj¹cym sekwencjê
+
+Zapytania 1-4 powinny byæ zrealizowane jako pojedyncze wyra¿enia kwerendowe.
+Zadanie 5 mo¿na zrealizowaæ jako kilka powi¹zanych wyra¿eñ kwerendowych
+(jako pojedyncze wyra¿enia oczywiœcie te¿ mo¿na, ale bedzie ono doœæ skomplikowane)
+
+Przy prawie ka¿dym zapytaniu nale¿y stworzyæ now¹ klasê anonimow¹, która zawiera jedynie te pola, ktore s¹ potrzebne w danym etapie.
+Pola te nale¿y wywnioskowaæ patrz¹c na argumenty podawane przy wypisywaniu wyników danego zapytania.
+
+W pliku Database.cs znajduj¹ siê klasy reprezentuj¹ce tabele w bazie danych (Customer, LoyaltyCard, Product, Order, OrderProduct),
+natomiast w klasie Database znajduj¹ siê listy z danymi reprezentuj¹ce wspomniane wy¿ej tabele.
+
+Tabela Customers przechowuje listê wszystkich klientów zamawiaj¹cych w sklepie, zawiera takie dane jak:
+Id klienta (CustomerId), imiê (FirstName), nazwisko (LastName) i numer PESEL (PESEL).
+
+Tabela LoayaltyCards przechowuje listê osób posiadaj¹cych kartê sta³ego klienta, zawiera takie dane jak:
+Id klienta (CustomerId) i wartoœæ zni¿ki jaka przys³uguje klientowi (Discount) zapisane w postaci
+u³amka dziesiêtnego. 
+
+Tabela Products przechowuje listê dostêpnych produktów w sklepie, zawiera takie dane jak:
+Id produktu (ProductId), nazwê (Name) i cenê (Price).
+
+Tabela Orders przechowuje listê wszystkich zamówieñ jakie zosta³y wykonane w sklepie, zawiera takie dane jak:
+Id zamówienia (OrderId), Id klienta sk³adaj¹cego zamówienie (CustomerId) i datê z³o¿enia zamówienia (Date).
+
+Tabela OrderProducts przechowuje listê produktów wchodz¹cych w sk³ad zamówienia, zawiera takie dane jak:
+Id zamówienia do którego nale¿y dany produkt (OrderId), Id zamówionego produktu (ProductId) oraz liczba sztuk produktu (Quantity).
+Jedno zamówienie mo¿e zawieraæ kilka produktów, w takim przypadku w tabeli OrderProducts istnieje kilka wierszy
+z Id danego zamówienia.

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pracownik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <identyfikator>7007</identyfikator>
+  <imie>Milena</imie>
+  <nazwisko>Misiewicz</nazwisko>
+  <stanowisko>Dyrektor</stanowisko>
+  <stazPracy>40</stazPracy>
+  <adres>
+    <ulica>Bialostocka</ulica>
+    <miasto>Suwalki</miasto>
+    <nr_lokalu>2</nr_lokalu>
+  </adres>
+</Pracownik>

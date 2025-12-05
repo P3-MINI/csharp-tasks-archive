@@ -1,0 +1,26 @@
+Zaimlementuj klasę Matrix, reprezentującą macierz liczb rzeczywistych, rozmiaru m (wierszy) na n (kolumn).
+
+Etap 1 (2 Punkty):
+    Stwórz konstruktor przyjmujący dwie liczby całkowite: m i n, który tworzy macierz m na n wypełnioną zerami
+    Stwórz konstruktor przyjmujący tablicę typu double[,], który tworzy nową macierz i wypełnia wartościami z przekazanej tablicy
+    Stwórz właściwości M i N, które zwracają odpowiednio liczbę wierszy i liczbę kolumn
+    Stwórz indeksator przyjmujący dwie liczby całkowite (i oraz j) i zwracający/ustawiający wartość z macierzy z i-tego wiersza i j-tej kolumny
+    Stwórz indeksator przyjmujący dwa zakresy (użyj System.Range) i zwracający/ustawiający podmacierz zadaną zakresami
+        Jeżeli wartość jest z poza przedziału rzuć wyjątkiem IndexOutOfRangeException
+    Odkomentuj metodę ToString()
+
+Stage 2 (1 Punkt):
+    Stwórz operator rzutowania niejawnego z Macierzy na double[,]
+    Stwórz operator rzutowania jawnego z double[,] na Macierz
+    Stwórz metodę Equals porównującą dwie macierze element po elemencie i operatory == i !=
+
+Stage 3 (1 Punkt):
+    Stwórz operator +, który dodaje dwie macierze, jeżeli wymiary się nie zgadzają rzuć wyjątkiem ArgumentException
+    Stwórz operator ~, który dokonuje transpozycji macierzy
+    Stwórz operator |, który konkatenuje dwie macierze 
+
+Stage 4 (1 Punkt):
+    Stwórz operator *, który mnoży macierz i skalar (typu double)    
+    Stwórz operator /, który dzieli macierz przez skalar (typu double), w przypadku dzielenia przez 0 rzuć wyjątkiem DivideByZeroException  
+    Stwórz operator *, który dwie macierze, jeżeli wymiary się nie zgadzają rzuć wyjątkiem ArgumentException
+    

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pracownik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <identyfikator>6006</identyfikator>
+  <imie>Grzegorz</imie>
+  <nazwisko>Grajewski</nazwisko>
+  <stanowisko>Praktykant</stanowisko>
+  <stazPracy>1</stazPracy>
+  <adres>
+    <ulica>Warszawska</ulica>
+    <miasto>Wyszkow</miasto>
+    <nr_lokalu>3</nr_lokalu>
+  </adres>
+</Pracownik>

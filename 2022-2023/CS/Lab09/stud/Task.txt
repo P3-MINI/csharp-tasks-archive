@@ -1,0 +1,32 @@
+STAGE 1 (0.5 points)
+Create generic class Matrix2D. It should have constructor taking an array of the generic type. 
+
+
+STAGE 2 (2 points)
+
+Create an indexer for that class, that takes Index and Range, and returns an array of the generic type. The array should be determined by the used index and range. 
+Example - when we have Matrix2D with an int array 3x3:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 9]
+
+Indexer [0,1..3] should return int[] array with elements [2, 3].
+
+STAGE 3 (2.5 points)
+
+Create generic extension methods for Matrix2D:
+- Sum(), that will sum all elements.
+- Average(), that will return avearge of the elements.
+To make things easier, you can cast all the numbers to doubles in those two methods (and only in those two!).
+- Max(), that will return max element.
+- Min(), that will return min element.
+- Flatten(), that will return 1D array with the elements of the 2D array.
+
+Implement AddConst(), that will add const to all elements in the matrix. Implement it for 3 special cases: double, int, and uint.
+
+IMPORTANT INFO
+- Stages need to be submitted sequentially, you can't get points for a stage if previous one isn't completed.
+- You cannot use LINQ.
+
+HINTS:
+- Convert.ToDouble.

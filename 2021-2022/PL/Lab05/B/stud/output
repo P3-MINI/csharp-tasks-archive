@@ -1,0 +1,83 @@
+*********Etap 1.*********
+Etap 1. rozpoczety
+Brak bledow
+*********Etap 2.*********
+Etap 2. rozpoczety
+Arithm node:
+Id:Addition-Node-Id-0
+Operation:Addition
+
+Arithm node:
+Id:Subtraction-Node-Id-1
+Operation:Subtraction
+
+Arithm node:
+Id:Multiplication-Node-Id-2
+Operation:Multiplication
+
+Arithm node:
+Id:Division-Node-Id-3
+Operation:Division
+
+Value node:
+Id:Value-Node-Id-0-4
+Value:38
+
+
+Value node:
+Id:Value-Node-Id-1-5
+Value:382912,21
+
+
+Value node:
+Id:Value-Node-Id-2-6
+Value:-5
+
+
+Value node:
+Id:Value-Node-Id-3-7
+Value:0
+
+
+Value node:
+Id:Value-Node-Id-4-8
+Value:17,200000762939453
+
+
+Arithm node:
+Id:Addition-Node-Id-11
+Operation:Addition
+
+Brak bledow
+Sprawdzanie kopiowania
+ValueNode.Clone()
+
+Oryginalny:Id:Value-Node-Id-11-16
+Value:0
+
+Nowy:Id:Value-Node-Id-12-18
+Value:0
+
+
+ArithmNode.Clone()
+
+Oryginalny:Id:Addition-Node-Id-17
+Operation:Addition
+Oryginalny.right:Id:Value-Node-Id-11-16
+Value:0
+
+Nowy:Id:Addition-Node-Id-19
+Operation:Addition
+Nowy.right:Id:Value-Node-Id-13-20
+Value:0
+
+
+*********Etap 3.*********
+Etap 3. rozpoczety
+Brak bledow
+*********Etap 4.*********
+Etap 4. rozpoczety
+Brak bledow
+*********Wyniki:*********
+Brak bledow!
+Wcisnij dowolny przycisk, zeby zamknac okno

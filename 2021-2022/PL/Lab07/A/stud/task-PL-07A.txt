@@ -1,0 +1,32 @@
+Całe zadanie polega na zaimplementowaniu listy wiązanej (dynamiczna struktura danych). Gdy w poleceniach poniżej jest używane słowo "lista", mamy na myśli implementowaną przez nas klasę listy wiązanej.
+
+Etap 1 (1.5 Pkt.)
+
+Stwórz właściwość Head tylko z akcesorem get (zwraca pole prywatne head).
+Stwórz właściwość Count tylko z akcesorem get, które zwraca liczbę elementów na liście (każde dodanie elementu na listę ma aktualizować ten licznik).
+Stwórz właściwość IsEmpty tylko z akcesorem get, które zwraca true wtedy i tylko wtedy gdy nie ma żadnego elementu na liście.
+Stwórz konstruktor bezparametrowy tworzący pustą listę.
+Stwórz metodę PushFront, która przyjmuje liczbę całkowitą i umieszcza ją na przedzie listy (dodany element staje się nowym head).
+Stwórz konstruktor przyjmujący tablicę liczb całkowitych, które zostaną wrzucone na listę.
+
+Etap 2 (1 Pkt.)
+
+Stwórz operator jawnej konwersji z listy do tablicy liczb całkowitych.
+Stwórz operator konwersji niejawnej z tablicy liczb całkowitych do listy.
+Stwórz metodę Clone() która zwraca listę. Klonowanie powinno odbywać się poprzez konwersję listy do tablicy, a następnie skonwertowanie tej tablicy do nowej listy.
+Przeciąż metodę ToString() która konwertuje listę do tablicy, a następnie zapisuje tę tablicę jako napis (podpowiedź: string.Join()).
+
+
+Etap 3 (1 Pkt.)
+
+Stwórz operator +, który przyjmuje dwie listy i zwraca nową listę, która jest konkatenacją list wejściowych (najpierw lewy operand, potem prawy).
+
+Stwórz operator -, który przyjmuje dwie listy i zwraca nową listę, na której są te elementy z listy będącej lewym operandem, które nie występują na liście będącej prawej operandem (zabronione jest konwertowanie list do tablic).
+
+Stwórz operator == wraz z operatorami/metodami które muszą mu towarzyszyć. Dwie listy są sobie równe, jeśli mają tyle samo elementów i na tej samej pozycji są elementy których wartość jest sobie równa.
+
+Etap 4 (1.5 Pkt.)
+
+Zaimplementuj dekonstrukcję listy na dwie składowe. Lewa składowa ma posiadać same wartości parzyste, a prawa składowa same wartości nieparzyste (w tej samej kolejności co na oryginalnej liście).
+
+Zaimplementuj operator []. Po prostu zwróć wartość elementu na danej pozycji (get) lub zmodyfikuj tę wartość (set).

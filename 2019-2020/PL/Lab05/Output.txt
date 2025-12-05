@@ -1,0 +1,42 @@
+********************* Etap_1 (0.5 Pkt) *********************
+Point [0,0] With Length = 0,00
+Point [1,1] With Length = 1,41
+Point [3,4] With Length = 5,00
+Point [7,1] With Length = 7,07
+Point [3,-8] With Length = 8,54
+Point [-7,2] With Length = 7,28
+Point [-5,1] With Length = 5,10
+Point [-1,-5] With Length = 5,10
+
+********************* Etap_2/3 (3.0 Pkt) *********************
+Circle With Center At: [0,0] And Radius: 5 - Area = 78,54
+Circle With Center At: [1,5] And Radius: 16 - Area = 804,25
+Circle With Center At: [-7,3] And Radius: 9 - Area = 254,47
+Circle With Center At: [9,-2] And Radius: 1 - Area = 3,14
+Rectangle With Points: [5,7] [9,9] - Area = 8,00
+Rectangle With Points: [-1,1] [1,-1] - Area = 4,00
+Rectangle With Points: [-9,8] [-6,6] - Area = 6,00
+
+Rectangle With Center [7,8] Found
+Rectangle With Center [0,0] Found
+Rectangle With Center [-7,5,7] Found
+
+Circle With Max Point 5,00 Found
+Circle With Max Point 21,10 Found
+Circle With Max Point 16,62 Found
+Circle With Max Point 10,22 Found
+
+Deconstruction: Circle Center: [0,0] Radius: 5
+Deconstruction: Circle Center: [1,5] Radius: 16
+Deconstruction: Circle Center: [-7,3] Radius: 9
+Deconstruction: Circle Center: [9,-2] Radius: 1
+Deconstruction: Rectangle Points: [5,7] [9,9]
+Deconstruction: Rectangle Points: [-1,1] [1,-1]
+Deconstruction: Rectangle Points: [-9,8] [-6,6]
+
+********************* Etap_4 (1.5 Pkt) *********************
+Circle From Radius As Sum: Circle With Center At: [0,0] And Radius: 47,9343370767496
+
+Rectangles Found At Distance = 14,5344418537486
+Rectangle_1: Rectangle With Points: [5,7] [9,9]
+Rectangle_2: Rectangle With Points: [-9,8] [-6,6]

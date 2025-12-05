@@ -1,0 +1,34 @@
+Implement structure Vector3D that represents vector in R^3 euclidean space.
+
+Stage 1 (2 Pts):
+    Create constructor that takes three double parameters x, y, z.
+    Vector stores coefficients as three double fields (YOU CANNOT CHANGE THEM).
+    Create X, Y, Z properties that return/modify corresponding coefficients.
+    Create Equals method that compares two vectors using element-wise operations.
+        Do not forget to implement other (required by Equals) methods.
+    Create ToString method that returns string in form of "Vector3D(X = x, Y = y, Z = z)".
+
+Stage 2 (1 Pts):
+    Vector3D should contain five static fields that return following values:
+        Zero - Vector with three coefficients equal to zero.
+        One - Vector with three coefficients equal to one.
+        UnitX, UnitY, UnitZ - Corresponding unit vectors.
+    Create Length and Length2 properties that return length of a vector (in euclidean metrics) and its squared value respectively.
+    Create Dot (static and instanced/normal version) method that returns dot product of two vectors.
+    Create Cross (static and instanced/normal version) method that returns cross product of two vectors.
+
+Stage 3 (1 Pts):
+    Create tuple decomposition method that returns tuple with three double elements x,y,z.
+	Additional:	Create implicit converter that returns Vector3D from three double elements tuple.
+    	Additional:	Create explicit converter that returns three double elements tuple from Vector3D.
+    Create indexer that allows user to get existing and assign new values to vector.
+        It should throw IndexOutOfRangeException exception for indices out of [0-2] range.
+
+Stage 4 (1 Pts):
+    Create Normalize method that normalizes the vector (does nothing for zero-vector).
+    Create Normalized method that returns normalized copy of a vector (returns zero-vector for zero-vector).
+    Create MakeUnit method that returns normalized vector of the one given by parameters.
+    Create AlmostEquals method that checks whether two vectors (this and one given by parameter) are almost equal (element-wise distance).
+    Create AlmostZero method that checks whether this vector is almost zero (element-wise distance).
+        Both of those method are having epsilon parameter (with default value of 1e-7) that describes the tolerance (of almost word).
+    Create IsNaN (static and instanced/normal version) that checks whether any coefficient is not a number.

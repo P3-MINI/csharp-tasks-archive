@@ -1,0 +1,180 @@
+﻿Laboratorium 12
+
+W ramach dostarczonego zadania znajdują się pliki projektu i rozwiązania:
+- .csproj,
+- .sln.
+Zadanie należy uruchamiać, poprzez otwarcie tych plików za pomocą wybranego IDE (Visual, Rider, VSCode, etc.).
+Jeżeli ktoś chciałby stworzyć własny projekt, to musi ustawić kopiowanie pliku text.txt do wynikowego folderu 
+podczas kompilacji. W gotowym projekcie odpowiadają za to poniższe linie w pliku .csproj:
+
+<ItemGroup>
+    <None Remove="text.txt" />
+    <AdditionalFiles Include="text.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+</ItemGroup> 
+
+Wraz z plikami .csproj, .sln i .txt dostarczane są także pliki .cs, które trzeba dodać do rozwiązania i uzupełnić w nich kod.
+
+UWAGA!!!
+Rozwiązanie należy przesyłać bez folderów bin i obj, obowiązkowo w formie archiwum zip. W archiwum mają być pliki .cs, .csproj i .sln.
+
+Etap 1 można robić niezależnie od pozostałych.
+Etap 3 zależy od etapu 2, a etap 4 od etapu 3.
+
+
+------------------------------------------------------------------------------------------------------------------------
+Etap 1 - klasa Parallel - 1 pkt
+
+Ten etap wykonujemy w pliku Program.cs. Dozwolone jest modyfikowanie oznaczonych fragmentów kodu.
+
+a)
+Za pomocą metody ForEach z klasy Parallel policz dla każdego z wierszy pliku text.txt (wiersze zapisane są w zmiennej lines),
+liczbę słów w danej linii. Dla każdego wiersza dodaj do zmiennej messages napis postaci "Worker <numer wiersza>, words count: <liczba słów>"
+
+b)
+Za pomocą metody For z klasy Parallel wypisz wszystkie liczby pierwsze z zakresu [2,1000]. Wypisz je w wewnątrz pętli, a w zmiennej primesCount zapisz ich liczbę.
+
+Podpowiedzi:
+- Parallel.For
+- Parallel.ForEach
+- Interlocked
+- Mutex
+- Semaphore
+
+------------------------------------------------------------------------------------------------------------------------
+Etap 2 - zdarzenia - 1 pkt
+
+W tym i kolejnych etapach zadania będziesz implementować BARDZO uproszczony model przeprowadzania transakcji na giełdzie na spółkach notowanych w WIG20.
+Wraz z zadaniem zostały dostarczone klasy, struktury i wyliczenia:
+- Order (Order.cs), 
+- Operation (SupportClasses.cs),
+- Side (SupportClasses.cs).
+A także szkielety klas:
+- Exchange wraz z klasami reprezentującymi informacje przesyłane przy wywoływaniu zdarzeń (Exchange.cs),
+- Client wraz z interfejsem ICLient (Client.cs)
+
+UWAGA
+Kod klienta (liczba) odpowiada indeksowi w tablicach volume, price i analogicznych, pod którym zapisane są dane danego klienta.
+
+UWAGA
+Exchange nie może trzymać klientów w żadnej zmiennej lub polu
+
+UWAGA 
+Do mierzenia czasu wykorzystaj klasę Stopwatch
+
+a)
+Uzupełnij następujące metody klasy Exchange (klasa reprezentuje giełdę):
+- konstruktor:
+  1) powinien stworzyć głęboką kopię zmiennych securityCodeToName (mapującą kody liczbowe do skrótów nazw spółek), startingFreeVolume -> _volume (startową liczbę poszczególnych akcji dostępnych na rynku),
+     startingPrice -> _price (startowa cena akcji).
+- AddClient
+  1) Uzupełnić dane klienta o _volume i _price
+  2) Metoda powinna zasubskrybować zdarzenia StartSessionHandler i EndSessionHandler odpowiednimi metodami z interfejsu IClient
+- Start
+  1) Metoda wypisuje "Starting session"
+  2) Wywołuje zdarzenie StartSessionHandler przekazując aktualną godzinę i czas do końca sesji (podany jako parametr metody)
+  3) Czeka do momentu końca sesji
+  4) Wywołuje zdarzenie EndSessionHandler przekazując aktualną godzinę.
+- CleanUp
+  1) Metoda wypisuje na czerwono "Session End"
+  2) Metoda wypisuje na żółto "Final volume and price:"
+  3) Metoda wypisuje po kolei wszystkie spółki w formacie:
+     "Name: <skrót nazwy>, Volume: <obecną liczbę akcji na rynku>, Price: <obecną cenę za akcje na rynku>"
+     
+  Przykładowo dla spółki o kodzie liczbowym 3:
+  - skrót nazwy to wartość w słowniku _securityCodeToName dla klucza 3,
+  - liczba akcji to _volume[3],
+  - cena za akcję to _price[3].
+
+b)
+Uzupełnij klasę Client o następujące metody:
+- konstruktor:
+  1) Wykonaj głęboką kopię przekazywanych parametrów, opisuję one jak mapować kody do skrótów i początkowe portfolio danego klienta, a także listę transakcji które klient będzie wykonywał.
+  2) Przypisuje klientowi unikalne Id (int), pobierane ze statycznego licznika.
+- OnStartSession
+  1) Klient wypisuje posiadane pozycje (akcje) w formie:
+     "Id <kod numeryczny spółki>, Name: <nazwa spółki>, Shares <liczba posiadanych akcji>"
+     
+     Przykładowo dla spółki o kodzie liczbowym 1:
+       - Id to 1, 
+       - nazwy spólki to wartość w słowniku _codeToName dla klucza 1,
+       - liczba posiadanych akcji to _volume[1].
+          
+- OnEndSession
+  1) Klient wypisuje:
+     "\nClientID: <id klienta>, Closing Shop\n"
+- AddStartingData
+  1) tworzy głęboką kopię przekazanych parametrów: liczby akcji na rynku i ich cen.
+  
+Podpowiedzi:
+- events
+- event handler
+- Console.ForegroundColor
+ 
+------------------------------------------------------------------------------------------------------------------------
+Etap 3 - wielowątkowość - 2 pkt
+
+Ten etap będzie wymagał zaimplementowanie prostych metod synchronizacji, w tym momencie zadania dozwolone jest korzystanie z busy waitingu,
+ale nie dozwolone są wyścigi, czy zakleszczenia.
+
+Przed rozpoczęciem implementacji, przeczytaj CAŁY etap, ponieważ istnieje sporo zależności między klasami. 
+
+a)
+W klasie Client:
+- dodaj metodę AddExchange(Exchange ) przypisującą przekazaną zmienną do pola _exchange
+- metoda IsReady powinna zwracać informację czy pole _exchange nie jest nullem
+- metoda Run():
+  1) Czeka aż IsReady nie zwróci true
+  2) Następnie dopóki są jakieś zlecenia do złożenia:
+  - składa kolejne zlecenie, poprzez kolekcję FIFO po stronie _exchange
+  - wypisuje "<nazwa wątku>: sent order"
+  - zasypia na losową liczbę ms z zakresu [10,250]
+- OnRecordUpdate
+  1) Na podstawie przekazanych danych nadpisuje obecną liczbę akcji na rynku
+- OnOrderProcessed
+  1) Na podstawie argumentów sprawdza, czy zlecenie zostało wysłane przez tego klienta,
+     jeśli tak, to nadpisuje liczbę posiadanych akcji, dla buy dodaje, dla sell odejmuje.
+     
+b)
+W klasie Exchange:
+- dodaj kolekcję FIFO do której klienci będą dodawać zlecenia, pamiętaj o synchronizacji
+- zmodyfikuj metodę AddClient tak, aby podłączyć odpowiednie metody klienta pod zdarzenia RecordUpdateHandler oraz OrderProcessedHandler,
+  a także dodaj obecną giełdę jako giełdę klienta (AddExchange)
+- Zmodyfikuj metodę Start w następujący sposób:
+  1) po wywołaniu StartSessionHandler do końca sesji Exchange będzie oczekiwać na zlecenia klientów
+  2) jeśli w kolekcji FIFO znajdują się zlecenia Exchange wypisuje "<nazwa wątku>: Processing order"
+     i zaczyna obsługiwać zlecenie.
+  3) jeśli zlecenie jest po stronie buy i na rynku jest wystarczająco dużo akcji, to zlecenie jest wykonywane i aktualizowana jest liczba akcji na rynku
+  4) jeśli zlecenie jest po stronie sell to nie ma sprawdzania poprawności i zlecenie jest od razu wykonywane
+  5) cena danej pozycji aktualizowana jest o 0.1 * liczba akcji w transakcji
+  6) Wysyłane jest potwierdzenie obsłużenia zlecenia (event OrderProcessedHandler) z informacją o id zlecenia i tym czy udało się je wykonać
+  7) Wysyłana jest informacja o zmianie liczby akcji na rynku i ceny danej akcji (tej na której realizowano zlecenie) do wszystkich klientów (event RecordUpdateHandler)
+  
+c)
+Dodaj odpowiednie implementacje klas RecordUpdateArgs i OrderProcessedArgs bazując na opisie punktów b-6 i b-7.
+
+d)
+W funkcji main
+Stwórz dwie instancje BackgroundWorkerów, odpowiadających odpowiednio klientowi A i B, oprócz wywołania funkcji Run klientów ustaw nazwę wątków odpowiednio na WorkerA i WorkerB.  
+
+Podpowiedzi:
+- Mutex
+- Monitor
+- Semaphore
+- Thread-safe collections
+
+------------------------------------------------------------------------------------------------------------------------
+Etap 4 - synchronizacja - 1 pkt
+
+Punkty z tego etapu przyznawane są za "ładne" rozwiązanie części wielowątkowej:
+- usunięcie busy waitingu
+- wykorzystanie odpowiednich obiektów typu thread safe
+- wielowątkową obsługę eventów w programie
+
+Podpowiedzi:
+- InvokeAsync
+- Mutex
+- Monitor
+- Semaphore
+- Thread-safe collections

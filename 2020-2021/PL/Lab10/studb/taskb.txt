@@ -1,0 +1,94 @@
+Uwaga: kompilacja zadania nie powinna dawać błędów bądź ostrzeżeń np.CS0108
+Aby upewnić się że tak jest można włączyć opcję:
+Project properties -> Build -> Treat warnings as errors -> is ustawić set to All
+--------------------------------------------------------------------------------
+
+Celem zadania jest zaimplementowanie metod rozszerzających funkcjonalność obiektów implementujących interfejs 
+IEnumerable<T> oraz metod pomocniczych. Metody te należy zaimplementować w klasie EnumerableExtender, znajdującej
+się w pliku o tej samej nazwie. Dodatkowo w funkcji Main należy rozwiązać przedstawione problemy za pomocną wcześniej
+zaimplementowanych metod. Zadanie składa się z 4 etapów. Etapy 2-4 można rozwiązać w dowolnej kolejności, natomiast etap
+1 należy rozwiązać najpierw. Należy zaimplementować wymagane w metodach delegacje lub skorzystać z tych istniejących w
+bibliotece standardowej (Func, Predicate, Action). Zakazane jest korzystanie z biblioteki LINQ !!!
+
+--------------------------------------------------------------------------------
+Etap 1 (1p)
+Zaimplementować następujące metody rozszerzające IEnumerable<T>:
+ - metodę ForEach wykonującą na każdym elemencie podaną w parametrze funkcje
+	Parametry:
+	 * func - funkcja przyjmująca element typu T, niezwracająca żadnej wartości
+	Wynik:
+	 * void
+ - metodę Print wypisującą na ekran ciąg elementów (format a1;a2;a3;). Wykorzystać metodę ForEach
+
+Zaimplementować statyczną metodę GenerateN zwracającą n-elemetów wygenerowanych przez podaną w parametrach funkcję
+	Parametry:
+	 * count - liczba zwróconych obiektów
+	 * func - funkcja bezparametrowa zwracająca obiekt typu T
+	Wynik:
+	 * IEnumerable<T>
+
+Wykorzystując metodę GenerateN uzupełnić w funkcji Main dane (result_1a, result_1b, result_1c) według opisanych kryteriów
+
+--------------------------------------------------------------------------------
+Etap 2 (1p)
+Zaimplementować następujące metody rozszerzające IEnumerable<T>:
+ - metodę RemoveIf usuwającą z ciągu wejściowego elementy spełniające podany w parametrach predykat
+	Parametry:
+	 * pred - funkcja przyjmująca element typu T, zwracającą informację (bool) czy element powinien zostać usunięty
+	Wynik:
+	 * IEnumerable<T>
+
+ - metodę Transform zwracającą przekształcone dane wejściowe. Uwaga dane wyjściowe mogą być innego typu niż dane wejściowe
+	Parametry:
+	 * func - funkcja przyjmująca element typu T, zwracającą przekształconą wartość typu T1
+	Wynik:
+	 * IEnumerable<T1>
+
+Wykorzystując zaimplementowane metody uzupełnić w funkcji Main dane (result_2a, result_2b) według opisanych kryteriów
+
+--------------------------------------------------------------------------------
+Etap 3 (1.5p)
+Zaimplementować następujące metody rozszerzające IEnumerable<T>:
+ - metodę Accumulate zwracającą wartość sumy danych sumowanych według podanej w parametrze funkcji.
+	Parametry:
+	 * initValue - wartość początkowa sumy typu T1
+	 * func - funkcja przyjmująca element typu T1 (aktualny wynik sumy) oraz element typu T (aktualny element ciągu), 
+	   zwracająca wynik działania.
+       W przypadku IEnumerable<double> func jako wartość domyślną powinna przyjmować zwykłą funkcje dodawania
+	Wynik:
+	 * suma typu T1
+ 
+- metodę FindEndIfOrDefault zwracającą ostatni element spełniający warunki zadane przez podany predykat, jeżeli element nie
+   występuje w ciągu należy zwrócić wartość domyślną typu T. Jeżeli do funkcji nie zostanie podany predykat,
+   należy zwrócić ostatni element ciągu.
+	Parametry:
+	 * pred - funkcja przyjmująca element typu T, zwracającą informację (bool) czy element spełnia predykat
+	Wynik:
+	 * element typu T
+
+ - metodę ToArray zamieniającą podany ciąg na tablicę
+	Wynik:
+	 * tablica T[]
+
+Wykorzystując zaimplementowane metody uzupełnić w funkcji Main dane (result_3b, result_3c) według opisanych kryteriów
+
+--------------------------------------------------------------------------------
+Etap 4 (1.5p)
+Zaimplementować następujące metody rozszerzające IEnumerable<T>:
+ - metodę Unique zwracającą ciąg unikatowych obiektów. Sprawdzane są ze sobą tylko obiekty sąsiadujące za pomocą podanej w
+   parametrach funkcji.
+	Parametry:
+	 * func - funkcja przyjmująca dwa elementy typu T (powinny implementować interfejs IComparable<T>), zwracająca
+	   informację (bool) czy elementy są takie same. W przypadku nie podania func jako wartość domyślną powinna być 
+	   zwykła funkcja porównująca elementy
+	Wynik:
+	 * IEnumerable<T>
+
+Zaimplementować statyczną metodę MaxFunc, która dla ciągu podanych funkcji zwraca następującą funkcje x-> max(fi(x)), gdzie i=0..n
+	Parametry:
+	 * f1, f2,... fn - funkcje T->T (T powinien implementować interfejs IComparable<T>), w przypadku, gdy nie zostanie podana 
+	   żadna funkcja, powina zostać zwrócona funkcja tożsamościowa x->x
+	Wynik:
+	 * Func<T,T>
+
+Wykorzystując zaimplementowane metody uzupełnić w funkcji Main dane (result_4a, result_4b) według opisanych kryteriów

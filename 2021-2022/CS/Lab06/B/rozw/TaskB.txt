@@ -1,0 +1,25 @@
+Stage_1 (1.5 Pts)
+    Create Person structure that contains three fields: weight, name, surname.
+    Create constructor implementation for that structure with default value for weight parameter (default value equals 75).
+    Create implementation that allows system to print person in format: surname name. Version from C# language.
+    Create implementation that allows for deconstruction to tuple for name and surname.
+
+Stage_2 (1.0 Pts)
+    Create Plane class that contains several readonly fields: mass, torque, horsepower, tankCapacity.
+    	Additionally, flightHours with default value 0.0, maxSpeed with defualt value 700.0, array of maxCapacity indicating maxCapacity for each class (Business/Economy), array of passangers for each class and array of crew. All of them protected.
+    Create constructor implementation for that class with parameters as follow: mass, torque, horsepower, tankCapacity, maxCapacity, arbitrary amount of crew members. Assign rest class fields with their default values or create an array of 0 elements.
+    Create method PrintInfo(bool printPassengers) that prints basic information about plane including passengers (if printPassengers equals true). For more details see the output file.
+    Create implementation that allows for deconstruction to tuple for torque, horsepower, tankCapacity.
+
+Stage_3 (2.0 Pts)
+    Create method CalculateRange() that computes total range of a plane using given formula: tankCapaacity * (torque + horsepower) / (totalMass / 17.46).
+    Create method AddPassenger(Class _class, Person passenger) that adds new passanger. It returns true if there's enough space to add new passanger, false otherwise. Note that you have to resize the array.
+	Enough space is indicate by maxCapacity (for both Business/Economy) and current lenght of the array. You need to copy all existing passengers to some temporary array, allocate memory for new set of passengers and copy them back, whilst adding new one too.
+    Create method AddBusinessPassenger(Person passenger) and AddEconomyPassenger(Person passenger) that add business and economy passanger respectively.
+    Create Travel(double flightTime) method that computes travel time. It returns tuple with bool indicating if we reach final destination and double describing remaining flight time.
+	It uses CalculateRange() method to indicate maxRange and use that to compute temainingTime (remainingTime = maxRange / maxSpeed) which stays the same, so you need to subtract current flightHours from that to see whether it's enough to travel given flightTime.
+	If it's enough just return true and zero as remaining flight time. Otherwise return false and whatever the remaining flight time is (flightTime - (remainingTime - flightHours).
+
+Stage_4 (0.5 Pts)
+    Create AddPassengers() that takes array of tuples of Person and (Travel)Class. It returns true if all passangers have been added, false otherwise.
+	Remarks, it can return false after first failure.

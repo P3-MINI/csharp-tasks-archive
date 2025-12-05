@@ -1,0 +1,31 @@
+Implement structure Vector3D that represents vector in R^3 euclidean space.
+
+Stage 1 (2 Pts):
+    Create constructor that takes three double parameters x, y, z.
+    Vector stores coefficients as three double fields (YOU CANNOT CHANGE THEM).
+    Create X, Y, Z properties that return/modify corresponding coefficients.
+    Create Equals method that compares two vectors using element-wise operations.
+        Do not forget to implement other (required by Equals) methods.
+    Create ToString method that returns string in form of "Vector3D(X = x, Y = y, Z = z)".
+
+Stage 2 (1 Pts):
+    Vector3D should contain five static fields that return following values:
+        Zero - Vector with three coefficients equal to zero.
+        One - Vector with three coefficients equal to one.
+        UnitX, UnitY, UnitZ - Corresponding unit vectors.
+    Create Length properties that returns length of a vector (in euclidean metrics).
+    Create Dot (static and instanced/normal version) method that returns dot product of a vector.
+
+Stage 3 (1 Pts):
+    Create tuple decomposition method that returns tuple with three double elements x,y,z.
+    Create implicit converter that returns Vector3D from three double elements tuple.
+    Create indexer that allows user to get existing and assign new values to vector.
+        It should throw IndexOutOfRangeException exception for indices out of [0-2] range.
+
+Stage 4 (1 Pts):
+    Create Normalize method that normalizes the vector (does nothing for zero-vector).
+    Create Normalized method that returns normalized copy of a vector (returns zero-vector for zero-vector).
+    Create MakeUnit method that returns normalized vector of the one given by parameters.
+    Create AlmostEquals method that checks whether two vectors (this and one given by parameter) are almost equal (element-wise distance).
+        Method is having an epsilon parameter (with default value of 1e-7) that describes the tolerance (of almost word).
+    Create IsNaN (instanced/normal version) that checks whether any coefficient is not a number.

@@ -1,0 +1,24 @@
+The whole task is about creating Matrix class.
+
+Stage_1 (1.5 Pts)
+
+Create two public int automatic properties: Rows and Cols.
+Create a private field of rectangular array values.
+Create a construcor with three parameters: int rows, int cols, values (rectangular array), where default value of "values" is null. The constructor should allocate memory for values and make a deep copy of a corresponding parameter.
+Create a public property Trace with only "get" accessor. It should return a sum of values[i,i].
+Create void Print() method to print matrix. Use `Console.Write("{0, 4}   ", values[i, j]);`
+
+Stage_2 (1 Pts)
+
+Create an explicit conversion from matrix to double[,].
+Create an implicit conversion from double[,] to matrix.
+
+Stage_3 (1 Pts)
+
+Create operator+, which takes two matrices and return a matrix as a result. A result matrix shoud have maximum of both dimensions, and when elements from input matrix are finished (we are out of bounds), we should "wrap" it (start from the beginning).
+
+Create operator[] (get and set), where there are to integer parameters: rows (first) and columns (second).
+
+Stage_4 (1.5 Pts)
+
+Implement operator== and all operators and methods which should accompany this operator.

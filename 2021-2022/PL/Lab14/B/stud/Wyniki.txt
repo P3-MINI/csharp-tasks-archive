@@ -1,0 +1,63 @@
+1 0,036754966887417216
+56 0,06291390728476821
+50 0,08211920529801324
+45 0,09105960264900662
+18 0,1826158940397351
+35 0,19751655629139073
+25 0,34701986754966885
+--------------
+1 F  - 1987,7452135493372
+18 F  - 1989,3508045875801
+25 F  - 1988,2979198598644
+35 F  - 1985,1606532856306
+45 F  - 1984,381294068851
+50 F  - 1982,6278232949512
+56 F  - 1980,9536906185456
+1 M  - 1989,5753916449087
+18 M  - 1989,8174919809715
+25 M  - 1987,8754076051227
+35 M  - 1984,9009028288638
+45 M  - 1983,14375955513
+50 M  - 1982,4352147870502
+56 M  - 1981,7342550961766
+--------------
+Crime 211
+Children's 251
+Comedy 1200
+--------------
+7 Sabrina 1995 Comedy|Romance
+26 Othello 1995 Drama
+1873 Misérables, Les 1998 Drama
+191 Scarlet Letter, The 1995 Drama
+277 Miracle on 34th Street 1994 Drama
+332 Village of the Damned 1995 Horror|Sci-Fi
+362 Jungle Book, The 1994 Adventure|Children's|Romance
+2561 True Crime 1999 Crime|Thriller
+788 Nutty Professor, The 1996 Comedy|Fantasy|Romance|Sci-Fi
+2512 Ballad of Narayama, The (Narayama Bushiko) 1982 Drama
+3096 My Man Godfrey 1957 Comedy
+2059 Parent Trap, The 1998 Children's|Drama
+1460 That Darn Cat! 1997 Children's|Comedy|Mystery
+3616 Loser 2000 Comedy|Romance
+--------------
+Close Shave, A F 4,644444444444445
+Wrong Trousers, The F 4,588235294117647
+Godfather, The M 4,583333333333333
+Seven Samurai (The Magnificent Seven) (Shichinin no samurai) M 4,576628352490421
+Sunset Blvd. (a.k.a. Sunset Boulevard) F 4,572649572649572
+Wallace & Gromit: The Best of Aardman Animation F 4,563106796116505
+Schindler's List F 4,56260162601626
+Shawshank Redemption, The M 4,560625
+Shawshank Redemption, The F 4,539074960127592
+Grand Day Out, A F 4,537878787878788
+To Kill a Mockingbird F 4,536666666666667
+Raiders of the Lost Ark M 4,520597322348094
+Usual Suspects, The M 4,518248175182482
+Usual Suspects, The F 4,513317191283293
+It Happened One Night F 4,5
+Star Wars: Episode IV - A New Hope M 4,495307167235495
+Schindler's List M 4,49141503848431
+Paths of Glory M 4,485148514851486
+Rear Window F 4,484536082474227
+Seven Samurai (The Magnificent Seven) (Shichinin no samurai) F 4,481132075471698
+--------------

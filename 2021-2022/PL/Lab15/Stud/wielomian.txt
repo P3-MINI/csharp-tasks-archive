@@ -1,0 +1,51 @@
+
+Dany jest interfejs
+
+interface IComputable<T>
+    {
+    T Add(T x);
+    T Sub(T x);
+    T Mul(T x);
+    T Div(T x);
+    }
+
+1) (0.5 pkt)
+   zdefiniować typ bezpośredni Real
+   - przechowujący (w prywatnym polu) daną typu double
+   - implementujący interfejs IComputable<Real>
+   - umożliwiający niejawne konwersje  Real -> double  i  double -> Real
+
+2) (3.5 pkt)
+   zdefiniować typ uogólniony Polynomial<T>,
+      gdzie T musi być typem bezpośrednim implementującym interfejs IComputable<T>
+   wymagane operacje:
+   - konstruktor z parametrem int - stopień wielomianu (czyli współczynnikow jest o 1 więcej, wszystkie "zerowe")
+   - konstruktor z parametrem T[] - tablica współczynników (czyli stopień jest o 1 mniejszy)
+   - właściwość Degree - stopień (tylko do odczytu)
+   - dodawanie wielomianów (operator)
+   - mnożenie wielomianów (operator)
+   - negacja wielomianu (operator "minus unarny") - zmiana znaku wszystkich współczynnikow
+   - indeksowanie (argument typu int, zakładamy że nigdy nie będzie ujemny)
+     odczyt
+       - dla indeksu <= stopień zwraca odpowiedni współczynnik
+       - dla indeksu >  stopień zwraca "wartości zerowe"
+     zapis
+       - dla indeksu <= stopień modyfikuje odpowiedni współczynnik
+       - dla indeksu >  stopień tworzy nową tablicę współczynników, tak aby stopień == argument,
+                            pod indeksem stopień wpisuje podaną wartość (pozostałe kopiuje, uzupełnia zerowymi)
+   - możliwość korzystania z foreach (odczyt kolejnych składowych)
+   - metoda ToString() - przyklady dzialania w Main
+   - metoda Polynomial<T> Clone() - tworzy nowy wielomian o identycznych współczynnikach
+
+   Punktacja
+   - konstruktory, Degree    -  0.5
+   - ToString                -  0.5
+   - operatory               -  1.0
+   - indeksowanie            -  1.0
+   - foreach, Clone          -  0.5
+
+3) (1.0 pkt)
+   - zdefiniować uogólnioną metodę Neg<T> rozszerzającą typ T o negacje (zmianę znaku) wartości
+     przy założeniu, że T implementuje interfejs IComputable<T>
+   - zdefiniować uogólnioną metodę Horner<T> rozszerzającą typ Polynomial<T> o obliczanie wartości 
+     wielomianu we wskazanym punkcie (można zapytać prowadzącego o alg. Hornera)

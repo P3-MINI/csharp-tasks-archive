@@ -1,0 +1,6 @@
+﻿Id;FirstName;LastName;BirthDate;StudentType;Address.City;Address.Street;Address.StreetNo
+1;Iwona;Kiwała;25.05.1990;FullTime;Kraków;Wąska;10/1
+2;Zdzisław;Bąkała;12.08.1989;External;Wrocław;Pilna;12
+3;Henryk;Kowalski;10.01.1991;FullTime;Poznań;Wujka;3/5
+4;Adam;Sipowicz;08.03.1991;External;Gdańsk;Kliniczna;183
+5;Beata;Bartoszewicz;11.11.1990;FullTime;Rzeszów;Hetmańska;15

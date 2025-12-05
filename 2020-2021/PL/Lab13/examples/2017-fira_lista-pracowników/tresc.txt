@@ -1,0 +1,68 @@
+
+!!! KONIECZNIE PRZECZYTAJ UWAGI !!!
+
+WyobraŸ sobie, ¿e jesteœ nowym pracownikiem pewnej firmy i Twoim pierwszym 
+zadaniem jest napisanie systemu wspomagaj¹cego dzia³ HR. Dotychczas kartoteka 
+wszystkich pracowników firmy by³a prowadzona przez pani¹ Krysiê w postaci 
+plików i katalogów, które rêcznie by³y modyfikowane. Twoim zadaniem jest 
+napisanie programu, który pozwoli zautomatyzowaæ czêœæ procesów jednoczeœnie 
+pozostawiaj¹c sposób przetrzymywania informacji o pracownikach w dotychczasowej formie.
+
+Informacje o pracownikach przetrzymywane s¹ w katalogu 'Firma', który zawiera 
+podkatalogi odpowiadaj¹ce dzia³om firmy. Ka¿dy z tych katalogów zawiera pliki xml 
+z informacjami o pracownikach. Nazwy plików to pracownikX.xml, gdzie X to 
+unikalny identyfikator pracownika. Dodatkowo ka¿dy katalog dzia³u firmy zawiera 
+plik indeksacyjny index.txt, który zawiera listê identyfikatorów pracowników z 
+danego dzia³u. Plik ten jest u¿ywany przez inny system i musi byæ aktualizowany 
+przy ka¿dej zmianie sk³adów pracowników z tego dzia³u.
+
+UWAGI !!!
+- przed rozpoczêciem zadania wgraj katalog Firma do katalogu w którym Visual Studio
+utworzy plik exe (czyli zapewne do odpowiedniego katalogu Debug).
+Mo¿esz te¿ umieœciæ katalog Firma w innym miejscu, ale w takim razie musisz zamieniæ
+wartoœæ basePath w mainie na pe³n¹ œcie¿kê wskazuj¹c¹ do po³o¿enie katalogu Firma
+- wywo³anie zrealizowanych etapów zmienia strukturê plików, dlatego te¿, 
+aby otrzymane wyniki odpowiada³y tym za³¹czonym w zadaniu, nale¿y uruchomiæ 
+program na niezmodyfikowanym katalogu Firma (najlepiej przed ostatecznym 
+uruchomieniem ponownie go skopiowaæ z katalogu z zadaniem)
+
+
+--- ETAP I (1 pkt.) ---
+Stwórz klasê Pracownik (oraz Adres) z takimi polami, aby mo¿na by³o do niej 
+zdeserializowaæ poszczególnych pracowników. Pole stanowisko jest typem 
+wyliczeniowym. Mo¿liwe wartoœci: Praktykant, Specjalista, Dyrektor, CzlonekZarzadu.
+
+Stwórz klasê HR z polem bêd¹cym œcie¿k¹ do katalogu z plikami firmy.
+W stworzonej klasie napisz metodê DeserializujPracownika, która jako 
+parametr przyjmie œcie¿kê do pliku xml z pracownikiem i zwróci 
+zdeserializowany obiekt Pracownik z tego pliku.
+Wykorzystaæ serializacjê XML.
+
+--- ETAP II (1 pkt.) ---
+Dodaj metodê WypiszPracownikow, która wypisuje wszystkich pracowników firmy 
+w postaci: "{imie} {nazwisko} z {dzial}". Imiê i nazwisko pobraæ z 
+zdeserializowanych pracowników, dzia³y z nazw katalogów.
+
+--- ETAP III (1 pkt.) ---
+Napisz metodê Zatrudnij, która przyjmie obiekt typu Pracownik i string dzia³. 
+Metoda powinna utworzyæ przy pomocy serializacji plik z pracownikiem w 
+odpowiednim katalogu - dziale. Nale¿y pamiêtaæ o aktualizacji pliku 
+indeksacyjnego pracowników. Jeœli podany dzia³ jeszcze nie istnieje, 
+to przed dodaniem pracownika powinien zostaæ utworzony odpowiedni katalog 
+z nazw¹ tego dzia³u i plik index.txt w nim.
+
+--- ETAP IV (1 pkt.) ---
+Napisz metodê Zwolnij, która przyjmuje parametr int bêd¹cy identyfikatorem 
+pracownika, którego nale¿y zwolniæ. Metoda powinna odnaleŸæ plik pracownika 
+(po nazwie pliku), a nastêpnie usun¹æ go i zaktualizowaæ plik index.txt. 
+Jeœli pracownik o podanym identyfikatorze nie istnieje wypisz komunikat 
+"Brak pracownika o podanym identyfikatorze".
+Uwaga: Dzia³y, z których zwolniliœmy wszystkich pracowników pozostaj¹.
+
+--- ETAP V (1 pkt.) ---
+Napisz metodê SerializujFirme, która przy u¿yciu serializacji binarnej 
+zserializuje listê wszystkich pracowników firmy do pliku 
+firma.bin umieszczonym bezpoœrednio w katalogu bazowym 'Firma'.
+
+Napisz metodê DeserializujFirme, która umo¿liwi wczytanie listy pracowników 
+z pliku utworzonego poprzedni¹ metod¹.

@@ -1,0 +1,11 @@
+A1: 10
+A2: Interstellar
+A3: 1143
+B1: Doc, Hud, Jauja, Rango, Posse, Keoma, Zorro, Chino, Jubal, Hondo, Shane
+B2: 3837537.3768300447
+C1: 2013:304
+C2: The:93810882083
+D1: (Doctor Who - Last Christmas, Christmas Day), (Crisis Hotline - Veterans Press 1, Veterans Day), (There Will Come a Day, Martin Luther King Jr. Day)
+D2: (Ju-on - White Ghost, Ju-on - Black Ghost), (The Gingerdead Man, The Brice Man), (The Yes Man, The Marrying Man), (The Fly, The Boy Who Could Fly), (The No Mercy Man, The MacKintosh Man), (The Mole People, The Gamma People), (The Eddy Duchin Story, The Benny Goodman Story)
+E1: Drama:3866, Comedy:2498, Thriller:1818, Documentary:1372, Action:1232
+E2: 6765

@@ -1,0 +1,46 @@
+There's interface given:
+
+interface IComputable<T>
+{
+    T Addition(T x);
+    T Multiply(T x);
+    T Subtraction(T x);
+}
+
+1) (1.0 pkt)
+   define value-type called Real
+   - that stores as a public property value of type double (private set)
+   - that implements IComputable<Real> interface
+   - that allows for implicit conversions Real -> double i double -> Real
+
+2) (3.0 pkt)
+   define generic type Polynomial<T>,
+      where T must be a value-type that implements IComputable<T> interface
+   requirements:
+   - constructor with int parameter - degree of polymonial (note there're more coefficients by one than the degree itself, all with value of zero)
+   - constructor woth T[] parameter - coefficients (note degree is smaller than the array length)
+   - Degree property - readonly (get)
+   - plus operator that adds two polynomials together
+   - unary minus operator that negates polynomial - changes the sign of coefficients
+   - indexers (with int parameter, you can assume it always will be positive value)
+     get
+       - for index <= degree returns associated coefficient
+       - for index >  degree returns zero
+     set
+       - for index <= degree modifies associated coefficient
+       - for index >  degree you can assume there's no such case
+   - should support foreach (reading consecutive coefficients)
+   - ToString() method - example output in Main and Output.txt file
+   - Polynomial<T> Clone() method - created new polynomial with identical coefficients
+
+   Points
+   - constructors, Degree    -  0.5
+   - ToString                -  0.5
+   - operators               -  1.0
+   - indexers                -  0.5
+   - foreach, Clone          -  0.5
+
+3) (1.0 pkt)
+   - define generic method Negation<T> that extends type T with nagation of a value (sign),
+     assuming that T implements IComputable<T> interface
+   - define generic method Horner<T> that extends type Polynomial<T> with calculating its value at given point

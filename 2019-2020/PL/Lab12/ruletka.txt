@@ -1,0 +1,47 @@
+
+Programowanie obiektowe - zadanie 12 - zdarzenia, wyjątki.
+
+Celem jest napisanie gry w ruletkę.
+Mamy dwie klasy: Player i GameMaster.
+
+Klasa Player opisuje gracza.
+
+Zdefiniowane są w niej dwa zdarzenia:
+ - MoveMade typu EventHandler<MoveEventArgs>
+ - GameOver typu EventHandler<EventArgs>
+Przy pomocy zdarzenia MoveMade gracz zgłasza zarządcy gry wybraną liczbę (ruch).
+Przy pomocy zdarzenia GameOver gracz informuje zarządcę gry ze odpada z dalszej gry.
+
+Klasa Game Master opisuje zarządcę gry
+
+Zdefiniowane są w niej dwa zdarzenia:
+ - StartGame typu EventHandler<EventArgs>
+ - SendResult typu EventHandler<MoveEventArgs>
+Przy pomocy zdarzenia StartGane zarządca informuje graczy o rozpoczęciu gry (ściślej kolejki w grze).
+W odpowiedzi gracze wysyłają zarządcy swoje ruchy (wybrane liczby).
+Przy pomocy zdarzenia SendResult zarządca informuje graczy o wygrywającej (w danej kolejce) liczbie.
+W odpowiedzi gracze aktualizują swoje punkty i ewentualnie informują zarządcę o odpadnięciu z dalszej gry.
+
+Do napisania są metody w klasie Player
+ - MakeMove - wykonany ruch
+ - GetResult - reakcja na wylosowaną liczbę wygrywającą
+raz metody w klasie GameMaster
+ - AddPlayer    - dodanie gracza do gry (przed rozpoczęciem)
+ - RemovePlayer - "odłączenie" gracza od gry (gdy wszystko przegra)
+ - GetMove      - rejestracja ruchu gracza i kontrola jego poprawności
+ - EndRound     - zakonczenie kolejki (wylosowanie liczby wygrywającej i inne czynności porządkowe)
+
+Ponadto należy zdefiniować klasę wyjątków InvalidMoveException pochodną od Exception
+przy pomocy której Game Master informuje gracza o nieprawidłowym ruchu
+
+GameMaster przechowuje listy uczestniczących w grze graczy (ścisklej ich identyfikatory)
+oraz listę zgłoszonych przez graczy w danej turze liczb.
+
+CAŁA KOMUNIKACJA POWINNA ODBYWAĆ SIĘ ZA POMOCĄ ZDARZEŃ !!!
+
+Punktacja
+- AddPlayer, RemovePlayer        -  1
+- GetMove, InvalidMoveException  -  1
+- EndRound                       -  1
+- MakeMove                       -  1
+- GetResult                      -  1

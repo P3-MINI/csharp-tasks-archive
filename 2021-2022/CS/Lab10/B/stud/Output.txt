@@ -1,0 +1,165 @@
+﻿STAGE 1
+List:
+XYZ ABCDEFG, Age: 25
+Havelock Vetinari, Age: 64
+Abc Cfg, Age: 3
+Elvis Presley, Age: 3004
+Frank Herbert, Age: 10
+Vlad Dracula, Age: 5900
+Default Default, Age: 17
+Marco Polo, Age: 38
+Sam Vimes, Age: 45
+Frodo Baggins, Age: 34
+
+Sorted list:
+Abc Cfg, Age: 3
+Frank Herbert, Age: 10
+Default Default, Age: 17
+XYZ ABCDEFG, Age: 25
+Frodo Baggins, Age: 34
+Marco Polo, Age: 38
+Sam Vimes, Age: 45
+Havelock Vetinari, Age: 64
+Elvis Presley, Age: 3004
+Vlad Dracula, Age: 5900
+
+REDACTED!
+REDACTED!
+Accumulated age: 236
+
+
+
+STAGE 2
+Constant function
+(13, 5)
+(14, 5)
+(15, 5)
+(16, 5)
+(17, 5)
+(18, 5)
+(19, 5)
+(20, 5)
+(21, 5)
+(22, 5)
+(23, 5)
+(24, 5)
+(25, 5)
+(26, 5)
+
+
+
+Quadratic function
+(0, 6)
+(1, 4)
+(2, 2)
+(3, 0)
+(4, 2)
+(5, 4)
+(6, 6)
+(7, 8)
+(8, 10)
+(9, 12)
+(10, 14)
+
+
+
+Polynomial function
+(0, 1)
+(1, 8)
+(2, 441)
+(3, 3064)
+(4, 12185)
+(5, 35856)
+(6, 87073)
+(7, 184976)
+(8, 356049)
+(9, 635320)
+(10, 1067561)
+
+
+
+STAGE 3
+Choose function
+(-5, 7)
+(-4,5, 6,5)
+(-4, 6)
+(-3,5, 5,5)
+(-3, 5)
+(-2,5, 4,5)
+(-2, 4)
+(-1,5, 3,5)
+(-1, 3)
+(-0,5, 2,5)
+(0, 2)
+
+
+
+Multiply functions
+(-5, 140)
+(-4, 120)
+(-3, 100)
+(-2, 80)
+(-1, 60)
+(0, 40)
+(1, 20)
+(2, 0)
+(3, 20)
+(4, 40)
+(5, 60)
+
+
+
+Combine functions
+(-5, 4)
+(-4, 4)
+(-3, 4)
+(-2, 4)
+(-1, 4)
+(0, 4)
+(1, 4)
+(2, 4)
+(3, 4)
+(4, 4)
+(5, 4)
+
+
+
+STAGE 4
+Invoke action extension
+XYZ ABCDEFG, Age: 25
+Havelock Vetinari, Age: 64
+Abc Cfg, Age: 3
+Elvis Presley, Age: 3004
+Frank Herbert, Age: 10
+Vlad Dracula, Age: 5900
+Default Default, Age: 17
+Marco Polo, Age: 38
+Sam Vimes, Age: 45
+Frodo Baggins, Age: 34
+
+0: Age changed!
+1: No changes made
+2: No changes made
+3: Age changed!
+4: No changes made
+5: No changes made
+6: Age changed!
+7: No changes made
+8: No changes made
+9: Age changed!
+
+
+
+Accumulate extension
+XYZ ABCDEFG, Age: 125
+Havelock Vetinari, Age: 64
+Abc Cfg, Age: 3
+Elvis Presley, Age: 3104
+Frank Herbert, Age: 10
+Vlad Dracula, Age: 5900
+Default Default, Age: 117
+Marco Polo, Age: 38
+Sam Vimes, Age: 45
+Frodo Baggins, Age: 134
+
+9540

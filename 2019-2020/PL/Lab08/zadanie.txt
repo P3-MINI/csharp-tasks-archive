@@ -1,0 +1,52 @@
+﻿
+Etap 1 [0.5]
+Stwórz klasę generyczną Pair<TKey, TValue> która będzie przechowywała klucz i wartość.
+Klasa powinna zawierać:
+* Konstruktor, który przyjmuje dwa parametry typu TKey i TValue.
+* Właściwość Key, która zwraca klucz i nie pozwala na jego zmianę.
+* Właściwość Value, która pozwala pobrać i zmienić wartość.
+
+Klasa powinna być móc utworzona tylko dla typów kluczy implementujących standardowy interfejs IComparable<TKey>.
+Dla klasy Pair również zaimplementuj interfejs IComparable<> pozwalający porównywać pary między sobą na podstawie klucza.
+
+Etap 2 [2.0]
+Stwórz interfejs IMap<TKey, TValue> definiujący część funkcjonalności mapy/słownika.
+Tak jak w przypadku pary, TKey powinno implementować interface IComparable<TKey>
+Interface powinnien zawierać:
+* Właściwość Count, zwracającą liczbę elementów w mapie.
+* Metodę Add(TKey, TValue), która dodaje do mapy parę o danym kluczu i wartości.
+  W przypadku udanego dodania elementu metoda powinna zwrócić True, wpp. False.
+* Metodę Find(TKey), która wyszukuje w mapie parę o podanym kluczu.
+  Należy zwrócić Pair<TKey, TValue> w przypadku, gdy para o danym kluczu została znaleziona, wpp. null.
+
+Stwórz klasę SortedLinkedList<TKey, TValue> przechowującą pary klucz-wartość
+w formie posortowanej rosnąco listcie łączonej.
+Utwórz odpowednią klasę dla węzła listy.
+Zaimplementuj interface IMap dla klasy SortedLinkedList.
+Dodaj do klasy SortedLinkedList metodę PopFront, która zwraca pierwszy (minimalny) element i usuwa go z listy.
+W przypadku pustej listy metoda zwraca null.
+
+Uwaga: Możesz zaimplementować SortedLinkedList "ręcznie" (zapewne potrzebna będzie pomocnicza klasa opisująca węzweł listy)
+       albo wykorzystać standardową klasę LinkedList (i pomocniczą dla niej LinkedListNode), ale z innych stsndardowych
+       kolekcji kirzystać nie wolno. (aby korzystać z LinkedList należy dodać do projektu referencję System.dll)
+
+##### Etapy 3 i 4 mogą być wykonane w dowolnej kolejności #####
+
+Etap 3 [1.5]
+Stwórz klasę BinaryTree<TKey, TValue> przechowującą pary klucz-wartość w formie drzewa binarnego.
+Utwórz odpowednią pomocniczą klasę dla węzła drzewa (zagnieżdzoną w klasie BinaryTree).
+Zaimplementuj interface IMap dla klasy BinaryTree.
+
+Uwaga 1: Klasa zagnieżdzona w klasie uogólnionej automarycznie jest uogólniona
+         (w jej deklaracji nie trzeba pisać parametrów-typów)
+
+Uwaga 2: Do dodawania elementów Wygodnie jest stworzyć pomocniczą metodę z parametrem z modyfikatorem ref
+         (ale można i bez takiej metody)
+
+Etap 4 [1.0]
+Stwórz następujace metody rozszerzającą do interfejsu IMap.
+* ContainsAll, która przyjmuje kolekcje kluczy IEnumerable<TKey> i sprzawdza czy mapa zawiera wszystkie klucze z danej kolekcji.
+* SumForKeys, która przyjmuje kolekcje kluczy IEnumerable<TKey>.
+  Metoda powinna być dostępna tylko dla map których typem wartości jest int.
+  Dla tych map, metoda zwraca sumę wartości par których klucz występuje w kolekcji.
+

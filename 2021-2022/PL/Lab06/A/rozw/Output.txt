@@ -1,0 +1,55 @@
+--------------------- Stage_1 (1.5 Pts) ---------------------
+Jan Kowalski
+Zbiwniew Nowak
+Anna Kowalczyk
+First Name: Kowalski
+First Name: Nowak
+First Name: Kowalczyk
+--------------------- Stage_2 (1.0 Pts) ---------------------
+Milage: 0
+Mass: 1200
+Torque: 400
+Horsepower: 125
+Max Capacity: 5
+Tank Capacity: 45
+
+Car with torque: 400 and horsepower: 125
+--------------------- Stage_3 (1.5 Pts) ---------------------
+Range = 306,2305122494432
+[OK]
+Range = 286,8515299026426
+[OK]
+Range = 269,77926749509487
+[OK]
+Range = 254,625
+[OK]
+Range = 254,625
+Milage: 0
+Mass: 1200
+Torque: 400
+Horsepower: 125
+Max Capacity: 5
+Tank Capacity: 45
+Passengers:
+        Tim Mroz
+        Umber Yan
+        Chikaw Broklyn
+        Skrzypek Tim
+        Epfint Jakub
+Is final destination: True. Remaining Distance: 0
+Is final destination: True. Remaining Distance: 0
+Is final destination: False. Remaining Distance: 72,375
+--------------------- Stage_4 (1.0 Pts) ---------------------
+[OK]
+[OK]
+[OK]
+[OK]
+[OK]
+[OK]
+[OK]
+Milage: 0
+Mass: 170000
+Torque: 900
+Horsepower: 300
+Max Capacity: 19
+Tank Capacity: 350

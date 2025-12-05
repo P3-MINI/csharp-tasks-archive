@@ -1,0 +1,43 @@
+STAGE 1 (0.5 points)
+Create generic class NDimMatrix. It should have constructor taking an Array object. The class should be n-dimensional matrix (e.g. should be able to store 5D matrix, or 3D matrix, which would be a cube).
+
+For example, if we have 3D matrix, let's say of size 3x3x3. It is then a cube, where we have 3 times matrices of 2D. Let's decompose it a little:
+
+matrix[0,0:3,0:3] =
+
+[0, 0, 0]
+[0, 0, 0]
+[0, 0, 0]
+
+matrix[1,0:3,0:3] =
+
+[1, 1, 1]
+[1, 1, 1]
+[1, 1, 1]
+
+matrix[2,0:3,0:3] =
+
+[2, 2, 2]
+[2, 2, 2]
+[2, 2, 2]
+
+In 3D they would just be stacked in rows. See visualisation of the concept there:
+https://www.w3resource.com/w3r_images/python-data-type-list-excercise-13.svg
+
+STAGE 2 (1.5 point)
+
+Create generic extension method for NDimMatrix - Max(), Min(), Flatten(), that will get the minimum/maximum element or flatten the array.
+
+STAGE 3 (3 points)
+
+Create get/set indexers, that allow usage of Range for NDimMatrix. They should return another NDimMatrix. You should use recursion.
+
+IMPORTANT INFO
+- Stages need to be submitted sequentially, you can't get points for a stage if previous one isn't completed.
+- You cannot use LINQ.
+
+HINTS:
+- Read Array documentation (especially Array.CreateInstance).
+- Use recursion. Really.
+- Convert.ToDouble.
+- Use params for indexers.

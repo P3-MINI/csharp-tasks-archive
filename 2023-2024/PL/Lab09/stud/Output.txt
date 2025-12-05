@@ -1,0 +1,51 @@
+
+ ----------------------- STAGE_1 (1.0 Pts) -----------------------
+
+Temperature: [22.1 21.7 19.2]
+Precipitation: [2.1 1.9 3.8]
+WindDirection: [345 152 279]
+
+ ----------------------- STAGE_2 (1.5 Pts) -----------------------
+
+UniformWeights<int>:    [1 1 1 1 1]
+UniformWeights<byte>:   [1 1 1 1 1]
+UniformWeights<double>: [1 1 1 1 1]
+
+ExponentialWeights<int>: [0 0 0 0 0]
+ExponentialWeights<byte>: [0 0 0 0 0]
+ExponentialWeights<float>: [0.36787945 0.13533528 0.049787067 0.01831564 0.006737947]
+
+RandomWeights<byte>: Thrown An Exception, OK!
+RandomWeights<float>: [240.83527 199.02034 218.29895 149.8476 262.53723 269.83914 154.67615 29.762638 171.04976 127.82351 220.67242 150.0402 194.53477 272.39423 244.94472]
+RandomWeights<double>: [0.2606964741625577 0.6658140498794053 0.5627649696827852 0.00454098566338379 0.8690531674154613 0.08465129661346427 0.6033837452936156 0.10571326969609185 0.4212726003261501 0.18624248568865442 0.3164027449725054 0.6659543683010118 0.09656508803006514 0.1619200849270822 0.205416366269924]
+
+ ----------------------- STAGE_3 (1.0 Pts) -----------------------
+
+Random String: ":/.h?F=K#Dk" And It's AlphaNumeric Value: "hFKDk"
+Random String: "c_4%J+_%@@S" And It's AlphaNumeric Value: "c4JS"
+Random String: "-+Y!O9oJVLU" And It's AlphaNumeric Value: "YO9oJVLU"
+Random String: "F$mp2C(^$]i" And It's AlphaNumeric Value: "Fmp2Ci"
+Random String: "Z<\d}z8H#<$" And It's AlphaNumeric Value: "Zdz8H"
+
+ ----------------------- STAGE_4 (1.5 Pts) -----------------------
+
+Temperature<float> Average with UniformWeights<int>: 24.061481
+Temperature<int> Average with UniformWeights<int>: 23
+
+Precipitation<int> Average with RandomWeights<float>: 5
+Precipitation<float> Average with RandomWeights<float>: 17.801334
+
+WindDirection<float> Average with ExponentialWeights<int>: 0
+WindDirection<float> Average with ExponentialWeights<float>: 1.3997204
+
+Precipitation<int> Mode: 0
+Precipitation<float> Mode: 0
+
+Temperature<int> Mode: 27
+Temperature<float> Mode: 27.88
+
+WindDirection<int> Median: 353
+WindDirection<float> Median: 353
+
+Precipitation<int> Median: 0
+Precipitation<float> Median: 0

@@ -1,0 +1,40 @@
+ --------------------- ETAP_1 (1.5 Pts) ---------------------
+Thread No: 15512
+Thread No: 22208
+Thread No: 6692
+Thread No: 9828
+Thread No: 8944
+Thread No: 8304
+Thread No: 13428
+Thread No: 16996
+Thread No: 7856
+Thread No: 7848
+CURL Elapsed: 3227.78
+
+Resources Aqquired:
+cppReference_2.txt
+cppReference_8.txt
+cppReference_5.txt
+cppReference_6.txt
+cppReference_0.txt
+cppReference_9.txt
+cppReference_3.txt
+cppReference_7.txt
+cppReference_4.txt
+cppReference_1.txt
+
+ --------------------- STAGE_2 (1.0 Pts) ---------------------
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_0.txt has others_write permission.
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_1.txt has others_write permission.
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_2.txt has others_write permission.
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_3.txt has others_write permission.
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_4.txt has others_write permission.
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_5.txt has others_write permission.
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_6.txt has others_write permission.
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_7.txt has others_write permission.
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_8.txt has others_write permission.
+C:\Users\...\source\repos\ConsoleApp\Project\cppReference_9.txt has others_write permission.
+
+ --------------------- STAGE_3 (0.5 Pts) ---------------------
+
+ --------------------- STAGE_4 (2.0 Pts) ---------------------

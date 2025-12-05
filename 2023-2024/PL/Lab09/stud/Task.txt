@@ -1,0 +1,35 @@
+
+HINT: Do stworzenia nowej zmiennej typu parametru klasy/metody uogólnionej skorzystaj z dostępnych w interfejsie INumber metod.
+
+Użyj Post-Build Events z Visual Studio do skopiowania pliku 'Data.json' z folderu Projektu do folderu Wynikowego (copy "$(ProjectDir)Data.json" "$(OutDir)").
+
+Etap_1 (1.0 Pts)
+	* Stwórz trzy struktury (Temperature, Precipitation, WindDirection) zawierające właściwość reprezentującą wartość o odpowiednich typach (float, float, int).
+		* Struktury powinny zawierać niejawny operator rzutowania odpowiednio na typ float/int, zależnie od typu przechowywanej właściwości.
+	* Stwórz strukturę WeatherInfo posiadającą trzy publicze właściwości o typach zgodnych z wyżej stworzonymi (Temperature, Precipitation, WindDirection).
+	* Stwórz klasę WeatherForecast posiadającą publiczną właściwość (tylko do odczytu) reprezentującą słownik, kluczem powinien być typ DateTime, wartością WeatherInfo.
+		Klasa zawiera trzy uogólnione metody o nazwach odpowiednio (GetTemperatures, GetPrecipitations, GetWindDirections) zwracające listy typów implementujących interfejs INumber<>.
+		Metody te zwracając listę wartości ze słownika reprezentujące odpowiednio temperaturę, opad, kierunek wiatru.
+
+Etap_2 (1.5 Pts)
+	* Stwórz uogólniony interfejs IWeights implementujący odpowiednio uogólniony IEnumerable ograniczając parametr do odpowiedniej wariacji interfejsu INumber<>.
+	* Stwórz trzy klasy implementujące interfejs IWeights generujące wagi w odpowiedni sposób:
+		* Klasa uogólniona UniformWeights zwraca stałą wagę o wartości podanej w konstruktorze (domyślna wartość wynosi 1).
+			Można skorzystać z argumentu typu int/float/double i skonwertować na typ parametru klasy uogólnionej w konstruktorze.
+		* Klasa uogólniona ExponentialWeights zwraca wagi obliczane w sposób wykładniczy wzorem e^(-x) poczynając od x=1.
+		* Klasa uogólniona RandomWeights zwraca losowe wagi z zakresu Start/End. Zakres podany zostaje w konstruktorze.
+			Można skorzystać z argumentu typu int/float/double i skonwertować na typ parametru klasy uogólnionej podczas wykonywania obliczeń.
+
+Etap_3 (1.0 Pts)
+	* Stwórz statyczną klasę StringExtension.
+		* Stwórz statyczną metodę Random przyjmującą argument typu int wskazujący na długość generowanego napisu (wartość domyślna to 10).
+			Metoda zwraca losowy ciąg znaków o zadaniej długości. Skorzystaj z już istniejących klas/metod. Skorzystaj ze StringBuilder.
+			Możemy założyć, że losujemy znaki z ograniczonego zbioru (ASCII 33 : 127).
+		* Stwórz metodę rozszerzającą klasę string o nazwie AlphaNumeric. Metoda zwraca nowy napis zawierający znaki bazowego napisu będące literą lub cyfrą.
+
+Etap_4 (1.5 Pts)
+	* Stwórz trzy metody rozszerzające uogólniony interfejs IEnumerable<>, gdzie parametr ograniczamy do odpowiedniej wariacji interfejsu INumber<>.
+		* Uogólnioną metodę Median obliczająca medianę liczb znajdujących się w kolekcji.
+		* Uogólnioną metodę Mode obliczająca modę liczb znajdujących się w kolekcji.
+		* Uogólnioną metodę Average, przyjmującą dodatkowy argument typu IWeights, obliczającą średnią ważoną.
+			NOTE: Wartości kolekcji oraz wagi posiadają różne typy.

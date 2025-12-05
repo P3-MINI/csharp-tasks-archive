@@ -1,0 +1,284 @@
+       ### STAGE 1 ###
+       Easy passwords
+START  Sequential - Baseline recovery should succeed
+       Starting recovering password for (e2fc714c4727ee9395f324cd2e7f331f) [md5]. Password length: 4. Alphabet: abcd
+       Recovery finished. Recovered password: [....]
+OK     Password should be recovered
+OK     Password length should be 4
+OK     Password characters should be within abcd
+OK     Recovered password hash should be equal to original hash
+OK     Sequential - Baseline recovery should succeed
+       Elapsed time - 12 [ms]
+       
+
+START  Sequential - Baseline recovery should failed
+       Starting recovering password for (e2fc714c4727ee9395f324cd2e7f331f) [md5]. Password length: 4. Alphabet: abce
+       Recovery finished. Recovered password: [<NULL>]
+OK     Password should not be recovered
+OK     Sequential - Baseline recovery should failed
+       Elapsed time - 1 [ms]
+       
+
+START  Parallel   - Baseline recovery should succeed
+       Starting recovering password for (e2fc714c4727ee9395f324cd2e7f331f) [md5]. Password length: 4. Alphabet: abcd
+       Recovery finished. Recovered password: [....]
+OK     Password should be recovered
+OK     Password length should be 4
+OK     Password characters should be within abcd
+OK     Recovered password hash should be equal to original hash
+OK     Parallel   - Baseline recovery should succeed
+       Elapsed time - 25 [ms]
+       
+
+START  Parallel   - Baseline recovery should fail
+       Starting recovering password for (e2fc714c4727ee9395f324cd2e7f331f) [md5]. Password length: 4. Alphabet: abce
+       Recovery finished. Recovered password: [<NULL>]
+OK     Password should not be recovered
+OK     Parallel   - Baseline recovery should fail
+       Elapsed time - 1 [ms]
+       
+
+       Medium passwords
+START  Sequential - Password is recovered
+       Starting recovering password for (794fd8df6686e85e0d8345670d2cd4ae) [md5]. Password length: 8. Alphabet: abcd
+       Recovery finished. Recovered password: [....]
+OK     Password should be recovered
+OK     Password length should be 8
+OK     Password characters should be within abcd
+OK     Recovered password hash should be equal to original hash
+OK     Finished in less than 2000 ms
+OK     Sequential - Password is recovered
+       Elapsed time - 273 [ms]
+       
+
+START  Parallel - Password is recovered
+       Starting recovering password for (794fd8df6686e85e0d8345670d2cd4ae) [md5]. Password length: 8. Alphabet: abcd
+       Recovery finished. Recovered password: [....]
+OK     Password should be recovered
+OK     Password length should be 8
+OK     Password characters should be within abcd
+OK     Recovered password hash should be equal to original hash
+OK     Finished in less than 2000 ms
+OK     Parallel - Password is recovered
+       Elapsed time - 89 [ms]
+       
+
+       ### STAGE 2 ###
+       Hard passwords
+START  Sequential - Password is recovered
+       Starting recovering password for (d78b6f30225cdc811adfe8d4e7c9fd34) [md5]. Password length: 4. Alphabet: qwertyuiopasdfghjklzxcvbnm
+       Recovery finished. Recovered password: [....]
+OK     Password should be recovered
+OK     Password length should be 4
+OK     Password characters should be within qwertyuiopasdfghjklzxcvbnm
+OK     Recovered password hash should be equal to original hash
+OK     Finished in less than 5000 ms
+OK     Sequential - Password is recovered
+       Elapsed time - 1691 [ms]
+       
+
+START  Parallel - Password is recovered
+       Starting recovering password for (d78b6f30225cdc811adfe8d4e7c9fd34) [md5]. Password length: 4. Alphabet: qwertyuiopasdfghjklzxcvbnm
+       Recovery finished. Recovered password: [....]
+OK     Password should be recovered
+OK     Password length should be 4
+OK     Password characters should be within qwertyuiopasdfghjklzxcvbnm
+OK     Recovered password hash should be equal to original hash
+OK     Finished in less than 5000 ms
+OK     Parallel - Password is recovered
+       Elapsed time - 313 [ms]
+       
+
+       Very hard passwords
+START  Sequential - Password is recovered
+       Starting recovering password for (fd9ab41e47a9ef4f6477a8a000bf404f) [md5]. Password length: 5. Alphabet: qwertyoasdfghjklzxcvbnm
+       Sequential - Password is recovered - Did not finish in 15000 ms
+FAIL   Sequential - Password is recovered
+       Elapsed time - 15015 [ms]
+       
+
+START  Parallel   - Password is recovered
+       Starting recovering password for (fd9ab41e47a9ef4f6477a8a000bf404f) [md5]. Password length: 5. Alphabet: qwertyoasdfghjklzxcvbnm
+       Recovery finished. Recovered password: [....]
+OK     Password should be recovered
+OK     Password length should be 5
+OK     Password characters should be within qwertyoasdfghjklzxcvbnm
+OK     Recovered password hash should be equal to original hash
+OK     Finished in less than 15000 ms
+OK     Parallel   - Password is recovered
+       Elapsed time - 7774 [ms]
+       
+
+       ### STAGE 3 ###
+START  Stable server - simple requests
+[2020-01-16 17:20:45.7150] Starting processing request  2
+[2020-01-16 17:20:45.7150] Starting processing request  3
+[2020-01-16 17:20:45.7150] Starting processing request  1
+[2020-01-16 17:20:45.7150] Starting processing request  4
+[2020-01-16 17:20:45.7150] Starting processing request  5
+[2020-01-16 17:20:46.2208] Finished processing request  3. Process time:  505 [ms]
+[2020-01-16 17:20:46.3068] Finished processing request  1. Process time:  591 [ms]
+[2020-01-16 17:20:46.3488] Finished processing request  5. Process time:  633 [ms]
+[2020-01-16 17:20:46.3688] Finished processing request  2. Process time:  653 [ms]
+[2020-01-16 17:20:46.3998] Finished processing request  4. Process time:  684 [ms]
+OK     Finished in less than 5000 ms
+OK     Computed sum should be 17
+OK     Stable server - simple requests
+       Elapsed time - 690 [ms]
+START  Stable server #2 - parallel
+[2020-01-16 17:20:46.4038] Starting processing request  1
+[2020-01-16 17:20:46.4038] Starting processing request  2
+[2020-01-16 17:20:46.4038] Starting processing request  7
+[2020-01-16 17:20:46.4038] Starting processing request 10
+[2020-01-16 17:20:46.4038] Starting processing request  8
+[2020-01-16 17:20:46.4038] Starting processing request 12
+[2020-01-16 17:20:46.4038] Starting processing request 11
+[2020-01-16 17:20:46.4038] Starting processing request 14
+[2020-01-16 17:20:46.4038] Starting processing request 15
+[2020-01-16 17:20:46.4038] Starting processing request 13
+[2020-01-16 17:20:46.4038] Starting processing request  3
+[2020-01-16 17:20:46.4038] Starting processing request  9
+[2020-01-16 17:20:46.4038] Starting processing request  4
+[2020-01-16 17:20:46.4038] Starting processing request  6
+[2020-01-16 17:20:46.4038] Starting processing request  5
+[2020-01-16 17:20:46.9202] Finished processing request  5. Process time:  515 [ms]
+[2020-01-16 17:20:46.9202] Finished processing request  7. Process time:  515 [ms]
+[2020-01-16 17:20:46.9362] Finished processing request  4. Process time:  531 [ms]
+[2020-01-16 17:20:46.9472] Finished processing request  8. Process time:  542 [ms]
+[2020-01-16 17:20:46.9632] Finished processing request  6. Process time:  558 [ms]
+[2020-01-16 17:20:46.9632] Finished processing request 12. Process time:  558 [ms]
+[2020-01-16 17:20:46.9792] Finished processing request 11. Process time:  574 [ms]
+[2020-01-16 17:20:47.0112] Finished processing request 10. Process time:  606 [ms]
+[2020-01-16 17:20:47.0432] Finished processing request  1. Process time:  638 [ms]
+[2020-01-16 17:20:47.0432] Finished processing request 13. Process time:  638 [ms]
+[2020-01-16 17:20:47.0731] Finished processing request  3. Process time:  668 [ms]
+[2020-01-16 17:20:47.0731] Finished processing request 14. Process time:  668 [ms]
+[2020-01-16 17:20:47.0731] Finished processing request  2. Process time:  668 [ms]
+[2020-01-16 17:20:47.0731] Finished processing request 15. Process time:  668 [ms]
+[2020-01-16 17:20:47.1031] Finished processing request  9. Process time:  698 [ms]
+OK     Finished in less than 5000 ms
+OK     Computed sum should be 1389
+OK     Stable server #2 - parallel
+       Elapsed time - 702 [ms]
+       ### STAGE 4 ###
+START  Stable server #3 - throttling disabled
+[2020-01-16 17:20:47.1041] Starting processing request  2
+[2020-01-16 17:20:47.1041] Starting processing request  3
+[2020-01-16 17:20:47.1041] Starting processing request  1
+[2020-01-16 17:20:47.1051] Starting processing request  4
+[2020-01-16 17:20:47.1051] Starting processing request  5
+[2020-01-16 17:20:47.6380] Finished processing request  4. Process time:  532 [ms]
+[2020-01-16 17:20:47.6380] Finished processing request  2. Process time:  532 [ms]
+[2020-01-16 17:20:47.7162] Finished processing request  3. Process time:  611 [ms]
+[2020-01-16 17:20:47.7321] Finished processing request  5. Process time:  627 [ms]
+[2020-01-16 17:20:47.8061] Finished processing request  1. Process time:  701 [ms]
+OK     Finished in less than 1000 ms
+OK     Computed sum should be 1234
+OK     Stable server #3 - throttling disabled
+       Elapsed time - 702 [ms]
+START  Stable server #4 - throttling - enough to handle all requests concurrently
+[2020-01-16 17:20:47.8071] Starting processing request  2
+[2020-01-16 17:20:47.8071] Starting processing request  5
+[2020-01-16 17:20:47.8071] Starting processing request  3
+[2020-01-16 17:20:47.8071] Starting processing request  1
+[2020-01-16 17:20:47.8071] Starting processing request  4
+[2020-01-16 17:20:48.3260] Finished processing request  5. Process time:  518 [ms]
+[2020-01-16 17:20:48.3400] Finished processing request  4. Process time:  532 [ms]
+[2020-01-16 17:20:48.3530] Finished processing request  1. Process time:  545 [ms]
+[2020-01-16 17:20:48.4020] Finished processing request  2. Process time:  594 [ms]
+[2020-01-16 17:20:48.4979] Finished processing request  3. Process time:  690 [ms]
+OK     Finished in less than 1000 ms
+OK     Computed sum should be 821
+OK     Stable server #4 - throttling - enough to handle all requests concurrently
+       Elapsed time - 692 [ms]
+START  Stable server #5 - throttling - queueing is needed
+[2020-01-16 17:20:48.4989] Starting processing request  1
+[2020-01-16 17:20:48.4989] Starting processing request  3
+[2020-01-16 17:20:48.4989] Starting processing request  5
+[2020-01-16 17:20:48.4989] Starting processing request  4
+[2020-01-16 17:20:48.4989] Starting processing request  2
+[2020-01-16 17:20:49.0298] Finished processing request  1. Process time:  530 [ms]
+[2020-01-16 17:20:49.0298] Finished processing request  3. Process time:  530 [ms]
+[2020-01-16 17:20:49.0298] Starting processing request  6
+[2020-01-16 17:20:49.0298] Starting processing request  7
+[2020-01-16 17:20:49.0478] Finished processing request  5. Process time:  548 [ms]
+[2020-01-16 17:20:49.0478] Starting processing request  8
+[2020-01-16 17:20:49.1577] Finished processing request  4. Process time:  658 [ms]
+[2020-01-16 17:20:49.1577] Starting processing request  9
+[2020-01-16 17:20:49.1988] Finished processing request  2. Process time:  699 [ms]
+[2020-01-16 17:20:49.1988] Starting processing request 10
+[2020-01-16 17:20:49.5426] Finished processing request  7. Process time:  512 [ms]
+[2020-01-16 17:20:49.5426] Starting processing request 11
+[2020-01-16 17:20:49.5606] Finished processing request  6. Process time:  530 [ms]
+[2020-01-16 17:20:49.5606] Starting processing request 12
+[2020-01-16 17:20:49.7316] Finished processing request 10. Process time:  532 [ms]
+[2020-01-16 17:20:49.7316] Starting processing request 13
+[2020-01-16 17:20:49.7536] Finished processing request  9. Process time:  595 [ms]
+[2020-01-16 17:20:49.7536] Finished processing request  8. Process time:  705 [ms]
+[2020-01-16 17:20:49.7536] Starting processing request 14
+[2020-01-16 17:20:49.7536] Starting processing request 15
+[2020-01-16 17:20:50.0945] Finished processing request 11. Process time:  551 [ms]
+[2020-01-16 17:20:50.1994] Finished processing request 12. Process time:  638 [ms]
+[2020-01-16 17:20:50.2594] Finished processing request 15. Process time:  505 [ms]
+[2020-01-16 17:20:50.3714] Finished processing request 13. Process time:  639 [ms]
+[2020-01-16 17:20:50.4024] Finished processing request 14. Process time:  648 [ms]
+OK     Finished in less than 3000 ms
+OK     Computed sum should be 6029
+OK     Stable server #5 - throttling - queueing is needed
+       Elapsed time - 1904 [ms]
+       ### STAGE 5 ###
+START  Faulty server #1 - maxConcurrentRequests (disabled)
+[2020-01-16 17:20:50.4034] Starting processing request  1
+[2020-01-16 17:20:50.4034] Starting processing request  5
+[2020-01-16 17:20:50.4034] Starting processing request  4
+[2020-01-16 17:20:50.4034] Starting processing request  3
+[2020-01-16 17:20:50.4034] Starting processing request  2
+[2020-01-16 17:20:50.9312] Finished processing request  3. Process time:  527 [ms]
+[2020-01-16 17:20:50.9492] Finished processing request  5. Process time:  545 [ms]
+Server couldn't compute abs of -95
+[2020-01-16 17:20:51.0221] Finished processing request  2. Process time:  618 [ms]
+[2020-01-16 17:20:51.0691] Finished processing request  4. Process time:  665 [ms]
+OK     Finished in less than 5000 ms
+OK     Computed sum should be 3340
+OK     Faulty server #1 - maxConcurrentRequests (disabled)
+       Elapsed time - 666 [ms]
+START  Faulty server #2 - maxConcurrentRequests (5)
+[2020-01-16 17:20:51.0702] Starting processing request  1
+[2020-01-16 17:20:51.0702] Starting processing request  4
+[2020-01-16 17:20:51.0702] Starting processing request  5
+[2020-01-16 17:20:51.0702] Starting processing request  3
+[2020-01-16 17:20:51.0702] Starting processing request  2
+Server couldn't compute square of -76
+[2020-01-16 17:20:51.5860] Starting processing request  6
+Server couldn't compute identity of 11
+[2020-01-16 17:20:51.5920] Starting processing request  7
+Server couldn't compute square of -12
+[2020-01-16 17:20:51.6510] Starting processing request  8
+Server couldn't compute identity of -22
+[2020-01-16 17:20:51.7059] Starting processing request  9
+Server couldn't compute identity of 92
+[2020-01-16 17:20:51.7459] Starting processing request 10
+Server couldn't compute square of 62
+[2020-01-16 17:20:52.2748] Finished processing request  6. Process time:  688 [ms]
+Server couldn't compute square of 44
+Server couldn't compute abs of -64
+Server couldn't compute abs of -79
+OK     Finished in less than 5000 ms
+OK     Computed sum should be 8
+OK     Faulty server #2 - maxConcurrentRequests (5)
+       Elapsed time - 1252 [ms]
+START  Faulty server #3 - maxConcurrentRequests (1)
+[2020-01-16 17:20:52.3228] Starting processing request  1
+[2020-01-16 17:20:52.9334] Finished processing request  1. Process time:  610 [ms]
+[2020-01-16 17:20:52.9334] Starting processing request  2
+Server couldn't compute identity of -76
+[2020-01-16 17:20:53.5432] Starting processing request  3
+Server couldn't compute square of 92
+[2020-01-16 17:20:54.1505] Starting processing request  4
+Server couldn't compute square of -66
+[2020-01-16 17:20:54.6769] Starting processing request  5
+[2020-01-16 17:20:55.3655] Finished processing request  5. Process time:  688 [ms]
+OK     Finished in less than 5000 ms
+OK     Computed sum should be 26
+OK     Faulty server #3 - maxConcurrentRequests (1)
+       Elapsed time - 3045 [ms]

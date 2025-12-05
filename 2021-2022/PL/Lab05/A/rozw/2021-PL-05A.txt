@@ -1,0 +1,83 @@
+﻿Etap 1. (1 pkt)
+    W pliku "Edge.cs" zaimplementuj klasę "Edge" reprezentującą krawędź w grafie.
+    
+    Klasa "Edge" powinna zawierać następujące pola:
+     - pole publiczne "start" typu "int" - początek krawędzi, zawsze <= od jej końca,
+     - pole publiczne "end" typu "int" - koniec krawędzi, zawsze >= od jej początku,
+     - pole prywatne "weight" typu "int" - waga przypisana krawędzi, zawsze >= 0.
+     
+    Klasa "Edge" powinna również zawierać następujące konstruktory:
+     - konstruktor przyjmujący parametry typu "int, int, int" reprezentujące w kolejności "start, end, weight",
+     - konstruktor przyjmujący parametry typu "int, int, float" reprezentujące w kolejności "start, end, weight",
+     - konstruktor kopiujący,
+     - konstruktor przyjmujący krotkę "(int, int, float)" reprezentujacą krotkę wartości "(start, end, weight)".
+     
+    Dodatkowo klasa "Edge" powinna zawierać metody:
+     - "GetWeight" zwracającą wagę krawędzi (pole "weight"),
+     - "SetWeight" ustwiającą wagę krawędzi (pole "weight").
+     
+     
+     
+Etap 2. (0.5 pkt)
+    W pliku "Graph.cs" stwórz klasę abstakcyjną "Graph" reprezentującą graf.
+    
+    Klasa "Graph" powinna zawierać następujące pola:
+     - pole "verticesCount" - liczba wierzchołków w grafie, pole jedynie do odczytu,
+                              niedostępne z zewnątrz, ale dostępne dla klas pochodnych.
+                              
+    Klasa "Graph" powinna również zawierać konstruktor przyjmujący jeden parametr typu "int", opisujący liczbę wierzchołków grafu.
+    
+    Dodatkowo kalsa "Graph" powinna zawierać następujące metody:
+     - abstrakcyjną metodę "AddEdge" przyjmującą parametr typu "Edge", reprezentujący krawędź dodawaną do grafu, zwraca "void",
+     - abstrakcyjną metodę "RemoveEdge" przyjmującą parametr typu "Edge", reprezentujący krawędź usuwaną z grafu, zwraca "void",
+     - abstrakcyjną metodę "GetEdge" przyjmującą 2 parametry typu int, reprezentujące początek i koniec szukanej krawędzi, zwraca "Edge",
+     - abstrakcyjną metodę bezparametrową "GetEdgesCount" zwracającą "int",
+     - metodę bezparametrową "GetVerticesCount" zwracającą liczbę wierzchołków w grafie (pole "verticesCount"), zwraca "int".
+     
+     
+     
+Etap 3. (2 pkt)
+    W pliku "MatrixGraph.cs" stwórz klasę "MatrixGraph" klasę pochodną klasy "Graph", będzie ona reprezentować graf za 
+    pomocą macierzy sąsiedztwa.
+    
+    Macierz sasiedztwa - macierz przedstawiajaca graf, jeśli w grafie istnieje krawedz pomiedzy wierzchołkami A i B, to
+    w macierzy na miejscu [A,B] będzie zapisana waga krawędzi łączącej A z B.
+    
+    W klasie "MatrixGraph" należy zaimplementować wszystkie składowe wymagane przez klasę "Graph":
+     - konstruktor przyjmujący parametr typu "int", opisujący liczbę wierzchołków grafu,
+     - metodę "AddEdge", przyjmującą parametr typu "Edge" opisujący dodawaną krawędź, dodającą krawędź do grafu,
+       w przypadku ponownego wywołania powinna nadpisać wagę starej krawędzi,
+     - metodę "RemoveEdge", przyjmującą parametr typu "Edge" opisujący usuwaną krawędź, usuwającą podaną krawędź z grafu,
+       waga usuwanej krawędzi nie musi się zgadzać,
+     - metodę "GetEdge", przyjmującą 2 parametry typu "int", preprezentujące początek i koniec krawędzi (mniejsza z wartości
+       jest początkiem krawędzi), zwracającą szukaną krawędź, lub wartość "null" jeśli ona nie istnieje,
+     - bezparametrową metodę "GetEdgesCount", zwracającą liczbę krawędzi w grafie.
+     
+    Dodatkowo należy zaimplementować podany konstruktor:
+     Konstruktor przyjmuje liczbę wierzchołków w grafie (parametr typu int) oraz tablicę krawędzi typu "Edge", które od razu są dodawane do grafu,
+     ignorujemy wartości "null". 
+     
+    UWAGA!!!
+     - Wierzchołki numerujemy od 0 - dla grafu o 5 wierzchołkach, mamy wierzchołki 0,1,2,3,4.
+     - Jeśli krawędź przekazana do funkcji/konstruktora jest nieprawidłowa - conajmniej jeden z wierzchołków nie należy do grafu to ją ignorujemy,
+       analogicznie dla nieprawidłowych wierzchołków.
+       
+    Wskazówki:
+     - macierz sąsiedztwa można reprezentować jako pole typu Edge[,] lub int[,] jeśli zapisujemy jedynie wagi,
+     - warto dodać pole trzymające informację o liczbie krawędzi w grafie - trzeba je na bieżąco aktualizować,
+     - w konstruktorze przyjmującym krawędzie należy pamiętać o aktualizacji liczby krawędzi grafu.
+     
+     
+     
+Etap 4. (1.5 pkt)
+    W pliku "GraphProcessor.cs" zaimplementuj klasę statyczną "GraphProcessor".
+    
+    Powinna ona zawierać następujące składowe:
+    - metode statyczną "FindMinAndMaxDegree" przyjmującą parametr typu "Graph" i zwracającą pierwszy wierzchołek o najniższy stopniu, i
+      pierwszy o najwyższym oraz ich stopnie w formie następującej krotki: "(int degree, int v) min, (int degree, int v) max)",
+    - metodę statyczną "FindAdjacentVertices" przyjmującą parametry typu "Graph" i "int" oznaczające graf i wierzchołek, którego sąsiedztwa szukamy w grafie,
+      parametr zwracany jest typu "int[]", jest on tablicą wierzchołków sąsiadujących z wierzchołkiem przekazanym do funkcji,
+    - metodę statyczną "SortEdges" przyjmującą parametr typu "Edge[]" będacy tablicą krawędzi, które należy posortować rosnąco po wadze,
+      zwracany parametr typu "Edge[]" to posortowana tablica.
+    
+      

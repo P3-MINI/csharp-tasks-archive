@@ -1,0 +1,25 @@
+
+ETAP 1
+
+collection changed
+collection changed
+
+ETAP 2
+
+collection changed
+collection: [collection 1] changed, value: [Third item] was added
+-------------------------------
+collection: [collection 1] changed, value: [Third item] was removed
+
+ETAP 3
+
+collection: [collection 1] changed, value: [o1] was added
+collection: [collection 1] changed, value: [o2] was added
+-------------------------------
+collection: [collection 1] changed, value: [new o1] was changed
+collection: [collection 1] changed, value: [new o2] was changed
+-------------------------------
+collection: [collection 1] changed, value: [new o2] was removed
+-------------------------------
+collection: [collection 1] changed, value: [even newer o1] was changed
+

@@ -1,0 +1,30 @@
+The whole task is about creating Matrix class.
+
+Stage_1 (1.5 Pts)
+
+Create two public int automatic properties: Rows and Columns.
+Create a private field "values", which is an array of arrays.
+Create a construcor with two parameters: int rows, int cols. Allocate memory ("values"), fill with zeroes.
+
+
+Create a second constructor, with one parameter: values (array of arrays). The constructor should allocate memory for values and make a deep copy of a corresponding parameter. Rows and Columns should be assigned properly.
+Create a public property IsSymmetric with only "get" accessor. It should return true if and only if a matrix is square and for each pair values[i][j] == values[j][i].
+Create void Print() method to print matrix. Use `Console.Write("{0, 4}   ", values[i][j]);`
+
+Stage_2 (1 Pts)
+
+Create an explicit conversion from matrix to double[][].
+Create an implicit conversion from double[][] to matrix.
+Create an explicit conversion from matrix to double. It should return a sum of all values.
+
+Stage_3 (1 Pts)
+
+Create operator- (unary minus), which takes a matrix and return a diagonal (double[]). A diagonal is an array of values values[i][i].
+
+Create operator+ which takes a matrix and double. A result matrix should have all values incremented by this double.
+
+Create operator[] (get and set), where there are to integer parameters: columns (first) and rows (second).
+
+Stage_4 (1.5 Pts)
+
+Implement operator== and all operators and methods which should accompany this operator.

@@ -1,0 +1,28 @@
+Uwaga: kompilacja zadania nie powinna dawać błędów bądź ostrzeżeń np. CS0108
+Aby upewnić się że tak jest można włączyć opcję:
+Project properties -> Build -> Treat warnings as errors -> is ustawić set to All
+
+Zadaniem punktowanym jest napisanie klasy Set, odpowiadającej matematycznej definicji zbioru, z zestawem kilku prostych operatorów.
+
+UWAGA: rozszerzanie tablicy można zrobić tylko raz w każdej funkcji; rozmiar wewnętrzej tablicy w klasie Set musi być równy liczbie elementów wyniku danej operacji.
+
+Etap 1(1 pkt)
+Utwórz klasę Set, która przechowuje w prywatnym polu tablicę elementów zbioru typu całkowitoliczbowego (int).
+Zaimplementuj konstruktor przyjmujący jako argument zmienną liczbę parametrów będących elementami zbioru. Konstruktor powinien dodawać tylko unikatowe elementy, tzn. po wykryciu duplikatu w argumentach nie dodaje takiego elementu po raz kolejny.
+Uwaga: wartości zbioru nie muszą być posortowane - wystarczy, że będą unikatowe.
+
+Zaimplementuj metodę ToString(), która wypisze wszystkie elementy zbioru po przecinku:
+{A0, A1, A2, ..., A(N-1)}
+Zaimplementuj metodę GetElementsArrayCapacity(), która zwróci rozmiar wewnętrznej tablicy elementów.
+
+Etap 2(2 pkt)
+Zaimplementuj operator +, który zwraca sumę zbiorów A i B.
+
+Zaimplementuj operator -, który zwraca różnicę zbiorów A i B.
+
+Etap 3(2 pkt)
+Zaimplementuj operator || oraz &&. S1 && S2 ma zwrócić true, gdy oba zbiory są niepuste, S1 || S2 ma zwrócić true gdy którykolwiek ze zbiorów jest niepusty. W szczególności, if(set) zwraca true, gdy zbiór jest niepusty, false w przeciwnym przypadku.
+Hint: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/expressions#12143-user-defined-conditional-logical-operators 
+Uwaga: Operacja przecięcia zbiorów musi zostać zaimplementowana poprawnie, tzn. zwracać część wspólną zbiorów.
+
+Zaimplementuj operator == oraz !=.

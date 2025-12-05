@@ -1,0 +1,61 @@
+--------------------- Stage_1 (1.5 Pts) ---------------------
+Jan Kowalski
+Zbiwniew Nowak
+Anna Kowalczyk
+First Name: Kowalski
+First Name: Nowak
+First Name: Kowalczyk
+--------------------- Stage_2 (1.0 Pts) ---------------------
+Flight Hours: 0
+Mass: 1200
+Torque: 400
+Horsepower: 125
+Max Capacity Business: 2
+Max Capacity Economy: 120
+Tank Capacity: 45
+
+Plane with torque: 400 and horsepower: 125
+--------------------- Stage_3 (2.0 Pts) ---------------------
+Range = 2880,9
+[OK]
+Range = 2851,24703087886
+[OK]
+Range = 2836,648286727058
+[OK]
+Range = 2807,8947368421054
+[OK]
+Range = 2807,8947368421054
+Flight Hours: 0
+Mass: 17500
+Torque: 4000
+Horsepower: 1250
+Max Capacity Business: 2
+Max Capacity Economy: 14
+Tank Capacity: 550
+Business Passengers:
+        Ohara Efmen
+        Turwurden Jonas
+Economy Passengers:
+        Neuman Jarzy
+
+Plane with torque: True and horsepower: 0
+Plane with torque: True and horsepower: 0
+Plane with torque: False and horsepower: 1,838721804511278
+--------------------- Stage_4 (0.5 Pts) ---------------------
+[OK]
+[OK]
+[OK]
+[OK]
+[OK]
+[OK]
+[OK]
+[OK]
+[OK]
+[OK]
+Flight Hours: 0
+Mass: 170000
+Torque: 900
+Horsepower: 300
+Max Capacity Business: 50
+Max Capacity Economy: 50
+Tank Capacity: 350

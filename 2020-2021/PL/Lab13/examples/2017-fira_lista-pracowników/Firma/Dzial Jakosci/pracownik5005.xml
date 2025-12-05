@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pracownik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <identyfikator>5005</identyfikator>
+  <imie>Czeslaw</imie>
+  <nazwisko>Czarnecki</nazwisko>
+  <stanowisko>CzlonekZarzadu</stanowisko>
+  <stazPracy>120</stazPracy>
+  <adres>
+    <ulica>Zlota</ulica>
+    <miasto>Warszawa</miasto>
+    <nr_lokalu>44</nr_lokalu>
+  </adres>
+</Pracownik>

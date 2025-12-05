@@ -1,0 +1,62 @@
+﻿Stage 1. - 1 point
+Files: Program.cs
+ 
+a) In Main function use lambda expression to sort array of integer numbers from positive to negative and then by their absolute values.
+    You can only write code inside brackets ints.Sort(...); expression.
+   
+b) In Main function use lambda expression to calculate absolute value of the sum of negative elements in the ints array. Result should be stored in "absSum" variable.
+    You can only write code inside brackets of ints.ForEach(...); expression.
+   
+Stage 2. - 1.5 point
+Files: Functions.cs
+Class: BaseFunctions
+
+You are not allowed to use lambda expressions here, you have to use delegates
+
+a) Add public static method ConstantFunction which takes parameter of type double "d", and returns function which takes one parameter of type double "x" and returns value of "d". 
+
+b) Add public static method QuadraticFunction which takes three parameters of type double "a", "b", "c" and returns function which takes one parameter of type double "x" and returns
+    value of quadratic formula: ax^2 + bx + c
+    
+c) Add public static method PolynomialFunction which takes variable number of parameters (params keyword) of type double "tab" and returns function which takes one parameter of type double "x" 
+    and computes the value of polynomial at point "x". "tab" parameter specifies coefficients of the polynomial, tab[0] is a coefficient next to "x" to the highest power.
+    Use Horner's method.
+    
+Stage 3. - 1 point
+Files: Functions.cs
+Class: FunctionsManipulator
+
+You have to use lambda expressions here.
+
+a) Add public static method Max which takes two parameters f and g which are functions that take and return one parameter of type double each, method should return
+    function that takes one parameter of type double "x" and returns maximum of the f,g at "x". 
+
+b) Add public static method Difference which takes two parameters f and g which are functions that take and return one parameter of type double each, method should return
+    function that takes one parameter of type double "x" and returns the absolute value of the difference of the f,g at "x".
+    
+c) Add public static method CombineFunctions which takes two parameters f and g which are functions that take and return one parameter of type double each, method should return
+    function that takes one parameter of type double "x" and returns function composition (f ∘ g) of the f,g at "x".
+
+Stage 3. - 1 point
+Files: Functions.cs, Program.cs
+Class: ExtensionMethods
+
+In Function.cs:
+
+a) Add extension method InvokeAction to the IEnumerable<int> interface which takes one parameter specifying an action to perform on each element of the collection. Method should perform
+    that action on every element of the collection. Return type is void.
+    
+b) Add extension method Transform to the IEnumerable<double> interface which takes one parameter "fun" which is a function that takes and returns one parameter of type double. Method should return
+    a list containing results of the "fun" function performed on all elements of the collection. Return type is List<double>.
+    
+    Hints: 
+    1) To create list use "new List<double>()".
+    2) To add element to list use "list.Add()" method.
+    
+In Program.cs:
+
+a) Write action which prints the parity of the integer number.
+    Action should be passed to "ints.InvokeAction(...)" expression.
+b) Write function which rounds numbers that are between 0 and 1.
+    Function should be passed to "doubles.Transform(...)" expression.
+     

@@ -1,0 +1,87 @@
+Gracz 1 wykonuje ruch: 1
+Gracz 2 wykonuje ruch: 5
+Gracz 3 wykonuje ruch: 3
+Gracz 4 wykonuje ruch: 3
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 4 wykonuje ruch: 3
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 4 wykonuje ruch: 4
+Wylosowana liczba 1
+Gracz 1 wygrywa
+
+Kolejna runda
+Gracz 1 wykonuje ruch: 5
+Gracz 2 wykonuje ruch: 1
+Gracz 3 wykonuje ruch: 2
+Gracz 4 wykonuje ruch: 3
+Wylosowana liczba 5
+Gracz 1 wygrywa
+
+Kolejna runda
+Gracz 1 wykonuje ruch: 2
+Gracz 2 wykonuje ruch: 4
+Gracz 3 wykonuje ruch: 4
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 3 wykonuje ruch: 3
+Gracz 4 wykonuje ruch: 3
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 4 wykonuje ruch: 2
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 4 wykonuje ruch: 3
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 4 wykonuje ruch: 2
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 4 wykonuje ruch: 4
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 4 wykonuje ruch: 5
+Wylosowana liczba 3
+Gracz 3 wygrywa
+
+Kolejna runda
+Gracz 1 wykonuje ruch: 1
+Gracz 3 wykonuje ruch: 5
+Wylosowana liczba 3
+Gracz 2 przegral
+Gracz 4 przegral
+
+Kolejna runda
+Gracz 1 wykonuje ruch: 2
+Gracz 3 wykonuje ruch: 2
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 3 wykonuje ruch: 5
+Wylosowana liczba 3
+
+Kolejna runda
+Gracz 1 wykonuje ruch: 2
+Gracz 3 wykonuje ruch: 4
+Wylosowana liczba 4
+Gracz 3 wygrywa
+
+Kolejna runda
+Gracz 1 wykonuje ruch: 4
+Gracz 3 wykonuje ruch: 2
+Wylosowana liczba 5
+
+Kolejna runda
+Gracz 1 wykonuje ruch: 4
+Gracz 3 wykonuje ruch: 4
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 3 wykonuje ruch: 4
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 3 wykonuje ruch: 4
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 3 wykonuje ruch: 4
+Liczba juz wybrana przez innego gracza Wybierz ponownie
+Gracz 3 wykonuje ruch: 5
+Wylosowana liczba 1
+
+Kolejna runda
+Gracz 1 wykonuje ruch: 3
+Gracz 3 wykonuje ruch: 5
+Wylosowana liczba 2
+
+Kolejna runda
+Wylosowana liczba 3
+Gracz 1 wygrywa
+Gracz 3 przegral
+Gracz 1 wygral

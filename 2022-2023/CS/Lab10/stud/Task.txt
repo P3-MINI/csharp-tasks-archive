@@ -1,0 +1,74 @@
+﻿WARNING!
+You are NOT allowed to use LINQ
+
+Stage 1. - 1 point
+Files: Program.cs
+ 
+a) In Main function use lambda expression to sort array of integer numbers by their absolute values, but negative numbers are always greater than non negative ones.
+    You can only write code inside brackets ints.Sort(...); expression.
+   
+b) In Main function use lambda expression to remove all negative elements from list, additionally store sum of their absolute values in variable "diff".
+    You can only write code inside brackets of ints.RemoveAll(...); expression.  
+   
+Stage 2. - 1 point
+Files: Functions.cs, Program.cs
+Class: BaseFunctions
+
+You are not allowed to use lambda expressions in this stage, you have to use delegates
+
+a) Add public static method ConstantFunction which takes parameter of type double "d", and returns function which takes one parameter of type double "x" and returns value of "d". 
+
+b) Add public static method QuadraticFunction which takes three parameters of type double "a", "b", "c" and returns function which takes one parameter of type double "x" and returns
+    value of quadratic formula: ax^2 + bx + c
+    
+c) Add public static method PolynomialFunction which takes variable number of parameters (params keyword) of type double "tab" and returns function which takes one parameter of type double "x" 
+    and computes the value of polynomial at point "x". "tab" parameter specifies coefficients of the polynomial, tab[0] is a coefficient next to "x" to the highest power.
+    Use Horner's method.
+    
+In Program.cs fill create appropriate functions
+    
+Stage 3. - 1 point
+Files: Functions.cs
+Class: FunctionsManipulator
+
+You have to use lambda expressions in this stage.
+
+a) Add public static method NewPoint which takes two parameters f and g which are functions that take and return one parameter of type double each, method should return
+    function that takes one parameter of type double "x" and returns a tuple made from f at "x" and g at "x". 
+
+b) Add public static method Power which takes two parameters f and g which are functions that take and return one parameter of type double each, method should return
+    function that takes one parameter of type double "x" and returns value of f at "x" to power g at "x".
+    
+c) Add public static method CombineFunctions which takes two parameters f and g which are functions that take and return one parameter of type double each, method should return
+    function that takes one parameter of type double "x" and returns function composition (f ∘ g) of the f,g at "x".
+
+Stage 4. - 2 points
+Files: Functions.cs, Program.cs
+Class: ExtensionMethods
+
+In Function.cs:
+
+a) Add extension method ForEachWithBrake to the IEnumerable<T> interface which takes two parameters:
+    - first specifying an action to perform on each element of the collection,
+    - and second specifying a function to call with each element of the collection which return bool.
+     Method should perform action on every element of the collection and stops if function returns false.
+    
+b) Add extension method Distinct to the IEnumerable<T> interface which takes one parameter comparison function (the one, which can be used in Sort). Method should return
+    a list (List<T>) containing only distinct values from the collection it's invoked on. If two values are the same (comparison function returns 0) we store only the first one in the output list.
+    
+c) Add extension SortRange that sorts specified range (Range class) of List<T> using provided comparison function (the one, which can be used in Sort). 
+    
+    Hints: 
+    1) Use List<T> class
+    2) Comparer<T> class
+    3) Comparer.Default.Compare
+    
+In Program.cs:
+
+a) Write action which prints the remainder of the floating point numbers (example: for 8.92 write 0.92).
+   Write function which returns true for all numbers < 27 and > -15
+    Action and function should be passed to "ints.ForEachWithBrake(...)" expression.
+b) Write function which compares rounded down floating point numbers.
+    Function should be passed to "doubles.Distinct(...)" expression.
+c) Call SortRange on provided List<T> numbers on range from 10th from the end to 15th (from the front) using default comparison method for integer numbers.
+     

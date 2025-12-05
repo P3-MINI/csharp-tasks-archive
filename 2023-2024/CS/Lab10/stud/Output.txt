@@ -1,0 +1,93 @@
+===   BINARY TREE TESTS (1 point)    ===
+Value -1 found 2 times in a tree
+Value  1 found 1 times in a tree
+Value  6 found 3 times in a tree
+Value  9 found 7 times in a tree
+===   BENCHMARKING TESTS (1 point)   ===
+Running benchmarks:
+Function String+=: 0.525043 ms on average
+Function StringBuilder: 0.013043 ms on average
+Function StringJoin: 0.046879 ms on average
+===    DICTIONARY TESTS (1 point)    ===
+Merged log:
+Thursday, 14 December 2023 18:05:00:
+301: Opened the laboratory
+Thursday, 14 December 2023 18:07:00:
+301: First student came in
+Thursday, 14 December 2023 18:12:00:
+302: Opened the laboratory
+Thursday, 14 December 2023 18:13:00:
+302: First student came in
+Thursday, 14 December 2023 18:15:00:
+301: The task showed up on the Leon platform
+302: The task showed up on the Leon platform
+Thursday, 14 December 2023 18:16:00:
+302: Student 318239 appears to be missing
+Thursday, 14 December 2023 18:20:00:
+301: Student 318874 asked about BinaryTree stage
+302: Student 321076 asked about Numerics stage
+Thursday, 14 December 2023 18:21:00:
+301: Student 315731 asked about Numerics stage
+Thursday, 14 December 2023 18:26:00:
+301: Student 318048 returned BinaryTree stage
+302: Student 317225 asked about FactoryMethods stage
+Thursday, 14 December 2023 18:37:00:
+301: Student 319956 returned EnumerableExtensions stage
+302: Student 318239 came in late
+Thursday, 14 December 2023 18:44:00:
+301: Student 321875 returned Numerics stage
+Thursday, 14 December 2023 18:46:00:
+302: Student 319847 returned DictionaryExtensions stage
+Thursday, 14 December 2023 18:49:00:
+302: Student 318032 returned EnumerableExtensions stage
+Thursday, 14 December 2023 18:53:00:
+301: Student 316975 returned Benchmarking stage
+302: Student 317225 returned Numerics stage
+Thursday, 14 December 2023 18:57:00:
+302: Student 315689 returned BinaryTree stage
+Thursday, 14 December 2023 19:02:00:
+301: Student 320485 returned DictionaryExtensions stage
+302: Student 320512 returned BinaryTree stage
+Thursday, 14 December 2023 19:08:00:
+302: Student 319008 returned Benchmarking stage
+Thursday, 14 December 2023 19:11:00:
+301: Student 318874 returned EnumerableExtensions stage
+Thursday, 14 December 2023 19:14:00:
+302: Student 321076 returned Numerics stage
+Thursday, 14 December 2023 19:18:00:
+301: Student 317889 returned Numerics stage
+Thursday, 14 December 2023 19:19:00:
+302: Student 316714 returned FactoryMethods stage
+Thursday, 14 December 2023 19:25:00:
+301: Student 321267 returned BinaryTree stage
+302: Student 318921 returned Numerics stage
+Thursday, 14 December 2023 19:30:00:
+302: Student 321493 returned Benchmarking stage
+Thursday, 14 December 2023 19:32:00:
+301: Student 319204 returned Numerics stage
+Thursday, 14 December 2023 19:35:00:
+302: Student 316958 returned DictionaryExtensions stage
+Thursday, 14 December 2023 19:39:00:
+301: Student 322301 returned Numerics stage
+Thursday, 14 December 2023 19:44:00:
+301: Student 316412 returned BinaryTree stage
+302: Student 320512 returned DictionaryExtensions stage
+Thursday, 14 December 2023 19:45:00:
+302: Student 317225 returned Benchmarking stage
+Thursday, 14 December 2023 19:46:00:
+301: Student 318874 returned Numerics stage
+302: Student 318032 returned DictionaryExtensions stage
+Thursday, 14 December 2023 19:47:00:
+301: All students finished and uploaded their sources on the Leon platform
+302: All students finished and uploaded their sources on the Leon platform
+Thursday, 14 December 2023 19:50:00:
+302: Last student left the laboratory
+Thursday, 14 December 2023 19:53:00:
+301: Last student left the laboratory
+===    ENUMERABLE TESTS (1 point)    ===
+Concatenated story: 
+In the futuristic realm of binary dreams and algorithmic adventures, a group of aspiring computer science students embarked on a quest for knowledge. Their journey led them through the enchanted halls of code, where the syntax whispered secrets of logic and the algorithms danced in elegant choreography. In the algorithms' ballet, the students found themselves entranced by the beauty of efficiency and the elegance of well-optimized solutions. Each line of code they wrote was a stroke on the canvas of virtual reality, painting a picture of innovation and creativity. One day, the students encountered a mythical bug, a creature that lurked in the shadows of their software. Undeterred, they delved into the debugger's lair, armed with the sword of logical reasoning and the shield of error handling. Through the forest of edge cases and the swamp of unexpected inputs, they bravely battled until the bug was vanquished, and their code stood victorious. As the moon of deadline approached, the students huddled around the fire of caffeine, sharing tales of recursive adventures and the legends of the great software architects. They spoke in the ancient tongue of pseudocode, and their laughter echoed in the halls of the virtual machine. In the end, the computer science students emerged triumphant, their projects compiled, and their programs executed flawlessly. And so, their story became a legend in the digital kingdom, inspiring future generations to embark on their own quests for code mastery. And thus, in the kingdom of algorithms and syntax, the saga of the computer science students continued, an eternal loop of learning and discovery. 
+===     NUMERICS TESTS (1 point)     ===
+Linear function root: 0.5
+Quadratic function root: -0.5
+Natural logarithm function root: 1

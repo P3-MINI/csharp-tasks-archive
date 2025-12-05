@@ -1,0 +1,86 @@
+!!! Na tym laboratorium wymagane jest użycie .NETa w wersji 7.0+. !!!
+Zadanie składa się z 5 etapów. Etapy można wykonywać w dowolnej kolejności.
+Każdy etap jest warty 1 punkt. Etapy zdefiniowane są w plikach:
+====> BinaryTree.cs
+  Dodaj metodę DepthFirstSearch, która przyjmuje trzy funkcje
+  typu Action z parametrem typu Node (preVisit, inVisit, postVisit).
+  Metoda powinna rekurencyjnie przejść po drzewie,
+  wywołując odpowiednie akcje w odpowiednich momentach:
+  - preVisit powinno wywołać się przed zejściami rekurencyjnymi.
+  - inVisit powinno wywołać się pomiędzy zejściami rekurencyjnymi.
+  - postVisit powinno wywołać się po zejściach rekurencyjnych.
+  Dodaj implementację metody PrintInOrder, wykorzystując poprzednio zaimplementowaną metodę:
+  - Metoda ta ma wypisywać wartości węzłów w kolejności In-Order z odpowiednimi wcięciami.
+  - Długość wcięcia ma być proporcjonalna do poziomu węzła w drzewie.
+  - W metodach preVisit i postVisit można pilnować poziomu rekurencji.
+  - W metodzie inVisit należy wypisać wartość węzła wraz z odpowiednim wcięciem.
+====> DictionaryExtensions.cs
+  Zaimplementuj metodę rozszerzającą interfejs IDictionary<TKey, TValue> o nazwie AddOrUpdate.
+  Ta metoda powinna dodawać nowe elementy do słownika jeżeli wartość pod wskazanym kluczem nie istnieje
+  lub aktualizować istniejącą wartość na podstawie klucza i poprzedniej wartości. 
+  Metoda powinna przyjmować następujące parametry:
+  - TKey key: klucz, który ma zostać dodany lub zaktualizowany
+  - TValue addValue: wartość, którą należy dodać, jeśli klucz nie istnieje w słowniku.
+  - Func updateValueFactory: funkcja która na podstawie poprzedniej wartości i klucza
+    definiuje jak zaktualizować poprzednią wartość. Powinna przyjmować stary klucz TKey
+    i poprzednią wartość TValue i zwracać nową wartość TValue.
+  Metoda powinna zwrócić nowo dodaną wartość.
+  Następnie zaimplementuj metodę CountWords zliczającą liczbę wystąpień słów w sekwencji stringów
+  używając poprzednio zaimplementowanej metody. Metoda ta ma zwrócić IDictionary<string, int>,
+  gdzie kluczem są słowa, a wartością jest liczba wystąpień w sekwencji.
+====> EnumerableExtensions.cs
+  W tym etapie nie wolno używać funkcji Aggregate z LINQ.
+  Napisz metodę rozszerzającą Reduce<TSource, TAccumulate>
+  do interfejsu IEnumerable<TSource>, która będzie
+  wykonywać operację redukcji na sekwencji do pojedynczej wartości.
+  Metoda powinna przyjmować następujące parametry:
+  - TAccumulate seed: inicjalna wartość akumulatora,
+  - Func accumulator: funkcja, która realizuje logikę akumulacji,
+    przyjmującą dwie wartości typu TAccumulate i TSource,
+    zwracającą wartość typu TAccumulate.
+  Metoda powinna iterować przez elementy sekwencji source
+  i aktualizować wynikowy akumulator przy użyciu dostarczonej funkcji.
+  Przy użyciu metody Reduce zaimplementuj trzy metody
+  rozszerzające interfejs IEnumerable<T>,
+  przy ograniczeniu typu T do interfejsu INumber<T>:
+  - Sum - zwracającą sumę T sekwencji
+  - Min - zwracającą minimalny element T sekwencji
+  - Max - zwracającą maksymalny element T sekwencji
+  Wskazówki:
+  - T.CreateTruncating(double.NegativeInfinity)
+  - T.CreateTruncating(double.PositiveInfinity)
+  - T.Zero
+  - T.Min
+  - T.Max
+====> FactoryMethods.cs
+  Napisz statyczną funkcję RandomValueFunctionFactory, która zwraca funkcję anonimową,
+  zwracającą (pseudo)losową liczbę typu double z przedziału zadanego przez parametry:
+  double min i double max.
+  Napisz statyczną funkcję RandomPointFunctionFactory, która zwraca funkcję anonimową,
+  zwracającą (pseudo)losowy wektor dwóch liczb typu double (przez krotkę)
+  z przedziału zadanego przez parametry: double xMin, double xMax, double yMin, double yMax.
+  Użyj poprzednio zdefiniowanej metody.
+  Napisz statyczna funkcję MonteCarloPiEstimation zwracającą przybliżenie liczby π (typu double).
+  Użyj poprzednio zdefiniowanej metody. Metoda powinna przyjmować liczbę próbek (punktów) użytych
+  do przybliżenia typu int (z wartością domyślną 1024).
+  Metoda Monte Carlo: https://en.wikipedia.org/wiki/Monte_Carlo_method
+  Wskazówka: Generuj losowe punkty w prostokącie zawierającym (wycinek) koło jednostkowe i sprawdzaj,
+  czy są one wewnątrz (wycinka) koła jednostkowego.
+  Oblicz stosunek punktów wewnątrz (wycinka) koła do ogólnej liczby punktów, aby oszacować wartość π.
+====> Numerics.cs
+  Zadeklaruj delegację o nazwie Function, który przyjmuje parametr x typu double
+  i zwraca wartość typu double. 
+  Zaimplementuj statyczną metodę NewtonRootFinding, która przyjmuje funkcję f typu Function,
+  funkcję pochodną df typu Function (z domyślną wartością null), punkt początkowy x0
+  (z domyślną wartością 0) oraz dokładność eps (z domyślną wartością 1e-6).
+  Metoda powinna zwracać obliczony pierwiastek równania metodą Newtona.
+  Jeśli funkcja pochodna df jest równa null w parametrze,
+  zainicjuj ją na początku metody używając przybliżenia:
+  "(f(x + eps) - f(x - eps)) / (2 * eps)".
+  Metoda Newtona: https://en.wikipedia.org/wiki/Newton%27s_method 
+  Następnie napisz trzy metody bezparametrowe zwracające pierwiastki funkcji
+  przy użyciu metody Newtona:
+  - FindLinearRoot - Dla funkcji f(x) = x - 2. Przekaż dokładną pochodną.
+  - FindQuadraticRoot - Dla funkcji f(x) = x * x + 2 * x + 1. Przekaż null jako pochodną.
+  - FindSinRoot - Dla funkcji f(x) = sin(x). Przekaż dokładną pochodną i punkt startowy x0 = 2.
+    Przekaż funkcję sin i cos przez referencję do metod: Math.Sin i Math.Cos.

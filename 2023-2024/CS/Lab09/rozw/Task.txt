@@ -1,0 +1,41 @@
+
+WARNING: In order to create a new class/method parameter variable, use the INumber interface (.Net 7.0+)!
+
+Stage_1 (1.0 Point)
+	* Create a generic Grade structure that constrains its generic type to the INumber<> interface.
+		* It contains of T Value property, appropriate constructor and implicit cast operator from Grade<T> to T.
+	* Create three structures (Presence, Quiz, Task) containing a property of type Grade<> with int, float, float types respectively. Property should have a name Grade.
+	* Create a Laboratory structure with three public properties of types given by structures created above (Presence, Quiz, Task).
+		* Create constructor.
+		* Quiz should be an optional (nullable).
+	* Create a SubjectInfo class with a public (read-only) property representing a dictionary (storing KeyValuePairs in chronological order), the key should be DateTime and the value Laboratory.
+		The class contains three generalized methods named (GetPresences, GetQuizzes, GetTasks) that return lists of types implementing the INumber<> interface.
+		These methods return a list of values from the dictionary representing presence, quizzes, and tasks respectively.
+
+Stage_2 (1.0 Point)
+	* Create a generic IWeights interface that implements a generic IEnumerable interface, constraining the generic parameter to the variation of the INumber<> interface.
+	* Create two classes implementing the IWeights interface that generate weights in the following way:
+		* Generic UniformWeights class that returns a constant weight value equals to 1.
+		* Generic RandomWeights class that returns random weights in the Start-End range (both are T type), using given Seed. The range and seed are given in the constructor.
+			* Range is given as a T type argument, whereas seed can be null (in that case, use parameterless constructor for Random).
+			* Use Random to generate a random double, scale it to match the range and convert it to the T type.
+				NOTE: Keep in mind that every time you call GetEnumerator, we want to get the same sequence of random values.
+
+Stage_3 (1.0 Point)
+	* Create a static StringExtension class.
+		* Create static Random method that takes a string representing available characters, an int representing a seed (default value is 12345) and int indicating the length of the generated string (default value is 10).
+			* This method returns a random string of characters of a given length. Use StringBuilder for better performance.
+		* Create an extension method for string called Rot18. The method returns a new string rotated by 18 (13 for letters and 5 for numbers). Leave the other characters intact.
+			NOTE: Performing Rot18 twice on a string gets it back to its original form. Hint: https://en.wikipedia.org/wiki/ROT13
+
+Stage_4 (1.0 Point)
+	* Create two extension methods for the generic IEnumerable<> interface, where we constrain the generic parameter to the appropriate variation of the INumber<> interface.
+		* Generic Mean method that calculates the mean of numbers in the generic IEnumerable<> collection. The method takes an additional argument of generic IWeights<>.
+			NOTE: Collection values and weights have different types (but both of them implement INumber<> interface). https://en.wikipedia.org/wiki/Mean
+		* Generic StandardDeviation method that calculates standard deviation of numbers in the generic IEnumerable<> collection. The method takes an additional argument of generic IWeights<>.
+			NOTE: Collection values and weights have different types (but both of them implement INumber<> interface). https://en.wikipedia.org/wiki/Standard_deviation
+
+Stage_5 (1.0 Point)
+	* Create another extension method for IEnumerable<>.
+		* Generic method MovingAverage that return a sequence of averages based on values in the collection. Provide a parameter describing the period (default value is 3).
+			https://en.wikipedia.org/wiki/Moving_average

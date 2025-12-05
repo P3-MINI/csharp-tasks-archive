@@ -1,0 +1,36 @@
+Your task is to create the library class that represents information about books and their authors.
+    The library holds this data both in memory as lists and saved in files on your disk.
+Remember to change 'Copy to Output Directory' property of Books.csv file to 'Copy always'.
+
+Stage_1 (1.5 Pts)
+    The 'Library' class should contain two lists, for books and artists respectively.
+        Additionally, a property that represents current path on disk - for further usages.
+
+    Implement the constructor that creates empty catalog on disk, based on given string value.
+
+    Implement static method Create(string libraryPath, string sourceFile) that creates new Library in location given by libraryPath (call the constructor here), based on csv source file located in sourceFile.
+        As the library creation, you should add all books and authors to appropriate lists in library class. You should return newly created library.
+        The order of fields in csv file is as follows: BookID, Title, CoverType, AuthorID, Name, Surname, Birthday, PublicationDate, PublicationLocation, Publisher.
+
+    Implement Info() method that prints to console information about books. According to given output. Use already defined ToString methods.
+
+Stage_2 (1.5 Pts)
+    Create 'PathAlreadyExistsException' class that represents an exception thrown when given file or catalog already exists.
+
+    In 'Library' class implement Add method. Method should be suitable for both books and authors. It should serialize the content to json file.
+        Use the ID value as the filename. Throw an exception when given file already exists.
+        Remember about special attributes for classes that you're serialising. Try not to repeat the code.
+        Every ID field should be serialized using GUID name. Rememer to change the implementation of Create method to use newly created Add method.
+        Add method should now add elements to appropriate lists. Add method in roder to be generic may use GetType method.
+
+Stage_3 (1.0 Pts)
+    Implement Get method, that takes in title of a book that we want to retrive.
+        In order to do so, iterate over all files inside library's directory, deserialize them one by one and return if titles match.
+        If there's no such book, return null. Remember that there are books and authors together, stored in single catalog.
+
+    Implement Delete method, that takes in ID and deletes file with appropriate name.
+        Throw an exception when file does not exists, and return true when the file has been successfully deleted.
+
+Stage_4 (1.0 Pts)
+    Implement Save(string filenamePath) method that serialises all books using xml serialization in location given by filenamePath.
+        Remember about special attributes for our classes that we're serialising.

@@ -1,0 +1,47 @@
+Dany jest interfejs:
+
+interface IComputable<T>
+{
+    T Addition(T x);
+    T Multiply(T x);
+    T Subtraction(T x);
+}
+
+1) (1.0 pkt)
+   zdefiniować typ bezpośredni Real
+   - przechowujący jako publiczną właściwość daną typu double (prywatny set)
+   - implementujący interfejs IComputable<Real>
+   - umożliwiający niejawne konwersje Real -> double i double -> Real
+
+2) (3.0 pkt)
+   zdefiniować typ uogólniony Polynomial<T>,
+      gdzie T musi być typem bezpośrednim implementującym interfejs IComputable<T>
+   wymagane operacje:
+   - konstruktor z parametrem int - stopień wielomianu (czyli współczynnikow jest o 1 więcej, wszystkie "zerowe")
+   - konstruktor z parametrem T[] - tablica współczynników (czyli stopień jest o 1 mniejszy)
+   - właściwość Degree - stopień (tylko do odczytu)
+   - operator pozwalający na dodawanie dwóch wielomianów
+   - negacja wielomianu (operator "minus unarny") - zmiana znaku wszystkich współczynnikow
+   - indeksowanie (argument typu int, zakładamy że nigdy nie będzie ujemny)
+     odczyt
+       - dla indeksu <= stopień zwraca odpowiedni współczynnik
+       - dla indeksu >  stopień zwraca "wartości zerowe"
+     zapis
+       - dla indeksu <= stopień modyfikuje odpowiedni współczynnik
+       - dla indeksu >  stopień zakładamy, że taki scenariusz nie zastąpi
+   - możliwość korzystania z foreach (odczyt kolejnych współczynników)
+   - metoda ToString() - przyklady dzialania w Main i pliku Output.txt
+   - metoda Polynomial<T> Clone() - tworzy nowy wielomian o identycznych współczynnikach
+
+   Punktacja
+   - konstruktory, Degree    -  0.5
+   - ToString                -  0.5
+   - operatory               -  1.0
+   - indeksowanie            -  0.5
+   - foreach, Clone          -  0.5
+
+3) (1.0 pkt)
+   - zdefiniować uogólnioną metodę Negation<T> rozszerzającą typ T o negacje (zmianę znaku) wartości
+     przy założeniu, że T implementuje interfejs IComputable<T>
+   - zdefiniować uogólnioną metodę Horner<T> rozszerzającą typ Polynomial<T> o obliczanie wartości 
+     wielomianu we wskazanym punkcie

@@ -1,0 +1,63 @@
+--------------- ETAP_1 (0.5 Pts) ---------------
+Frantsev Raoul
+Gamddsev Wallas
+
+--------------- ETAP_2 (0.5 Pts) ---------------
+FR-7487 - 700 PLN
+LH-1492 - 1450 PLN
+FR-7864 - 21000 PLN
+LH-1576 - 23500 PLN
+LO-385 - 26500 PLN
+LH-1835 - 28000 PLN
+FR-7872 - 38000 PLN
+W-63901 - 43000 PLN
+
+--------------- ETAP_3 (0.5 Pts) ---------------
+WAW - 3 Airplanes
+CGN - 2 Airplanes
+KRK - 2 Airplanes
+BER - 2 Airplanes
+FCO - 3 Airplanes
+EDI - 1 Airplanes
+NAP - 3 Airplanes
+MUC - 1 Airplanes
+MAD - 3 Airplanes
+VIE - 2 Airplanes
+WRO - 2 Airplanes
+LHR - 2 Airplanes
+MPL - 1 Airplanes
+BCN - 2 Airplanes
+
+--------------- ETAP_4 (1.0 Pts) ---------------
+WRO -> BCN by Plane D-QZZK Flight Number EK-39.
+VIE -> BCN by Plane SP-XDD Flight Number EK-76.
+LHR -> EDI by Plane D-QZZK Flight Number EK-78.
+CGN -> BCN by Plane SP-XDD Flight Number FR-7487.
+FCO -> MPL by Plane SP-FXM Flight Number FR-7697.
+BER -> VIE by Plane D-QZZK Flight Number FR-7845.
+EDI -> CDG by Plane EC-TYZ Flight Number FR-7864.
+LHR -> FCO by Plane EC-TYZ Flight Number KL-763.
+WAW -> MAD by Plane EC-TYZ Flight Number KL-764.
+KRK -> LHR by Plane SP-XDD Flight Number KL-835.
+KRK -> MUC by Plane SP-FXM Flight Number LH-1492.
+MPL -> MUC by Plane D-TRYZ Flight Number LO-379.
+MUC -> CGN by Plane SP-FXM Flight Number LO-492.
+MAD -> MPL by Plane SP-FXM Flight Number LO-535.
+FCO -> KRK by Plane D-QZZK Flight Number W-71492.
+BCN -> WAW by Plane EC-TYZ Flight Number W-73648.
+
+--------------- ETAP_5 (1.0 Pts) ---------------
+EC-TYZ - 191.67
+EC-TYZ - 183.75
+SP-FXM - 141.67
+G-OTMY - 135.00
+D-QZZK - 120.00
+SP-XDD - 118.33
+G-KATM - 105.00
+SP-FXM - 98.75
+D-TRYZ - 85.00
+
+--------------- ETAP_6 (1.5 Pts) ---------------
+Dilston Gerianna - 195.00 on Jet
+Gullan Cameron - 156.25 on Jet
+Cruddas Vivienne - 140.00 on Jet

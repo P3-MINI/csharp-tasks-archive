@@ -1,0 +1,2 @@
+All stages are marked with comment "// TODO:" in files Model.cs and Scene.cs
+All details are below TODO: section.

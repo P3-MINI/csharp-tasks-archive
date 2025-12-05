@@ -1,0 +1,170 @@
+ ********************** Stage_1 (1.0 Pts) ********************** 
+Store_1 Products:
+Product: Headphones ( 0) With Price:     30 And Quantity: 15
+Product:      Shoes ( 1) With Price:    190 And Quantity: 10
+Product:  Chocolate ( 2) With Price:    3.5 And Quantity: 6
+Product:   Computer ( 3) With Price:   3599 And Quantity: 4
+Product: Showel Gel ( 4) With Price:     13 And Quantity: 10
+Product:  Coca-Cola ( 5) With Price:    5.5 And Quantity: 7
+Product:      Paper ( 6) With Price:   15.5 And Quantity: 7
+Product:  Bookshelf ( 7) With Price:    150 And Quantity: 2
+Product:   Bateries ( 8) With Price:      8 And Quantity: 4
+Product:         TV ( 9) With Price:   1900 And Quantity: 2
+Product:     Coffee (10) With Price:     23 And Quantity: 5
+Product:       Wood (11) With Price:      7 And Quantity: 10
+Product:      Juice (12) With Price:    5.5 And Quantity: 13
+Product:        Dog (13) With Price:    800 And Quantity: 1
+
+Store_1 Stocktaking Value: 22232.5
+
+Customer_1 Products:
+ProductID:  0 With Quantity: 2
+ProductID:  1 With Quantity: 1
+ProductID:  8 With Quantity: 2
+ProductID: 12 With Quantity: 3
+ProductID:  6 With Quantity: 1
+ProductID: 11 With Quantity: 7
+
+Customer_2 Products:
+ProductID:  2 With Quantity: 2
+ProductID:  3 With Quantity: 1
+ProductID:  4 With Quantity: 1
+ProductID:  6 With Quantity: 3
+ProductID:  9 With Quantity: 1
+ProductID: 11 With Quantity: 5
+
+ ********************** Stage_2 (1.5 Pts) ********************** 
+Store_1 Products:
+Product: Headphones ( 0) With Price:     30 And Quantity: 13
+Product:      Shoes ( 1) With Price:    190 And Quantity: 9
+Product:  Chocolate ( 2) With Price:    3.5 And Quantity: 6
+Product:   Computer ( 3) With Price:   3599 And Quantity: 4
+Product: Showel Gel ( 4) With Price:     13 And Quantity: 10
+Product:  Coca-Cola ( 5) With Price:    5.5 And Quantity: 7
+Product:      Paper ( 6) With Price:   15.5 And Quantity: 6
+Product:  Bookshelf ( 7) With Price:    150 And Quantity: 2
+Product:   Bateries ( 8) With Price:      8 And Quantity: 2
+Product:         TV ( 9) With Price:   1900 And Quantity: 2
+Product:     Coffee (10) With Price:     23 And Quantity: 5
+Product:       Wood (11) With Price:      7 And Quantity: 3
+Product:      Juice (12) With Price:    5.5 And Quantity: 10
+Product:        Dog (13) With Price:    800 And Quantity: 1
+
+Store_1 Stocktaking Value: 21885.5
+
+Customer_1 Products:
+
+Customer_2 Products:
+ProductID:  2 With Quantity: 2
+ProductID:  3 With Quantity: 1
+ProductID:  4 With Quantity: 1
+ProductID:  6 With Quantity: 3
+ProductID:  9 With Quantity: 1
+ProductID: 11 With Quantity: 5
+
+Store_1 Products:
+Product: Headphones ( 0) With Price:     30 And Quantity: 13
+Product:      Shoes ( 1) With Price:    190 And Quantity: 9
+Product:  Chocolate ( 2) With Price:    3.5 And Quantity: 8
+Product:   Computer ( 3) With Price:   3599 And Quantity: 7
+Product: Showel Gel ( 4) With Price:     13 And Quantity: 6
+Product:  Coca-Cola ( 5) With Price:    5.5 And Quantity: 7
+Product:      Paper ( 6) With Price:   15.5 And Quantity: 3
+Product:  Bookshelf ( 7) With Price:    150 And Quantity: 2
+Product:   Bateries ( 8) With Price:      8 And Quantity: 2
+Product:         TV ( 9) With Price:   1900 And Quantity: 2
+Product:     Coffee (10) With Price:     23 And Quantity: 5
+Product:       Wood (11) With Price:      7 And Quantity: 9
+Product:      Juice (12) With Price:    5.5 And Quantity: 10
+Product:        Dog (13) With Price:    800 And Quantity: 1
+
+Store_1 Stocktaking Value: 32633
+
+Customer_1 Products:
+
+Customer_2 Products:
+
+Store_1 Stocktaking Value: 27032.5
+
+ ********************** Stage_3 (1.5 Pts) ********************** 
+
+Store_1 Stocktaking Value: 27032.5
+Performing Inflation With 1.2 Coefficient!
+Store_1 Stocktaking Value: 32439
+
+Maximum Value Product:   Computer ( 3) With Quantity: 6 And Price: 4318.8
+
+Store_1 Products:
+Product: Headphones ( 0) With Price:     36 And Quantity: 13
+Product:      Shoes ( 1) With Price:    228 And Quantity: 9
+Product:  Chocolate ( 2) With Price:    4.2 And Quantity: 6
+Product:   Computer ( 3) With Price: 4318.8 And Quantity: 6
+Product: Showel Gel ( 4) With Price:   15.6 And Quantity: 5
+Product:  Coca-Cola ( 5) With Price:    6.6 And Quantity: 7
+Product:      Paper ( 6) With Price:   18.6 And Quantity: 0
+Product:  Bookshelf ( 7) With Price:    180 And Quantity: 2
+Product:   Bateries ( 8) With Price:    9.6 And Quantity: 2
+Product:         TV ( 9) With Price:   2280 And Quantity: 1
+Product:     Coffee (10) With Price:   27.6 And Quantity: 5
+Product:       Wood (11) With Price:    8.4 And Quantity: 4
+Product:      Juice (12) With Price:    6.6 And Quantity: 10
+Product:        Dog (13) With Price:    960 And Quantity: 1
+
+Products With Quantity Up To 5:
+Product:      Paper ( 6) With Quantity: 0
+Product:  Bookshelf ( 7) With Quantity: 2
+Product:   Bateries ( 8) With Quantity: 2
+Product:         TV ( 9) With Quantity: 1
+Product:       Wood (11) With Quantity: 4
+Product:        Dog (13) With Quantity: 1
+ ********************** Stage_4 (1.0 Pts) ********************** 
+Store_1 Products:
+Product: Headphones ( 0) With Price:     36 And Quantity: 13
+Product:      Shoes ( 1) With Price:    228 And Quantity: 9
+Product:  Chocolate ( 2) With Price:    4.2 And Quantity: 6
+Product:   Computer ( 3) With Price: 4318.8 And Quantity: 6
+Product: Showel Gel ( 4) With Price:   15.6 And Quantity: 5
+Product:  Coca-Cola ( 5) With Price:    6.6 And Quantity: 7
+Product:      Paper ( 6) With Price:   18.6 And Quantity: 0
+Product:  Bookshelf ( 7) With Price:    180 And Quantity: 2
+Product:   Bateries ( 8) With Price:    9.6 And Quantity: 2
+Product:         TV ( 9) With Price:   2280 And Quantity: 1
+Product:     Coffee (10) With Price:   27.6 And Quantity: 5
+Product:       Wood (11) With Price:    8.4 And Quantity: 4
+Product:      Juice (12) With Price:    6.6 And Quantity: 10
+Product:        Dog (13) With Price:    960 And Quantity: 1
+
+Performing Cheap Order!
+
+Store_1 Products:
+Product: Headphones ( 0) With Price:     36 And Quantity: 13
+Product:      Shoes ( 1) With Price:    228 And Quantity: 9
+Product:  Chocolate ( 2) With Price:    4.2 And Quantity: 0
+Product:   Computer ( 3) With Price: 4318.8 And Quantity: 6
+Product: Showel Gel ( 4) With Price:   15.6 And Quantity: 5
+Product:  Coca-Cola ( 5) With Price:    6.6 And Quantity: 7
+Product:      Paper ( 6) With Price:   18.6 And Quantity: 0
+Product:  Bookshelf ( 7) With Price:    180 And Quantity: 2
+Product:   Bateries ( 8) With Price:    9.6 And Quantity: 2
+Product:         TV ( 9) With Price:   2280 And Quantity: 1
+Product:     Coffee (10) With Price:   27.6 And Quantity: 5
+Product:       Wood (11) With Price:    8.4 And Quantity: 4
+Product:      Juice (12) With Price:    6.6 And Quantity: 10
+Product:        Dog (13) With Price:    960 And Quantity: 1
+
+Store_1 Products:
+Product: Headphones ( 0) With Price:     36 And Quantity: 13
+Product:      Shoes ( 1) With Price:    228 And Quantity: 9
+Product:  Chocolate ( 2) With Price:    4.2 And Quantity: 0
+Product:   Computer ( 3) With Price: 4318.8 And Quantity: 6
+Product: Showel Gel ( 4) With Price:   15.6 And Quantity: 5
+Product:  Coca-Cola ( 5) With Price:    6.6 And Quantity: 0
+Product:      Paper ( 6) With Price:   18.6 And Quantity: 0
+Product:  Bookshelf ( 7) With Price:    180 And Quantity: 2
+Product:   Bateries ( 8) With Price:    9.6 And Quantity: 2
+Product:         TV ( 9) With Price:   2280 And Quantity: 1
+Product:     Coffee (10) With Price:   27.6 And Quantity: 5
+Product:       Wood (11) With Price:    8.4 And Quantity: 4
+Product:      Juice (12) With Price:    6.6 And Quantity: 2
+Product:        Dog (13) With Price:    960 And Quantity: 1
+

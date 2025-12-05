@@ -1,0 +1,39 @@
+Your task is to create scoreboard class that represents information about contests and ski jumpers participating in those contests.
+    The scoreboard holds data both in memory as lists and saved in files on your disk.
+Remember to change 'Copy to Output Directory' property of Contests.bin  file to 'Copy always'.
+
+Stage_1 (1.5 Pts)
+    Create 'PathAlreadyExistsException' class that represents an exception thrown when given file or catalog already exists.
+
+    The 'Scoreboard' class should contain two lists, for contests and participants respectively.
+        Additionally, a property that represents current path on disk - for further usages.
+
+    Implement the constructor that creates empty catalog on disk, based on given string value.
+        Default value for this parameter should be an empty string (""), which means that the scoreboard should be created in memory only (only lists, without saving files to disk).
+        While creating new catalog for scoreboard check whether given path value is not empty.
+
+    Implement Add method than serializes given as parameter contest to json file. The method should also add given contest to appripriate list. Additionally, should add all contest's participants to participants list.
+         Use the name of the contest as the filename. Throw an exception when given file already exists.
+         Remember about special attributes for classes that you're serialising. 
+         You can assume that you don't have to serialize participants of the contest.
+
+    Implement Info(bool printParticipants = true) method that prints to console information about participants and their prizes. It should also print information about all contests. Print info about participants only if printParticipants is true. According to given output. Use already defined ToString methods.
+
+Stage_2 (1.5 Pts)
+    Implement Update method that takes in contest that we want to update.
+         Override appropriate file, so it contains updated date.
+         You can assume that the name of the contest (the filename) never change.
+
+    Implement Delete method, that takes in name of the contest and deletes file with appropriate name.
+        Throw an exception when file does not exists, and return true when the file has been successfully deleted.
+
+    For 'Scoreboard' class implement 'Scoreboard' interface.
+        The method should iterate over all files inside scoreboard's directory, deserialize them one by one and return them using yield return mechanism. Remember about closing file before returning.
+
+Stage_3 (1.0 Pts)
+    Implement static method Create(string sourceFileContests), that creates new memory only Scoreboard (use default value constructor) based on the binary source file located in sourceFileContests.
+        As the scoreboard creation, you should add all contests and participants to appropriate lists in scoreboard class. To add participants iterate over all contest and take their participants and add them uniquely to participants list in scoreboard class. You should return newly created scoreboard.
+
+Stage_4 (1.0 Pts)
+    Implement Save(string filenamePath) method that serialises all participants using xml serialization in location given by filenamePath.
+        Remember about special attributes for our classes that we're serialising.

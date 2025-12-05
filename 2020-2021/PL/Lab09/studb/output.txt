@@ -1,0 +1,22 @@
+﻿-----------------------Stage 1 -------------------------
+3 <- 1 <- 4 <- 2
+Count (4) test -> OK
+Peek test (Peek == 4) -> OK
+Peek Count test (Count == 4) -> OK
+Get test (Get() == 4 -> OK
+Count (3) test -> OK
+Get test (Get() == 3 -> OK
+Count (2) test OK
+Get test (Get() == 2 -> OK
+Count (1) test -> OK
+Get test (Get() == 1 -> OK
+Count (0) test -> OK
+Get item for empty queue should raise InvalidOperationException: OK
+Peek item for empty queue should raise InvalidOperationException: OK
+-----------------------Stage 2 -------------------------
+Expected : J I H G F E D C B A
+Actual   : J I H G F E D C B A
+-----------------------Stage 3 -------------------------
+Date 2020-12-03 should exist in queue -> OK
+Date 2020-12-31 should not exist in queue -> OK
+Date 2018-01-01 should be min date -> OK

@@ -1,0 +1,63 @@
+F 1709
+M 4331
+--------------
+78 - 1 F
+102 - 56 F
+144 - 1 M
+146 - 50 F
+189 - 45 F
+278 - 56 M
+298 - 18 F
+338 - 35 F
+350 - 50 M
+361 - 45 M
+558 - 25 F
+805 - 18 M
+855 - 35 M
+1538 - 25 M
+--------------
+12 Dracula: Dead and Loving It 1995 Comedy|Horror
+70 From Dusk Till Dawn 1996 Action|Comedy|Crime|Horror|Thriller
+152 Addiction, The 1995 Horror
+177 Lord of Illusions 1995 Horror
+188 Prophecy, The 1995 Horror
+196 Species 1995 Horror|Sci-Fi
+220 Castle Freak 1995 Horror
+253 Interview with the Vampire 1994 Drama|Horror
+--------------
+7 Sabrina 1995 Comedy|Romance
+915 Sabrina 1954 Comedy|Romance
+26 Othello 1995 Drama
+2848 Othello 1952 Drama
+73 Misérables, Les 1995 Drama|Musical
+1873 Misérables, Les 1998 Drama
+191 Scarlet Letter, The 1995 Drama
+957 Scarlet Letter, The 1926 Drama
+277 Miracle on 34th Street 1994 Drama
+2398 Miracle on 34th Street 1947 Drama
+332 Village of the Damned 1995 Horror|Sci-Fi
+2553 Village of the Damned 1960 Horror|Sci-Fi|Thriller
+362 Jungle Book, The 1994 Adventure|Children's|Romance
+2078 Jungle Book, The 1967 Animation|Children's|Comedy|Musical
+--------------
+Gate of Heavenly Peace, The 5
+Schlafes Bruder (Brother of Sleep) 5
+Follow the Bitch 5
+Ulysses (Ulisse) 5
+Smashing Time 5
+Baby, The 5
+Song of Freedom 5
+One Little Indian 5
+Lured 5
+Bittersweet Motel 5
+I Am Cuba (Soy Cuba/Ya Kuba) 4,8
+Lamerica 4,75
+Apple, The (Sib) 4,666666666666667
+Sanjuro 4,608695652173913
+Seven Samurai (The Magnificent Seven) (Shichinin no samurai) 4,560509554140127
+Shawshank Redemption, The 4,554557700942973
+Godfather, The 4,524966261808367
+Close Shave, A 4,52054794520548
+Usual Suspects, The 4,517106001121705
+Schindler's List 4,510416666666667
+--------------

@@ -1,0 +1,26 @@
+//--------------------Etap 1(2.0p)--------------------//
+vec1 = [1;2;20;4;8] Count = 5
+vec2 = [2;1;5;3] Count = 4
+vec3 = [1;2;6;4;8] Count = 5
+vec4 = [] Count = 0
+Dekonstrukcja (vec5, vec6) = vec3 : vec5 = [1;2;6] Count = 3; vec6 = [4;8] Count = 2
+Dekonstrukcja (vec7, vec8) = vec4 : vec7 = [] Count = 0; vec8 = [] Count = 0
+Zˆapano wyj¥tek: System.IndexOutOfRangeException OK
+Zˆapano wyj¥tek: System.IndexOutOfRangeException OK
+//--------------------Etap 2(1.5p)--------------------//
+vec9 = [1;2;20;4;8] Count = 5
+vec10 = [1] Count = 1
+vec1 == vec3 : False
+vec1 == vec9 : True
+vec1 != vec10 : True
+vec1 != vec9 : False
+Konwersja: UniqueVector vec1-> int[] -> UnqueVector vec11 = [1;2;20;4;8] Count = 5 vec1 == vec15 : True
+//--------------------Etap 3(1.5p)--------------------//
+vec12 = [2] Count = 1
+vec12 = [2;0;1;3;4;5;6;7;8;9] Count = 10
+vec13 = [] Count = 0
+vec13 = vec12 + vec13 = [2;0;1;3;4;5;6;7;8;9] Count = 10
+vec14 = vec12 + vec13 = [2;0;1;3;4;5;6;7;8;9] Count = 10
+++vec14 = [3;1;2;4;5;6;7;8;9;10] Count = 10
+vec15 = vec14 * vec13 = [3;1;2;4;5;6;7;8;9] Count = 9
+vec16 = vec5 * vec6 = [] Count = 0

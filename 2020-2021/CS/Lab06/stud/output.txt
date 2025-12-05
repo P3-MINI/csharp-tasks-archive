@@ -1,0 +1,73 @@
+
+== STAGE 1 ==
+
+Point2D(1, 2) has been created.
+Point2D(1, 0) has been created.
+Point2D(1, -1) has been created.
+Point2D(0, 1) has been created.
+Point2D(1, 1) has been created.
+Point2D(1, 0) has been created.
+
+== STAGE 2 ==
+
+Point2D(3, 4) has been created.
+Distance between (0, 0) and (3, 4) is 5.00
+Distance between (0, 0) and (0, 0) is 0.00
+Circuit of polygon created from p1, p2, p3 is 6.00
+Circuit of polygon created from p4, p5, p6 is 3.41
+
+== STAGE 3 ==
+
+Point2D(1, 3) has been created.
+Point2D(3, 3) has been created.
+Point2D(3, -1) has been created.
+Point2D(0, 3) has been created.
+Point2D(2, 3) has been created.
+Point2D(2, 1) has been created.
+
+== STAGE 4 ==
+
+
+Describing object 1:
+Object is not a shape.
+
+Describing object 2:
+Object is a shape
+Shape has circuit of 31.42
+Shape is not a Polygon
+Shape is a Circle that has center at (1, 0) and radius of 5
+
+Describing object 3:
+Object is a shape
+Shape has circuit of 12.00
+Shape is a Polygon
+List of points in polygon:
+(1, -1)
+(1, 3)
+(3, 3)
+(3, -1)
+Shape is a Rectangle and has diagonal of 4.47
+
+Describing object 4:
+Object is a shape
+Shape has circuit of 8.00
+Shape is a Polygon
+List of points in polygon:
+(0, 1)
+(0, 3)
+(2, 3)
+(2, 1)
+Shape is a Rectangle and has diagonal of 2.83
+
+Describing object 5:
+Object is not a shape.
+
+Describing object 6:
+Object is not a shape.
+
+== STAGE 5 ==
+
+Distance of the closest point on the circle to origin point is 4.00
+
+== END ==
+

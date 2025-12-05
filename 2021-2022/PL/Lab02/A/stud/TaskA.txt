@@ -1,0 +1,4 @@
+Korzystając z elementów biblioteki STL należy rozwiązać 5 zadań. Polecenia zostały zapisane w pliku Lab2A.cpp.
+Etapy można rozwiązywać w dowolnej kolejności, chyba, że korzystają z danych policzonych w innym zadaniu.
+Nie można korzystać z żadnych pętli oraz w przypadku etapów 2-4 z funkcji std::for_each.
+W algorytmach należy używać wyrażeń lambda.

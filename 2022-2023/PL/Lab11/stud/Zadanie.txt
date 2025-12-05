@@ -1,0 +1,95 @@
+UWAGI OGÓLNE:
+
+NIE wolno modyfikować kodu w pliku Program.cs poza wyznaczonymi miejscami.
+NIE wolno korzystać z LINQ
+
+Etap 1. - 1.5 punkt
+
+Uwaga: W tym etapie w pliku Program.cs można jedynie korzystać z wyrażeń lambda.
+W pliku Functions.cs:
+
+Zaimplementuj metodę "CopyIf" rozszerzającą klasę List<T>, przyjmującą 2 parametry:
+- funkcję predykat przyjmującą parametr typu T zwracającą element typu bool,
+- argument zakres typu Range, przyjmujący zakres elementów do sprawdzenia.
+
+Metoda powinna zwracać nową listę zawierającą elementy z zakresu spełniające podany predykat (zwracana wartość true).
+
+W pliku Program.cs:
+
+Uzupełnij wywołanie CopyIf, tak żeby stworzyć nową listę zawierającą wszystkie obiekty podzielne przez 3 lub 5 z zakresu od elementu 5. do 10. od końca listy.
+W zmiennej CountOdd zapisz sumę wszystkich liczb nieparzystych z listy z podanego zakresu.  
+
+Uzupełnij wywołanie Sort, tak żeby posortować słowa w następujący sposób:
+1) najpierw o parzystej długości (0 jest parzyste),
+2) potem zaczynające się samogłoskami (a,e,i,o,u),
+3) na koniec alfabetycznie.
+
+Etap 2. - 1.5 punkt
+
+Uwaga: Nie wolno korzystać z wyrażeń lambda.
+W pliku Functions.cs:
+
+Dopisz do klasy  podane metody:
+
+Metoda RandomPointFromFunction przyjmuje 3 parametry typu 
+- ziarno typu int,
+- mod typu int,
+- funkcję f zwracającą dla podanej liczby typu float, liczbę typu float.
+Wynikiem metody jest funkcja, która zwraca argument x oraaz wartość funkcji f(x).
+Argument x ma być generowany losowo na podstawie ziarna seed z przedziału [0, mod] i byc typu float.
+
+Metoda ReturnElement przyjmuje 1 parametr:
+- kolekcja typu IEnumerable<T>
+
+Metoda zwraca funkcję zwracającą element o podanym indeksie (klasa Index) elementu do zwrócenia,
+jeśli kolekcja jest pusta powinien zostać zgłoszony wyjątek ArgumentOutOfRangeException (wyrażenie throw)
+
+
+Etap 3. - 0.5 punkt
+
+Uwaga: Etap należy wykonać korzystając wyłącznie z wyrażeń lambda.
+W pliku Functions.cs:
+
+Dopisz do klasy FunctionsManipulator podane metody:
+
+Metoda Combine przyjmuje 2 funkcje przyjmujące i zwracające double. Zwraca on ich złożenie - pierwsza_funkcja(druga_funkcja(x))
+
+Metoda Derivative przyjmuje:
+- funkcję f przyjmującą i zwracającą double,
+- parametr domyślny h=0.001.
+Funkcja zwraca funkcję przyjmującą parametr x i obliczającą pochodną funkcji f w x,
+pochodną liczymy z x1 = x - h i x2 = x + h.
+
+W pliku Program.cs uzupełnij wywołanie RandomPointFromFunction o funkcję f(x)= (x-3)^2
+ 
+ 
+Etap 4. - 1.5 punkt
+
+W pliku Functions.cs:
+
+Zaimplementuj podane metody rozszerzające interfejs IEnumerable<T>:
+
+Metoda Partition, przyjmuje 2 parametry:
+- wartość graniczną sumy, typu float,
+- funkcję przyjmującą zliczającą przyjmującą w kolejności: obecny element, aktualną sumą (float) i zwracającą nową sumę (float).
+
+Metoda zwraca tablicę list (List<T>) zawierających kolejne elementy kolekcji, tak aby ich suma nie przekraczała wartości granicznej.
+Jeśli element jest większy niż suma graniczna to tworzy osobną listę.
+
+Przykład dla listy 5,5,6,10,1,12 i sumy granicznej 11 oraz funkcji zliczającej bedącej zwykłą sumą
+wynikiem będzie tablica następujących list:
+5,5
+6
+10,1
+12
+
+Metoda Merge przyjmująca drugą kolekcję oraz funkcję porównującą (taką jak Sort).
+Metoda ta pobiera po elemencie z obu kolekcji i na podstawie funkcji porównującej ustala kolejność wstawienia tych dwóch elementów do nowej kolekcji, aż do wyczerpania krótszej kolekcji.
+Następnie przepisywane są pozostałe elementy z dłuższej kolekcji do nowej kolekcji.
+
+W pliku Program.cs:
+
+Uzupełnij wywołanie Partition o funkcję sumującą wartość elementów kolekcji (wartość startowa sumy to 0) ignorującą wszystkie liczby nieparzyste (uznajemy ich wartość za równą 0),
+ponadto funkcja powinna zapisać w zmiennej absSum sumę modułów wszystkich elementów kolekcji.
+
+Uzupełnij wywołanie Merge o funkcję, dla której liczby ujemne są zawsze większe od nieujemnych, a następnie porównuje już "normalnie".

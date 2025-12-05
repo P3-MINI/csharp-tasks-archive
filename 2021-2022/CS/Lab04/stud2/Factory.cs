@@ -1,0 +1,8 @@
+﻿
+namespace Vehicles
+{
+    class Factory
+    {
+        
+    }
+}

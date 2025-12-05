@@ -1,0 +1,39 @@
+Zadaniem jest przygotowanie klasy reprezentuj¹cej bibliotekê trzymaj¹c¹ informacjê o ksi¹¿kach oraz ich autorach.
+    Biblioteka trzyma dane zarówno w pamiêci operacyjnej jak równie¿ zapisuje je odpowiednio na dysku komputera.
+Klasy reprezentuj¹ce ksi¹¿kê i autora oraz ich pomocnicze sk³adowe zosta³y ju¿ przygotowane.
+Pamiêtaj, aby zmieniæ w³aœciwoœæ 'Copy to Output Directory' pliku Books.xml na 'Copy always'.
+
+Etap_1 (1.5 Pkt)
+    Klasa 'Library' powinna zawieraæ dwie listy przetrzymuj¹ce informacje odpowiednio o ksi¹¿kach i autorach.
+        Dodatkowo w³aœciwoœæ reprezentuj¹c¹ aktualn¹ œcie¿kê do folderu zapisu biblioteki.
+
+    Zaimplementuj konstruktor tworz¹cy pusty folder na dysku, na podstawie parametru string konstruktora.
+
+    Zaimplementuj statyczn¹ metodê Create(string libraryPath, string sourceFile), która utworzy bibliotekê w miejscu wskazanym (wywo³anie konstruktora) przez libraryPath na podstawie pliku csv zlokalizowanego w sourcePath.
+        Jako utworzenie biblioteki uznajemy dodanie wszystkich ksi¹¿ek i autorów do odpowiednich list z klasy. Zwróæ stworzon¹ bibliotekê.
+        Kolejnoœæ pól w pliku csv jest nastêpuj¹ca: IDKsia¿ki, Tytu³, TypOk³adki, IDAutora, Imiê, Nazwisko, RokUrodzenia, DataPublikacji, MiejscePublikacji, Wydawca.
+
+    Zaimplementuj metodê Info() wypisuj¹c¹ na konsolê informacjê o ksia¿kach. Zgodnie z dostarczonymi wynikami.
+
+Etap_2 (1.5 Pkt)
+    Stwórz klasê 'PathAlreadyExistsException' reprezentuj¹c¹ wyj¹tek zg³aszany w momencie kiedy plik lub folder na danej œcie¿ce ju¿ istnieje.
+
+    W klasie 'Library' zaimplementuj metodê Add odpowiednio dla ksi¹¿ki i autora, która zserializuje zawartoœæ do pliku xml.
+        Jako nazwê pliku u¿yj wartoœci ID. Zg³oœ wyj¹tek jeœli plik o danej nazwie ju¿ istnieje.
+        Pamiêtaj o nadaniu w³aœciwoœciom klasy odpowiednich atrybutów. Staraj sie reu¿ywaæ kod.
+        Chcemy aby wszystkie pola o nazie ID serializowane by³y jako pola o nazwie GUID.
+        Zmieñ implementajcê metody Create, aby u¿ywa³a nowo zaimplementowanej metody Add zamiast dodawaæ elementy bezpoœrednio do listy.
+        Pamiêtaj, aby metoda Add dodawa³a elementy do listy. Aby metoda Add by³a generyczna metoda Add mo¿e przyjmowaæ object oraz wykorzystaæ metodê GetType.
+
+Etap_3 (1.0 Pkt)
+    Zaimplementuj metodê Get, przyjmuj¹c¹ tytu³ ksi¹¿ki, któr¹ chcemy uzyskaæ.
+        W tym celu pobierz wszystkie pliki z g³ównego folderu biblioteki, zdeserializuj i zwróæ jeœli tytu³ siê zgadza.
+        Jeœli ksia¿ki o danym tytule nie bêdzie, zwróæ null. Pamiêtaj, ¿e w tym samym folderze znajduj¹ siê ksi¹¿ki i autorzy.
+        Jeœli deserializacja siê nie powiedzie mo¿na z³apaæ i obs³u¿yæ wyj¹tek.
+
+    Zaimplementuj metodê Delete, przyjmuj¹c¹ ID, która usuwa plik o odpowiedniej nazwie.
+        Zg³asza wyj¹tej jeœli plik nie istnieje oraz true gdy plik uda³o siê usun¹æ.
+
+Etap_4 (1.0 Pkt)
+    Zaimplementuj metodê Save(string filenamePath), która pod wskazan¹ œcie¿k¹ zapisze w formacie binarnym wszystkie ksi¹¿ki znajduj¹ce siê w bibliotece.
+        Pamietaj o dodaniu odpowiednich atrybutów do klas.

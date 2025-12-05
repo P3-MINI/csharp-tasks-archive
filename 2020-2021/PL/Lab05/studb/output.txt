@@ -1,0 +1,30 @@
+----------------------Stage 1-------------------------
+
+Shape2D (1) created
+Rectangle (1) with x=5, y=10 created
+Rectangle(x=5,y=10)
+Area of rectangle: 50,0000
+Shape2D (2) created
+Rectangle (2) with x=5, y=10 created
+End of Finalizers method
+Shape2D (3) created
+Rectangle (3) with x=5, y=10 created
+Rectangle(x=5,y=10)
+Rectangle (2) destroyed
+Shape2D (2) destroyed
+
+----------------------Stage 2-------------------------
+
+Shape2D (4) created
+Rectangle (4) with x=5, y=10 created
+Cuboid capacity: 500,0000
+Cuboid(h=10) with base: Rectangle(x=5,y=10)
+Shape2D (5) created
+Rectangle (5) with x=4, y=8 created
+Pyramid capacity: 53,3333
+Pyramid(h=5) with base: Rectangle(x=4,y=8)
+NumberOfShapes3D: 2
+NumberOfCuboids: 1
+NumberOfPyramids: 1
+Cuboid(h=10) with base: Rectangle(x=5,y=10)
+Shape3D with base Rectangle(x=4,y=8) and height: 5

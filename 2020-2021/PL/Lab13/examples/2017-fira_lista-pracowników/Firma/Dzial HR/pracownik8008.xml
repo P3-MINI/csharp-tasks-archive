@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pracownik xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <identyfikator>8008</identyfikator>
+  <imie>Krystyna</imie>
+  <nazwisko>Kowalska</nazwisko>
+  <stanowisko>Specjalista</stanowisko>
+  <stazPracy>42</stazPracy>
+  <adres>
+    <ulica>Zjazd</ulica>
+    <miasto>Lomza</miasto>
+    <nr_lokalu>5</nr_lokalu>
+  </adres>
+</Pracownik>

@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:controls="clr-namespace:Task2_ImageFilters.CustomControls" mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450" x:Class="Task2_ImageFilters.CustomControls.GroupBox">
+	<UserControl.Styles>
+		<Style Selector="controls|GroupBox">
+			<Setter Property="Template">
+				<ControlTemplate>
+					<Canvas>
+						<Border ZIndex="1" Canvas.Top="0" Canvas.Left="10" Background="{TemplateBinding HeaderBackground}">
+							<TextBlock Margin="{TemplateBinding HeaderMargin}" Text="{TemplateBinding Header}" Foreground="{TemplateBinding HeaderForeground}" />
+						</Border>
+						
+						<Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="10" ZIndex="0" Canvas.Top="7">
+							<Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
+								<ContentControl Grid.Row="1" Content="{TemplateBinding Content}" Margin="{TemplateBinding Margin}" />
+							</Grid>
+						</Border>
+						
+					</Canvas>
+				</ControlTemplate>
+			</Setter>
+		</Style>
+	</UserControl.Styles>
+</UserControl>

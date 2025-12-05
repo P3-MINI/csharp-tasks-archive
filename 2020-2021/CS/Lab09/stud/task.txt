@@ -1,0 +1,26 @@
+﻿Stage 1.
+2.5 points
+Inside CircularBuffer.cs file create CircularBuffer<T> generic class which implements interface IBuffer<T>
+(interface definition is in file Program.cs)
+CircularBuffer<T> constructor takes as parameter number of maximum stored values in the buffer.
+Method Put adds a new value to the buffer. If the buffer is full, throws an exception with message "Full buffer".
+Method Get returns the oldest stored value in the buffer. If empty, throws an exception with message "Empty buffer".
+Property Size returns the maximal number which can be stored in the buffer
+Property Count returns the current number of stored values.
+Properties Empty and Full returns respectively true if the buffer is empty and full.
+Method Reset allows for resetting the state of buffer - clean stored values.
+
+Stage 2.
+1.5 point
+Implement interface IEnumerable for class CircularBuffer which allows to peek all values stored inside the buffer
+in order of returning them by method Get (first is the oldest value and the last one is the newest)
+Add FilterLowerThan method which takes as an argument some value and allows to filter values from the buffer
+lower than the specified value.
+Hint: To be able to compare values of generic type you need to specify the constrains with IComparable<T> interface
+Remark: Iterating over the values can not change the state of buffer! So please do not use Get method when
+implementing IEnumerable interface.
+
+Stage 2.
+1 point
+Inside Program.cs file create extension class with method Clone() for CircularBuffer 
+which will create a new CircularBuffer with the same values stored as a cloned object.
