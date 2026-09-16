@@ -1,0 +1,323 @@
+-- Lab 2 --
+Press any key to continue...
+--- Commit History ---
+
+commit c12
+Author: Donald Knuth <knuth@artofprogramming.com>
+Date:   pon. lut 10 16:00:00 2025
+
+    docs: Update README with API usage examples
+
+
+commit c11
+Author: Edsger Dijkstra <dijkstra@structured.dev>
+Date:   sob. lut 08 11:45:00 2025
+
+    test: Add unit tests for LoanService business logic
+
+
+commit c10
+Author: Tony Hoare <hoare@quicksort.org>
+Date:   śr. lut 05 17:00:00 2025
+
+    perf: Optimize book search algorithm using quicksort on titles
+
+
+commit c9
+Author: Ada Lovelace <ada@analytical.engine>
+Date:   sob. lut 01 15:00:00 2025
+
+    feat: Introduce Loan model and LoanService
+
+
+commit c8
+Author: Alan Turing <turing@enigma.dev>
+Date:   śr. sty 22 09:30:00 2025
+
+    Merge branch 'feature/users' into main
+
+
+commit c5
+Author: Edsger Dijkstra <dijkstra@structured.dev>
+Date:   pt. sty 17 18:00:00 2025
+
+    fix: Correctly handle null ISBN in Book model
+
+
+commit c4
+Author: Donald Knuth <knuth@artofprogramming.com>
+Date:   czw. sty 16 11:00:00 2025
+
+    feat: Implement BookService for managing book catalog
+
+
+commit c2
+Author: Donald Knuth <knuth@artofprogramming.com>
+Date:   niedz. sty 12 14:30:00 2025
+
+    feat: Add core domain models for Book and Author
+
+
+commit c1
+Author: Ada Lovelace <ada@analytical.engine>
+Date:   pt. sty 10 10:00:00 2025
+
+    Initial commit: Project structure and solution file
+
+
+--- End of History ---
+Press any key to continue...
+--- Commit History from HEAD to HEAD~4^2~4 ---
+
+commit c12
+Author: Donald Knuth <knuth@artofprogramming.com>
+Date:   pon. lut 10 16:00:00 2025
+
+    docs: Update README with API usage examples
+
+
+commit c11
+Author: Edsger Dijkstra <dijkstra@structured.dev>
+Date:   sob. lut 08 11:45:00 2025
+
+    test: Add unit tests for LoanService business logic
+
+
+commit c10
+Author: Tony Hoare <hoare@quicksort.org>
+Date:   śr. lut 05 17:00:00 2025
+
+    perf: Optimize book search algorithm using quicksort on titles
+
+
+commit c9
+Author: Ada Lovelace <ada@analytical.engine>
+Date:   sob. lut 01 15:00:00 2025
+
+    feat: Introduce Loan model and LoanService
+
+
+commit c8
+Author: Alan Turing <turing@enigma.dev>
+Date:   śr. sty 22 09:30:00 2025
+
+    Merge branch 'feature/users' into main
+
+
+commit c7
+Author: Tony Hoare <hoare@quicksort.org>
+Date:   pon. sty 20 10:00:00 2025
+
+    refactor(auth): Simplify user creation logic in UserService
+
+
+commit c6
+Author: Alan Turing <turing@enigma.dev>
+Date:   sob. sty 18 12:00:00 2025
+
+    feat(auth): Implement in-memory user repository and user service
+
+
+commit c3
+Author: Alan Turing <turing@enigma.dev>
+Date:   śr. sty 15 09:00:00 2025
+
+    feat(auth): Add User model and basic repository interface
+
+
+commit c2
+Author: Donald Knuth <knuth@artofprogramming.com>
+Date:   niedz. sty 12 14:30:00 2025
+
+    feat: Add core domain models for Book and Author
+
+
+commit c1
+Author: Ada Lovelace <ada@analytical.engine>
+Date:   pt. sty 10 10:00:00 2025
+
+    Initial commit: Project structure and solution file
+
+
+--- End of History ---
+Press any key to continue...
+--- Queries ---
+Commit With Highest Total Lines Changed:
+{
+  "Commit": {
+    "Hash": "c11",
+    "Message": "test: Add unit tests for LoanService business logic"
+  },
+  "TotalLinesChanged": 350,
+  "AuthorName": "Edsger Dijkstra"
+}
+
+Average Number Of Files Per Commit By Author:
+[
+  {
+    "AuthorName": "Alan Turing",
+    "AvgFilesPerCommit": 2.6666666666666665
+  },
+  {
+    "AuthorName": "Ada Lovelace",
+    "AvgFilesPerCommit": 2.5
+  },
+  {
+    "AuthorName": "Donald Knuth",
+    "AvgFilesPerCommit": 1.6666666666666667
+  },
+  {
+    "AuthorName": "Edsger Dijkstra",
+    "AvgFilesPerCommit": 1
+  },
+  {
+    "AuthorName": "Tony Hoare",
+    "AvgFilesPerCommit": 1
+  }
+]
+
+Author With The Most Commits:
+{
+  "AuthorName": "Alan Turing",
+  "CommitsCount": 3
+}
+
+The First Commit For Each File:
+[
+  {
+    "Path": ".gitignore",
+    "FirstCommitHash": "c1",
+    "Timestamp": "2025-01-10T10:00:00",
+    "AuthorName": "Ada Lovelace",
+    "Message": "Initial commit: Project structure and solution file"
+  },
+  {
+    "Path": "LibraryManager.Application/Services/BookService.cs",
+    "FirstCommitHash": "c4",
+    "Timestamp": "2025-01-16T11:00:00",
+    "AuthorName": "Donald Knuth",
+    "Message": "feat: Implement BookService for managing book catalog"
+  },
+  {
+    "Path": "LibraryManager.Application/Services/LoanService.cs",
+    "FirstCommitHash": "c9",
+    "Timestamp": "2025-02-01T15:00:00",
+    "AuthorName": "Ada Lovelace",
+    "Message": "feat: Introduce Loan model and LoanService"
+  },
+  {
+    "Path": "LibraryManager.Application/Services/UserService.cs",
+    "FirstCommitHash": "c6",
+    "Timestamp": "2025-01-18T12:00:00",
+    "AuthorName": "Alan Turing",
+    "Message": "feat(auth): Implement in-memory user repository and user service"
+  },
+  {
+    "Path": "LibraryManager.Domain/Interfaces/IBookRepository.cs",
+    "FirstCommitHash": "c4",
+    "Timestamp": "2025-01-16T11:00:00",
+    "AuthorName": "Donald Knuth",
+    "Message": "feat: Implement BookService for managing book catalog"
+  },
+  {
+    "Path": "LibraryManager.Domain/Interfaces/IUserRepository.cs",
+    "FirstCommitHash": "c3",
+    "Timestamp": "2025-01-15T09:00:00",
+    "AuthorName": "Alan Turing",
+    "Message": "feat(auth): Add User model and basic repository interface"
+  },
+  {
+    "Path": "LibraryManager.Domain/Models/Author.cs",
+    "FirstCommitHash": "c2",
+    "Timestamp": "2025-01-12T14:30:00",
+    "AuthorName": "Donald Knuth",
+    "Message": "feat: Add core domain models for Book and Author"
+  },
+  {
+    "Path": "LibraryManager.Domain/Models/Book.cs",
+    "FirstCommitHash": "c2",
+    "Timestamp": "2025-01-12T14:30:00",
+    "AuthorName": "Donald Knuth",
+    "Message": "feat: Add core domain models for Book and Author"
+  },
+  {
+    "Path": "LibraryManager.Domain/Models/Loan.cs",
+    "FirstCommitHash": "c9",
+    "Timestamp": "2025-02-01T15:00:00",
+    "AuthorName": "Ada Lovelace",
+    "Message": "feat: Introduce Loan model and LoanService"
+  },
+  {
+    "Path": "LibraryManager.Domain/Models/User.cs",
+    "FirstCommitHash": "c3",
+    "Timestamp": "2025-01-15T09:00:00",
+    "AuthorName": "Alan Turing",
+    "Message": "feat(auth): Add User model and basic repository interface"
+  },
+  {
+    "Path": "LibraryManager.Infrastructure/Repositories/InMemoryUserRepository.cs",
+    "FirstCommitHash": "c6",
+    "Timestamp": "2025-01-18T12:00:00",
+    "AuthorName": "Alan Turing",
+    "Message": "feat(auth): Implement in-memory user repository and user service"
+  },
+  {
+    "Path": "LibraryManager.sln",
+    "FirstCommitHash": "c1",
+    "Timestamp": "2025-01-10T10:00:00",
+    "AuthorName": "Ada Lovelace",
+    "Message": "Initial commit: Project structure and solution file"
+  },
+  {
+    "Path": "LibraryManager.Tests/Services/LoanServiceTests.cs",
+    "FirstCommitHash": "c11",
+    "Timestamp": "2025-02-08T11:45:00",
+    "AuthorName": "Edsger Dijkstra",
+    "Message": "test: Add unit tests for LoanService business logic"
+  },
+  {
+    "Path": "README.md",
+    "FirstCommitHash": "c1",
+    "Timestamp": "2025-01-10T10:00:00",
+    "AuthorName": "Ada Lovelace",
+    "Message": "Initial commit: Project structure and solution file"
+  }
+]
+
+Files With Most Contributors:
+[
+  {
+    "Path": "LibraryManager.Application/Services/BookService.cs",
+    "DistinctAuthorsCount": 2,
+    "Authors": [
+      "Donald Knuth",
+      "Tony Hoare"
+    ]
+  },
+  {
+    "Path": "LibraryManager.Application/Services/UserService.cs",
+    "DistinctAuthorsCount": 2,
+    "Authors": [
+      "Alan Turing",
+      "Tony Hoare"
+    ]
+  },
+  {
+    "Path": "LibraryManager.Domain/Models/Book.cs",
+    "DistinctAuthorsCount": 2,
+    "Authors": [
+      "Donald Knuth",
+      "Edsger Dijkstra"
+    ]
+  },
+  {
+    "Path": "README.md",
+    "DistinctAuthorsCount": 2,
+    "Authors": [
+      "Ada Lovelace",
+      "Donald Knuth"
+    ]
+  }
+]
+
+Press any key to continue...

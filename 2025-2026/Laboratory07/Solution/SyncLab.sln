@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncLab", "SyncLab\SyncLab.csproj", "{44F2987B-0F1B-4057-819A-F37F7FBA2F26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44F2987B-0F1B-4057-819A-F37F7FBA2F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F2987B-0F1B-4057-819A-F37F7FBA2F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F2987B-0F1B-4057-819A-F37F7FBA2F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F2987B-0F1B-4057-819A-F37F7FBA2F26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

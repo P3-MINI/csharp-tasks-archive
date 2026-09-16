@@ -1,0 +1,119 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GameOfLife.UI.ViewModels"
+        xmlns:conv="using:GameOfLife.UI.Converters"
+        xmlns:controls="using:GameOfLife.UI.Controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="GameOfLife.UI.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Game Of Life"
+        Width="800" Height="600"
+        MinWidth="800" MinHeight="600"
+        RequestedThemeVariant="Light"> <Window.Resources>
+        <conv:PathToFileNameConverter x:Key="PathToFileNameConverter"/>
+    </Window.Resources>
+
+    <Grid ColumnDefinitions="250, *" RowDefinitions="*, Auto"
+          Background="{DynamicResource SystemRegionBrush}">
+        
+        <Grid Grid.Column="0" Grid.Row="0" RowDefinitions="Auto, Auto, *">
+            <Button Content="Choose directory..."
+                    Command="{Binding BrowseFolderCommand}"
+                    CommandParameter="{Binding $parent[TopLevel].StorageProvider}"
+                    HorizontalAlignment="Stretch"
+                    Margin="10 10 0 10"/>
+
+            <ProgressBar Grid.Row="1"
+                         IsIndeterminate="True"
+                         IsVisible="{Binding IsLoadingFiles}"
+                         Height="5" Margin="10 0 0 0"/>
+            
+            <Border Grid.Row="2"
+                    Background="{DynamicResource SystemControlBackgroundAltHighBrush}" 
+                    BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                    BorderThickness="1"
+                    Margin="10 0 0 10">
+                    <ListBox ItemsSource="{Binding FileList}"
+                         SelectedItem="{Binding SelectedFile}"
+                         Background="Transparent"> 
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Converter={StaticResource PathToFileNameConverter}}" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
+        </Grid>
+
+        <Border Grid.Column="1" Grid.Row="0"
+                Background="{DynamicResource SystemControlBackgroundAltHighBrush}"
+                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                BorderThickness="1"
+                Margin="10">
+            
+            <controls:BoardControl 
+                BoardState="{Binding CurrentGrid}"
+                RenderOptions.BitmapInterpolationMode="None"/>
+                
+        </Border>
+
+        <Border Grid.Row="1" Grid.ColumnSpan="2"
+                Background="{DynamicResource SystemRegionBrush}"
+                BorderBrush="{DynamicResource SystemControlForegroundBaseLowBrush}"
+                BorderThickness="0,1,0,0"
+                Padding="10,5">
+
+            <Grid ColumnDefinitions="*, *, 130, 130, 130">
+                <TextBlock Grid.Column="0"
+                           Text="{Binding StatusText}"
+                           VerticalAlignment="Center"
+                           FontWeight="SemiBold"
+                           TextTrimming="CharacterEllipsis"/>
+                
+                <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="10" Margin="0 0 35 0"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Delay:" 
+                               Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" 
+                               VerticalAlignment="Center"/>
+                    <Slider Width="80"
+                            VerticalAlignment="Center"
+                            Minimum="10" Maximum="500"
+                            TickFrequency="10"
+                            IsSnapToTickEnabled="True"
+                            Value="{Binding SimulationDelay}"/>
+                    <TextBlock Text="{Binding SimulationDelay, StringFormat={}{0} ms}"
+                               FontWeight="Bold"
+                               VerticalAlignment="Center"
+                               MinWidth="60"/>
+                </StackPanel>
+                
+                <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="10"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Generation:" 
+                               Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" 
+                               VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding Generation}" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+                
+                <StackPanel Grid.Column="3" Orientation="Horizontal" Spacing="10"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Living cells:" 
+                               Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" 
+                               VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding LiveCells}" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+                
+                <StackPanel Grid.Column="4" Orientation="Horizontal" Spacing="10"
+                            VerticalAlignment="Center">
+                    <TextBlock Text="Elapsed:" 
+                               Foreground="{DynamicResource SystemControlForegroundBaseMediumBrush}" 
+                               VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding LastCalculationTimeMs, StringFormat={}{0:F2} ms}" FontWeight="Bold" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- Use a hardcoded path relative to obj because IntermediateOutputPath is not available here -->
+    <NativeBuildDir>$(MSBuildProjectDirectory)/obj/native/$(Configuration)</NativeBuildDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <NativeSources Include="native\**" />
+    <None Include="@(NativeSources)" />
+    <UpToDateCheckInput Include="@(NativeSources)" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))">
+    <NativeLibPath>$(NativeBuildDir)/librt.so</NativeLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))">
+    <NativeLibPath>$(NativeBuildDir)/$(Configuration)/rt.dll</NativeLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))">
+    <NativeLibPath>$(NativeBuildDir)/librt.dylib</NativeLibPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="$(NativeLibPath)">
+      <Link>%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>false</Visible>
+    </Content>
+  </ItemGroup>
+
+  <Target Name="BuildNative" BeforeTargets="BeforeBuild" Inputs="@(NativeSources)" Outputs="$(NativeLibPath)">
+    <MakeDir Directories="$(NativeBuildDir)" />
+    <Exec Command="cmake -S native -B $(NativeBuildDir) -DCMAKE_BUILD_TYPE=$(Configuration)" />
+    <Exec Command="cmake --build $(NativeBuildDir) --config $(Configuration)" />
+  </Target>
+
+</Project>

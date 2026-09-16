@@ -1,0 +1,5 @@
+SharpOptions model validation failed with the following errors:
+  - [InvalidTypeException] Flag property 'Verbose' must be of type bool, but is 'Int32'.
+  - [DuplicateValuesException`1] Duplicate short names found: a
+  - [InvalidTypeException] Option property 'Complex' has an unsupported type 'ComplexType'. Type must be a string or implement IParsable<>.
+Press any key to continue...

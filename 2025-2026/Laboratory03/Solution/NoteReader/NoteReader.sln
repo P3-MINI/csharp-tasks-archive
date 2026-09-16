@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteReader", "NoteReader.csproj", "{1A18EAD6-6779-4AC3-9111-8FA095F1F5A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteReader.Test", "..\NoteReader.Test\NoteReader.Test.csproj", "{84F1F24B-F6F9-47B9-B5F1-66E1E215680C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A18EAD6-6779-4AC3-9111-8FA095F1F5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A18EAD6-6779-4AC3-9111-8FA095F1F5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A18EAD6-6779-4AC3-9111-8FA095F1F5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A18EAD6-6779-4AC3-9111-8FA095F1F5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84F1F24B-F6F9-47B9-B5F1-66E1E215680C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84F1F24B-F6F9-47B9-B5F1-66E1E215680C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84F1F24B-F6F9-47B9-B5F1-66E1E215680C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84F1F24B-F6F9-47B9-B5F1-66E1E215680C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CE69EA9-AF58-4173-93FB-A2A6AE3B0A6C}
+	EndGlobalSection
+EndGlobal

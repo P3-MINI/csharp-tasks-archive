@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "NoteReader": {
+      "commandName": "Project",
+      "commandLineArgs": "../NoteReader.Test/content.zip",
+      "workingDirectory": "$(ProjectDir)"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AssimpNet" Version="4.1.0" />
+      <PackageReference Include="ImGui.NET" Version="1.90.9.1" />
+      <PackageReference Include="OpenTK" Version="4.9.4" />
+      <PackageReference Include="StbImageSharp" Version="2.30.15" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\Fonts\NotoSansMono.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\NotoSansMono.ttf" />
+      <None Remove="Resources\Models\bread.obj" />
+      <EmbeddedResource Include="Resources\Models\bread.obj" />
+      <None Remove="Resources\Models\duck.obj" />
+      <EmbeddedResource Include="Resources\Models\duck.obj" />
+      <None Remove="Resources\Shaders\imgui.frag" />
+      <EmbeddedResource Include="Resources\Shaders\imgui.frag" />
+      <None Remove="Resources\Shaders\imgui.vert" />
+      <EmbeddedResource Include="Resources\Shaders\imgui.vert" />
+      <None Remove="Resources\Shaders\plane.frag" />
+      <EmbeddedResource Include="Resources\Shaders\plane.frag" />
+      <None Remove="Resources\Shaders\plane.vert" />
+      <EmbeddedResource Include="Resources\Shaders\plane.vert" />
+      <None Remove="Resources\Shaders\sky.frag" />
+      <EmbeddedResource Include="Resources\Shaders\sky.frag" />
+      <None Remove="Resources\Shaders\sky.vert" />
+      <EmbeddedResource Include="Resources\Shaders\sky.vert" />
+      <None Remove="Resources\Textures\bread.png" />
+      <EmbeddedResource Include="Resources\Shaders\water.frag" />
+      <EmbeddedResource Include="Resources\Textures\bread.png" />
+      <None Remove="Resources\Textures\duck.png" />
+      <EmbeddedResource Include="Resources\Textures\duck.png" />
+      <None Remove="Resources\Textures\grid.png" />
+      <EmbeddedResource Include="Resources\Textures\grid.png" />
+      <None Remove="Resources\Fonts\FiraCode-Medium.ttf" />
+      <EmbeddedResource Include="Resources\Fonts\FiraCode-Medium.ttf" />
+      <None Remove="Resources\Shaders\default.vert" />
+      <EmbeddedResource Include="Resources\Shaders\default.vert" />
+      <None Remove="Resources\Shaders\default.frag" />
+      <EmbeddedResource Include="Resources\Shaders\default.frag" />
+      <None Remove="Resources\Textures\water.png" />
+      <EmbeddedResource Include="Resources\Textures\water.png" />
+    </ItemGroup>
+
+</Project>

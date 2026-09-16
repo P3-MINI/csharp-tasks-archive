@@ -1,0 +1,17 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="600"
+        x:Class="Windowing.MainWindow"
+        Title="Ray Tracing in One Weekend - Avalonia">
+    <Grid RowDefinitions="Auto, *, Auto">
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10" Spacing="10">
+            <TextBlock Name="StatusText" VerticalAlignment="Center" Text="Ready" />
+        </StackPanel>
+
+        <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="1" Margin="10">
+             <Image Name="RenderImage" Stretch="Uniform" />
+        </Border>
+    </Grid>
+</Window>
