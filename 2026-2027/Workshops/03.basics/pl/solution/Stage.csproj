@@ -1,0 +1,5 @@
+<Project>
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);STAGE1;STAGE2;STAGE3</DefineConstants>
+  </PropertyGroup>
+</Project>

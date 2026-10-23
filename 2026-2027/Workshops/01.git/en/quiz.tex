@@ -1,0 +1,40 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+
+\pointpoints{pts}{pts}
+\boxedpoints
+
+\lhead{\makebox[12cm][l]{\large\textbf{Name and Surname:}\enspace\hrulefill}}
+\rhead{W01: git}
+
+\footer{}{}{}
+
+\begin{document}
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.8cm}
+
+\begin{questions}
+
+\question[2] 
+You need to clone an existing repository and work on a~new task involving 3 phases: (1) HTML layout, (2) CSS styling, and (3) JS validator. Write the Git commands required to clone the~repository, save each phase as a~separate commit, and finally push them back to the~remote server.
+\fillwithdottedlines{6cm}
+
+\question[2] 
+Your team uses the \texttt{master} branch. You developed a~new feature on a~local branch named \texttt{bugfix-navbar} and just committed the~final changes. You learned that the~remote \texttt{master} has been updated in the~meantime. You are currently on a~\texttt{bugfix-navbar} branch and \texttt{master} branch needs to be updated. Write the Git commands needed to incorporate these new changes from the~remote \texttt{master} into your local \texttt{bugfix-navbar} branch. Assume there are no merge conflicts.
+\fillwithdottedlines{6cm}
+
+\newpage
+
+\question[1] 
+You accidentally committed a~file containing sensitive passwords (\texttt{config.json}). You then added it to \texttt{.gitignore}, but Git is still tracking it. You haven't pushed the commit yet. Write the Git commands needed to untrack the file (without deleting it from the disk) and remove it from the last commit without creating a~new 'fix' commit.
+\fillwithdottedlines{6cm}
+
+\end{questions}
+
+\end{document}

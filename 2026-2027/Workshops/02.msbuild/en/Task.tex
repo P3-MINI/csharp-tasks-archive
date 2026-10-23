@@ -1,0 +1,56 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+
+\pointpoints{pts}{pts}
+\boxedpoints
+
+\lhead{\makebox[12cm][l]{\large\textbf{Name and Surname:}\enspace\hrulefill}}
+\rhead{W02: msbuild}
+
+\footer{}{}{}
+
+\begin{document}
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.8cm}
+
+You have decided to create an application for simple statistical analysis.
+The application should classify numbers as either even or odd.
+
+\begin{questions}
+
+\question[5]
+Create a new solution containing the following three projects:
+
+\begin{itemize}
+    \item \texttt{Statistics.Lib} -- a class library,
+    \item \texttt{Statistics.App} -- a console application,
+    \item \texttt{Statistics.Tests} -- an MSTest project.
+\end{itemize}
+
+Add the necessary project references between them.
+
+In the library project, create a class containing two methods:
+
+\begin{itemize}
+    \item \texttt{IsEven} -- returns \texttt{true} if the given number is even,
+    \item \texttt{IsOdd} -- returns \texttt{true} if the given number is odd.
+\end{itemize}
+
+Both methods should take an integer as an argument and return a boolean value.
+
+In the console application, create a \texttt{for} loop that iterates over all integers from \texttt{-10} to \texttt{10}.
+For each number, display the number together with information whether it is even or odd.
+Use the \texttt{IsEven} method from the library to determine the result.
+
+In the testing project, create two MSTest tests for each method.
+The tests should verify that both \texttt{IsEven} and \texttt{IsOdd} return correct results for even and odd input values.
+
+\end{questions}
+
+\end{document}

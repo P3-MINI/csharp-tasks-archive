@@ -1,0 +1,142 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\pointpoints{pkt}{pkt}
+\boxedpoints
+\hqword{Zadanie:}
+\hpword{Punkty:}
+\hsword{Wynik:}
+\htword{Suma}
+
+\lhead{\makebox[12cm][l]{\large\textbf{Imię i nazwisko:}\enspace\hrulefill}}
+\rhead{L01: basics}
+
+\footer{}{}{}
+
+\begin{document}
+\sloppy
+
+\cellwidth{2.5cm}
+\noindent \gradetable[h]
+
+\vspace{0.4cm}
+
+Celem laboratorium jest implementacja biblioteki reprezentacji obrazów cyfrowych oraz filtrów funkcyjnych w języku \texttt{C\#}.
+Otrzymujesz gotową solucję \texttt{ImageFiltering.sln} składającą się z:
+\begin{itemize}
+    \item \texttt{ImageFiltering.Core} -- biblioteka klas, w której należy zaimplementować wymagane typy,
+    \item \texttt{ImageFiltering.App} -- aplikacja konsolowa stanowiąca środowisko testowe z przykładowym obrazem \texttt{Lena\_512.png} oraz metodami pomocniczymi \texttt{ReadImage} i \texttt{WriteImage} (wykorzystującymi bibliotekę \texttt{SixLabors.ImageSharp}) do odczytu i zapisu plików PNG,
+    \item \texttt{ImageFiltering.Tests} -- projekt testów jednostkowych.
+\end{itemize}
+
+Zadanie podzielone jest na 3 etapy:
+
+\begin{questions}
+
+\question[4]
+Zaimplementuj reprezentację koloru, abstrakcyjną klasę bazową obrazu oraz dwie konkretne implementacje obrazu w projekcie \texttt{ImageFiltering.Core}:
+\begin{itemize}
+    \item W pliku \texttt{ColorRgb.cs} utwórz strukturę \texttt{ColorRgb}:
+    \begin{itemize}
+        \item konstruktor \texttt{ColorRgb(float red, float green, float blue)},
+        \item właściwości tylko do odczytu \texttt{float Red}, \texttt{float Green}, \texttt{float Blue}, obcinane w konstruktorze do zakresu $[0.0, 1.0]$ (\texttt{Math.Clamp}),
+        \item statyczne właściwości \texttt{ColorRgb White} $(1, 1, 1)$ oraz \texttt{ColorRgb Black} $(0, 0, 0)$,
+        \item właściwość tylko do odczytu \texttt{float Luminance} zwracająca luminancję wg wzoru $0.299 \cdot \text{Red} + 0.587 \cdot \text{Green} + 0.114 \cdot \text{Blue}$,
+        \item przeciążone operatory:
+        \begin{itemize}
+            \item \texttt{+} oraz \texttt{-} (dodawanie i odejmowanie kolorów kanał po kanale),
+            \item \texttt{*} dla dwóch kolorów (mnożenie kanał po kanale),
+            \item \texttt{*} dla koloru i skalara (\texttt{float}) w obu kolejnościach,
+        \end{itemize}
+        \item nadpisana metoda \texttt{ToString()}: zwraca napis w formacie \texttt{"(\{Red:F3\}R, \{Green:F3\}G, \{Blue:F3\}B)"}.
+    \end{itemize}
+
+    \item W pliku \texttt{Image.cs} utwórz klasę abstrakcyjną \texttt{Image}:
+    \begin{itemize}
+        \item właściwości tylko do odczytu: \texttt{int Width} oraz \texttt{int Height},
+        \item konstruktor chroniony \texttt{Image(int width, int height)}: rzuca wyjątek \texttt{ArgumentOutOfRangeException}, jeśli \texttt{width <= 0} lub \texttt{height <= 0},
+        \item abstrakcyjny dwuwymiarowy indeksator przyjmujący współrzędne \texttt{(int x, int y)} i pozwalający na odczyt oraz zapis koloru (\texttt{ColorRgb}),
+        \item abstrakcyjna metoda: \texttt{Image CreateImage(int width, int height)}.
+    \end{itemize}
+
+    \item W pliku \texttt{ImageRgb.cs} utwórz klasę \texttt{ImageRgb} dziedziczącą po \texttt{Image}:
+    \begin{itemize}
+        \item wewnętrzna dwuwymiarowa tablica prostokątna elementów \texttt{ColorRgb},
+        \item konstruktor \texttt{ImageRgb(int width, int height)},
+        \item indeksator odczytujący i zapisujący kolor w tablicy dla współrzędnych $(x, y)$,
+        \item metoda \texttt{CreateImage(int width, int height)}: zwraca nową instancję \texttt{ImageRgb}.
+    \end{itemize}
+
+    \item W pliku \texttt{ImageGrayscale.cs} utwórz klasę \texttt{ImageGrayscale} dziedziczącą po \texttt{Image}:
+    \begin{itemize}
+        \item wewnętrzna dwuwymiarowa tablica prostokątna wartości zmiennoprzecinkowych (\texttt{float}),
+        \item konstruktor \texttt{ImageGrayscale(int width, int height)},
+        \item indeksator: odczyt zwraca kolor \texttt{ColorRgb} o wszystkich trzech składowych równych wartości jasności w punkcie $(x, y)$; zapis umieszcza w tablicy luminancję przypisywanego koloru,
+        \item metoda \texttt{CreateImage(int width, int height)}: zwraca nową instancję \texttt{ImageGrayscale}.
+    \end{itemize}
+\end{itemize}
+
+\question[4]
+Zaimplementuj interfejs filtrów oraz hierarchię filtrów funkcyjnych w projekcie \texttt{ImageFiltering.Core}:
+\begin{itemize}
+    \item W pliku \texttt{IFilter.cs} zdefiniuj interfejs \texttt{IFilter} z metodą:
+    \begin{itemize}
+        \item \texttt{Image Apply(Image image)}.
+    \end{itemize}
+
+    \item W pliku \texttt{FilterBase.cs} zdefiniuj klasę abstrakcyjną \texttt{FilterBase} implementującą \texttt{IFilter} z abstrakcyjną metodą \texttt{Image Apply(Image image)}.
+
+    \item W pliku \texttt{FilterFunctional.cs} zdefiniuj klasę abstrakcyjną \texttt{FilterFunctional} dziedziczącą po \texttt{FilterBase}:
+    \begin{itemize}
+        \item metoda \texttt{Image Apply(Image image)}: tworzy obraz wynikowy za pomocą \texttt{image.CreateImage}, a następnie dla każdej pary współrzędnych $(x, y)$ przekształca piksel obrazu wejściowego za pomocą metody \texttt{Transform} i zapisuje wynik w obrazie wyjściowym,
+        \item wirtualna metoda chroniona \texttt{ColorRgb Transform(ColorRgb color)} zwracająca domyślnie niezmieniony kolor.
+    \end{itemize}
+
+    \item Zaimplementuj konkretne filtry funkcyjne dziedziczące po \texttt{FilterFunctional}:
+    \begin{itemize}
+        \item \texttt{FilterInvert}: nadpisuje \texttt{Transform(color)}, odwracając każdy kanał wg wzoru $1.0 - c$,
+        \item \texttt{FilterBrightnessContrast(float brightness, float contrast)}:
+        \begin{itemize}
+            \item właściwości tylko do odczytu \texttt{float Brightness} oraz \texttt{float Contrast},
+            \item nadpisuje \texttt{Transform(color)}, przekształcając każdy kanał $c \in \{\text{Red}, \text{Green}, \text{Blue}\}$ wg wzoru $\text{Contrast} \cdot (c - 0.5) + 0.5 + \text{Brightness}$,
+        \end{itemize}
+        \item \texttt{FilterGamma}:
+        \begin{itemize}
+            \item konstruktor z opcjonalnym parametrem \texttt{float gamma} o wartości domyślnej \texttt{2.0f},
+            \item właściwość tylko do odczytu \texttt{float Gamma},
+            \item nadpisuje \texttt{Transform(color)}, przekształcając każdy kanał $c$ wg wzoru $c^{1/\text{Gamma}}$ (\texttt{MathF.Pow}),
+        \end{itemize}
+        \item \texttt{FilterThreshold}:
+        \begin{itemize}
+            \item konstruktor z opcjonalnym parametrem \texttt{float threshold} o wartości domyślnej \texttt{0.5f},
+            \item właściwość tylko do odczytu \texttt{float Threshold},
+            \item nadpisuje \texttt{Transform(color)}: jeśli luminancja koloru jest większa bądź równa \texttt{Threshold}, zwraca kolor biały (\texttt{ColorRgb.White}), w przeciwnym razie czarny (\texttt{ColorRgb.Black}).
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\question[2]
+Zaimplementuj łączenie filtrów w potoki w projekcie \texttt{ImageFiltering.Core}:
+\begin{itemize}
+    \item W pliku \texttt{FilterPipeline.cs} zaimplementuj klasę \texttt{FilterPipeline} dziedziczącą po \texttt{FilterBase}:
+    \begin{itemize}
+        \item wewnętrzna lista filtrów typu \texttt{IFilter},
+        \item konstruktor przyjmujący zmienną liczbę argumentów typu \texttt{IFilter}: dodaje przekazane filtry za pomocą metody \texttt{Add},
+        \item metoda \texttt{void Add(IFilter other)}: jeśli \texttt{other} jest typu \texttt{FilterPipeline}, dodaje wszystkie filtry z jego listy (spłaszcza potok); w przeciwnym razie dodaje filtr \texttt{other},
+        \item metoda \texttt{Image Apply(Image image)}: sekwencyjnie aplikuje każdy filtr z listy do obrazu.
+    \end{itemize}
+
+    \item W pliku \texttt{FilterBase.cs} zaimplementuj przeciążony operator:
+    \begin{itemize}
+        \item operator \texttt{+} łączący dwa obiekty \texttt{FilterBase}: tworzy nowy obiekt \texttt{FilterPipeline}, dodaje do niego oba filtry i zwraca gotowy potok.
+    \end{itemize}
+\end{itemize}
+
+\end{questions}
+
+\end{document}

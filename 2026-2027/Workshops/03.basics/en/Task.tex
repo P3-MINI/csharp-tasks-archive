@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+\pointpoints{pts}{pts}
+\boxedpoints
+
+\lhead{\makebox[12cm][l]{\large\textbf{Name and Surname:}\enspace\hrulefill}}
+\rhead{W03: basics}
+
+\footer{}{}{}
+
+\begin{document}
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.4cm}
+
+The goal of this task is to implement an algebraic polynomial library in \texttt{C\#}.
+You are provided with a pre-configured solution \texttt{Polynomials.sln} containing the application project \texttt{Polynomials} and the unit test project \texttt{Polynomials.Tests}.
+The file \texttt{Program.cs} is already provided and must not be modified.
+The active stage is defined in the \texttt{Stage.csproj} file (via conditional compilation symbols \texttt{STAGE1}, \texttt{STAGE2}, \texttt{STAGE3}), which is imported by both projects. Uncomment the corresponding symbol before starting each stage.
+Your objective is to implement the required types in the \texttt{Polynomials} project so that all unit tests pass and running the application displays the evaluation and root-finding results.
+
+\begin{questions}
+
+\question[1]
+Define the function interface hierarchy and the monomial type \texttt{Term}:
+\begin{itemize}
+    \item In \texttt{IPolynomial.cs}, define the interface \texttt{IPolynomial} with read-only property \texttt{int Degree \{ get; \}} and method \texttt{float Evaluate(float x)}.
+    \item In \texttt{Term.cs}, define the type \texttt{Term} implementing \texttt{IPolynomial}:
+    \begin{itemize}
+        \item read-only properties: \texttt{float Coeff \{ get; \}} and \texttt{int Power \{ get; \}},
+        \item constructor: \texttt{Term(float coeff, int power)},
+        \item implementations of \texttt{Evaluate(float x)} and \texttt{Degree},
+        \item overloaded operator \texttt{*} for scalar multiplication (in both directions),
+        \item overloaded operator \texttt{*} for multiplying two terms (\texttt{Term * Term}),
+        \item overridden method \texttt{ToString()}: returns string \texttt{"\{Coeff\}x\textasciicircum\{Power\}"} (e.g.~\texttt{"3x\textasciicircum2"}).
+    \end{itemize}
+\end{itemize}
+
+\question[2]
+In \texttt{Polynomial.cs}, implement the type \texttt{Polynomial} implementing \texttt{IPolynomial}:
+\begin{itemize}
+    \item Constructors: parameterless \texttt{Polynomial()} and \texttt{Polynomial(params Term[] terms)},
+    \item Method \texttt{void Add(Term term)}: adds a term, merging coefficients if a term with the same power already exists,
+    \item Implementations of \texttt{Evaluate(float x)} and \texttt{Degree} (highest power among non-zero terms, or 0 if empty),
+    \item Overloaded operator \texttt{+} for adding two polynomials,
+    \item Overridden method \texttt{ToString()} joining terms with \texttt{" + "} (or \texttt{"0"} if empty).
+\end{itemize}
+
+\question[2]
+In \texttt{Polynomial.cs}, implement numerical root finding using the bisection method:
+\begin{itemize}
+    \item Method \texttt{bool FindRoot(float a, float b, out float root, float eps = 1e-4f)}:
+    \begin{itemize}
+        \item if $f(a)$ and $f(b)$ have opposite signs, finds a root on interval $[a, b]$ with tolerance \texttt{eps} using the bisection method, assigns it to \texttt{root}, and returns \texttt{true},
+        \item otherwise, returns \texttt{false}.
+    \end{itemize}
+\end{itemize}
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <!-- Uncomment the stage you are working on: -->
+    <!-- <DefineConstants>$(DefineConstants);STAGE1</DefineConstants> -->
+    <!-- <DefineConstants>$(DefineConstants);STAGE2</DefineConstants> -->
+    <!-- <DefineConstants>$(DefineConstants);STAGE3</DefineConstants> -->
+  </PropertyGroup>
+</Project>

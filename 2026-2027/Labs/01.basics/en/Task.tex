@@ -1,0 +1,132 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\pointpoints{pts}{pts}
+\boxedpoints
+
+\lhead{\makebox[12cm][l]{\large\textbf{Name and Surname:}\enspace\hrulefill}}
+\rhead{L01: basics}
+
+\footer{}{}{}
+
+\begin{document}
+\sloppy
+
+\cellwidth{2.5cm}
+\noindent \gradetable[h]
+
+\vspace{0.4cm}
+
+The goal of this laboratory is to implement an image representation and convolution filtering library in \texttt{C\#}.
+You are provided with a pre-configured solution \texttt{ImageFiltering.sln} containing:
+\begin{itemize}
+    \item \texttt{ImageFiltering.Core} -- class library where you will implement the required types,
+    \item \texttt{ImageFiltering.App} -- console application providing a test environment with a sample image \texttt{Lena\_512.png} and helper methods \texttt{ReadImage} and \texttt{WriteImage} (using \texttt{SixLabors.ImageSharp}) to load and save PNG files,
+    \item \texttt{ImageFiltering.Tests} -- unit test project.
+\end{itemize}
+
+The task is divided into 3 stages:
+
+\begin{questions}
+
+\question[4]
+Implement color representation, the abstract image base class, and two concrete image implementations in \texttt{ImageFiltering.Core}:
+\begin{itemize}
+    \item In \texttt{ColorRgb.cs}, define the value type \texttt{ColorRgb}:
+    \begin{itemize}
+        \item constructor \texttt{ColorRgb(float red, float green, float blue)},
+        \item read-only properties \texttt{float Red}, \texttt{float Green}, \texttt{float Blue}, clamped to the range $[0.0, 1.0]$ upon initialization (\texttt{Math.Clamp}),
+        \item static properties \texttt{ColorRgb White} $(1, 1, 1)$ and \texttt{ColorRgb Black} $(0, 0, 0)$,
+        \item read-only property \texttt{float Luminance} returning $0.299 \cdot \text{Red} + 0.587 \cdot \text{Green} + 0.114 \cdot \text{Blue}$,
+        \item overloaded operators:
+        \begin{itemize}
+            \item \texttt{+} and \texttt{-} for component-wise color addition and subtraction,
+            \item \texttt{*} for component-wise color multiplication,
+            \item \texttt{*} for scalar (\texttt{float}) multiplication in both operand orders,
+        \end{itemize}
+        \item overridden method \texttt{ToString()}: returns string in format \texttt{"(\{Red:F3\}R, \{Green:F3\}G, \{Blue:F3\}B)"}.
+    \end{itemize}
+
+    \item In \texttt{Image.cs}, define the abstract class \texttt{Image}:
+    \begin{itemize}
+        \item read-only properties: \texttt{int Width} and \texttt{int Height},
+        \item protected constructor \texttt{Image(int width, int height)}: throws \texttt{ArgumentOutOfRangeException} if \texttt{width <= 0} or \texttt{height <= 0},
+        \item abstract 2D indexer taking coordinates \texttt{(int x, int y)} for getting and setting a pixel's \texttt{ColorRgb},
+        \item abstract method: \texttt{Image CreateImage(int width, int height)},
+        \item public method \texttt{ColorRgb SampleClamped(int x, int y)}: clamps coordinate $x$ to $[0, \text{Width}-1]$ and $y$ to $[0, \text{Height}-1]$, returning the color at the clamped coordinate.
+    \end{itemize}
+
+    \item In \texttt{ImageRgb.cs}, implement the class \texttt{ImageRgb} inheriting from \texttt{Image}:
+    \begin{itemize}
+        \item internal 2D rectangular array of \texttt{ColorRgb},
+        \item constructor \texttt{ImageRgb(int width, int height)},
+        \item indexer getter and setter accessing the underlying 2D array at $(x, y)$,
+        \item method \texttt{CreateImage(int width, int height)}: returns a new \texttt{ImageRgb} instance.
+    \end{itemize}
+
+    \item In \texttt{ImageRgb32.cs}, implement the class \texttt{ImageRgb32} inheriting from \texttt{Image}:
+    \begin{itemize}
+        \item internal 2D rectangular array of 32-bit unsigned integers (\texttt{uint}),
+        \item constructor \texttt{ImageRgb32(int width, int height)},
+        \item indexer getter: unpacks channels from 32-bit unsigned integer (Red: bits 24..31, Green: bits 16..23, Blue: bits 8..15), normalized to $[0.0, 1.0]$ by dividing by $255$,
+        \item indexer setter: quantizes each channel from $[0.0, 1.0]$ to $[0, 255]$ by rounding to the nearest integer (\texttt{MathF.Round}) and packs them into bits 24..31 (Red), 16..23 (Green), 8..15 (Blue), with bits 0..7 set to \texttt{0xFF},
+        \item method \texttt{CreateImage(int width, int height)}: returns a new \texttt{ImageRgb32} instance.
+    \end{itemize}
+\end{itemize}
+
+\question[4]
+Implement the filter interface and 2D spatial convolution matrix filters in \texttt{ImageFiltering.Core}:
+\begin{itemize}
+    \item In \texttt{IFilter.cs}, define the interface \texttt{IFilter} with method:
+    \begin{itemize}
+        \item \texttt{Image Apply(Image image)}.
+    \end{itemize}
+
+    \item In \texttt{FilterBase.cs}, define the abstract class \texttt{FilterBase} implementing \texttt{IFilter} with abstract method \texttt{Image Apply(Image image)}.
+
+    \item In \texttt{FilterMatrix.cs}, define the abstract class \texttt{FilterMatrix} inheriting from \texttt{FilterBase}:
+    \begin{itemize}
+        \item protected read-only properties: \texttt{Kernel} (2D rectangular array of \texttt{float}) and \texttt{float Divisor},
+        \item protected constructor taking a 2D \texttt{float} array \texttt{kernel} and an optional \texttt{float divisor} (defaulting to \texttt{1.0f}):
+        \begin{itemize}
+            \item validates that \texttt{kernel} has $3 \times 3$ dimensions (\texttt{GetLength}; throws \texttt{ArgumentException} otherwise),
+            \item validates that \texttt{divisor} is not zero (\texttt{0.0f}; throws \texttt{ArgumentException} otherwise),
+            \item stores a clone of \texttt{kernel} and the \texttt{divisor},
+        \end{itemize}
+        \item method \texttt{Image Apply(Image image)}: creates destination image via \texttt{image.CreateImage}, computes $3 \times 3$ convolution for $kx, ky \in \{-1, 0, 1\}$ by sampling neighbors via \texttt{SampleClamped} at $(x + kx, y + ky)$ weighted by the kernel entry at row $ky + 1$ and column $kx + 1$, divides channel sums by \texttt{Divisor}, and sets the resulting pixel at $(x, y)$.
+    \end{itemize}
+
+    \item Implement concrete matrix filters inheriting from \texttt{FilterMatrix} (kernel arrays are pre-defined in the corresponding files):
+    \begin{itemize}
+        \item \texttt{FilterBoxBlur}: $3 \times 3$ kernel of all \texttt{1.0f}, divisor \texttt{9.0f},
+        \item \texttt{FilterGaussianBlur}: $3 \times 3$ kernel $\begin{bmatrix} 1 & 2 & 1 \\ 2 & 4 & 2 \\ 1 & 2 & 1 \end{bmatrix}$, divisor \texttt{16.0f},
+        \item \texttt{FilterSharpen}: $3 \times 3$ kernel $\begin{bmatrix} 0 & -1 & 0 \\ -1 & 5 & -1 \\ 0 & -1 & 0 \end{bmatrix}$, default divisor \texttt{1.0f},
+        \item \texttt{FilterLaplacian}: $3 \times 3$ kernel $\begin{bmatrix} 0 & 1 & 0 \\ 1 & -4 & 1 \\ 0 & 1 & 0 \end{bmatrix}$, default divisor \texttt{1.0f}.
+    \end{itemize}
+\end{itemize}
+
+\question[2]
+Implement filter composition and pipelines in \texttt{ImageFiltering.Core}:
+\begin{itemize}
+    \item In \texttt{FilterPipeline.cs}, implement the class \texttt{FilterPipeline} inheriting from \texttt{FilterBase}:
+    \begin{itemize}
+        \item internal list of \texttt{IFilter} elements,
+        \item constructor accepting a variable number of \texttt{IFilter} arguments: adds each passed filter using \texttt{Add},
+        \item method \texttt{void Add(IFilter other)}: if \texttt{other} is a \texttt{FilterPipeline}, adds each of its filters (flattens); otherwise adds \texttt{other},
+        \item method \texttt{Image Apply(Image image)}: sequentially applies each filter in the pipeline to the image.
+    \end{itemize}
+
+    \item In \texttt{FilterBase.cs}, implement the overloaded operator:
+    \begin{itemize}
+        \item operator \texttt{+} combining two \texttt{FilterBase} instances: creates a new \texttt{FilterPipeline}, adds both filters, and returns the pipeline.
+    \end{itemize}
+\end{itemize}
+
+\end{questions}
+
+\end{document}

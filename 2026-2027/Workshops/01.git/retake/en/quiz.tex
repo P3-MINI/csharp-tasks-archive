@@ -1,0 +1,40 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+
+\pointpoints{pts}{pts}
+\boxedpoints
+
+\lhead{\makebox[12cm][l]{\large\textbf{Name and Surname:}\enspace\hrulefill}}
+\rhead{W01: git}
+
+\footer{}{}{}
+
+\begin{document}
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.8cm}
+
+\begin{questions}
+
+\question[2] 
+You want to contribute to an open-source project and have just forked it on GitHub. Write the Git commands to clone your forked repository to your local machine, create a~new branch named \texttt{feature-login} and switch to it. Next, stage all your modified files and create a~single commit with them. Finally, push the~new branch back to your remote repository.
+\fillwithdottedlines{6cm}
+
+\question[2] 
+You are currently on the \texttt{main} branch. You update it by downloading the latest changes from the remote server. Then, you switch to your \texttt{feature-ui} branch and attempt to merge \texttt{main} into it. A~conflict occurs, and you decide to deal with it later. Write the commands to perform these steps, including the final command to completely cancel the merge process.
+\fillwithdottedlines{6cm}
+
+\newpage
+
+\question[1] 
+You just created a~commit containing two modified files: \texttt{index.html} and \texttt{style.css}. You realize they should be split into two separate commits. You haven't pushed yet. Write the Git commands to undo the last commit (without losing your changes to the files), and then create two separate commits: one containing only \texttt{index.html} and the second containing only \texttt{style.css}.
+\fillwithdottedlines{7cm}
+
+\end{questions}
+
+\end{document}

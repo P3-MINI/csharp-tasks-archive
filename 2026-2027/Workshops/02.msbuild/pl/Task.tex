@@ -1,0 +1,68 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{geometry}
+
+\pointpoints{pkt}{pkt}
+\boxedpoints
+\hqword{Zadanie:}
+\hpword{Punkty:}
+\hsword{Wynik:}
+\htword{Suma}
+
+
+\lhead{\makebox[12cm][l]{\large\textbf{Imię i nazwisko:}\enspace\hrulefill}}
+\rhead{W02: msbuild}
+
+\footer{}{}{}
+
+\begin{document}
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.8cm}
+
+Zdecydowałeś się stworzyć aplikację służącą do wykonywania prostych operacji związanych z ciągiem Fibonacciego.
+Aplikacja powinna umożliwiać wyznaczanie kolejnych wyrazów tego ciągu.
+
+\begin{questions}
+
+\question[5]
+Utwórz nową solucję zawierające następujące trzy projekty:
+
+\begin{itemize}
+    \item \texttt{Fibonacci.Lib} -- projekt biblioteki,
+    \item \texttt{Fibonacci.App} -- aplikację konsolową,
+    \item \texttt{Fibonacci.Tests} -- projekt z testami.
+\end{itemize}
+
+Dodaj odpowiednie referencje pomiędzy projektami.
+
+W projekcie biblioteki utwórz klasę zawierającą metodę:
+\newline
+\texttt{GetFibonacci}, która zwraca wyraz ciągu Fibonacciego o podanym numerze,
+
+
+Metoda \texttt{GetFibonacci} powinna przyjmować jako argument liczbę całkowitą określającą numer wyrazu ciągu i zwracać liczbę całkowitą.
+
+Przyjmij, że:
+
+\[
+F_0 = 0,\qquad F_1 = 1,\qquad
+F_n = F_{n-1} + F_{n-2}.
+\]
+
+
+W aplikacji konsolowej utwórz pętlę \texttt{for}, która wypisze 10 pierwszych wyrazów ciągu Fibonacciego.
+Do obliczenia każdego wyrazu wykorzystaj metodę \texttt{GetFibonacci} z projektu biblioteki.
+
+W projekcie testowym utwórz trzy testy tej funkcji.
+
+Testy powinny sprawdzić, czy \texttt{GetFibonacci} zwraca poprawne wartości dla wybranych numerów wyrazów ciągu,
+
+
+\end{questions}
+
+\end{document}

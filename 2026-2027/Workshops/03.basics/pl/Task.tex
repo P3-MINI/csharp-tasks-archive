@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+
+\pointpoints{pkt}{pkt}
+\boxedpoints
+\hqword{Zadanie:}
+\hpword{Punkty:}
+\hsword{Wynik:}
+\htword{Suma}
+
+\lhead{\makebox[12cm][l]{\large\textbf{Imię i nazwisko:}\enspace\hrulefill}}
+\rhead{W03: basics}
+
+\footer{}{}{}
+
+\begin{document}
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.4cm}
+
+Celem zadania jest implementacja silnika geometrii 2D w języku \texttt{C\#}.
+Otrzymujesz gotową solucję \texttt{Shapes.sln} składającą się z~projektu aplikacji \texttt{Shapes} oraz projektu z testami jednostkowymi \texttt{Shapes.Tests}.
+Plik \texttt{Program.cs} jest przygotowany i~nie należy go modyfikować.
+Aktywny etap pracy definiowany jest w~pliku \texttt{Stage.csproj} (stałe kompilacji warunkowej \texttt{STAGE1}, \texttt{STAGE2}, \texttt{STAGE3}), importowanym przez oba projekty. Przed rozpoczęciem każdego etapu odkomentuj w~nim odpowiednią stałą.
+Zaimplementuj wymagane typy tak, aby wszystkie testy jednostkowe zakończyły się sukcesem, a~uruchomienie aplikacji poprawnie wyświetliło wyrenderowaną scenę.
+
+\begin{questions}
+
+\question[1]
+W projekcie \texttt{Shapes} utwórz plik \texttt{Vector2.cs} zawierający typ \texttt{Vector2}:
+\begin{itemize}
+    \item Właściwości tylko do odczytu: \texttt{float X \{ get; \}} oraz \texttt{float Y \{ get; \}},
+    \item Konstruktor inicjalizujący obie współrzędne: \texttt{Vector2(float x, float y)},
+    \item Przeciążone operatory: \texttt{+}, \texttt{-} oraz \texttt{*} (mnożenie przez skalar \texttt{float} w~obu kolejnościach),
+    \item Właściwość \texttt{float Length} zwracającą długość euklidesową wektora,
+    \item Nadpisaną metodę \texttt{ToString()}, zwracającą postać \texttt{"(X, Y)"}.
+\end{itemize}
+
+\question[2]
+Zdefiniuj interfejs oraz figury geometryczne:
+\begin{itemize}
+    \item W pliku \texttt{IShape.cs} utwórz interfejs \texttt{IShape} deklarujący właściwość \texttt{float Area \{ get; \}} oraz metodę \texttt{bool Contains(Vector2 point)}.
+    \item W pliku \texttt{Circle.cs} utwórz typ \texttt{Circle} implementujący \texttt{IShape}:
+    \begin{itemize}
+        \item właściwości \texttt{Vector2 Center \{ get; \}} oraz \texttt{float Radius \{ get; \}},
+        \item konstruktor \texttt{Circle(Vector2 center, float radius)},
+        \item implementację właściwości \texttt{Area} oraz metody \texttt{Contains} (punkty na brzegu należą do figury).
+    \end{itemize}
+    \item W pliku \texttt{Rectangle.cs} utwórz typ \texttt{Rectangle} implementujący \texttt{IShape}:
+    \begin{itemize}
+        \item właściwości \texttt{Vector2 P1 \{ get; \}} oraz \texttt{Vector2 P2 \{ get; \}} przechowujące przeciwległe narożniki prostokąta,
+        \item konstruktor \texttt{Rectangle(Vector2 p1, Vector2 p2)},
+        \item implementację właściwości \texttt{Area} oraz metody \texttt{Contains} (narożniki mogą być podane w~dowolnej kolejności).
+    \end{itemize}
+\end{itemize}
+
+\question[2]
+W pliku \texttt{Scene.cs} utwórz typ \texttt{Scene} implementujący interfejs \texttt{IShape}:
+\begin{itemize}
+    \item Wewnętrzną kolekcję figur oraz metodę \texttt{void Add(IShape shape)} dodającą figurę do sceny,
+    \item Właściwość \texttt{Area}: całkowite pole powierzchni figur w~scenie (dla pustej sceny równe 0),
+    \item Metodę \texttt{bool Contains(Vector2 point)}: zwraca \texttt{true}, jeśli co najmniej jedna figura zawiera podany punkt,
+    \item Metodę \texttt{char[,] Render(int x, int y, int width, int height)}: próbkuje punkty sceny w~zadanym oknie współrzędnych świata $[x, x + width) \times [y, y + height)$ i~zwraca dwuwymiarową tablicę znaków o~wymiarach \texttt{[height, width]} (\texttt{'\#'} dla punktów należących do sceny, \texttt{'.'} w~przeciwnym razie).
+\end{itemize}
+
+\end{questions}
+
+\end{document}

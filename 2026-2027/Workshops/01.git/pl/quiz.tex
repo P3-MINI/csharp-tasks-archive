@@ -1,0 +1,44 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{geometry}
+
+\pointpoints{pkt}{pkt}
+\boxedpoints
+\hqword{Zadanie:}
+\hpword{Punkty:}
+\hsword{Wynik:}
+\htword{Suma}
+
+\lhead{\makebox[12cm][l]{\large\textbf{Imię i nazwisko:}\enspace\hrulefill}}
+\rhead{W01: git}
+
+\footer{}{}{}
+
+\begin{document}
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.8cm}
+
+\begin{questions}
+
+\question[2] 
+Rozpoczynasz pracę nad nowym zadaniem, które składa się z~trzech etapów: (1)~Utworzenie struktury, (2)~Dodanie logiki, (3)~Napisanie testów. Przyjmij, że wszystkie zmiany w kolejnych etapach dotyczą wyłącznie pliku Program.cs. Podaj kolejno komendy, których użyjesz, aby utworzyć lokalne repozytorium, zacommitować każdy z~trzech etapów osobno, a~następnie przesłać całość do~nowego, wcześniej utworzonego, pustego repozytorium na~GitHubie.
+\fillwithdottedlines{6cm}
+
+\question[2] 
+W Twoim repozytorium istnieje główna gałąź \texttt{main}. Od niej utworzono poboczną gałąź o~nazwie \texttt{feature-auth}, na której zapisałeś 2~commity. Zakończyłeś pracę. Jesteś obecnie na gałęzi \texttt{feature-auth}. Podaj komendy, przy pomocy których zintegrujesz ukończone zmiany z~gałęzi \texttt{feature-auth} do gałęzi \texttt{main}. Załóż, że wystąpił konflikt scalania.
+\fillwithdottedlines{6cm}
+
+\newpage
+
+\question[1] 
+Pracując nad nową funkcjonalnością na swojej gałęzi, zapisałeś postępy w ostatnich~5~małych commitach. Przed wysłaniem kodu na serwer chcesz połączyć te 5~commitów w~jeden, pozostając na tej samej gałęzi. Podaj komendy, dzięki którym zmienisz historię w~ten sposób, nie tracąc przy tym żadnego napisanego kodu.
+\fillwithdottedlines{6cm}
+
+\end{questions}
+
+\end{document}

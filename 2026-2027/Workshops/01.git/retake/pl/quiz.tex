@@ -1,0 +1,44 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{geometry}
+
+\pointpoints{pkt}{pkt}
+\boxedpoints
+\hqword{Zadanie:}
+\hpword{Punkty:}
+\hsword{Wynik:}
+\htword{Suma}
+
+\lhead{\makebox[12cm][l]{\large\textbf{Imię i nazwisko:}\enspace\hrulefill}}
+\rhead{W01: git}
+
+\footer{}{}{}
+
+\begin{document}
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.8cm}
+
+\begin{questions}
+
+\question[2] 
+Chcesz wnieść wkład do projektu open-source i~właśnie zrobiłeś jego fork na GitHubie. Napisz polecenia Git niezbędne do sklonowania Twojego zforkowanego repozytorium na lokalny komputer, utworzenia nowej gałęzi o~nazwie \texttt{feature-login} i~przełączenia się na nią. Następnie przygotuj wszystkie zmienione pliki (dodaj do staging area) i~utwórz z~nich jeden commit. Na koniec wypchnij nową gałąź do swojego zdalnego repozytorium.
+\fillwithdottedlines{6cm}
+
+\question[2] 
+Jesteś obecnie na gałęzi \texttt{main}. Aktualizujesz ją, pobierając najnowsze zmiany ze zdalnego serwera. Następnie przełączasz się na swoją gałąź \texttt{feature-ui} i~próbujesz scalić (merge) do niej gałąź \texttt{main}. Występuje konflikt, a~Ty decydujesz, że zajmiesz się nim później. Napisz polecenia, aby wykonać te kroki, włączając w~to ostatnie polecenie, które całkowicie przerwie i~anuluje proces scalania.
+\fillwithdottedlines{6cm}
+
+\newpage
+
+\question[1] 
+Właśnie utworzyłeś commit zawierający dwa zmodyfikowane pliki: \texttt{index.html} oraz \texttt{style.css}. Zdajesz sobie sprawę, że powinny one zostać rozdzielone na dwa osobne commity. Zmiany nie zostały jeszcze wypchnięte na serwer. Napisz polecenia Git, aby cofnąć ostatni commit (bez utraty wprowadzonych zmian w~plikach), a~następnie utwórz dwa osobne commity: jeden zawierający tylko plik \texttt{index.html}, a~drugi tylko \texttt{style.css}.
+\fillwithdottedlines{7cm}
+
+\end{questions}
+
+\end{document}
