@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+
+\pointpoints{pkt}{pkt}
+\boxedpoints
+\hqword{Zadanie:}
+\hpword{Punkty:}
+\hsword{Wynik:}
+\htword{Suma}
+
+\lhead{\makebox[12cm][l]{\large\textbf{Imię i nazwisko:}\enspace\hrulefill}}
+\rhead{W05}
+
+\footer{}{}{}
+%\emergencystretch=2em
+
+\renewcommand*\half{.5}
+
+\begin{document}
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.4cm}
+
+Otrzymujesz gotową solucję \texttt{AdeptusMechanicus.slnx} składającą się z~projektu aplikacji \texttt{AdeptusMechanicus} oraz projektu z~testami jednostkowymi \texttt{AdeptusMechanicus.Tests}. Pliki \texttt{Program.cs} oraz \texttt{Database.cs} są przygotowane i~nie należy ich modyfikować. Aktywny etap pracy definiowany jest w~pliku \texttt{Stage.props} (stałe \texttt{STAGE1}, \texttt{STAGE2}, \texttt{STAGE3}), importowanym przez oba projekty (lub przez \texttt{\#define} na początku \texttt{Program.cs} i~każdego pliku z~testami). Przed rozpoczęciem każdego etapu odkomentuj odpowiednią stałą. Etapy są niezależne.
+
+\begin{questions}
+
+\question[1\half] W pliku \texttt{Litany.cs} uzupełnij klasę \texttt{Litany}:
+\begin{itemize}
+    \item \texttt{ReciteLitany} -- dla każdego komponentu z~\texttt{Components} przechodzącego przez \texttt{filter}:
+    \begin{itemize}
+        \item wywołuje \texttt{calculate} na komponencie,
+        \item wyznacza \texttt{index} jako maksimum z~elementów \texttt{Petitions}, wykorzystując \texttt{select},
+        \item dodaje trójkę \texttt{(component, index, total)} do rezultatu, gdzie \texttt{total} to wynik wywołania \texttt{summarize} z~wartością \texttt{index}.
+    \end{itemize}
+    Podpowiedź: \texttt{Where}, \texttt{Max}.
+    \item \texttt{LitanyOfRestoration} -- zwraca \texttt{ReciteLitany} z~następującymi argumentami:
+    \begin{itemize}
+        \item \texttt{filter}: sprawdza, czy \texttt{Integrity} jest mniejsze niż \texttt{threshold},
+        \item \texttt{calculate}: oblicza \texttt{damage} jako różnicę \texttt{threshold} minus \texttt{Integrity},
+        \item \texttt{select}: jeżeli \texttt{Potency} jest nie większe niż \texttt{damage}, zwraca \texttt{Index}, jeśli nie \texttt{-1},
+        \item \texttt{summarize}: oblicza sumę \texttt{Potency} elementów \texttt{Petitions} z~zakresu od \texttt{0} do \texttt{Index} \textbf{włącznie} i~mnoży przez \texttt{damage} (podpowiedź: \texttt{Sum} na wycinku \texttt{Petitions}).
+    \end{itemize}
+\end{itemize}
+
+\question[2] W pliku \texttt{Extensions.cs} zaimplementuj metody rozszerzające:
+\begin{itemize}
+    \item \texttt{Invert<K, V>} -- dla słownika \texttt{IDictionary<K, V>} zwraca \texttt{IDictionary<V, List<K>>} odwracający relację -- każdemu unikalnemu \texttt{V} przyporządkowuje listę kluczy \texttt{K}, które na nie wskazywały; kolejność kluczy na liście odpowiada kolejności napotkania.
+    \item \texttt{IQR<T, TResult>} -- stosuje funkcję \texttt{selector} do każdego elementu ciągu (co pozwala na wybór właściwości, jeżeli \texttt{T} to typ złożony) i~zwraca rozstęp ćwiartkowy otrzymanych liczb (typu \texttt{TResult}) liczony \textbf{bez interpolacji}:
+    \begin{itemize}
+        \item jeśli długość ciągu \texttt{<= 3}, rzuca wyjątek \texttt{InvalidOperationException},
+        \item rozstęp ćwiartkowy to różnica pomiędzy trzecim i~pierwszym kwartylem \texttt{Q3 - Q1},
+        \item w \textbf{posortowanej} sekwencji kwartyl \texttt{Q1} to wartość, poniżej której znajduje się \break 1/4 wartości (ergo \textit{$\frac{n}{4}$ -- element}), zaś \texttt{Q3} -- 3/4 wartości (ergo \textit{$\frac{3n}{4}$ -- element}),
+        \item \textbf{nie} modyfikuje oryginalnej sekwencji.
+    \end{itemize}
+\end{itemize}
+
+\question[1\half] Zapoznaj się z listami \texttt{Techpriests} i \texttt{ImplantOrders} z pliku \texttt{Database.cs}. W pliku \texttt{Implants.cs} zaimplementuj następujące kwerendy z użyciem LINQ:
+\begin{itemize}
+    \item \texttt{Top3OldestTechpriests} -- zwraca listę \textbf{top 3} par \texttt{(Name, Age)} techpriestów o~randze \texttt{"Magos"}, posortowaną \textbf{malejąco} po \texttt{Age}.\newline
+    Podpowiedź: \texttt{Where, OrderBy, Take}.
+    \item \texttt{ForgeWorldsByAverageCost} -- zwraca listę par \texttt{(ForgeWorld, AverageCost)} posortowaną \textbf{rosnąco} po średnim koszcie, gdzie \textbf{średni koszt} to średnia wartość \texttt{Cost} \break wszystkich zamówień z~danego \texttt{ForgeWorld}.\newline
+    Podpowiedź: \texttt{GroupBy, OrderBy, Average}.
+\end{itemize}
+
+\end{questions}
+
+\end{document}

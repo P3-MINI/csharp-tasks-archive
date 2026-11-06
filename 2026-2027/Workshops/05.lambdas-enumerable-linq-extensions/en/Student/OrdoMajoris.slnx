@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Stage.props" />
+  </Folder>
+  <Project Path="OrdoMajoris.Tests/OrdoMajoris.Tests.csproj" />
+  <Project Path="OrdoMajoris/OrdoMajoris.csproj" />
+</Solution>

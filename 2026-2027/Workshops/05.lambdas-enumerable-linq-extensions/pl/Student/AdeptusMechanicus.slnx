@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Stage.props" />
+  </Folder>
+  <Project Path="AdeptusMechanicus.Tests/AdeptusMechanicus.Tests.csproj" />
+  <Project Path="AdeptusMechanicus/AdeptusMechanicus.csproj" />
+</Solution>

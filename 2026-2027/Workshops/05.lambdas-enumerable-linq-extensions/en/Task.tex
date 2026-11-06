@@ -1,0 +1,71 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+\pointpoints{pts}{pts}
+\boxedpoints
+
+\lhead{\makebox[12cm][l]{\large\textbf{Name and Surname:}\enspace\hrulefill}}
+\rhead{W05}
+
+\footer{}{}{}
+
+\renewcommand*\half{.5}
+
+\begin{document}
+%\emergencystretch 2em
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.4cm}
+
+You are provided with a pre-configured solution \texttt{OrdoMajoris.slnx} containing the application project \texttt{OrdoMajoris} and the unit test project \texttt{OrdoMajoris.Tests}. The files \texttt{Program.cs} and \texttt{Database.cs} are already provided and must not be modified. The active stage is defined in \texttt{Stage.props} file (symbols \texttt{STAGE1}, \texttt{STAGE2}, \texttt{STAGE3}), imported by both projects  \break (or via \texttt{\#define} at the top of \texttt{Program.cs} and each test file). Uncomment the symbol before starting each stage. Stages are independent.
+
+\begin{questions}
+
+\question[1\half] In the file \texttt{Xenos.cs} complete the class \texttt{Xenos}:
+\begin{itemize}
+    \item \texttt{ProcessSpecimens} -- for each specimen from \texttt{Specimens} that passes \texttt{filter}:
+    \begin{itemize}
+        \item calls \texttt{calculate} on the specimen,
+        \item calculates \texttt{total} bonus as the sum over transformed \texttt{Traits} using \texttt{transform},
+        \item assigns the specimen's classification by calling \texttt{classify} on \texttt{total} bonus,
+        \item adds the pair \texttt{(specimen, total)} to the result.
+    \end{itemize}
+    Hint: \texttt{Where, Sum}.
+    \item \texttt{ClassifyXenosThreat} -- returns \texttt{ProcessSpecimens} with the following arguments:
+    \begin{itemize}
+        \item \texttt{filter}: checks if \texttt{BaseThreat} is greater than \texttt{threshold},
+        \item \texttt{calculate}: calculates \texttt{excess} as \texttt{BaseThreat} minus \texttt{threshold},
+        \item \texttt{transform}: multiplies \texttt{excess} by \texttt{BonusPercentage} and divides by \texttt{100},
+        \item \texttt{classify}: calculates class as \texttt{3 * (total + excess) / threshold}, \break clamps to~$[1,3]$ and casts to \texttt{Classification} (implicit truncation works).
+    \end{itemize}
+\end{itemize}
+
+\question[2] In the file \texttt{Extensions.cs} implement the following extension methods:
+\begin{itemize}
+    \item \texttt{Interleave<T>} -- \textbf{yields} elements of two sequences \texttt{a} and \texttt{b} alternately
+    (\texttt{a0, b0, \break a1, b1 \dots}) with deferred execution (hint: enumerators); if one sequence is shorter, the remaining elements of the longer one are appended at the end.
+    \item \texttt{Median<T, TResult>} -- applies the \texttt{selector} function to each element of the sequence (allowing selecting properties if \texttt{T} is a composite type) and returns the median of the obtained numbers (of \texttt{TResult} type):
+    \begin{itemize}
+        \item if the sequence is empty, throws \texttt{InvalidOperationException},
+        \item for an odd length, the median is the middle element of the \textbf{sorted} selected values,
+        \item for an even length, the median is the average of the two middle values \break
+        (hint: \texttt{TResult.CreateChecked(2)} to create 2),
+        \item the original sequence must \textbf{not} be modified.
+    \end{itemize}
+\end{itemize}
+
+\question[1\half] Familiarize yourself with the \texttt{Orders} and \texttt{Sisters} lists in \texttt{Database.cs}. In the file \texttt{Sororitas.cs} implement the following queries using LINQ:
+\begin{itemize}
+    \item \texttt{ThirdSmallestTerraOrder} -- returns the pair \texttt{(Name, Members)} of the \textbf{third smallest} order (by \texttt{Members}) among the orders whose \texttt{HomeWorld} is \texttt{"Terra"}.\newline
+    Hint: \texttt{Where, OrderBy, Skip}.
+    \item \texttt{WeaponsByTotalKillCount} -- returns a list of \texttt{(FavouriteWeapon, TotalKillCount)} pairs sorted \textbf{descending} by the total kill count, where the \textbf{total kill count} is the sum of \texttt{KillCount} of all sisters whose \texttt{FavouriteWeapon} is the given weapon.\newline
+    Hint: \texttt{GroupBy, OrderBy, Sum}.
+\end{itemize}
+
+\end{questions}
+
+\end{document}
