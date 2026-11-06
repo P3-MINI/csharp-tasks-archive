@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Elementy rozwiązania/">
+    <File Path="BreakingBad.props" />
+  </Folder>
+  <Project Path="BreakingBad.Tests/BreakingBad.Tests.csproj" />
+  <Project Path="BreakingBad/BreakingBad.csproj" />
+</Solution>

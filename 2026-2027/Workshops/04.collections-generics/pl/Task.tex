@@ -1,0 +1,66 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[margin=1.8cm]{geometry}
+
+\pointpoints{pkt}{pkt}
+\boxedpoints
+\hqword{Zadanie:}
+\hpword{Punkty:}
+\hsword{Wynik:}
+\htword{Suma}
+
+\lhead{\makebox[12cm][l]{\large\textbf{Imię i nazwisko:}\enspace\hrulefill}}
+\rhead{W04: collections-generics}
+
+\footer{}{}{}
+
+\renewcommand*\half{.5}
+
+\begin{document}
+\sloppy
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.4cm}
+
+\noindent Walter White i Jesse Pinkman potrzebują Twojej pomocy w gotowaniu. Otrzymujesz gotową solucję \texttt{BreakingBad.slnx} składającą się z~projektu aplikacji \texttt{BreakingBad} oraz projektu z~testami jednostkowymi \texttt{BreakingBad.Tests}. Pliki \texttt{Program.cs} oraz \texttt{Records.cs} są przygotowane i~nie należy ich modyfikować. Aktywny etap pracy definiowany jest w~pliku \texttt{BreakingBad.props} widocznym w~solucji (stałe kompilacji warunkowej \texttt{STAGE1}, \texttt{STAGE2}, \texttt{STAGE3}), importowanym przez oba projekty. Przed rozpoczęciem każdego etapu odkomentuj w~nim odpowiednią stałą. \textbf{Etap 1} jest wymagany do \textbf{Etapu 2}; \textbf{Etap 3} jest niezależny. Czy uda Ci się osiągnąć czystość na poziomie 99,1\%?
+
+\begin{questions}
+
+\question[1\half] W pliku \texttt{Container.cs} zaimplementuj metody:
+\begin{itemize}
+    \item \texttt{Add} -- dodaje element \textbf{na szczyt}, zwraca \texttt{false}, gdy jest pełny,
+    \item \texttt{Take} -- zdejmuje i zwraca element \textbf{ze szczytu}, zwraca \texttt{null}, gdy jest pusty,
+    \item \texttt{Check} -- zwraca element \textbf{ze szczytu} bez zdejmowania, zwraca \texttt{null}, gdy jest pusty,
+    \item \texttt{GetEnumerator} -- zwraca iterator zwracający elementy z~kontenera w~kolejności \textbf{od szczytu do dna} (LIFO; podpowiedź: \texttt{yield return}).
+\end{itemize}
+
+\question[2\half] W pliku \texttt{RV.cs} zaimplementuj metody:
+\begin{itemize}
+    \item \texttt{Stock} -- dokłada nową dostawę związku chemicznego do kontenera przechowywanego w~słowniku \texttt{\_chemicals} (\textbf{tworzy nowy}, jeżeli kontener nie istnieje); zwraca \texttt{false}, jeśli kontener jest pełny,
+    \item \texttt{Amount} -- zwraca łączną liczbę gramów danego związku (lub \texttt{0}, jeśli brak go w~słowniku),
+    \item \texttt{Consume} -- konsumuje daną liczbę gramów z~kontenera zaczynając od jego \textbf{szczytu}; jeśli łączna ilość jest niewystarczająca, \textbf{nie zmienia stanu kontenera} i~zwraca \texttt{false}; jeżeli konsumowana liczba gramów odpowiada całkowitej dostępnej, \textbf{usuwa} kontener ze słownika; w~przypadku częściowej konsumpcji substancji na wierzchu, pozostała liczba gramów wraca na szczyt kontenera,
+    \item \texttt{CookBatches} -- dla kolejnych prób \texttt{attempt = 0, 1, \dots, count - 1} (\textbf{maksymalnie} \texttt{count} prób), w~podanej kolejności:
+    \begin{itemize}
+        \item sprawdza przy pomocy \texttt{HasAll(this, recipe)}, czy kamper zawiera wszystkie chemikalia w~wymaganych ilościach; jeśli nie, \textbf{przerywa} gotowanie,
+        \item zużywa związki chemiczne zgodnie z~recepturą (\texttt{recipe.PerBatch}),
+        \item wylicza czystość \texttt{p} przy pomocy metody \texttt{Purity(cook, attempt)}; jeżeli jest mniejsza niż \texttt{66.0}, \textbf{przerywa} gotowanie,
+        \item tworzy partię \texttt{Batch(cook, p, grams)} i~zwraca ją \textbf{na bieżąco} (podpowiedź: \texttt{yield return}).
+    \end{itemize}
+\end{itemize}
+
+\question[1]
+W pliku \texttt{BatchComparer.cs} dokończ klasę \texttt{BatchComparer} dziedziczącą z~\texttt{Comparer<Batch>} poprzez zaimplementowanie metody \texttt{Compare} porównującej dwie partie:
+\begin{enumerate}
+    \item najpierw po czystości \texttt{Purity} malejąco,
+    \item następnie po \textit{kucharzu} \texttt{Cook} rosnąco,
+    \item finalnie po wadze \texttt{Grams} malejąco.
+\end{enumerate}
+\textbf{Zadbaj o obsługę} \texttt{null}: element \texttt{null} trafia na koniec, a~porównanie dwóch wartości \texttt{null} zwraca wynik równy \texttt{0}.
+
+\end{questions}
+
+\end{document}

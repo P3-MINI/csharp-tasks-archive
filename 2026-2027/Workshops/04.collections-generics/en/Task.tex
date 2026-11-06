@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper,addpoints]{exam}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[margin=1.8cm]{geometry}
+
+\pointpoints{pts}{pts}
+\boxedpoints
+
+\lhead{\makebox[12cm][l]{\large\textbf{Name and surname:}\enspace\hrulefill}}
+\rhead{W04: collections-generics}
+
+\footer{}{}{}
+
+\renewcommand*\half{.5}
+
+\begin{document}
+\emergencystretch=2em
+
+\cellwidth{2.75cm}
+\noindent \gradetable[h]
+
+\vspace{0.4cm}
+
+\noindent Gustavo Fring from Los Pollos Hermanos needs your help in his restaurant. You are provided with a pre-configured solution \texttt{LosPollosHermanos.slnx} containing the application project \texttt{LosPollosHermanos} and the unit test project \texttt{LosPollosHermanos.Tests}. The files \texttt{Program.cs} and \texttt{Records.cs} are already provided and must not be modified. The active stage is defined in the \texttt{LosPollosHermanos.props} file visible in the solution (conditional compilation symbols \texttt{STAGE1}, \texttt{STAGE2}, \texttt{STAGE3}), which is imported by both projects. Uncomment the corresponding symbol before starting each stage. \textbf{Stage 1} must be completed before \textbf{Stage 2}; \textbf{Stage 3} is independent. Are you up to Los Pollos standards?
+
+\begin{questions}
+
+\question[1\half] In file \texttt{Line.cs}, implement the following methods:
+\begin{itemize}
+    \item \texttt{Add} -- adds an item at the \textbf{back} of the line, returns \texttt{false} if full,
+    \item \texttt{Take} -- removes and returns the element from the \textbf{front} of the line, returns \texttt{null} if empty,
+    \item \texttt{Check} -- returns the element from the \textbf{front} of the line without removing it, returns \texttt{null} if empty,
+    \item \texttt{GetEnumerator} -- returns an iterator yielding elements from the line \textbf{front to back} (FIFO).
+\end{itemize}
+
+\question[2\half] In file \texttt{Kitchen.cs}, implement the following methods:
+\begin{itemize}
+    \item \texttt{StockEquipment} -- adds new equipment to \texttt{\_equipment} if not already present and returns how many items were newly added,
+    \item \texttt{StockSpices} -- adds the given amounts of spices to \texttt{\_spices} stock, ensuring each spice does not exceed \texttt{SpiceLimit}, and returns how many grams were actually added \textbf{in total},
+    \item \texttt{CanCook} -- returns \texttt{true} \textbf{if} the kitchen has all required equipment (\texttt{recipe.Equipment}) and enough of every spice listed in \texttt{recipe.SpicesPerBatch},
+    \item \texttt{CookBatches} -- for \texttt{attempt = 0, 1, \dots, count - 1} (\textbf{at most} \texttt{count} attempts), in order:
+    \begin{itemize}
+        \item checks via \texttt{CanCook} if the recipe \textbf{can be cooked}; if not, \textbf{stops} the cook,
+        \item consumes the spices required by the recipe (\texttt{recipe.SpicesPerBatch}),
+        \item builds a \texttt{ChickenBatch} (\texttt{id + attempt}, \texttt{pieces}, \texttt{recipe.Temperature}, and \texttt{HasMeth} set to \texttt{true} when \texttt{attempt \% methEvery == 0}),
+        \item checks if the batch meets Los Pollos standards via \texttt{Accept(batch, attempt)}; if not, \textbf{stops} the cook,
+        \item adds the batch to the \texttt{\_ready} line; if full, \textbf{stops} the cook,
+        \item only then \textbf{yields} the batch.
+    \end{itemize}
+\end{itemize}
+
+\question[1]
+In file \texttt{BatchComparer.cs}, complete \texttt{BatchComparer} (\texttt{Comparer<ChickenBatch>}) by implementing the \texttt{Compare} method using the following ordering key:
+    \begin{enumerate}
+        \item safe batches before unsafe (a batch is safe if \texttt{Temperature >= SafeTemperature}),
+        \item batches containing meth (\texttt{HasMeth == true}) before clean ones,
+        \item smaller batches before bigger -- ascending by \texttt{Pieces}.
+    \end{enumerate}
+\textbf{Remember to handle} \texttt{null}\textbf{s}: \texttt{null} sorts last, and comparing two \texttt{null} references returns \texttt{0}.
+\end{questions}
+
+\end{document}

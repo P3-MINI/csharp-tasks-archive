@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="LosPollosHermanos.props" />
+  </Folder>
+  <Project Path="LosPollosHermanos.Tests/LosPollosHermanos.Tests.csproj" />
+  <Project Path="LosPollosHermanos/LosPollosHermanos.csproj" />
+</Solution>
